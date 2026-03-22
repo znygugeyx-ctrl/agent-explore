@@ -1,0 +1,35 @@
+[project]
+name = "agent-explore"
+version = "0.1.0"
+description = "Experimental framework for validating AI agent hypotheses"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3",
+    "openai",
+    "jsonschema",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "mypy",
+]
+
+[tool.setuptools.packages.find]
+include = ["core*", "bench*", "tools*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
