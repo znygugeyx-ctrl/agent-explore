@@ -80,6 +80,33 @@ Each experiment lives in `experiments/<NNN>_<name>/` with:
 - **Async throughout**: All LLM calls and tool executions are async
 - **JSON Schema for tools**: Tool parameters validated with jsonschema
 
+## vLLM Inference Endpoint
+
+GPU inference runs on an EC2 g6e.2xlarge (L40S 48GB) with vLLM + Qwen3-8B. Stopped nightly to save cost. See `infra/README.md` for full details.
+
+**Daily lifecycle:** start instance → start vLLM → SSH tunnel → experiment → stop instance
+
+```bash
+# Start instance + get new IP
+aws ec2 start-instances --instance-ids i-0e3affd7763024652 --region us-east-1
+aws ec2 describe-instances --instance-ids i-0e3affd7763024652 --region us-east-1 \
+  --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
+
+# SSH tunnel (makes localhost:8000 → remote vLLM)
+ssh -f -N -L 8000:localhost:8000 -i ~/.ssh/vllm-experiment-key.pem ubuntu@<IP>
+
+# Stop instance
+aws ec2 stop-instances --instance-ids i-0e3affd7763024652 --region us-east-1
+```
+
+**Using in code:** `Model(id="Qwen/Qwen3-8B", provider="openai_compat", base_url="http://localhost:8000/v1")`
+
+**Key capabilities** (documented in `infra/README.md`):
+- Tool calling (Hermes parser)
+- Logit bias / logit masking via `StreamOptions.extra={"logit_bias": {...}}`
+- Prefix cache metrics via `/metrics` endpoint
+- Tokenization via `/tokenize` endpoint
+
 ## Dependencies
 
 - `boto3` - AWS Bedrock

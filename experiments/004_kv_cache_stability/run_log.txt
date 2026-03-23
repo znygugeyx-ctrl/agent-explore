@@ -1,0 +1,352 @@
+2026-03-22 18:19:46,423 INFO Loaded 20 tasks, 50 tools
+2026-03-22 18:19:47,479 INFO === [Run 1] Strategy: stable | cache before: queries=5242674 hits=5113776 ===
+2026-03-22 18:19:48,970 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:19:55,921 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:19:56,177 INFO   [Run1 1/20] stable/chain4_calc_bin_char_power: WRONG (steps=4/4, 8.70s, ttft=[1.534,0.866])
+2026-03-22 18:19:56,964 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:07,474 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:07,736 INFO   [Run1 2/20] stable/chain4_reverse_len_mod_even: OK (steps=4/4, 11.56s, ttft=[0.879,0.883])
+2026-03-22 18:20:08,559 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:16,780 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:17,033 INFO   [Run1 3/20] stable/chain4_wc_power_base_upper: OK (steps=4/4, 9.30s, ttft=[0.910,0.868])
+2026-03-22 18:20:17,832 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:23,472 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:25,006 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:26,547 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:28,075 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:28,333 INFO   [Run1 4/20] stable/chain4_caesar_reverse_len_calc: OK (steps=4/4, 11.30s, ttft=[0.889,1.015,1.028,1.019,0.870])
+2026-03-22 18:20:29,117 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:41,533 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:41,792 INFO   [Run1 5/20] stable/chain5_calc_gcd_bin_char_power: OK (steps=5/5, 13.46s, ttft=[0.872,0.868])
+2026-03-22 18:20:42,574 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:50,032 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:51,592 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:53,211 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:54,806 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:20:55,080 INFO   [Run1 6/20] stable/chain4_temp_round_mod_abs: OK (steps=4/4, 13.29s, ttft=[0.869,1.029,1.022,1.038,0.886])
+2026-03-22 18:20:55,981 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:04,193 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:04,459 INFO   [Run1 7/20] stable/chain5_reverse_upper_len_lcm_bin: OK (steps=5/5, 9.38s, ttft=[0.911,0.888])
+2026-03-22 18:21:05,234 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:17,080 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:17,339 INFO   [Run1 8/20] stable/chain4_calc_floor_gcd_even: OK (steps=4/4, 12.88s, ttft=[0.884,0.865])
+2026-03-22 18:21:18,121 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:41,484 INFO   [Run1 9/20] stable/chain4_lower_replace_char_calc: WRONG (steps=0/4, 24.14s, ttft=[0.880])
+2026-03-22 18:21:42,349 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:51,085 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:21:51,339 INFO   [Run1 10/20] stable/chain5_calc_mod_power_sumdig_even: WRONG (steps=5/5, 9.86s, ttft=[0.869,0.878])
+2026-03-22 18:21:52,119 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:07,336 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:07,593 INFO   [Run1 11/20] stable/chain4_sort_first3_upper_len: OK (steps=4/4, 16.25s, ttft=[0.873,0.892])
+2026-03-22 18:22:08,367 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:18,076 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:18,329 INFO   [Run1 12/20] stable/chain5_wc_gcd_power_bin_char: OK (steps=5/5, 10.74s, ttft=[0.868,0.863])
+2026-03-22 18:22:19,146 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:31,972 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:32,229 INFO   [Run1 13/20] stable/chain4_unique_len_max_round: OK (steps=4/4, 13.90s, ttft=[0.909,0.859])
+2026-03-22 18:22:33,006 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:41,431 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:41,684 INFO   [Run1 14/20] stable/chain4_calc_base_lower_len: OK (steps=4/4, 9.45s, ttft=[0.869,0.872])
+2026-03-22 18:22:42,460 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:47,604 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:49,156 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:50,710 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:52,268 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:53,579 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:22:53,832 INFO   [Run1 15/20] stable/chain5_temp_calc_mod_power_sumdig: OK (steps=5/5, 12.15s, ttft=[0.867,1.033,1.031,1.028,1.038,0.877])
+2026-03-22 18:22:54,643 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:04,814 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:05,070 INFO   [Run1 16/20] stable/chain4_repeat_len_floor_bin: OK (steps=4/4, 11.24s, ttft=[0.892,0.880])
+2026-03-22 18:23:05,873 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:15,633 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:15,888 INFO   [Run1 17/20] stable/chain5_caesar_char_lcm_mod_even: OK (steps=5/5, 10.82s, ttft=[0.891,0.871])
+2026-03-22 18:23:16,671 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:28,058 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:28,316 INFO   [Run1 18/20] stable/chain4_slice_reverse_upper_len: WRONG (steps=4/4, 12.43s, ttft=[0.871,0.869])
+2026-03-22 18:23:29,101 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:38,538 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:38,801 INFO   [Run1 19/20] stable/chain5_calc_pct_round_floor_bin: OK (steps=5/5, 10.48s, ttft=[0.864,0.868])
+2026-03-22 18:23:39,588 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:48,638 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:48,893 INFO   [Run1 20/20] stable/chain6_reverse_len_power_bin_char_calc: OK (steps=6/6, 10.09s, ttft=[0.875,0.883])
+2026-03-22 18:23:50,167 INFO [Run 1] stable done: acc=80.0%, lat=12.07s, avg_ttft=0.922s, cache=237760/238953 (99.5%)
+2026-03-22 18:23:50,175 INFO Saved: /Users/zny/Documents/LLM/agent-explore/experiments/004_kv_cache_stability/results/stable_run1.json
+2026-03-22 18:23:50,949 INFO === [Run 1] Strategy: timestamp_s | cache before: queries=5481627 hits=5351536 ===
+2026-03-22 18:23:51,732 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:59,255 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:23:59,922 INFO   [Run1 1/20] timestamp_s/chain4_calc_bin_char_power: WRONG (steps=4/4, 8.97s, ttft=[1.156,1.190])
+2026-03-22 18:24:00,709 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:08,872 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:09,535 INFO   [Run1 2/20] timestamp_s/chain4_reverse_len_mod_even: OK (steps=4/4, 9.61s, ttft=[1.146,1.195])
+2026-03-22 18:24:10,340 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:20,229 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:20,904 INFO   [Run1 3/20] timestamp_s/chain4_wc_power_base_upper: OK (steps=4/4, 11.37s, ttft=[1.180,1.194])
+2026-03-22 18:24:21,759 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:29,846 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:30,528 INFO   [Run1 4/20] timestamp_s/chain4_caesar_reverse_len_calc: OK (steps=4/4, 9.62s, ttft=[1.243,1.199])
+2026-03-22 18:24:31,301 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:41,859 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:42,560 INFO   [Run1 5/20] timestamp_s/chain5_calc_gcd_bin_char_power: OK (steps=5/5, 12.03s, ttft=[1.163,1.204])
+2026-03-22 18:24:43,345 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:50,461 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:52,519 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:54,480 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:56,220 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:24:56,920 INFO   [Run1 6/20] timestamp_s/chain4_temp_round_mod_abs: OK (steps=4/4, 14.36s, ttft=[1.173,1.282,1.199,1.213,1.230])
+2026-03-22 18:24:57,709 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:05,650 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:06,427 INFO   [Run1 7/20] timestamp_s/chain5_reverse_upper_len_lcm_bin: OK (steps=5/5, 9.51s, ttft=[1.175,1.246])
+2026-03-22 18:25:07,202 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:17,092 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:17,767 INFO   [Run1 8/20] timestamp_s/chain4_calc_floor_gcd_even: OK (steps=4/4, 11.34s, ttft=[1.164,1.192])
+2026-03-22 18:25:18,559 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:42,299 INFO   [Run1 9/20] timestamp_s/chain4_lower_replace_char_calc: WRONG (steps=0/4, 24.53s, ttft=[1.171])
+2026-03-22 18:25:43,075 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:52,075 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:25:52,744 INFO   [Run1 10/20] timestamp_s/chain5_calc_mod_power_sumdig_even: WRONG (steps=5/5, 10.44s, ttft=[1.200,1.186])
+2026-03-22 18:25:53,523 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:05,793 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:06,476 INFO   [Run1 11/20] timestamp_s/chain4_sort_first3_upper_len: OK (steps=4/4, 13.73s, ttft=[1.148,1.191])
+2026-03-22 18:26:07,291 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:20,270 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:20,948 INFO   [Run1 12/20] timestamp_s/chain5_wc_gcd_power_bin_char: OK (steps=5/5, 14.47s, ttft=[1.187,2.759])
+2026-03-22 18:26:22,008 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:29,629 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:30,286 INFO   [Run1 13/20] timestamp_s/chain4_unique_len_max_round: OK (steps=4/4, 9.34s, ttft=[1.422,1.162])
+2026-03-22 18:26:31,071 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:43,822 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:44,515 INFO   [Run1 14/20] timestamp_s/chain4_calc_base_lower_len: OK (steps=4/4, 14.23s, ttft=[1.149,1.192])
+2026-03-22 18:26:45,300 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:58,739 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:26:59,431 INFO   [Run1 15/20] timestamp_s/chain5_temp_calc_mod_power_sumdig: OK (steps=5/5, 14.92s, ttft=[1.143,1.198])
+2026-03-22 18:27:00,225 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:10,959 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:11,601 INFO   [Run1 16/20] timestamp_s/chain4_repeat_len_floor_bin: OK (steps=4/4, 12.17s, ttft=[1.157,1.174])
+2026-03-22 18:27:12,388 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:22,324 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:22,989 INFO   [Run1 17/20] timestamp_s/chain5_caesar_char_lcm_mod_even: OK (steps=5/5, 11.39s, ttft=[1.179,1.197])
+2026-03-22 18:27:23,803 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:35,552 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:36,234 INFO   [Run1 18/20] timestamp_s/chain4_slice_reverse_upper_len: WRONG (steps=4/4, 13.24s, ttft=[1.185,1.184])
+2026-03-22 18:27:37,024 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:48,351 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:48,936 INFO   [Run1 19/20] timestamp_s/chain5_calc_pct_round_floor_bin: OK (steps=5/5, 12.70s, ttft=[1.155,1.197])
+2026-03-22 18:27:49,733 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:59,117 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:27:59,804 INFO   [Run1 20/20] timestamp_s/chain6_reverse_len_power_bin_char_calc: OK (steps=6/6, 10.87s, ttft=[1.160,1.203])
+2026-03-22 18:28:00,837 INFO [Run 1] timestamp_s done: acc=80.0%, lat=12.44s, avg_ttft=1.230s, cache=656/205326 (0.3%)
+2026-03-22 18:28:00,843 INFO Saved: /Users/zny/Documents/LLM/agent-explore/experiments/004_kv_cache_stability/results/timestamp_s_run1.json
+2026-03-22 18:28:01,614 INFO === [Run 1] Strategy: truncate | cache before: queries=5686953 hits=5352192 ===
+2026-03-22 18:28:02,390 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:09,945 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:10,207 INFO   [Run1 1/20] truncate/chain4_calc_bin_char_power: WRONG (steps=4/4, 8.59s, ttft=[1.153,0.887])
+2026-03-22 18:28:10,776 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:21,139 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:21,396 INFO   [Run1 2/20] truncate/chain4_reverse_len_mod_even: OK (steps=4/4, 11.19s, ttft=[0.652,0.873])
+2026-03-22 18:28:22,174 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:30,383 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:30,637 INFO   [Run1 3/20] truncate/chain4_wc_power_base_upper: OK (steps=4/4, 9.24s, ttft=[0.867,0.864])
+2026-03-22 18:28:31,416 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:37,081 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:38,633 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:40,223 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:41,766 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:28:47,411 INFO   [Run1 4/20] truncate/chain4_caesar_reverse_len_calc: OK (steps=4/4, 16.77s, ttft=[0.872,1.034,1.035,1.044,0.872])
+2026-03-22 18:28:48,185 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:01,612 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:01,869 INFO   [Run1 5/20] truncate/chain5_calc_gcd_bin_char_power: OK (steps=5/5, 14.46s, ttft=[0.867,0.868])
+2026-03-22 18:29:02,647 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:10,072 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:11,630 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:13,190 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:14,781 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:16,357 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:17,985 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:19,569 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:21,112 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:22,688 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:23,451 INFO   [Run1 6/20] truncate/chain4_temp_round_mod_abs: WRONG (steps=10/4, 21.58s, ttft=[0.874,1.036,1.041,1.050,1.032,1.050,1.100,1.055,1.033,1.034])
+2026-03-22 18:29:24,257 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:32,723 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:32,977 INFO   [Run1 7/20] truncate/chain5_reverse_upper_len_lcm_bin: OK (steps=5/5, 9.53s, ttft=[0.897,0.871])
+2026-03-22 18:29:33,759 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:49,491 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:29:49,751 INFO   [Run1 8/20] truncate/chain4_calc_floor_gcd_even: OK (steps=4/4, 16.77s, ttft=[0.880,0.865])
+2026-03-22 18:29:50,527 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:30:52,312 INFO Loaded 20 tasks, 50 tools
+2026-03-22 18:30:53,371 INFO === [Run 1] Strategy: truncate | cache before: queries=5821597 hits=5480320 ===
+2026-03-22 18:30:54,561 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:01,608 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:01,862 INFO   [Run1 1/20] truncate/chain4_calc_bin_char_power: WRONG (steps=4/4, 8.49s, ttft=[1.227,0.867])
+2026-03-22 18:31:02,643 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:13,189 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:13,444 INFO   [Run1 2/20] truncate/chain4_reverse_len_mod_even: OK (steps=4/4, 11.58s, ttft=[0.878,0.884])
+2026-03-22 18:31:14,233 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:22,387 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:22,652 INFO   [Run1 3/20] truncate/chain4_wc_power_base_upper: OK (steps=4/4, 9.21s, ttft=[0.880,0.921])
+2026-03-22 18:31:23,462 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:29,149 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:30,698 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:32,266 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:33,833 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:38,739 INFO   [Run1 4/20] truncate/chain4_caesar_reverse_len_calc: OK (steps=4/4, 16.09s, ttft=[0.908,1.032,1.037,1.036,0.868])
+2026-03-22 18:31:39,528 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:52,442 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:31:52,696 INFO   [Run1 5/20] truncate/chain5_calc_gcd_bin_char_power: OK (steps=5/5, 13.96s, ttft=[0.867,0.870])
+2026-03-22 18:31:53,484 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:01,023 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:02,652 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:04,256 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:05,602 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:07,248 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:08,820 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:10,391 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:11,968 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:13,560 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:14,350 INFO   [Run1 6/20] truncate/chain4_temp_round_mod_abs: WRONG (steps=10/4, 21.65s, ttft=[0.882,1.026,1.102,1.092,1.043,1.094,1.022,1.037,1.050,1.046])
+2026-03-22 18:32:15,139 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:23,613 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:23,865 INFO   [Run1 7/20] truncate/chain5_reverse_upper_len_lcm_bin: OK (steps=5/5, 9.52s, ttft=[0.879,0.882])
+2026-03-22 18:32:24,650 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:38,331 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:32:38,594 INFO   [Run1 8/20] truncate/chain4_calc_floor_gcd_even: OK (steps=4/4, 14.73s, ttft=[0.869,0.869])
+2026-03-22 18:32:39,377 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:02,648 INFO   [Run1 9/20] truncate/chain4_lower_replace_char_calc: WRONG (steps=0/4, 24.05s, ttft=[0.871])
+2026-03-22 18:33:03,460 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:12,042 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:12,311 INFO   [Run1 10/20] truncate/chain5_calc_mod_power_sumdig_even: WRONG (steps=5/5, 9.66s, ttft=[0.891,0.888])
+2026-03-22 18:33:13,111 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:25,102 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:25,363 INFO   [Run1 11/20] truncate/chain4_sort_first3_upper_len: OK (steps=4/4, 13.05s, ttft=[0.887,0.887])
+2026-03-22 18:33:26,148 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:36,496 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:36,757 INFO   [Run1 12/20] truncate/chain5_wc_gcd_power_bin_char: OK (steps=5/5, 11.39s, ttft=[0.890,0.865])
+2026-03-22 18:33:37,536 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:50,232 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:33:50,491 INFO   [Run1 13/20] truncate/chain4_unique_len_max_round: OK (steps=4/4, 13.73s, ttft=[0.941,0.868])
+2026-03-22 18:33:51,270 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:01,022 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:01,278 INFO   [Run1 14/20] truncate/chain4_calc_base_lower_len: OK (steps=4/4, 10.79s, ttft=[0.883,0.877])
+2026-03-22 18:34:02,059 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:07,205 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:08,752 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:10,296 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:11,827 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:13,427 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:22,995 INFO   [Run1 15/20] truncate/chain5_temp_calc_mod_power_sumdig: OK (steps=5/5, 21.72s, ttft=[0.876,1.031,1.024,1.018,1.019,0.874])
+2026-03-22 18:34:23,772 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:34,011 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:34,269 INFO   [Run1 16/20] truncate/chain4_repeat_len_floor_bin: OK (steps=4/4, 11.27s, ttft=[0.892,0.872])
+2026-03-22 18:34:35,063 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:45,381 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:45,637 INFO   [Run1 17/20] truncate/chain5_caesar_char_lcm_mod_even: OK (steps=5/5, 11.37s, ttft=[0.880,0.885])
+2026-03-22 18:34:46,429 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:57,776 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:34:58,042 INFO   [Run1 18/20] truncate/chain4_slice_reverse_upper_len: WRONG (steps=4/4, 12.40s, ttft=[0.881,0.869])
+2026-03-22 18:34:58,823 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:35:08,670 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:35:08,924 INFO   [Run1 19/20] truncate/chain5_calc_pct_round_floor_bin: OK (steps=5/5, 10.88s, ttft=[0.874,0.888])
+2026-03-22 18:35:09,702 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:35:18,710 INFO HTTP Request: POST http://localhost:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-22 18:35:18,967 INFO   [Run1 20/20] truncate/chain6_reverse_len_power_bin_char_calc: OK (steps=6/6, 10.04s, ttft=[0.867,0.881])
+2026-03-22 18:35:20,582 INFO [Run 1] truncate done: acc=75.0%, lat=13.28s, avg_ttft=0.936s, cache=258208/260720 (99.0%)
+2026-03-22 18:35:20,596 INFO Saved: /Users/zny/Documents/LLM/agent-explore/experiments/004_kv_cache_stability/results/truncate_run1.json
+2026-03-22 18:35:20,597 INFO Report saved: /Users/zny/Documents/LLM/agent-explore/experiments/004_kv_cache_stability/results/report.md
+
+# Experiment 004: KV Cache Stability — Results
+
+Generated: 2026-03-22 18:35:20
+
+50 tools (all shown), 20 tasks, sequential execution, temperature=0.0
+
+## Summary
+
+| Strategy    | Runs | Accuracy | Avg Latency | Avg TTFT | Cache Hit Rate | Avg Input Tok |
+|-------------|------|----------|-------------|----------|----------------|---------------|
+| truncate    |    1 |   75.0% |       13.28s |   0.936s |         99.0% |         13036 |
+
+## TTFT by Turn Number (Primary Result)
+
+Mean TTFT at each turn index, aggregated across all tasks.
+
+H1: stable TTFT should *decrease* after turn 1 (cross-task cache warming).
+H2: timestamp_s TTFT should stay *flat/high* (cache miss every turn).
+H3: truncate TTFT should *spike* at turns where truncation kicks in (turn 3+).
+
+| Turn # | truncate           |
+|--------|--------------------|
+|      1 | 0.901s (n=20)      |
+|      2 | 0.903s (n=19)      |
+|      3 | 1.054s (n= 3)      |
+|      4 | 1.049s (n= 3)      |
+|      5 | 0.977s (n= 3)      |
+|      6 | 0.984s (n= 2)      |
+|      7 | 1.022s (n= 1)      |
+|      8 | 1.037s (n= 1)      |
+|      9 | 1.050s (n= 1)      |
+|     10 | 1.046s (n= 1)      |
+
+## TTFT by Task Index (stable strategy, run 1)
+
+Shows whether turn-1 TTFT decreases as more tasks are processed (evidence of cross-task prefix cache warmup).
+
+
+## Turn-1 TTFT by Task Index (all strategies)
+
+Turn 1 is the first LLM call per task (system prompt + task prompt only).
+For stable, this TTFT should decrease as the system prompt prefix warms up.
+For timestamp_s, this TTFT should stay high (new timestamp each call).
+
+| Task | truncate    |
+|------|-------------|
+|    0 | 1.227s      |
+|    1 | 0.878s      |
+|    2 | 0.880s      |
+|    3 | 0.908s      |
+|    4 | 0.867s      |
+|    5 | 0.882s      |
+|    6 | 0.879s      |
+|    7 | 0.869s      |
+|    8 | 0.871s      |
+|    9 | 0.891s      |
+|   10 | 0.887s      |
+|   11 | 0.890s      |
+|   12 | 0.941s      |
+|   13 | 0.883s      |
+|   14 | 0.876s      |
+|   15 | 0.892s      |
+|   16 | 0.880s      |
+|   17 | 0.881s      |
+|   18 | 0.874s      |
+|   19 | 0.867s      |
+
+## Prefix Cache Metrics
+
+| Strategy    | Run | Queries (delta) | Hits (delta) | Hit Rate |
+|-------------|-----|-----------------|--------------|----------|
+| truncate    |   1 |         260,720 |      258,208 |   99.0% |
+
+## Per-Task Results (Run 1)
+
+| Task ID | Strategy    | Correct | Steps | Latency | Avg TTFT | Tokens |
+|---------|-------------|---------|-------|---------|----------|--------|
+| chain4_calc_bin_char_power          | truncate    | N       |  4/4 |    8.49s |   1.047s |   9871 |
+| chain4_reverse_len_mod_even         | truncate    | Y       |  4/4 |   11.58s |   0.881s |  10144 |
+| chain4_wc_power_base_upper          | truncate    | Y       |  4/4 |    9.21s |   0.901s |   9976 |
+| chain4_caesar_reverse_len_calc      | truncate    | Y       |  4/4 |   16.09s |   0.977s |  24302 |
+| chain5_calc_gcd_bin_char_power      | truncate    | Y       |  5/5 |   13.96s |   0.868s |  10450 |
+| chain4_temp_round_mod_abs           | truncate    | N       | 10/4 |   21.65s |   1.039s |  48193 |
+| chain5_reverse_upper_len_lcm_bin    | truncate    | Y       |  5/5 |    9.52s |   0.881s |  10022 |
+| chain4_calc_floor_gcd_even          | truncate    | Y       |  4/4 |   14.73s |   0.869s |  10474 |
+| chain4_lower_replace_char_calc      | truncate    | N       |  0/4 |   24.05s |   0.871s |   5654 |
+| chain5_calc_mod_power_sumdig_even   | truncate    | N       |  5/5 |    9.66s |   0.889s |  10046 |
+| chain4_sort_first3_upper_len        | truncate    | Y       |  4/4 |   13.05s |   0.887s |  10280 |
+| chain5_wc_gcd_power_bin_char        | truncate    | Y       |  5/5 |   11.39s |   0.878s |  10218 |
+| chain4_unique_len_max_round         | truncate    | Y       |  4/4 |   13.73s |   0.905s |  10367 |
+| chain4_calc_base_lower_len          | truncate    | Y       |  4/4 |   10.79s |   0.880s |  10121 |
+| chain5_temp_calc_mod_power_sumdig   | truncate    | Y       |  5/5 |   21.72s |   0.974s |  29267 |
+| chain4_repeat_len_floor_bin         | truncate    | Y       |  4/4 |   11.27s |   0.882s |  10143 |
+| chain5_caesar_char_lcm_mod_even     | truncate    | Y       |  5/5 |   11.37s |   0.882s |  10187 |
+| chain4_slice_reverse_upper_len      | truncate    | N       |  4/4 |   12.40s |   0.875s |  10237 |
+| chain5_calc_pct_round_floor_bin     | truncate    | Y       |  5/5 |   10.88s |   0.881s |  10157 |
+| chain6_reverse_len_power_bin_char_calc | truncate    | Y       |  6/6 |   10.04s |   0.874s |  10143 |

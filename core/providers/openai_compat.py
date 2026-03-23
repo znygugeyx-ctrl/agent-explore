@@ -166,11 +166,17 @@ class OpenAICompatProvider:
             if tools:
                 params["tools"] = tools
 
+            # Inject provider-specific params (e.g. logit_bias for vLLM)
+            if options.extra:
+                params.update(options.extra)
+
+            t_request = time.time()
             response = await client.chat.completions.create(**params)
 
             started = False
             async for chunk in response:
                 if not started:
+                    output.usage.ttft_seconds = time.time() - t_request
                     yield StartEvent(partial=output)
                     started = True
 
@@ -271,6 +277,21 @@ class OpenAICompatProvider:
             output.stop_reason = "error"
             output.error_message = str(e)
             yield ErrorEvent(reason="error", error=output)
+
+
+async def tokenize(base_url: str, model_id: str, text: str) -> list[int]:
+    """Call vLLM /tokenize endpoint to get token IDs for text."""
+    import urllib.request
+    # /tokenize is at root level, not under /v1
+    base = base_url.rstrip("/")
+    if base.endswith("/v1"):
+        base = base[:-3]
+    url = base + "/tokenize"
+    data = json.dumps({"model": model_id, "prompt": text}).encode()
+    req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        result = json.loads(resp.read().decode())
+    return result["tokens"]
 
 
 # Auto-register default instance

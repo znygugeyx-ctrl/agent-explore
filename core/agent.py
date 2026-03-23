@@ -104,13 +104,19 @@ async def run_agent(
 
         # Select tools for this turn
         tools = config.tools
+        turn_extra: dict[str, Any] | None = None
         if config.tool_selection_strategy:
             ctx_for_selection = Context(
                 system_prompt=config.system_prompt,
                 messages=turn_messages,
                 tools=[t for t in config.tools],
             )
-            tools = config.tool_selection_strategy(config.tools, ctx_for_selection)
+            result = config.tool_selection_strategy(config.tools, ctx_for_selection)
+            # Strategy can return tools or (tools, extra_params) tuple
+            if isinstance(result, tuple):
+                tools, turn_extra = result
+            else:
+                tools = result
 
         # Build LLM context
         context = Context(
@@ -123,8 +129,15 @@ async def run_agent(
         if config.before_llm_call:
             context = await _maybe_await(config.before_llm_call(context))
 
+        # Merge per-turn extra params into stream options
+        turn_options = config.stream_options
+        if turn_extra:
+            from dataclasses import replace
+            merged_extra = {**(turn_options.extra or {}), **turn_extra}
+            turn_options = replace(turn_options, extra=merged_extra)
+
         # LLM call
-        response = await complete(config.model, context, config.stream_options)
+        response = await complete(config.model, context, turn_options)
         messages.append(response)
 
         # Post-LLM hook

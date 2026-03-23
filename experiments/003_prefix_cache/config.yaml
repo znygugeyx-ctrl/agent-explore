@@ -1,0 +1,38 @@
+experiment: "003_prefix_cache"
+description: "50-tool scale prefix cache validation"
+
+model:
+  id: "Qwen/Qwen3-8B"
+  provider: "openai_compat"
+  base_url: "http://localhost:8000/v1"
+
+tools:
+  total: 50
+  filler: 10        # first 10 tools, targets for remove/mask
+  active: 40        # tools 11-50, used by tasks
+  n_to_target: 10   # number of irrelevant tools to remove/mask per task
+
+tasks:
+  file: "tasks.jsonl"
+  count: 20
+  steps_range: [4, 6]
+
+strategies:
+  - all             # baseline: all 50 tools, no masking
+  - remove          # delete first 10 irrelevant tools from prompt
+  - logit_mask      # all 50 tools, block 10 via logit_bias
+  - desc_mask       # all 50 tools, mark 10 as [UNAVAILABLE]
+
+execution:
+  runs: 3
+  max_turns: 15
+  max_tokens: 1024
+  temperature: 0.6
+
+metrics:
+  - accuracy
+  - latency
+  - input_tokens
+  - output_tokens
+  - ttft_per_turn
+  - prefix_cache_hit_rate

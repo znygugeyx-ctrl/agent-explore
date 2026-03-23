@@ -66,6 +66,7 @@ class Usage:
     cache_write: int = 0
     total_tokens: int = 0
     cost: Cost = field(default_factory=Cost)
+    ttft_seconds: float = 0.0
 
 
 # -- Messages --
@@ -150,6 +151,7 @@ class StreamOptions:
     temperature: float | None = None
     max_tokens: int | None = None
     reasoning: str | None = None
+    extra: dict[str, Any] | None = None  # Provider-specific params (e.g. logit_bias for vLLM)
 
 
 # -- Streaming events --

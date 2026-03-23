@@ -1,0 +1,26 @@
+experiment:
+  name: "001_mask_vs_remove"
+  description: "Test whether masking tools outperforms removing them"
+
+model:
+  id: "Qwen/Qwen3-8B"
+  name: "Qwen3-8B"
+  provider: "openai_compat"
+  base_url: "http://localhost:8000/v1"
+
+parameters:
+  temperature: 0.0
+  max_tokens: 512
+  max_turns: 5
+  runs_per_strategy: 3
+
+strategies:
+  - all        # baseline: all tools visible
+  - remove     # only relevant tools in list
+  - mask       # all tools, irrelevant marked [UNAVAILABLE]
+
+infrastructure:
+  server: "vLLM 0.18.0"
+  gpu: "NVIDIA L40S 48GB"
+  instance: "g6e.2xlarge"
+  flags: "--enable-prefix-caching --enable-auto-tool-choice --tool-call-parser hermes"

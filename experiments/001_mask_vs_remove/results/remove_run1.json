@@ -1,0 +1,392 @@
+{
+  "strategy": "remove",
+  "run_id": 1,
+  "accuracy": 0.95,
+  "avg_latency": 6.294472098350525,
+  "total_input_tokens": 16294,
+  "total_output_tokens": 4438,
+  "invalid_tool_calls": 0,
+  "outcomes": [
+    {
+      "task_id": "calc_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n62571",
+      "expected": "62571",
+      "tool_called": "calculator",
+      "tool_args": {
+        "expression": "137 * 456 + 99"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 9.4096200466156,
+      "input_tokens": 931,
+      "output_tokens": 348,
+      "total_tokens": 1279,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "calc_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n38.0",
+      "expected": "38",
+      "tool_called": "calculator",
+      "tool_args": {
+        "expression": "sqrt(144) + 13 * 2"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 7.720046758651733,
+      "input_tokens": 870,
+      "output_tokens": 288,
+      "total_tokens": 1158,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "calc_03",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n1000.0",
+      "expected": "1000",
+      "tool_called": "calculator",
+      "tool_args": {
+        "expression": "2 ** 10 - 24"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.943349123001099,
+      "input_tokens": 775,
+      "output_tokens": 203,
+      "total_tokens": 978,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "rev_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\ndlrow olleh",
+      "expected": "dlrow olleh",
+      "tool_called": "string_reverse",
+      "tool_args": {
+        "text": "hello world"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.869478940963745,
+      "input_tokens": 660,
+      "output_tokens": 160,
+      "total_tokens": 820,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "rev_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\nnohtyP",
+      "expected": "nohtyP",
+      "tool_called": "string_reverse",
+      "tool_args": {
+        "text": "Python"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.8809380531311035,
+      "input_tokens": 658,
+      "output_tokens": 161,
+      "total_tokens": 819,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "char_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n5",
+      "expected": "5",
+      "tool_called": "char_count",
+      "tool_args": {
+        "text": "abracadabra",
+        "char": "a"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 8.834920883178711,
+      "input_tokens": 925,
+      "output_tokens": 344,
+      "total_tokens": 1269,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "char_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n4",
+      "expected": "4",
+      "tool_called": "char_count",
+      "tool_args": {
+        "text": "llama llama red pajama",
+        "char": "l"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 6.516608953475952,
+      "input_tokens": 824,
+      "output_tokens": 237,
+      "total_tokens": 1061,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "char_03",
+      "strategy": "remove",
+      "correct": false,
+      "answer": "<think>\n</think>\n\n3",
+      "expected": "2",
+      "tool_called": "char_count",
+      "tool_args": {
+        "text": "experimentation",
+        "char": "e"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 10.191828966140747,
+      "input_tokens": 977,
+      "output_tokens": 402,
+      "total_tokens": 1379,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "base_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\nff",
+      "expected": "ff",
+      "tool_called": "base_convert",
+      "tool_args": {
+        "number": "255",
+        "from_base": 10,
+        "to_base": 16
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.273714065551758,
+      "input_tokens": 834,
+      "output_tokens": 176,
+      "total_tokens": 1010,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "base_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n10",
+      "expected": "10",
+      "tool_called": "base_convert",
+      "tool_args": {
+        "number": "1010",
+        "from_base": 2,
+        "to_base": 10
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.861845016479492,
+      "input_tokens": 818,
+      "output_tokens": 160,
+      "total_tokens": 978,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "base_03",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n101010",
+      "expected": "101010",
+      "tool_called": "base_convert",
+      "tool_args": {
+        "number": "42",
+        "from_base": 10,
+        "to_base": 2
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.027515172958374,
+      "input_tokens": 816,
+      "output_tokens": 164,
+      "total_tokens": 980,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "cipher_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\nkhoor",
+      "expected": "khoor",
+      "tool_called": "caesar_cipher",
+      "tool_args": {
+        "text": "hello",
+        "shift": 3,
+        "mode": "encode"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.917041301727295,
+      "input_tokens": 855,
+      "output_tokens": 205,
+      "total_tokens": 1060,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "cipher_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\nhello",
+      "expected": "hello",
+      "tool_called": "caesar_cipher",
+      "tool_args": {
+        "text": "khoor",
+        "shift": 3,
+        "mode": "decode"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 9.725398063659668,
+      "input_tokens": 1034,
+      "output_tokens": 378,
+      "total_tokens": 1412,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "temp_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n212.0",
+      "expected": "212",
+      "tool_called": "temperature_convert",
+      "tool_args": {
+        "value": 100,
+        "from_unit": "C",
+        "to_unit": "F"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.86182975769043,
+      "input_tokens": 791,
+      "output_tokens": 149,
+      "total_tokens": 940,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "temp_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n0.0",
+      "expected": "0",
+      "tool_called": "temperature_convert",
+      "tool_args": {
+        "value": 32,
+        "from_unit": "F",
+        "to_unit": "C"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.466609954833984,
+      "input_tokens": 825,
+      "output_tokens": 186,
+      "total_tokens": 1011,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "temp_03",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n273.15",
+      "expected": "273.15",
+      "tool_called": "temperature_convert",
+      "tool_args": {
+        "value": 0,
+        "from_unit": "C",
+        "to_unit": "K"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.292709112167358,
+      "input_tokens": 805,
+      "output_tokens": 169,
+      "total_tokens": 974,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "gcd_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n6",
+      "expected": "6",
+      "tool_called": "gcd",
+      "tool_args": {
+        "a": 48,
+        "b": 18
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.223351001739502,
+      "input_tokens": 683,
+      "output_tokens": 129,
+      "total_tokens": 812,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "gcd_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n25",
+      "expected": "25",
+      "tool_called": "gcd",
+      "tool_args": {
+        "a": 100,
+        "b": 75
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 4.235013008117676,
+      "input_tokens": 690,
+      "output_tokens": 133,
+      "total_tokens": 823,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "wc_01",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n9",
+      "expected": "9",
+      "tool_called": "word_count",
+      "tool_args": {
+        "text": "The quick brown fox jumps over the lazy dog"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 5.905413866043091,
+      "input_tokens": 742,
+      "output_tokens": 205,
+      "total_tokens": 947,
+      "num_turns": 2,
+      "error": null
+    },
+    {
+      "task_id": "wc_02",
+      "strategy": "remove",
+      "correct": true,
+      "answer": "<think>\n</think>\n\n10",
+      "expected": "10",
+      "tool_called": "word_count",
+      "tool_args": {
+        "text": "To be or not to be that is the question"
+      },
+      "invalid_tool_call": false,
+      "latency_seconds": 6.732209920883179,
+      "input_tokens": 781,
+      "output_tokens": 241,
+      "total_tokens": 1022,
+      "num_turns": 2,
+      "error": null
+    }
+  ]
+}

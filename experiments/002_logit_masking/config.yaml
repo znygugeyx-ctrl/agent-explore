@@ -1,0 +1,24 @@
+# Experiment 002: True Logit Masking + Multi-Turn Tasks
+
+model:
+  id: "Qwen/Qwen3-8B"
+  name: "Qwen3-8B"
+  provider: "openai_compat"
+  base_url: "http://localhost:8000/v1"
+
+experiment:
+  strategies: ["all", "remove", "logit_mask", "desc_mask"]
+  runs_per_strategy: 3
+  max_turns_per_task: 8    # multi-step tasks need more turns
+  max_tokens: 1024
+  temperature: 0.0
+
+logit_mask:
+  bias_value: -100          # effectively blocks token generation
+  collect_variants: true    # collect casing/spacing variants of tool names
+  # Token variants collected at runtime via vLLM /tokenize endpoint
+
+tasks:
+  file: "tasks.jsonl"
+  count: 20
+  steps_range: [2, 3]       # each task requires 2-3 tool calls

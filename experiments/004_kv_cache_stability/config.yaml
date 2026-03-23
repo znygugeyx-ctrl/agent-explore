@@ -1,0 +1,42 @@
+experiment: "004_kv_cache_stability"
+description: "Validate Manus KV cache stability claims via TTFT measurement"
+
+model:
+  id: "Qwen/Qwen3-8B"
+  provider: "openai_compat"
+  base_url: "http://localhost:8000/v1"
+
+tools:
+  source: "experiments/003_prefix_cache/tools.py"
+  total: 50
+  note: "All 50 tools shown to every strategy — tool selection is held constant"
+
+tasks:
+  file: "../003_prefix_cache/tasks.jsonl"
+  count: 20
+  steps_range: [4, 6]
+
+strategies:
+  - stable        # control: static system prompt, append-only messages
+  - timestamp_s   # before_llm_call: inject second-precision timestamp at prompt start
+  - truncate      # context_transform: keep only last 2 assistant-step groups
+
+execution:
+  runs: 1
+  sequential_tasks: true    # tasks run one-by-one; critical for cache warmup signal
+  sequential_strategies: true  # strategies also sequential for clean cache state
+  max_turns: 10
+  max_tokens: 1024
+  temperature: 0.0          # deterministic for reproducibility
+
+truncate:
+  keep_last_n_groups: 2     # keep last N assistant-step groups per turn
+
+metrics:
+  primary:
+    - ttft_by_turn_number   # mean TTFT at each turn index, per strategy
+  secondary:
+    - accuracy
+    - prefix_cache_hit_rate
+    - input_tokens_per_turn
+    - latency
