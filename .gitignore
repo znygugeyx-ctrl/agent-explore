@@ -35,6 +35,7 @@ htmlcov/
 .idea/
 .vscode/
 .DS_Store
+*.jsonl
 Thumbs.db
 
 pi-mono/
