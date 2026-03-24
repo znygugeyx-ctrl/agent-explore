@@ -12,6 +12,9 @@ core/           Minimal ReAct agent framework
   providers/    Provider implementations (Bedrock, OpenAI-compatible)
   agent.py      ReAct agent loop with hook points
   tools.py      Tool definition, validation, execution
+observer/       Standalone context observation service
+  server.py     Persistent HTTP server + SSE + JSONL storage
+  client.py     Agent-side thin client (fire-and-forget)
 bench/          Benchmark evaluation infrastructure
   types.py      Task, TaskResult, AttemptResult, BenchmarkResult
   runner.py     Parallel evaluation runner
@@ -55,12 +58,34 @@ from bench.verifier import ExactMatchVerifier
 "
 ```
 
+## Context Observer
+
+Real-time web UI for observing agent context windows. Runs as a separate persistent process.
+
+**Start the server (keep running in a dedicated terminal):**
+```bash
+python -m observer.server          # http://localhost:7777
+python -m observer.server --port 8888  # custom port
+```
+
+**All experiments MUST attach the observer.** Add this to every `run.py` after creating `AgentConfig`:
+```python
+from observer.client import attach_observer
+
+attach_observer(config, task_id=task.id, run_id="exp_NNN_name")
+```
+
+- `run_id`: identifies the experiment run (e.g. `"exp_005_guided_decoding"`). Auto-generated if omitted.
+- `task_id`: identifies the task within a run. Auto-generated if omitted.
+- Observer failures never affect the agent — all emits are fire-and-forget.
+- Data persists to `observer/data/` as JSONL files, browsable via the web UI after experiments finish.
+
 ## Experiment Convention
 
 Each experiment lives in `experiments/<NNN>_<name>/` with:
 - `hypothesis.md` - What we're testing and why
 - `config.yaml` - All parameters (model, tools, benchmark, etc.)
-- `run.py` - Self-contained entry point
+- `run.py` - Self-contained entry point (must attach observer, see above)
 - `results/` - Output data (JSON, JSONL)
 - Results must be reproducible with the same config
 

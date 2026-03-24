@@ -31,6 +31,25 @@ EXPERIMENT_DIR = Path(__file__).parent
 RESULTS_DIR = EXPERIMENT_DIR / "results"
 TASKS_FILE = EXPERIMENT_DIR / "tasks.jsonl"
 
+# Observer integration (optional — set via --observer-url)
+_OBSERVER_URL: str = ""
+
+
+def _emit_observer(event: dict) -> None:
+    """Fire-and-forget POST to observer server. Fails silently if server is down."""
+    if not _OBSERVER_URL:
+        return
+    try:
+        data = json.dumps(event, ensure_ascii=False).encode()
+        req = urllib.request.Request(
+            _OBSERVER_URL.rstrip("/") + "/api/events",
+            data=data,
+            headers={"Content-Type": "application/json"},
+        )
+        urllib.request.urlopen(req, timeout=2)
+    except Exception:
+        pass
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -307,9 +326,34 @@ async def run_task(
     )
     payload = _build_payload(task["prompt"], strategy, model_id)
 
+    # Emit context event to observer
+    obs_run_id = f"006_{model_id.split('/')[-1]}_run{run_id}"
+    obs_task_id = f"{task['id']}_{strategy}"
+    _emit_observer({
+        "ts": time.time(), "run_id": obs_run_id, "task_id": obs_task_id,
+        "type": "context", "turn": 1,
+        "data": {
+            "system_prompt": payload["messages"][0]["content"] if payload["messages"] else "",
+            "messages": payload["messages"],
+            "tools": [], "tool_count": 0,
+        },
+    })
+
     try:
         content, out_tokens, latency = await call_llm(base_url, model_id, payload)
         result.raw_response = content
+        # Emit response event to observer
+        _emit_observer({
+            "ts": time.time(), "run_id": obs_run_id, "task_id": obs_task_id,
+            "type": "response", "turn": 1,
+            "data": {
+                "content": [{"type": "text", "text": content}],
+                "usage": {"input": 0, "output": out_tokens, "cache_read": 0,
+                          "cache_write": 0, "ttft_seconds": 0, "cost_total": 0},
+                "stop_reason": "stop", "model": model_id,
+                "latency_s": latency, "parse_ok": None,
+            },
+        })
         result.latency_s = latency
         result.output_tokens = out_tokens
         result.has_think = "<think>" in content
@@ -538,12 +582,18 @@ async def main() -> None:
     parser.add_argument("--model-id", default="Qwen/Qwen3-8B")
     parser.add_argument("--strategies", nargs="+", default=STRATEGY_NAMES)
     parser.add_argument("--concurrency", type=int, default=4)
+    parser.add_argument("--results-dir", default=str(RESULTS_DIR))
+    parser.add_argument("--observer-url", default="", help="Observer server URL, e.g. http://localhost:7777")
     args = parser.parse_args()
 
+    global _OBSERVER_URL
+    _OBSERVER_URL = args.observer_url
+
+    results_dir = Path(args.results_dir)
     tasks = load_tasks()
     logger.info("加载 %d 个任务", len(tasks))
 
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    results_dir.mkdir(parents=True, exist_ok=True)
     all_results: list[TaskResult] = []
 
     for run_id in range(1, args.runs + 1):
@@ -555,13 +605,13 @@ async def main() -> None:
             )
             all_results.extend(results)
 
-            out_path = RESULTS_DIR / f"{strategy}_run{run_id}.json"
+            out_path = results_dir / f"{strategy}_run{run_id}.json"
             with open(out_path, "w", encoding="utf-8") as f:
                 json.dump([asdict(r) for r in results], f, indent=2, ensure_ascii=False)
             logger.info("已保存: %s", out_path)
 
     report = generate_report(all_results)
-    report_path = RESULTS_DIR / "report.md"
+    report_path = results_dir / "report.md"
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
     logger.info("报告已保存: %s", report_path)

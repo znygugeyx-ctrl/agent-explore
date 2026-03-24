@@ -1,0 +1,2381 @@
+[
+  {
+    "task_id": "A01",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Emma Rodriguez\",\n\"age\": 29,\n\"role\": \"engineer\",\n\"location\": \"Austin, TX\",\n\"skills\": [\"React\", \"Node.js\", \"TypeScript\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Emma Rodriguez",
+      "age": 29,
+      "role": "engineer",
+      "location": "Austin, TX",
+      "skills": [
+        "React",
+        "Node.js",
+        "TypeScript"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Emma Rodriguez",
+        "expected": "Emma Rodriguez",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 29,
+        "expected": 29,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Austin, TX",
+        "expected": "Austin, TX",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "React",
+          "Node.js",
+          "TypeScript"
+        ],
+        "expected": [
+          "React",
+          "Node.js",
+          "TypeScript"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.0366058349609375,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "A02",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"James Lee\",\n\"age\": 34,\n\"role\": \"designer\",\n\"location\": \"San Francisco\",\n\"skills\": [\"Figma\", \"Adobe XD\", \"user research\"],\n\"available\": false\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "James Lee",
+      "age": 34,
+      "role": "designer",
+      "location": "San Francisco",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "user research"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "James Lee",
+        "expected": "James Lee",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 34,
+        "expected": 34,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "designer",
+        "expected": "designer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "San Francisco",
+        "expected": "San Francisco",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Figma",
+          "Adobe XD",
+          "user research"
+        ],
+        "expected": [
+          "Figma",
+          "Adobe XD",
+          "user research"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.031315803527832,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "A03",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Priya Sharma\",\n\"age\": 31,\n\"role\": \"analyst\",\n\"location\": \"Chicago\",\n\"skills\": [\"SQL\", \"Tableau\", \"Python\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Priya Sharma",
+      "age": 31,
+      "role": "analyst",
+      "location": "Chicago",
+      "skills": [
+        "SQL",
+        "Tableau",
+        "Python"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Priya Sharma",
+        "expected": "Priya Sharma",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 31,
+        "expected": 31,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Chicago",
+        "expected": "Chicago",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "SQL",
+          "Tableau",
+          "Python"
+        ],
+        "expected": [
+          "SQL",
+          "Tableau",
+          "Python"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.776326894760132,
+    "output_tokens": 49,
+    "error": null
+  },
+  {
+    "task_id": "A04",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"David Chen\", \"age\": 42, \"role\": \"engineer\", \"location\": \"New York\", \"skills\": [\"system design\", \"team leadership\", \"Agile methodologies\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "David Chen",
+      "age": 42,
+      "role": "engineer",
+      "location": "New York",
+      "skills": [
+        "system design",
+        "team leadership",
+        "Agile methodologies"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "David Chen",
+        "expected": "David Chen",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 42,
+        "expected": 42,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "manager",
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "New York",
+        "expected": "New York",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "system design",
+          "team leadership",
+          "Agile methodologies"
+        ],
+        "expected": [
+          "system design",
+          "team leadership",
+          "Agile"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.819520950317383,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "A05",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Sofia Martinez\",\n\"age\": 27,\n\"role\": \"designer\",\n\"location\": \"Miami\",\n\"skills\": [\"Photoshop\", \"Illustrator\", \"motion graphics\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Sofia Martinez",
+      "age": 27,
+      "role": "designer",
+      "location": "Miami",
+      "skills": [
+        "Photoshop",
+        "Illustrator",
+        "motion graphics"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Sofia Martinez",
+        "expected": "Sofia Martinez",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 27,
+        "expected": 27,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "designer",
+        "expected": "designer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Miami",
+        "expected": "Miami",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Photoshop",
+          "Illustrator",
+          "motion graphics"
+        ],
+        "expected": [
+          "Photoshop",
+          "Illustrator",
+          "motion graphics"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.001289129257202,
+    "output_tokens": 52,
+    "error": null
+  },
+  {
+    "task_id": "A06",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Michael Thompson\",\n\"age\": 38,\n\"role\": \"analyst\",\n\"location\": \"London\",\n\"skills\": [\"data modeling\", \"requirements gathering\", \"stakeholder management\"],\n\"available\": false\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Michael Thompson",
+      "age": 38,
+      "role": "analyst",
+      "location": "London",
+      "skills": [
+        "data modeling",
+        "requirements gathering",
+        "stakeholder management"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Michael Thompson",
+        "expected": "Michael Thompson",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 38,
+        "expected": 38,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "London",
+        "expected": "London",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "data modeling",
+          "requirements gathering",
+          "stakeholder management"
+        ],
+        "expected": [
+          "data modeling",
+          "requirements gathering",
+          "stakeholder management"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.8496031761169434,
+    "output_tokens": 52,
+    "error": null
+  },
+  {
+    "task_id": "A07",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Aisha Johnson\", \"age\": 33, \"role\": \"engineer\", \"location\": \"Seattle\", \"skills\": [\"Go\", \"Kubernetes\", \"PostgreSQL\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Aisha Johnson",
+      "age": 33,
+      "role": "engineer",
+      "location": "Seattle",
+      "skills": [
+        "Go",
+        "Kubernetes",
+        "PostgreSQL"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Aisha Johnson",
+        "expected": "Aisha Johnson",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 33,
+        "expected": 33,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Seattle",
+        "expected": "Seattle",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Go",
+          "Kubernetes",
+          "PostgreSQL"
+        ],
+        "expected": [
+          "Go",
+          "Kubernetes",
+          "PostgreSQL"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.8501291275024414,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "A08",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Robert Kim\", \"age\": 45, \"role\": \"manager\", \"location\": \"Toronto\", \"skills\": [\"PMP-certified project delivery\", \"risk management\", \"budgeting\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Robert Kim",
+      "age": 45,
+      "role": "manager",
+      "location": "Toronto",
+      "skills": [
+        "PMP-certified project delivery",
+        "risk management",
+        "budgeting"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Robert Kim",
+        "expected": "Robert Kim",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 45,
+        "expected": 45,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "manager",
+        "expected": "manager",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Toronto",
+        "expected": "Toronto",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "PMP-certified project delivery",
+          "risk management",
+          "budgeting"
+        ],
+        "expected": [
+          "project delivery",
+          "risk management",
+          "budgeting"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.874997138977051,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "A09",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Clara Dubois\", \"age\": 26, \"role\": \"engineer\", \"location\": \"Paris\", \"skills\": [\"Vue.js\", \"CSS animations\", \"accessibility standards\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Clara Dubois",
+      "age": 26,
+      "role": "engineer",
+      "location": "Paris",
+      "skills": [
+        "Vue.js",
+        "CSS animations",
+        "accessibility standards"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Clara Dubois",
+        "expected": "Clara Dubois",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 26,
+        "expected": 26,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Paris",
+        "expected": "Paris",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Vue.js",
+          "CSS animations",
+          "accessibility standards"
+        ],
+        "expected": [
+          "Vue.js",
+          "CSS animations",
+          "accessibility standards"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.86665678024292,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "A10",
+    "group": "A",
+    "subgroup": "clear",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Hiroshi Tanaka\", \"age\": 36, \"role\": \"analyst\", \"location\": \"Tokyo\", \"skills\": [\"penetration testing\", \"threat modeling\", \"SIEM platforms\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Hiroshi Tanaka",
+      "age": 36,
+      "role": "analyst",
+      "location": "Tokyo",
+      "skills": [
+        "penetration testing",
+        "threat modeling",
+        "SIEM platforms"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Hiroshi Tanaka",
+        "expected": "Hiroshi Tanaka",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 36,
+        "expected": 36,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Tokyo",
+        "expected": "Tokyo",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "penetration testing",
+          "threat modeling",
+          "SIEM platforms"
+        ],
+        "expected": [
+          "penetration testing",
+          "threat modeling",
+          "SIEM"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.0170187950134277,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "B101",
+    "group": "B",
+    "subgroup": "role_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Alex Petrov\",\n\"age\": 31,\n\"role\": \"engineer\",\n\"location\": \"Berlin\",\n\"skills\": [\"CI/CD pipelines\", \"Docker containers\", \"cloud infrastructure\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Alex Petrov",
+      "age": 31,
+      "role": "engineer",
+      "location": "Berlin",
+      "skills": [
+        "CI/CD pipelines",
+        "Docker containers",
+        "cloud infrastructure"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Alex Petrov",
+        "expected": "Alex Petrov",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 31,
+        "expected": 31,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": [
+          "engineer",
+          "other"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Berlin",
+        "expected": "Berlin",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "CI/CD pipelines",
+          "Docker containers",
+          "cloud infrastructure"
+        ],
+        "expected": [
+          "CI/CD",
+          "Docker",
+          "AWS"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.775480031967163,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "B102",
+    "group": "B",
+    "subgroup": "role_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Nina Johansson\", \"age\": 29, \"role\": \"analyst\", \"location\": \"Stockholm\", \"skills\": [\"machine learning\", \"statistical analysis\", \"model deployment\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Nina Johansson",
+      "age": 29,
+      "role": "analyst",
+      "location": "Stockholm",
+      "skills": [
+        "machine learning",
+        "statistical analysis",
+        "model deployment"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Nina Johansson",
+        "expected": "Nina Johansson",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 29,
+        "expected": 29,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": [
+          "analyst",
+          "engineer"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Stockholm",
+        "expected": "Stockholm",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "machine learning",
+          "statistical analysis",
+          "model deployment"
+        ],
+        "expected": [
+          "machine learning",
+          "statistical analysis",
+          "model deployment"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.1142420768737793,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "B103",
+    "group": "B",
+    "subgroup": "role_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Carlos Mendes\", \"age\": 44, \"role\": \"analyst\", \"location\": \"São Paulo\", \"skills\": [\"digital transformation\", \"enterprise architecture\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Carlos Mendes",
+      "age": 44,
+      "role": "analyst",
+      "location": "São Paulo",
+      "skills": [
+        "digital transformation",
+        "enterprise architecture"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Carlos Mendes",
+        "expected": "Carlos Mendes",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 44,
+        "expected": 44,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": [
+          "other",
+          "manager"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "São Paulo",
+        "expected": "São Paulo",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "digital transformation",
+          "enterprise architecture"
+        ],
+        "expected": [
+          "digital transformation",
+          "enterprise architecture",
+          "consulting"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.7363362312316895,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "B104",
+    "group": "B",
+    "subgroup": "role_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Yuki Nakamura\", \"age\": 37, \"role\": \"manager\", \"location\": \"Singapore\", \"skills\": [\"product management\", \"roadmap planning\", \"team coordination\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Yuki Nakamura",
+      "age": 37,
+      "role": "manager",
+      "location": "Singapore",
+      "skills": [
+        "product management",
+        "roadmap planning",
+        "team coordination"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Yuki Nakamura",
+        "expected": "Yuki Nakamura",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 37,
+        "expected": 37,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "manager",
+        "expected": [
+          "manager"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Singapore",
+        "expected": "Singapore",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "product management",
+          "roadmap planning",
+          "team coordination"
+        ],
+        "expected": [
+          "product roadmap",
+          "team coordination",
+          "user research"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.8524153232574463,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "B201",
+    "group": "B",
+    "subgroup": "available_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Marco Rossi\", \"age\": 35, \"role\": \"engineer\", \"location\": \"Rome\", \"skills\": [\"Java\", \"Spring Boot\", \"microservices\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Marco Rossi",
+      "age": 35,
+      "role": "engineer",
+      "location": "Rome",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "microservices"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Marco Rossi",
+        "expected": "Marco Rossi",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 35,
+        "expected": 35,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Rome",
+        "expected": "Rome",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Java",
+          "Spring Boot",
+          "microservices"
+        ],
+        "expected": [
+          "Java",
+          "Spring Boot",
+          "microservices"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": true,
+        "correct": false,
+        "judge_verdict": "unreasonable",
+        "judge_reason": "不合理。原文提到 Marco Rossi 是 \"passively looking for new opportunities while staying in his current role\"，表明他目前仍在职且在寻找机会，因此应视为 available。"
+      }
+    },
+    "latency_s": 2.9997658729553223,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "B202",
+    "group": "B",
+    "subgroup": "available_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Hannah Müller\", \"age\": 32, \"role\": \"designer\", \"location\": \"Hamburg\", \"skills\": [\"user research\", \"wireframing\", \"design systems\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Hannah Müller",
+      "age": 32,
+      "role": "designer",
+      "location": "Hamburg",
+      "skills": [
+        "user research",
+        "wireframing",
+        "design systems"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Hannah Müller",
+        "expected": "Hannah Müller",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 32,
+        "expected": 32,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "designer",
+        "expected": "designer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Hamburg",
+        "expected": "Hamburg",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "user research",
+          "wireframing",
+          "design systems"
+        ],
+        "expected": [
+          "user research",
+          "wireframing",
+          "design systems"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": true,
+        "correct": false,
+        "judge_verdict": "unreasonable",
+        "judge_reason": "不合理。原文提到 Hannah Müller \"is not actively job hunting but would consider the right opportunity\"，表明她目前不在积极找工作，但不排除合适的职位机会，因此 `available` 应为 true。"
+      }
+    },
+    "latency_s": 3.002851963043213,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "B203",
+    "group": "B",
+    "subgroup": "available_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Omar Al-Hassan\", \"age\": 40, \"role\": \"analyst\", \"location\": \"Dubai\", \"skills\": [\"financial modeling\", \"Excel automation\", \"Power BI\"], \"available\": false}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Omar Al-Hassan",
+      "age": 40,
+      "role": "analyst",
+      "location": "Dubai",
+      "skills": [
+        "financial modeling",
+        "Excel automation",
+        "Power BI"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Omar Al-Hassan",
+        "expected": "Omar Al-Hassan",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 40,
+        "expected": 40,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Dubai",
+        "expected": "Dubai",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "financial modeling",
+          "Excel automation",
+          "Power BI"
+        ],
+        "expected": [
+          "financial modeling",
+          "Excel automation",
+          "Power BI"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "reasonable",
+        "judge_reason": "合理。原文明确提到Omar目前不在寻找工作，因此`available`字段设为false是正确的。"
+      }
+    },
+    "latency_s": 2.903886079788208,
+    "output_tokens": 53,
+    "error": null
+  },
+  {
+    "task_id": "B204",
+    "group": "B",
+    "subgroup": "available_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Wei Zhang\", \"age\": 33, \"role\": \"engineer\", \"location\": \"Beijing\", \"skills\": [\"distributed systems\", \"Go\", \"team mentoring\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Wei Zhang",
+      "age": 33,
+      "role": "engineer",
+      "location": "Beijing",
+      "skills": [
+        "distributed systems",
+        "Go",
+        "team mentoring"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Wei Zhang",
+        "expected": "Wei Zhang",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 33,
+        "expected": 33,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Beijing",
+        "expected": "Beijing",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "distributed systems",
+          "Go",
+          "team mentoring"
+        ],
+        "expected": [
+          "distributed systems",
+          "Go",
+          "team mentoring"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "reasonable",
+        "judge_reason": "合理。原文提到她“is quietly exploring her options in the market”，表明她目前在市场中寻找其他机会，因此可以合理推断她目前是可获得的（available）。"
+      }
+    },
+    "latency_s": 2.7960901260375977,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "B301",
+    "group": "B",
+    "subgroup": "age_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Lucas Bennett\",\n\"age\": 30,\n\"role\": \"analyst\",\n\"location\": \"Dublin\",\n\"skills\": [\"cloud-native development\", \"Terraform\", \"distributed databases\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Lucas Bennett",
+      "age": 30,
+      "role": "analyst",
+      "location": "Dublin",
+      "skills": [
+        "cloud-native development",
+        "Terraform",
+        "distributed databases"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Lucas Bennett",
+        "expected": "Lucas Bennett",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 30,
+        "expected": "range [30,34]",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "engineer",
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Dublin",
+        "expected": "Dublin",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "cloud-native development",
+          "Terraform",
+          "distributed databases"
+        ],
+        "expected": [
+          "cloud-native development",
+          "Terraform",
+          "distributed databases"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.1912801265716553,
+    "output_tokens": 56,
+    "error": null
+  },
+  {
+    "task_id": "B302",
+    "group": "B",
+    "subgroup": "age_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Zoe Williams\",\n\"age\": 22,\n\"role\": \"engineer\",\n\"location\": \"Vancouver\",\n\"skills\": [\"Python\", \"JavaScript\", \"Git\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Zoe Williams",
+      "age": 22,
+      "role": "engineer",
+      "location": "Vancouver",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Git"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Zoe Williams",
+        "expected": "Zoe Williams",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 22,
+        "expected": "range [21,25]",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Vancouver",
+        "expected": "Vancouver",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Python",
+          "JavaScript",
+          "Git"
+        ],
+        "expected": [
+          "Python",
+          "JavaScript",
+          "Git"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.9354047775268555,
+    "output_tokens": 49,
+    "error": null
+  },
+  {
+    "task_id": "B303",
+    "group": "B",
+    "subgroup": "age_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Frank Novak\",\n\"age\": 55,\n\"role\": \"engineer\",\n\"location\": \"Prague\",\n\"skills\": [\"enterprise Java development\", \"system integration\", \"mentoring junior developers\"],\n\"available\": false\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Frank Novak",
+      "age": 55,
+      "role": "engineer",
+      "location": "Prague",
+      "skills": [
+        "enterprise Java development",
+        "system integration",
+        "mentoring junior developers"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Frank Novak",
+        "expected": "Frank Novak",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 55,
+        "expected": "range [40,60]",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Prague",
+        "expected": "Prague",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "enterprise Java development",
+          "system integration",
+          "mentoring junior developers"
+        ],
+        "expected": [
+          "enterprise Java",
+          "system integration",
+          "mentoring"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.7986440658569336,
+    "output_tokens": 55,
+    "error": null
+  },
+  {
+    "task_id": "B304",
+    "group": "B",
+    "subgroup": "age_ambiguity",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Ingrid Larsson\", \"age\": 35, \"role\": \"analyst\", \"location\": \"Copenhagen\", \"skills\": [\"R\", \"statistical modeling\", \"business intelligence\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Ingrid Larsson",
+      "age": 35,
+      "role": "analyst",
+      "location": "Copenhagen",
+      "skills": [
+        "R",
+        "statistical modeling",
+        "business intelligence"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Ingrid Larsson",
+        "expected": "Ingrid Larsson",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 35,
+        "expected": "range [30,45]",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Copenhagen",
+        "expected": "Copenhagen",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "R",
+          "statistical modeling",
+          "business intelligence"
+        ],
+        "expected": [
+          "R",
+          "statistical modeling",
+          "business intelligence"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.2832858562469482,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "C101",
+    "group": "C",
+    "subgroup": "missing_age",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Jordan Foster\", \"age\": 5, \"role\": \"designer\", \"location\": \"Portland\", \"skills\": [\"Figma\", \"user testing\", \"design sprints\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Jordan Foster",
+      "age": 5,
+      "role": "designer",
+      "location": "Portland",
+      "skills": [
+        "Figma",
+        "user testing",
+        "design sprints"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Jordan Foster",
+        "expected": "Jordan Foster",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 5,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文提到的是Jordan Foster有5年专业经验，而不是他的年龄。"
+      },
+      "role": {
+        "extracted": "designer",
+        "expected": "designer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Portland",
+        "expected": "Portland",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Figma",
+          "user testing",
+          "design sprints"
+        ],
+        "expected": [
+          "Figma",
+          "user testing",
+          "design sprints"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.025050163269043,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "C102",
+    "group": "C",
+    "subgroup": "missing_age",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Patricia Osei\",\n\"age\": 15,\n\"role\": \"analyst\",\n\"location\": \"Accra, Ghana\",\n\"skills\": [\"Python\", \"Power BI\", \"advanced SQL\"],\n\"available\": false\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Patricia Osei",
+      "age": 15,
+      "role": "analyst",
+      "location": "Accra, Ghana",
+      "skills": [
+        "Python",
+        "Power BI",
+        "advanced SQL"
+      ],
+      "available": false
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Patricia Osei",
+        "expected": "Patricia Osei",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 15,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文中提到的“15 years”是指Patricia Osei在数据分析师行业的经验，而不是她的年龄。"
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "analyst",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Accra, Ghana",
+        "expected": "Accra, Ghana",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Python",
+          "Power BI",
+          "advanced SQL"
+        ],
+        "expected": [
+          "Python",
+          "Power BI",
+          "SQL"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": false,
+        "expected": false,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.0227770805358887,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "C103",
+    "group": "C",
+    "subgroup": "missing_age",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Kenji Watanabe\", \"age\": 25, \"role\": \"engineer\", \"location\": \"Osaka\", \"skills\": [\"React\", \"Redux\", \"REST APIs\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Kenji Watanabe",
+      "age": 25,
+      "role": "engineer",
+      "location": "Osaka",
+      "skills": [
+        "React",
+        "Redux",
+        "REST APIs"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Kenji Watanabe",
+        "expected": "Kenji Watanabe",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 25,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文中没有提到 Kenji Watanabe 的年龄信息。"
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Osaka",
+        "expected": "Osaka",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "React",
+          "Redux",
+          "REST APIs"
+        ],
+        "expected": [
+          "React",
+          "Redux",
+          "REST APIs"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 3.0178089141845703,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "C104",
+    "group": "C",
+    "subgroup": "missing_age",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Aaliyah Brooks\",\n\"age\": 25,\n\"role\": \"engineer\",\n\"location\": \"Atlanta\",\n\"skills\": [\"JavaScript\", \"HTML/CSS\", \"Python\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Aaliyah Brooks",
+      "age": 25,
+      "role": "engineer",
+      "location": "Atlanta",
+      "skills": [
+        "JavaScript",
+        "HTML/CSS",
+        "Python"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Aaliyah Brooks",
+        "expected": "Aaliyah Brooks",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 25,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文中没有提到 Aaliyah Brooks 的年龄信息。"
+      },
+      "role": {
+        "extracted": "engineer",
+        "expected": "engineer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Atlanta",
+        "expected": "Atlanta",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "JavaScript",
+          "HTML/CSS",
+          "Python"
+        ],
+        "expected": [
+          "JavaScript",
+          "HTML/CSS",
+          "Python"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": true,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      }
+    },
+    "latency_s": 2.883197069168091,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "C201",
+    "group": "C",
+    "subgroup": "missing_available",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Tobias Richter\",\n\"age\": 41,\n\"role\": \"analyst\",\n\"location\": \"Munich\",\n\"skills\": [\"AWS\", \"enterprise integration patterns\", \"DevOps practices\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Tobias Richter",
+      "age": 41,
+      "role": "analyst",
+      "location": "Munich",
+      "skills": [
+        "AWS",
+        "enterprise integration patterns",
+        "DevOps practices"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Tobias Richter",
+        "expected": "Tobias Richter",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 41,
+        "expected": 41,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "engineer",
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Munich",
+        "expected": "Munich",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "AWS",
+          "enterprise integration patterns",
+          "DevOps practices"
+        ],
+        "expected": [
+          "AWS",
+          "enterprise integration",
+          "DevOps"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文未提及任何与“available”字段相关的信息，无法确定其值。"
+      }
+    },
+    "latency_s": 3.123034954071045,
+    "output_tokens": 58,
+    "error": null
+  },
+  {
+    "task_id": "C202",
+    "group": "C",
+    "subgroup": "missing_available",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\n\n\n\"name\": \"Valentina Cruz\",\n\"age\": 28,\n\"role\": \"designer\",\n\"location\": \"Buenos Aires\",\n\"skills\": [\"Adobe Creative Suite\", \"motion design\", \"brand identity work\"],\n\"available\": true\n}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Valentina Cruz",
+      "age": 28,
+      "role": "designer",
+      "location": "Buenos Aires",
+      "skills": [
+        "Adobe Creative Suite",
+        "motion design",
+        "brand identity work"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Valentina Cruz",
+        "expected": "Valentina Cruz",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 28,
+        "expected": 28,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "designer",
+        "expected": "designer",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Buenos Aires",
+        "expected": "Buenos Aires",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Adobe Creative Suite",
+          "motion design",
+          "brand identity work"
+        ],
+        "expected": [
+          "Adobe Creative Suite",
+          "motion design",
+          "brand identity"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文未提及 Valentina Cruz 是否可用或是否在寻找工作机会，因此无法确定 `available` 字段的值。"
+      }
+    },
+    "latency_s": 3.116546869277954,
+    "output_tokens": 56,
+    "error": null
+  },
+  {
+    "task_id": "C203",
+    "group": "C",
+    "subgroup": "missing_available",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Ethan Park\", \"age\": 34, \"role\": \"manager\", \"location\": \"Seoul\", \"skills\": [\"Python\", \"machine learning pipelines\", \"data visualization\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Ethan Park",
+      "age": 34,
+      "role": "manager",
+      "location": "Seoul",
+      "skills": [
+        "Python",
+        "machine learning pipelines",
+        "data visualization"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Ethan Park",
+        "expected": "Ethan Park",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 34,
+        "expected": 34,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "manager",
+        "expected": "analyst",
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Seoul",
+        "expected": "Seoul",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "Python",
+          "machine learning pipelines",
+          "data visualization"
+        ],
+        "expected": [
+          "Python",
+          "machine learning pipelines",
+          "data visualization"
+        ],
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文未提及任何与“available”字段相关的信息，无法确定其值为true。"
+      }
+    },
+    "latency_s": 3.095505952835083,
+    "output_tokens": 52,
+    "error": null
+  },
+  {
+    "task_id": "C204",
+    "group": "C",
+    "subgroup": "missing_available",
+    "strategy": "guided",
+    "run_id": 2,
+    "raw_response": "{\"name\": \"Mei Chen\", \"age\": 30, \"role\": \"analyst\", \"location\": \"Shenzhen\", \"skills\": [\"data analysis\", \"data visualization\", \"SQL\"], \"available\": true}",
+    "has_think": false,
+    "parse_success": true,
+    "schema_valid": true,
+    "schema_errors": [],
+    "parsed": {
+      "name": "Mei Chen",
+      "age": 30,
+      "role": "analyst",
+      "location": "Shenzhen",
+      "skills": [
+        "data analysis",
+        "data visualization",
+        "SQL"
+      ],
+      "available": true
+    },
+    "field_results": {
+      "name": {
+        "extracted": "Mei Chen",
+        "expected": "Mei Chen",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "age": {
+        "extracted": 30,
+        "expected": 30,
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "role": {
+        "extracted": "analyst",
+        "expected": "manager",
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "location": {
+        "extracted": "Shenzhen",
+        "expected": "Shenzhen",
+        "correct": true,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "skills": {
+        "extracted": [
+          "data analysis",
+          "data visualization",
+          "SQL"
+        ],
+        "expected": [
+          "product strategy",
+          "user acquisition",
+          "cross-functional alignment"
+        ],
+        "correct": false,
+        "judge_verdict": "",
+        "judge_reason": ""
+      },
+      "available": {
+        "extracted": true,
+        "expected": null,
+        "correct": false,
+        "judge_verdict": "hallucination",
+        "judge_reason": "幻觉。原文中没有提到任何与“available”字段相关的信息，无法确定其值为true。"
+      }
+    },
+    "latency_s": 3.0808520317077637,
+    "output_tokens": 54,
+    "error": null
+  }
+]
