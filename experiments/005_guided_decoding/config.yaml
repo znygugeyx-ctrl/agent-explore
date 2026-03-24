@@ -1,0 +1,64 @@
+experiment: 005_guided_decoding
+description: "Guided decoding structural guarantee vs semantic quality"
+
+model:
+  id: "Qwen/Qwen3-8B"
+  provider: openai_compat
+  base_url: "http://localhost:8001/v1"   # SSH tunnel: remote:8000 → local:8001
+
+# Shared output schema
+schema:
+  type: object
+  required: [name, age, role, location, skills, available]
+  properties:
+    name:      {type: string}
+    age:       {type: integer}
+    role:      {type: string, enum: [engineer, designer, manager, analyst, other]}
+    location:  {type: string}
+    skills:    {type: array, items: {type: string}, maxItems: 3}
+    available: {type: boolean}
+
+strategies:
+  free:
+    # No schema in prompt, no guided decoding
+    # Establishes baseline failure rate
+    system_prompt: "You are a helpful assistant."
+    response_format: null
+
+  prompt:
+    # Schema in system prompt, no guided decoding
+    system_prompt: |
+      Extract information from the text and output ONLY valid JSON matching this schema.
+      No markdown, no explanation, just the JSON object:
+      {"type":"object","required":["name","age","role","location","skills","available"],
+       "properties":{"name":{"type":"string"},"age":{"type":"integer"},
+       "role":{"type":"string","enum":["engineer","designer","manager","analyst","other"]},
+       "location":{"type":"string"},
+       "skills":{"type":"array","items":{"type":"string"},"maxItems":3},
+       "available":{"type":"boolean"}}}
+    response_format: null
+
+  guided:
+    # No schema in prompt, guided decoding enforces schema
+    system_prompt: "Extract structured information from the text."
+    response_format:
+      type: json_schema
+      json_schema:
+        name: person_profile
+        strict: true
+        # schema injected from top-level schema field at runtime
+
+# User message suffix to disable Qwen3 thinking mode
+no_think_suffix: " /no_think"
+
+generation:
+  max_tokens: 512
+  temperature: 0.0
+
+evaluation:
+  runs: 3
+  tasks_file: tasks.jsonl
+  verifier:
+    group_A: exact_match      # all 6 fields, strict
+    group_B: llm_judge        # per-field, judge gets (source_text, field, extracted_value)
+    group_C: hallucination    # judge: did model invent a value for a field not in source?
