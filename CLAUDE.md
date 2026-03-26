@@ -28,6 +28,7 @@ configs/        Shared configuration files
 ## Security Rules
 
 - NEVER hardcode API keys, credentials, or secrets in code
+- RED LINE: NEVER commit any AWS-related keys, access keys, secret keys, session tokens, or credentials in any code, config, script, example, log, or repository file
 - All credentials read from environment variables (boto3 default chain)
 - AWS Bedrock: uses AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION
 - vLLM/OpenAI-compat: pass base_url and api_key via config, not code
@@ -88,6 +89,19 @@ Each experiment lives in `experiments/<NNN>_<name>/` with:
 - `run.py` - Self-contained entry point (must attach observer, see above)
 - `results/` - Output data (JSON, JSONL)
 - Results must be reproducible with the same config
+
+### Phased Execution
+
+Run experiments in two phases:
+1. **Pilot run**: Execute a small subset first (e.g. 5-10 tasks, 1 strategy). Verify tools work, API quotas hold, data format is correct, and results are plausible. Present pilot summary to user before proceeding.
+2. **Full run**: Only after pilot is validated, plan and execute the full-scale experiment.
+
+### Resumability
+
+All `run.py` must support断点恢复 (resume from interruption):
+- On start, load existing result file and identify completed task IDs
+- Only run missing tasks, then merge new outcomes with existing ones preserving task order
+- This handles API failures, quota exhaustion, and long-running experiments gracefully
 
 ## Code Style
 

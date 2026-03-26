@@ -8,6 +8,10 @@ dependencies = [
     "openai",
     "jsonschema",
     "pyyaml",
+    "aiohttp",
+    "beautifulsoup4",
+    "markitdown",
+    "playwright",
 ]
 
 [project.optional-dependencies]
@@ -16,6 +20,8 @@ dev = [
     "pytest-asyncio",
     "ruff",
     "mypy",
+    "datasets",
+    "huggingface_hub",
 ]
 
 [tool.setuptools.packages.find]

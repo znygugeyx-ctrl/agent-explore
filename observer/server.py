@@ -375,6 +375,7 @@ const S = {
   taskTokens: {},        // "run_id/task_file" → last input token count
   autoScroll: true,
   ctxWin: 128000,
+  prevMsgCount: 0,       // messages count after last rendered turn (for delta display)
 };
 
 // ---- SSE ----
@@ -488,6 +489,7 @@ function renderRunTasks(run_id) {
 // ---- Task selection ----
 async function selectTask(run_id, task_file, task_id) {
   S.sel = { run_id, task_file, task_id };
+  S.prevMsgCount = 0;
   renderRunTasks(run_id);
 
   document.getElementById('turns').innerHTML = '<div class="waiting">Loading...</div>';
@@ -512,6 +514,7 @@ function renderHistory(events) {
     if (!turns[t]) turns[t] = [];
     turns[t].push(ev);
   }
+  S.prevMsgCount = 0;
   for (const n of Object.keys(turns).map(Number).sort((a,b)=>a-b)) {
     renderTurnFromEvents(n, turns[n]);
   }
@@ -526,7 +529,8 @@ function renderTurnFromEvents(n, events) {
   const resp = events.find(e => e.type === 'response');
   const tools = events.filter(e => e.type === 'tool_result');
   if (!ctx) return;
-  addTurnCard(n, ctx.data, resp ? resp.data : null, tools.map(e => e.data));
+  const newMsgs = ctx.data.messages.slice(S.prevMsgCount);
+  addTurnCard(n, ctx.data, resp ? resp.data : null, tools.map(e => e.data), newMsgs);
 }
 
 // ---- Live event application ----
@@ -535,7 +539,8 @@ function applyEvent(ev) {
   const cardId = 'tc-' + n;
   if (ev.type === 'context') {
     if (!document.getElementById(cardId)) {
-      addTurnCard(n, ev.data, null, []);
+      const newMsgs = ev.data.messages.slice(S.prevMsgCount);
+      addTurnCard(n, ev.data, null, [], newMsgs);
     }
   } else if (ev.type === 'response') {
     if (!document.getElementById(cardId)) return;
@@ -548,27 +553,31 @@ function applyEvent(ev) {
 }
 
 // ---- Turn rendering ----
-function addTurnCard(n, ctx, resp, toolResults) {
+function addTurnCard(n, ctx, resp, toolResults, newMsgs) {
   const container = document.getElementById('turns');
   // Remove empty state
   const empty = document.getElementById('empty');
   if (empty) empty.remove();
 
+  const msgsToShow = (newMsgs !== undefined) ? newMsgs : ctx.messages;
+  S.prevMsgCount = ctx.messages.length;  // update for next turn's delta
+  const isFirst = n === 1;
+
   const card = document.createElement('div');
   card.className = 'turn-card';
   card.id = 'tc-' + n;
-  const isFirst = n === 1;
 
   card.innerHTML = `
     <div class="turn-hdr">
       <span class="t-num">Turn ${n}</span>
-      <span class="st">msgs: <b>${ctx.messages.length}</b></span>
+      <span class="st">+msgs: <b>${msgsToShow.length}</b></span>
+      <span class="st">total: <b>${ctx.messages.length}</b></span>
       <span class="st">tools: <b>${ctx.tool_count}</b></span>
       <div class="t-stats" id="ts-${n}"><span style="color:#555">—</span></div>
     </div>
-    ${secSys(ctx.system_prompt, isFirst)}
-    ${secMsgs(ctx.messages)}
-    ${secTools(ctx.tools)}
+    ${isFirst ? secSys(ctx.system_prompt, true) : ''}
+    ${secMsgs(msgsToShow)}
+    ${isFirst ? secTools(ctx.tools) : ''}
     <div id="tr-${n}">${resp ? '' : '<div class="waiting">Waiting for model…</div>'}</div>`;
 
   container.appendChild(card);

@@ -1,0 +1,38 @@
+experiment:
+  name: "007_content_format"
+  description: "Web page content format impact on DeepSearch agent"
+
+model:
+  id: "us.anthropic.claude-sonnet-4-20250514"
+  name: "Claude Sonnet"
+  provider: "bedrock"
+
+parameters:
+  temperature: 0.0
+  max_tokens: 4096
+  max_turns: 15
+  runs_per_strategy: 2
+
+strategies:
+  - raw_html
+  - markdown
+  - text_only
+  - pruned_html
+
+tools:
+  web_search:
+    backend: "searxng"
+    env: "SEARXNG_BASE_URL"
+  fetch_page:
+    backend: "agentcore_browser"
+    env: "BROWSER_ID, AWS_REGION"
+
+tasks:
+  file: "tasks.jsonl"
+  source: "GAIA validation (2023_all)"
+  selection: "3 per level (L1, L2, L3) = 9 tasks"
+  filter: "no file attachments"
+
+verification:
+  method: "gaia"
+  judge_model: "us.anthropic.claude-sonnet-4-20250514"

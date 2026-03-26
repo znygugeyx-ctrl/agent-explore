@@ -139,6 +139,18 @@ def _map_stop_reason(reason: str | None) -> str:
 class BedrockProvider:
     """AWS Bedrock provider using converse_stream API."""
 
+    def __init__(self) -> None:
+        self._client = None
+        self._lock = __import__("threading").Lock()
+
+    def _get_client(self):
+        """Lazily create and reuse a single Bedrock client (thread-safe)."""
+        if self._client is None:
+            with self._lock:
+                if self._client is None:
+                    self._client = boto3.client("bedrock-runtime")
+        return self._client
+
     @property
     def name(self) -> str:
         return "bedrock"
@@ -294,7 +306,7 @@ class BedrockProvider:
 
     def _call_converse_stream(self, params: dict[str, Any]) -> list[dict[str, Any]]:
         """Synchronous call to Bedrock converse_stream. Collects stream events."""
-        client = boto3.client("bedrock-runtime")
+        client = self._get_client()
         response = client.converse_stream(**params)
         # Collect all events from the stream
         events = []

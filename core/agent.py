@@ -80,6 +80,49 @@ async def _maybe_await(result: Any) -> Any:
     return result
 
 
+async def _llm_call_with_retry(
+    model: Model,
+    context: Context,
+    options: StreamOptions,
+    max_retries: int = 3,
+) -> AssistantMessage:
+    """Call LLM with retry on provider errors (throttling, transient failures).
+
+    Non-retryable errors (e.g. input too long) return immediately.
+    Throttling errors use longer backoff (10s, 30s, 60s).
+    """
+    import asyncio
+
+    for attempt in range(1, max_retries + 1):
+        response = await complete(model, context, options)
+        if response.error_message is None:
+            return response
+
+        err = response.error_message
+        err_lower = err.lower()
+
+        # Input too long = strategy defect (e.g. raw HTML exceeds context window)
+        # Not retryable — same input will always fail
+        if "too long" in err_lower or "validation" in err_lower:
+            logger.warning("Non-retryable LLM error: %s", err)
+            return response
+
+        if attempt < max_retries:
+            # Throttling needs much longer backoff to let TPM quota recover
+            if "throttl" in err_lower or "too many tokens" in err_lower:
+                wait = [10, 30, 60][min(attempt - 1, 2)]
+            else:
+                wait = min(2 ** (attempt + 1), 30)
+            logger.warning(
+                "LLM error (attempt %d/%d): %s — retrying in %ds",
+                attempt, max_retries, err, wait,
+            )
+            await asyncio.sleep(wait)
+        else:
+            logger.error("LLM error after %d retries: %s", max_retries, err)
+    return response
+
+
 async def run_agent(
     config: AgentConfig,
     prompt: str | UserMessage,
@@ -136,8 +179,8 @@ async def run_agent(
             merged_extra = {**(turn_options.extra or {}), **turn_extra}
             turn_options = replace(turn_options, extra=merged_extra)
 
-        # LLM call
-        response = await complete(config.model, context, turn_options)
+        # LLM call with retry on provider errors
+        response = await _llm_call_with_retry(config.model, context, turn_options)
         messages.append(response)
 
         # Post-LLM hook
