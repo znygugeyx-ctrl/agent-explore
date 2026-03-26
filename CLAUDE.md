@@ -29,6 +29,7 @@ configs/        Shared configuration files
 
 - NEVER hardcode API keys, credentials, or secrets in code
 - RED LINE: NEVER commit any AWS-related keys, access keys, secret keys, session tokens, or credentials in any code, config, script, example, log, or repository file
+- RED LINE: NEVER commit AWS resource identifiers — Instance IDs (i-xxx), Security Group IDs (sg-xxx), VPC IDs (vpc-xxx), Subnet IDs (subnet-xxx), AMI IDs (ami-xxx), public IP addresses, or any other AWS resource IDs. Store these in `~/.aws-resources` (local only, never committed) and reference via environment variables (e.g. `$VLLM_INSTANCE_ID`).
 - All credentials read from environment variables (boto3 default chain)
 - AWS Bedrock: uses AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION
 - vLLM/OpenAI-compat: pass base_url and api_key via config, not code
@@ -126,16 +127,18 @@ GPU inference runs on an EC2 g6e.2xlarge (L40S 48GB) with vLLM + Qwen3-8B. Stopp
 **Daily lifecycle:** start instance → start vLLM → SSH tunnel → experiment → stop instance
 
 ```bash
+# Instance ID stored in ~/.aws-resources as $VLLM_INSTANCE_ID (never commit)
+
 # Start instance + get new IP
-aws ec2 start-instances --instance-ids i-0e3affd7763024652 --region us-east-1
-aws ec2 describe-instances --instance-ids i-0e3affd7763024652 --region us-east-1 \
+aws ec2 start-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
+aws ec2 describe-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1 \
   --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
 
 # SSH tunnel (makes localhost:8000 → remote vLLM)
 ssh -f -N -L 8000:localhost:8000 -i ~/.ssh/vllm-experiment-key.pem ubuntu@<IP>
 
 # Stop instance
-aws ec2 stop-instances --instance-ids i-0e3affd7763024652 --region us-east-1
+aws ec2 stop-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
 ```
 
 **Using in code:** `Model(id="Qwen/Qwen3-8B", provider="openai_compat", base_url="http://localhost:8000/v1")`

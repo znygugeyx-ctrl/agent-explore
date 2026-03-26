@@ -6,12 +6,12 @@ EC2 GPU instance running vLLM for local model inference. Stopped nightly to save
 
 | Item | Value |
 |------|-------|
-| Instance ID | `i-0e3affd7763024652` |
+| Instance ID | stored in `~/.aws-resources` (never commit) |
 | Type | g6e.2xlarge (NVIDIA L40S 48GB) |
-| Region | us-east-1a |
-| Public IP | `54.224.14.63` (changes on restart) |
+| Region | us-east-1 |
+| Public IP | dynamic — query after each start (see below) |
 | SSH Key | `~/.ssh/vllm-experiment-key.pem` |
-| Security Group | `sg-0ef95c1c2db2389f5` (ports 22, 8000) |
+| Security Group | stored in `~/.aws-resources` (never commit) |
 | vLLM venv | `/home/ubuntu/vllm-env` |
 | vLLM version | 0.18.0 |
 | Model | `Qwen/Qwen3-8B` (pre-downloaded) |
@@ -21,11 +21,14 @@ EC2 GPU instance running vLLM for local model inference. Stopped nightly to save
 ### 1. Start Instance
 
 ```bash
-aws ec2 start-instances --instance-ids i-0e3affd7763024652 --region us-east-1
-aws ec2 wait instance-running --instance-ids i-0e3affd7763024652 --region us-east-1
+# Load your instance ID (store in ~/.aws-resources, never commit)
+# e.g. export VLLM_INSTANCE_ID=i-xxxxxxxxxxxxxxxxx
+
+aws ec2 start-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
+aws ec2 wait instance-running --instance-ids $VLLM_INSTANCE_ID --region us-east-1
 
 # Get new public IP (changes each start)
-aws ec2 describe-instances --instance-ids i-0e3affd7763024652 --region us-east-1 \
+aws ec2 describe-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1 \
   --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
 ```
 
@@ -73,7 +76,7 @@ curl http://localhost:8000/v1/models
 ### 5. Stop Instance (end of day)
 
 ```bash
-aws ec2 stop-instances --instance-ids i-0e3affd7763024652 --region us-east-1
+aws ec2 stop-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
 ```
 
 ### Troubleshooting: Stale Tunnel
