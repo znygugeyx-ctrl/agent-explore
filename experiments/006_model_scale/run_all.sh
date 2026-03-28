@@ -24,6 +24,7 @@ MODELS=(
   "Qwen/Qwen3-1.7B"
   "Qwen/Qwen3-4B"
   "Qwen/Qwen3-8B"
+  "Qwen/Qwen3-32B"
 )
 
 # ---------------------------------------------------------------------------
@@ -62,6 +63,21 @@ model_to_dir() {
   echo "$1" | sed 's|Qwen/||' | tr '[:upper:]' '[:lower:]'
 }
 
+model_to_tp() {
+  case "$1" in
+    *32B*|*70B*) echo 4 ;;
+    *14B*)        echo 2 ;;
+    *)            echo 1 ;;
+  esac
+}
+
+model_to_max_len() {
+  case "$1" in
+    *32B*) echo 8192 ;;
+    *)     echo 32768 ;;
+  esac
+}
+
 # ---------------------------------------------------------------------------
 # Main loop
 # ---------------------------------------------------------------------------
@@ -95,8 +111,10 @@ for MODEL in "${MODELS[@]}"; do
   fi
 
   # 1. Restart vLLM with this model
-  echo "[vllm] Starting vLLM with $MODEL ..."
-  $SSH "bash /home/ubuntu/restart_vllm.sh $MODEL"
+  TP=$(model_to_tp "$MODEL")
+  MAX_LEN=$(model_to_max_len "$MODEL")
+  echo "[vllm] Starting vLLM with $MODEL (TP=$TP, max_len=$MAX_LEN) ..."
+  $SSH "bash /home/ubuntu/restart_vllm.sh $MODEL $TP $MAX_LEN"
 
   # 2. (Re)start SSH tunnel
   start_tunnel

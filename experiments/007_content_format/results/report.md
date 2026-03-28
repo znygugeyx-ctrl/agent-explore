@@ -1,6 +1,6 @@
 # Experiment 007: Content Format — Results
 
-Generated: 2026-03-26 10:03:32
+Generated: 2026-03-27 00:33:42
 
 ## Summary
 
@@ -10,6 +10,7 @@ Generated: 2026-03-26 10:03:32
 | markdown     |    2 |   65.3% |        74.6s |        236891 |          43451 |       9.1 |         3.2 |
 | text_only    |    2 |   67.3% |        76.1s |        179034 |          24955 |       8.9 |         3.2 |
 | pruned_html  |    2 |   60.0% |        95.3s |        290613 |          29298 |      11.9 |         4.1 |
+| jina_reader  |    2 |   61.3% |        59.7s |        213370 |          54956 |       7.7 |         2.8 |
 
 ## Accuracy by Level
 
@@ -19,6 +20,7 @@ Generated: 2026-03-26 10:03:32
 | markdown     | 65% | 75% | 25% |
 | text_only    | 68% | 69% | 50% |
 | pruned_html  | 59% | 66% | 38% |
+| jina_reader  | 67% | 66% | 33% |
 
 ## Per-Task Results (Run 1)
 
@@ -326,3 +328,78 @@ Generated: 2026-03-26 10:03:32
 | 983bba7c-c092-45 | L3 | pruned_html  | N       | Based on my comprehensive rese... |    24 |      10 | 734355 |   162.1s |
 | 9e1fc53b-46ff-49 | L3 | pruned_html  | N       | Perfect! I found it in the Wow... |    26 |       6 | 1013722 |   228.6s |
 | ebbc1f13-d24d-40 | L3 | pruned_html  | N       | Based on my research, I have d... |    30 |       6 | 3240586 |   259.0s |
+| 23dd907f-1261-44 | L1 | jina_reader  | Y       | Looking at the poem text from ... |     3 |       1 |   9022 |    22.9s |
+| 27d5d136-8563-46 | L1 | jina_reader  | Y       | Based on my analysis, I can no... |     5 |       1 |  26470 |    29.3s |
+| 2d83110e-a098-4e | L1 | jina_reader  | Y       | right                          |     2 |       0 |   3052 |     5.0s |
+| 305ac316-eef6-44 | L1 | jina_reader  | Y       | Perfect! I have confirmed the ... |     5 |       2 |  19195 |    35.2s |
+| 3cef3a44-215e-4a | L1 | jina_reader  | Y       | Based on my research, I now ha... |     5 |       0 |  34323 |    19.4s |
+| 3f57289b-8c60-48 | L1 | jina_reader  | Y       | Looking at the batting statist... |     3 |       1 |  51529 |    34.3s |
+| 42576abe-0deb-48 | L1 | jina_reader  | N       | Based on the information you'v... |     2 |       0 |   3746 |     9.4s |
+| 46719c30-f4c3-4c | L1 | jina_reader  | N       | Perfect! I have confirmed that... |    21 |       7 | 493835 |   134.2s |
+| 4b650a35-8529-46 | L1 | jina_reader  | Y       | Guava                          |     1 |       0 |   1014 |     1.2s |
+| 4b6bb5f7-f634-41 | L1 | jina_reader  | Y       | Perfect! I found the script. L... |     4 |       2 |  31241 |    34.7s |
+| 4fc2f1ae-8625-45 | L1 | jina_reader  | E       | Let me fetch the Featured arti... |     3 |       1 |   3071 |    17.0s |
+| 50ad0280-0819-4b | L1 | jina_reader  | N       | I need to read this 5x7 block ... |     1 |       0 |   1446 |     5.8s |
+| 50ec8903-b81f-42 | L1 | jina_reader  | N       | Perfect! I've confirmed the st... |     4 |       1 |  44720 |    47.2s |
+| 5a0c1adf-205e-48 | L1 | jina_reader  | Y       | Perfect! I found the answer. L... |     5 |       2 |  27929 |    34.1s |
+| 5d0080cb-90d7-47 | L1 | jina_reader  | Y       | 0.1777 m³                      |     5 |       3 |  25323 |    25.4s |
+| 6f37996b-2ac7-44 | L1 | jina_reader  | Y       | I need to find all counter-exa... |     1 |       0 |   1611 |     3.6s |
+| 72e110e7-464c-45 | L1 | jina_reader  | N       | Based on my search results, I ... |     8 |       4 |  49819 |    58.3s |
+| 7673d772-ef80-4f | L1 | jina_reader  | E       | Let me check the House U.S. Co... |    18 |      17 | 547964 |   164.7s |
+| 840bfca7-4f7b-48 | L1 | jina_reader  | Y       | Perfect! I found the informati... |     4 |       2 |  32036 |    29.7s |
+| 8e867cd7-cff9-4e | L1 | jina_reader  | Y       | Based on the Wikipedia article... |     3 |       1 |  64894 |    16.5s |
+| 935e2cff-ae78-42 | L1 | jina_reader  | Y       | Based on my research, I found ... |     6 |       3 | 281086 |    48.4s |
+| a0068077-79f4-46 | L1 | jina_reader  | Y       | Perfect! I found the informati... |    11 |       4 |  67021 |    59.6s |
+| a0c07678-e491-4b | L1 | jina_reader  | N       | Perfect! I found confirmation ... |    14 |       5 | 330116 |   140.0s |
+| b415aba4-4b68-4f | L1 | jina_reader  | N       | Good! I found that the second ... |     4 |       3 |  53469 |    29.4s |
+| b816bfce-3d80-49 | L1 | jina_reader  | Y       | Perfect! I found the article. ... |     3 |       2 |  24468 |    23.6s |
+| bda648d7-d618-48 | L1 | jina_reader  | Y       | Perfect! The search results an... |     4 |       2 |  18125 |    32.1s |
+| c365c1c7-a3db-4d | L1 | jina_reader  | Y       | Yorba Linda, California is at ... |    11 |       3 | 406416 |    73.2s |
+| c714ab3a-da30-46 | L1 | jina_reader  | Y       | I need to work through this lo... |     1 |       0 |   1764 |     5.1s |
+| cabe07ed-9eca-40 | L1 | jina_reader  | Y       | Perfect! I found it. In the 1.... |     6 |       3 |  52731 |    45.1s |
+| cf106601-ab4f-4a | L1 | jina_reader  | Y       | Based on my research, I found ... |     6 |       2 | 131997 |    32.5s |
+| d0633230-7067-47 | L1 | jina_reader  | N       | Looking at the v0.19 changelog... |     7 |       2 | 486132 |    47.9s |
+| dc22a632-937f-4e | L1 | jina_reader  | N       | Perfect! I found the informati... |     5 |       1 |  41603 |    28.4s |
+| ec09fa32-d03f-4b | L1 | jina_reader  | N       | The search didn't find this sp... |     2 |       0 |   5020 |    11.7s |
+| 05407167-39ec-4d | L2 | jina_reader  | N       | I apologize, but I'm unable to... |    27 |       5 | 485971 |   280.4s |
+| 08f3a05f-5947-40 | L2 | jina_reader  | N       | Now I understand Newton's Meth... |     3 |       1 |  15173 |    27.8s |
+| 0a3cd321-3e76-46 | L2 | jina_reader  | Y       | Based on the validation data I... |    11 |       4 | 577907 |    80.1s |
+| 0a65cb96-cb6e-4a | L2 | jina_reader  | Y       | Perfect! I have confirmed that... |     7 |       2 |  32644 |    40.4s |
+| 0bb3b44a-ede5-4d | L2 | jina_reader  | N       | The search returned no results... |    17 |       5 | 1165191 |   133.7s |
+| 0ff53813-3367-4f | L2 | jina_reader  | Y       | Based on my research, I have f... |    12 |       6 | 243533 |    94.3s |
+| 14569e28-c88c-43 | L2 | jina_reader  | Y       | Now I understand Unlambda. Let... |     3 |       2 |  37340 |    21.1s |
+| 16d825ff-1623-41 | L2 | jina_reader  | Y       | Perfect! I found the answer in... |    11 |       4 | 239627 |   103.3s |
+| 17b5a6a3-bc87-42 | L2 | jina_reader  | Y       | Perfect! I found the zip code ... |     4 |       2 |  30190 |    23.5s |
+| 1dcc160f-c187-48 | L2 | jina_reader  | N       | Based on my comprehensive sear... |    10 |       4 | 578429 |    80.4s |
+| 2a649bb1-795f-4a | L2 | jina_reader  | N       | Let me try a different approac... |    30 |      11 | 628328 |   208.1s |
+| 2dfc4c37-fec1-45 | L2 | jina_reader  | N       | Perfect! Now I have both lists... |     3 |       2 |  54941 |    21.3s |
+| 33d8ea3b-6c6b-4f | L2 | jina_reader  | E       | Now let me fetch the actual Wi... |     3 |       2 |   4392 |    18.6s |
+| 3627a8be-a77f-41 | L2 | jina_reader  | E       | Great! I found that the object... |     3 |       1 |   3341 |    14.8s |
+| 3ff6b7a9-a5bd-44 | L2 | jina_reader  | N       | Perfect! I found it. According... |     4 |       1 | 329859 |    27.5s |
+| 48eb8242-1099-4c | L2 | jina_reader  | N       | Perfect! I found 1 Morelet's C... |     7 |       4 |  60240 |    47.0s |
+| 544b7f0c-173a-43 | L2 | jina_reader  | Y       | Perfect! I have confirmed the ... |     6 |       3 | 126295 |    52.6s |
+| 56137764-b4e0-45 | L2 | jina_reader  | Y       | Perfect! I've found the answer... |     5 |       2 | 281443 |    33.4s |
+| 65638e28-7f37-4f | L2 | jina_reader  | Y       | Perfect! The search result cle... |    11 |       3 |  77595 |    59.9s |
+| 6b078778-0b90-46 | L2 | jina_reader  | Y       | Perfect! Now I have the inform... |     6 |       2 |  46760 |    32.5s |
+| 708b99c5-e4a7-49 | L2 | jina_reader  | Y       | Perfect! I found the answer. A... |     3 |       1 |  11419 |    19.6s |
+| 71345b0a-9c7d-4b | L2 | jina_reader  | Y       | Perfect! I found the answer in... |     4 |       1 |  45495 |    21.9s |
+| 7619a514-5fa8-43 | L2 | jina_reader  | N       | Interesting! I can see in the ... |    30 |       9 | 1021349 |   416.7s |
+| 87c610df-bef7-49 | L2 | jina_reader  | N       | Perfect! The search results co... |     6 |       2 | 135355 |    48.9s |
+| 9f41b083-683e-4d | L2 | jina_reader  | Y       | Based on my extensive research... |    19 |       9 | 389890 |   128.7s |
+| ad37a656-079a-49 | L2 | jina_reader  | Y       | Perfect! I have confirmed that... |     7 |       2 |  59648 |    37.7s |
+| d700d50d-c707-4d | L2 | jina_reader  | Y       | Perfect! I have confirmed the ... |     5 |       1 |  46547 |    24.5s |
+| db4fd70a-2d37-40 | L2 | jina_reader  | Y       | Based on the information I fou... |     3 |       2 |  58218 |    17.0s |
+| ded28325-3447-4c | L2 | jina_reader  | N       | I can help you decrypt this ma... |     3 |       1 |  12025 |    21.0s |
+| e0c10771-d627-4f | L2 | jina_reader  | Y       | Perfect! I found the informati... |     2 |       0 |   3186 |     8.5s |
+| e2d69698-bc99-4e | L2 | jina_reader  | Y       | Perfect! The search results co... |    11 |       3 | 550523 |    95.8s |
+| e4e91f1c-1dcd-43 | L2 | jina_reader  | Y       | Perfect! I found the answer in... |    10 |       4 |  73698 |    54.0s |
+| e8cb5b03-41e0-40 | L2 | jina_reader  | Y       | Perfect! I now have both menus... |     4 |       4 |  39799 |    46.6s |
+| ed58682d-bc52-4b | L2 | jina_reader  | Y       | Perfect! I have the full lyric... |     5 |       2 | 491667 |    39.6s |
+| f2feb6a4-363c-4c | L2 | jina_reader  | Y       | Perfect! I found the informati... |     4 |       1 |  59574 |    19.4s |
+| f3917a3d-1d17-4e | L2 | jina_reader  | N       | Perfect! I found the informati... |    12 |       4 | 394976 |    80.7s |
+| f46b4380-207e-44 | L2 | jina_reader  | Y       | Perfect! I found the confirmat... |    14 |       4 | 218478 |    75.2s |
+| 384d0dd8-e8a4-4c | L3 | jina_reader  | Y       | Based on my research, I found ... |    13 |       6 | 445502 |   113.1s |
+| 50f58759-7bd6-40 | L3 | jina_reader  | N       | I apologize, but I cannot find... |    15 |       1 | 263574 |    80.1s |
+| 983bba7c-c092-45 | L3 | jina_reader  | Y       | Perfect! Now I have all three ... |    12 |       7 | 937906 |   114.3s |
+| 9e1fc53b-46ff-49 | L3 | jina_reader  | N       | Perfect! Now I have all the in... |     9 |       3 | 237986 |   117.9s |
+| ebbc1f13-d24d-40 | L3 | jina_reader  | N       | The page shows the Google Tran... |    24 |       4 | 1259845 |   134.0s |

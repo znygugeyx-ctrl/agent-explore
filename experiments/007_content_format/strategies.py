@@ -15,8 +15,10 @@ from __future__ import annotations
 
 import io
 import json
+import os
 import re
 
+import httpx
 from bs4 import BeautifulSoup
 from markitdown import MarkItDown
 
@@ -80,7 +82,27 @@ CONVERTERS: dict[str, callable] = {
     "pruned_html": _prune_html,
 }
 
-STRATEGY_NAMES = list(CONVERTERS.keys())
+# ---------------------------------------------------------------------------
+# Jina Reader (async, URL-based — not in CONVERTERS)
+# ---------------------------------------------------------------------------
+
+
+async def _call_jina_reader(url: str) -> str:
+    """Fetch URL via Jina Reader API. Returns LLM-friendly markdown.
+
+    Requires JINA_API_KEY environment variable.
+    """
+    api_key = os.environ.get("JINA_API_KEY", "")
+    async with httpx.AsyncClient(timeout=60.0) as client:
+        resp = await client.get(
+            f"https://r.jina.ai/{url}",
+            headers={"Authorization": f"Bearer {api_key}"},
+        )
+        resp.raise_for_status()
+        return resp.text
+
+
+STRATEGY_NAMES = list(CONVERTERS.keys()) + ["jina_reader"]
 
 
 # ---------------------------------------------------------------------------
@@ -94,6 +116,25 @@ def build_format_hook(strategy: str):
     The hook intercepts fetch_page results, applies the format conversion,
     and updates the content and metadata before the agent sees it.
     """
+    if strategy == "jina_reader":
+        async def after_tool_exec_jina(
+            tc: ToolCall, result: ToolResultMessage
+        ) -> ToolResultMessage:
+            if tc.name != "fetch_page" or result.is_error:
+                return result
+            try:
+                data = json.loads(result.content[0].text)
+                url = data["url"]
+                converted = await _call_jina_reader(url)
+                data["content"] = converted
+                data["content_length"] = len(converted)
+                data["format"] = "jina_reader"
+                result.content = [TextContent(text=json.dumps(data, ensure_ascii=False))]
+            except Exception:
+                pass  # On any failure, return Playwright result as-is
+            return result
+        return after_tool_exec_jina
+
     if strategy not in CONVERTERS:
         raise ValueError(f"Unknown strategy: {strategy}. Choose from {STRATEGY_NAMES}")
     converter = CONVERTERS[strategy]

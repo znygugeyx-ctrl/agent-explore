@@ -7,14 +7,21 @@ EC2 GPU instance running vLLM for local model inference. Stopped nightly to save
 | Item | Value |
 |------|-------|
 | Instance ID | stored in `~/.aws-resources` (never commit) |
-| Type | g6e.2xlarge (NVIDIA L40S 48GB) |
+| Type | g6e.2xlarge (1× L40S 48GB) — default; g6e.12xlarge (4× L40S 192GB) for 32B+ |
 | Region | us-east-1 |
 | Public IP | dynamic — query after each start (see below) |
 | SSH Key | `~/.ssh/vllm-experiment-key.pem` |
 | Security Group | stored in `~/.aws-resources` (never commit) |
 | vLLM venv | `/home/ubuntu/vllm-env` |
 | vLLM version | 0.18.0 |
-| Model | `Qwen/Qwen3-8B` (pre-downloaded) |
+| Models | `Qwen/Qwen3-8B` (pre-downloaded); `Qwen/Qwen3-32B` (download on 12xlarge) |
+
+### Instance Selection Guide
+
+| Model size | Instance | GPUs | VRAM |
+|-----------|----------|------|------|
+| ≤14B | g6e.2xlarge | 1× L40S | 48GB |
+| 32B | g6e.12xlarge | 4× L40S | 192GB |
 
 ## Daily Workflow
 
@@ -38,19 +45,31 @@ aws ec2 describe-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1 \
 # SSH in
 ssh -i ~/.ssh/vllm-experiment-key.pem ubuntu@<PUBLIC_IP>
 
-# Activate venv and start server
-source /home/ubuntu/vllm-env/bin/activate
-nohup vllm serve Qwen/Qwen3-8B \
-  --host 0.0.0.0 --port 8000 \
-  --enable-prefix-caching \
-  --max-model-len 32768 \
-  --gpu-memory-utilization 0.90 \
-  --enable-auto-tool-choice \
-  --tool-call-parser hermes \
-  > /home/ubuntu/vllm.log 2>&1 &
+# Use the restart script (recommended — handles kill + restart)
+# Usage: bash /home/ubuntu/restart_vllm.sh <MODEL_ID> [TP_SIZE] [MAX_MODEL_LEN]
+bash /home/ubuntu/restart_vllm.sh Qwen/Qwen3-8B          # 1 GPU, max_len=32768
+bash /home/ubuntu/restart_vllm.sh Qwen/Qwen3-32B 4 8192  # 4 GPUs, max_len=8192
+```
 
-# Or use the restart script
-bash /home/ubuntu/restart_vllm.sh
+Server takes 30–120s to load (32B is slower). Check readiness:
+```bash
+curl http://localhost:8000/v1/models
+```
+
+#### First-time setup on g6e.12xlarge: download Qwen3-32B
+
+```bash
+ssh -i ~/.ssh/vllm-experiment-key.pem ubuntu@<PUBLIC_IP>
+source /home/ubuntu/vllm-env/bin/activate
+python3 -c "from huggingface_hub import snapshot_download; snapshot_download('Qwen/Qwen3-32B')"
+# Takes ~15–20 min; ~64GB download
+```
+
+#### Upload restart script to new instance
+
+```bash
+scp -i ~/.ssh/vllm-experiment-key.pem \
+    infra/restart_vllm.sh ubuntu@<PUBLIC_IP>:/home/ubuntu/restart_vllm.sh
 ```
 
 Server takes ~30s to load the model. Check readiness:
