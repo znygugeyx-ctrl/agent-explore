@@ -1,0 +1,5061 @@
+[
+  {
+    "task_id": "fewnerd_000",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Soumaré\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Dallas\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Soumaré",
+        "type": "person"
+      },
+      {
+        "text": "Dallas",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Soumaré",
+        "type": "person"
+      },
+      {
+        "text": "Dallas",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.842519760131836,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_001",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Luton\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Alec Chamberlain\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Luton",
+        "type": "location"
+      },
+      {
+        "text": "Alec Chamberlain",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Luton 's",
+        "type": "organization"
+      },
+      {
+        "text": "Alec Chamberlain",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.8620662689208984,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_002",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Bald Eagle Lodge\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Black Eagle Lodge\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Bald Eagle Lodge",
+        "type": "organization"
+      },
+      {
+        "text": "Black Eagle Lodge",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Bald Eagle Lodge",
+        "type": "building"
+      },
+      {
+        "text": "Black Eagle Lodge",
+        "type": "building"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.9288129806518555,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_003",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Albania\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Albania",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Albania",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.3298900127410889,
+    "output_tokens": 30,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_004",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Grenville—Dundas\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"House of Commons of Canada\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Grenville—Dundas",
+        "type": "location"
+      },
+      {
+        "text": "House of Commons of Canada",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Grenville—Dundas",
+        "type": "location"
+      },
+      {
+        "text": "House of Commons of Canada",
+        "type": "organization"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.0731360912323,
+    "output_tokens": 56,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_005",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"DMUs\", \"type\": \"product\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "DMUs",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "DMUs",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.1693377494812012,
+    "output_tokens": 21,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_006",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\"entities\": [{\"text\": \"Gayasan National Park\", \"type\": \"location\"}]}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Gayasan National Park",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Gayasan National Park",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 0.9637000560760498,
+    "output_tokens": 20,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_007",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n  {\n    \"text\": \"Messier\",\n    \"type\": \"organization\"\n  },\n  {\n    \"text\": \"Milky Way\",\n    \"type\": \"location\"\n  }\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Messier",
+        "type": "organization"
+      },
+      {
+        "text": "Milky Way",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Messier",
+        "type": "other"
+      },
+      {
+        "text": "Milky Way",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.8824889659881592,
+    "output_tokens": 47,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_008",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Black Death\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Niall O’Neill\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Franciscan Order\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Black Death",
+        "type": "event"
+      },
+      {
+        "text": "Niall O’Neill",
+        "type": "person"
+      },
+      {
+        "text": "Franciscan Order",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Black Death",
+        "type": "other"
+      },
+      {
+        "text": "Niall O ’ Neill",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 2.366992950439453,
+    "output_tokens": 73,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_009",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Mary Jean Chan\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Hong Kong\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Mary Jean Chan",
+        "type": "person"
+      },
+      {
+        "text": "Hong Kong",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Mary Jean Chan",
+        "type": "person"
+      },
+      {
+        "text": "Hong Kong Chinese",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.790050983428955,
+    "output_tokens": 49,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_010",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"British Library\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"The shinkansen Collection\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "British Library",
+        "type": "location"
+      },
+      {
+        "text": "The shinkansen Collection",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "British Library",
+        "type": "building"
+      },
+      {
+        "text": "The shinkansen Collection",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.9810402393341064,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_011",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Kremlin Cup\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Kremlin Cup",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Kremlin Cup",
+        "type": "event"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.374323844909668,
+    "output_tokens": 31,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_012",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n  {\n    \"text\": \"Peltodytes callosus\",\n    \"type\": \"product\"\n  },\n  {\n    \"text\": \"Haliplidae\",\n    \"type\": \"organization\"\n  }\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Peltodytes callosus",
+        "type": "product"
+      },
+      {
+        "text": "Haliplidae",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Peltodytes callosus",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.9664959907531738,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_013",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Natale Monferrato\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Italian\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Baroque\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Natale Monferrato",
+        "type": "person"
+      },
+      {
+        "text": "Italian",
+        "type": "location"
+      },
+      {
+        "text": "Baroque",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Natale Monferrato",
+        "type": "person"
+      },
+      {
+        "text": "Italian",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8,
+    "latency_s": 2.364346981048584,
+    "output_tokens": 71,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_014",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Atlanta\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"SR 347\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Atlanta",
+        "type": "location"
+      },
+      {
+        "text": "SR 347",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Atlanta",
+        "type": "location"
+      },
+      {
+        "text": "SR 347",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.9616408348083496,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_015",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"JSR 316\", \"type\": \"other\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "JSR 316",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "JSR 316",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.2008140087127686,
+    "output_tokens": 25,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_016",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Expo\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Bureau International des Expositions\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Expo",
+        "type": "event"
+      },
+      {
+        "text": "Bureau International des Expositions",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "the Bureau International des Expositions",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.923327922821045,
+    "output_tokens": 52,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_017",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"Interleukin 6\", \"type\": \"product\"},\n{\"text\": \"IL-6\", \"type\": \"product\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Interleukin 6",
+        "type": "product"
+      },
+      {
+        "text": "IL-6",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Interleukin 6",
+        "type": "other"
+      },
+      {
+        "text": "IL-6",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.6514339447021484,
+    "output_tokens": 39,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_018",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Gastón Gaudio\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Torneo Godó\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Gastón Gaudio",
+        "type": "person"
+      },
+      {
+        "text": "Torneo Godó",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Gastón Gaudio",
+        "type": "person"
+      },
+      {
+        "text": "Torneo Godó",
+        "type": "event"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.9080159664154053,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_019",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": []\n}",
+    "has_think": false,
+    "parsed_answer": [],
+    "expected_answer": [
+      {
+        "text": "Vaishnavism",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 0.7683942317962646,
+    "output_tokens": 7,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_020",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Dean Cain\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Teri Hatcher\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Dean Cain",
+        "type": "person"
+      },
+      {
+        "text": "Teri Hatcher",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Dean Cain",
+        "type": "person"
+      },
+      {
+        "text": "Teri Hatcher",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.9547009468078613,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_021",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Hawaii\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Urata\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Hawaii",
+        "type": "location"
+      },
+      {
+        "text": "Urata",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Hawaii",
+        "type": "location"
+      },
+      {
+        "text": "Urata",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.6388771533966064,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_022",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Obama\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"2008 presidential election\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Obama",
+        "type": "person"
+      },
+      {
+        "text": "2008 presidential election",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "2008 presidential election",
+        "type": "event"
+      },
+      {
+        "text": "Obama",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.9535698890686035,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_023",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Guus Hiddink\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Turkish football\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Guus Hiddink",
+        "type": "person"
+      },
+      {
+        "text": "Turkish football",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Guus Hiddink",
+        "type": "person"
+      },
+      {
+        "text": "Turkish football",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.9481899738311768,
+    "output_tokens": 52,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_024",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"DShK\", \"type\": \"product\"},\n{\"text\": \"mortar\", \"type\": \"product\"},\n{\"text\": \"technical\", \"type\": \"product\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "DShK",
+        "type": "product"
+      },
+      {
+        "text": "mortar",
+        "type": "product"
+      },
+      {
+        "text": "technical",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "mortar",
+        "type": "product"
+      },
+      {
+        "text": "DShK heavy machine gun",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.4,
+    "latency_s": 1.8960072994232178,
+    "output_tokens": 47,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_025",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"S. cerevisiae\", \"type\": \"organization\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "S. cerevisiae",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "S. cerevisiae",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.3194267749786377,
+    "output_tokens": 27,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_026",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Bittor Alkiza\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"San Sebastián\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Bittor Alkiza",
+        "type": "person"
+      },
+      {
+        "text": "San Sebastián",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Bittor Alkiza",
+        "type": "person"
+      },
+      {
+        "text": "San Sebastián",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.914876937866211,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_027",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Proline\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"2019 CECAFA Cup\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Proline",
+        "type": "organization"
+      },
+      {
+        "text": "2019 CECAFA Cup",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "2019 CECAFA Cup",
+        "type": "event"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 1.9097189903259277,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_028",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Hayden\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ferriss\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Hayden",
+        "type": "person"
+      },
+      {
+        "text": "Ferriss",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Hayden",
+        "type": "person"
+      },
+      {
+        "text": "Ferriss",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.9103240966796875,
+    "output_tokens": 49,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_029",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Carl Barks\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"So Far And No Safari\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"1966\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Carl Barks",
+        "type": "person"
+      },
+      {
+        "text": "So Far And No Safari",
+        "type": "event"
+      },
+      {
+        "text": "1966",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Carl Barks '",
+        "type": "person"
+      },
+      {
+        "text": "So Far And No Safari",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 2.362514019012451,
+    "output_tokens": 73,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_030",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n\"entities\": [\n  {\n    \"text\": \"Tyrosine kinase\",\n    \"type\": \"product\"\n  },\n  {\n    \"text\": \"Inhibitors\",\n    \"type\": \"product\"\n  }\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Tyrosine kinase",
+        "type": "product"
+      },
+      {
+        "text": "Inhibitors",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Tyrosine kinase Inhibitors",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.773913860321045,
+    "output_tokens": 49,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_031",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Janie Dee\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"England\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Janie Dee",
+        "type": "person"
+      },
+      {
+        "text": "England",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Janie Dee",
+        "type": "person"
+      },
+      {
+        "text": "English",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.7700960636138916,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_032",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Bhai Parmanand\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"political prisoners\",\n            \"type\": \"other\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Bhai Parmanand",
+        "type": "person"
+      },
+      {
+        "text": "political prisoners",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Bhai Parmanand",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 1.8207743167877197,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_033",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Bărbat\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Hungarian\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Bărbat",
+        "type": "person"
+      },
+      {
+        "text": "Hungarian",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Bărbat",
+        "type": "person"
+      },
+      {
+        "text": "Hungarian",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 1.9581489562988281,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_034",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "easy",
+    "raw_response": "{\"entities\": [{\"text\": \"San Diego\", \"type\": \"location\"}]}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "San Diego",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "San Diego",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.1813609600067139,
+    "output_tokens": 18,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_035",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Staatstheater Braunschweig\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Flemish Opera\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Antwerp\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Gent\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Staatstheater Braunschweig",
+        "type": "organization"
+      },
+      {
+        "text": "Flemish Opera",
+        "type": "organization"
+      },
+      {
+        "text": "Antwerp",
+        "type": "location"
+      },
+      {
+        "text": "Gent",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Staatstheater Braunschweig",
+        "type": "organization"
+      },
+      {
+        "text": "Flemish Opera",
+        "type": "organization"
+      },
+      {
+        "text": "Antwerp",
+        "type": "location"
+      },
+      {
+        "text": "Gent",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.890813112258911,
+    "output_tokens": 95,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_036",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Freaks , Geeks & amp ; Asperger Syndrome\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"GF/CF Diet\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Autism\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Asperger Syndrome\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"ADHD\",\n            \"type\": \"other\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Freaks , Geeks & amp ; Asperger Syndrome",
+        "type": "product"
+      },
+      {
+        "text": "GF/CF Diet",
+        "type": "product"
+      },
+      {
+        "text": "Autism",
+        "type": "other"
+      },
+      {
+        "text": "Asperger Syndrome",
+        "type": "other"
+      },
+      {
+        "text": "ADHD",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Freaks , Geeks & amp ; Asperger Syndrome",
+        "type": "art"
+      },
+      {
+        "text": "Jackson",
+        "type": "person"
+      },
+      {
+        "text": "A User Guide to the GF/CF Diet : For Autism , Asperger Syndrome and ADHD",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 3.619682788848877,
+    "output_tokens": 120,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_037",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Customs and Excise\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Ministry of Agriculture , Fisheries and Food\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Inland Revenue\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Customs and Excise",
+        "type": "organization"
+      },
+      {
+        "text": "Ministry of Agriculture , Fisheries and Food",
+        "type": "organization"
+      },
+      {
+        "text": "Inland Revenue",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Customs and Excise",
+        "type": "organization"
+      },
+      {
+        "text": "Ministry of Agriculture , Fisheries and Food",
+        "type": "organization"
+      },
+      {
+        "text": "Inland Revenue",
+        "type": "organization"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.458340883255005,
+    "output_tokens": 77,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_038",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Olga Danilović\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"WTA Tour\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Anastasia Potapova\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Olga Danilović",
+        "type": "person"
+      },
+      {
+        "text": "WTA Tour",
+        "type": "organization"
+      },
+      {
+        "text": "Anastasia Potapova",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Olga Danilović",
+        "type": "person"
+      },
+      {
+        "text": "WTA Tour",
+        "type": "event"
+      },
+      {
+        "text": "Anastasia Potapova",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.4659671783447266,
+    "output_tokens": 76,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_039",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Meeseburg\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Meesenkopf\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Wiehen Hills\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Meeseburg",
+        "type": "location"
+      },
+      {
+        "text": "Meesenkopf",
+        "type": "location"
+      },
+      {
+        "text": "Wiehen Hills",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "`` Meeseburg",
+        "type": "location"
+      },
+      {
+        "text": "Meesenkopf",
+        "type": "location"
+      },
+      {
+        "text": "Wiehen Hills",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.3197479248046875,
+    "output_tokens": 71,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_040",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Thorncliffe Stable\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Toronto\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Ontario\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Robert T. Davies\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Thorncliffe Stable",
+        "type": "organization"
+      },
+      {
+        "text": "Toronto",
+        "type": "location"
+      },
+      {
+        "text": "Ontario",
+        "type": "location"
+      },
+      {
+        "text": "Robert T. Davies",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Thorncliffe Stable",
+        "type": "organization"
+      },
+      {
+        "text": "Toronto",
+        "type": "location"
+      },
+      {
+        "text": "Ontario",
+        "type": "location"
+      },
+      {
+        "text": "Robert T. Davies",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.773677110671997,
+    "output_tokens": 89,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_041",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Goodyear-Zeppelin Corporation\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"USS Akron\",\n            \"type\": \"building\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Goodyear-Zeppelin Corporation",
+        "type": "organization"
+      },
+      {
+        "text": "USS Akron",
+        "type": "building"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Goodyear-Zeppelin Corporation",
+        "type": "organization"
+      },
+      {
+        "text": "USS",
+        "type": "organization"
+      },
+      {
+        "text": "Akron",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.4,
+    "latency_s": 1.9362471103668213,
+    "output_tokens": 54,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_042",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"silicon\", \"type\": \"product\"},\n{\"text\": \"silicon carbide\", \"type\": \"product\"},\n{\"text\": \"SiSiC\", \"type\": \"product\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "silicon",
+        "type": "product"
+      },
+      {
+        "text": "silicon carbide",
+        "type": "product"
+      },
+      {
+        "text": "SiSiC",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "reaction bonded silicon carbide",
+        "type": "other"
+      },
+      {
+        "text": "siliconized silicon carbide",
+        "type": "other"
+      },
+      {
+        "text": "SiSiC",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.9368760585784912,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_043",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Sound Transit\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Sound Transit 3\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Federal Way\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Tacoma\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Sound Transit",
+        "type": "organization"
+      },
+      {
+        "text": "Sound Transit 3",
+        "type": "event"
+      },
+      {
+        "text": "Federal Way",
+        "type": "location"
+      },
+      {
+        "text": "Tacoma",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Sound Transit 3",
+        "type": "product"
+      },
+      {
+        "text": "Sound Transit",
+        "type": "product"
+      },
+      {
+        "text": "Federal Way",
+        "type": "location"
+      },
+      {
+        "text": "Tacoma",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 2.7440550327301025,
+    "output_tokens": 88,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_044",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Diplo\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Benny Blanco\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ariana Grande\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Diplo",
+        "type": "person"
+      },
+      {
+        "text": "Benny Blanco",
+        "type": "person"
+      },
+      {
+        "text": "Ariana Grande",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Diplo",
+        "type": "person"
+      },
+      {
+        "text": "Benny Blanco",
+        "type": "person"
+      },
+      {
+        "text": "American",
+        "type": "location"
+      },
+      {
+        "text": "Ariana Grande",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8571428571428571,
+    "latency_s": 2.353059768676758,
+    "output_tokens": 71,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_045",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"The Battle for Wesnoth\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"David White\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Australia\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"June 2003\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "The Battle for Wesnoth",
+        "type": "product"
+      },
+      {
+        "text": "David White",
+        "type": "person"
+      },
+      {
+        "text": "Australia",
+        "type": "location"
+      },
+      {
+        "text": "June 2003",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Battle for Wesnoth",
+        "type": "product"
+      },
+      {
+        "text": "Australian",
+        "type": "location"
+      },
+      {
+        "text": "David White",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.28571428571428575,
+    "latency_s": 2.7957661151885986,
+    "output_tokens": 93,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_046",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"AH-6\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"MH-6\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Al Qadisiyah\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Iraq\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "AH-6",
+        "type": "product"
+      },
+      {
+        "text": "MH-6",
+        "type": "product"
+      },
+      {
+        "text": "Al Qadisiyah",
+        "type": "location"
+      },
+      {
+        "text": "Iraq",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "AH-6",
+        "type": "product"
+      },
+      {
+        "text": "MH-6",
+        "type": "product"
+      },
+      {
+        "text": "Al Qadisiyah",
+        "type": "location"
+      },
+      {
+        "text": "Iraq",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.8597490787506104,
+    "output_tokens": 90,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_047",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Charles Hawtrey\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Applejohn\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Marion Lorne\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Poppy Faire\",\n            \"type\": \"other\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Charles Hawtrey",
+        "type": "person"
+      },
+      {
+        "text": "Applejohn",
+        "type": "other"
+      },
+      {
+        "text": "Marion Lorne",
+        "type": "person"
+      },
+      {
+        "text": "Poppy Faire",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Charles Hawtrey Charles Hawtrey",
+        "type": "person"
+      },
+      {
+        "text": "Applejohn",
+        "type": "person"
+      },
+      {
+        "text": "Marion Lorne",
+        "type": "person"
+      },
+      {
+        "text": "Poppy Faire",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.25,
+    "latency_s": 2.823901891708374,
+    "output_tokens": 92,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_048",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Pedro Ximénez\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Gibi\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Alarije\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Pedro Ximénez",
+        "type": "product"
+      },
+      {
+        "text": "Gibi",
+        "type": "product"
+      },
+      {
+        "text": "Alarije",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Pedro Ximénez",
+        "type": "product"
+      },
+      {
+        "text": "Arabic table grape Gibi",
+        "type": "product"
+      },
+      {
+        "text": "Alarije",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.331008195877075,
+    "output_tokens": 72,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_049",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"Savi 's pipistrelle\", \"type\": \"organization\"},\n{\"text\": \"Hypsugo alaschanicus\", \"type\": \"organization\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Savi 's pipistrelle",
+        "type": "organization"
+      },
+      {
+        "text": "Hypsugo alaschanicus",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "DNA",
+        "type": "other"
+      },
+      {
+        "text": "Savi",
+        "type": "other"
+      },
+      {
+        "text": "Hypsugo alaschanicus",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.8251688480377197,
+    "output_tokens": 50,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_050",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Gene Golub\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"NA-Net\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"NA-Digest\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"International Congress on Industrial and Applied Mathematics\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Gene Golub",
+        "type": "person"
+      },
+      {
+        "text": "NA-Net",
+        "type": "organization"
+      },
+      {
+        "text": "NA-Digest",
+        "type": "product"
+      },
+      {
+        "text": "International Congress on Industrial and Applied Mathematics",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Gene Golub",
+        "type": "person"
+      },
+      {
+        "text": "NA-Net",
+        "type": "product"
+      },
+      {
+        "text": "NA-Digest",
+        "type": "product"
+      },
+      {
+        "text": "International Congress on Industrial and Applied Mathematics",
+        "type": "event"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.75,
+    "latency_s": 2.879042148590088,
+    "output_tokens": 94,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_051",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Isla Vista\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"California\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Christiansen\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Patricia Marie Laney\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Isla Vista",
+        "type": "location"
+      },
+      {
+        "text": "California",
+        "type": "location"
+      },
+      {
+        "text": "Christiansen",
+        "type": "person"
+      },
+      {
+        "text": "Patricia Marie Laney",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Isla Vista",
+        "type": "location"
+      },
+      {
+        "text": "California",
+        "type": "location"
+      },
+      {
+        "text": "Christiansen",
+        "type": "person"
+      },
+      {
+        "text": "Patricia Marie Laney",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.7247018814086914,
+    "output_tokens": 90,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_052",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Academy\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"monastery\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"king David the Builder\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Arsen Ikaltoeli\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"David IV\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ikalto\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"1106\",\n            \"type\": \"other\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Academy",
+        "type": "organization"
+      },
+      {
+        "text": "monastery",
+        "type": "location"
+      },
+      {
+        "text": "king David the Builder",
+        "type": "person"
+      },
+      {
+        "text": "Arsen Ikaltoeli",
+        "type": "person"
+      },
+      {
+        "text": "David IV",
+        "type": "person"
+      },
+      {
+        "text": "Ikalto",
+        "type": "location"
+      },
+      {
+        "text": "1106",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "David",
+        "type": "person"
+      },
+      {
+        "text": "Arsen Ikaltoeli",
+        "type": "person"
+      },
+      {
+        "text": "Ikalto",
+        "type": "location"
+      },
+      {
+        "text": "David IV",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5454545454545454,
+    "latency_s": 4.436922073364258,
+    "output_tokens": 153,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_053",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Qizhong Forest Sports City Arena\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Shanghai\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"China\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Qizhong Forest Sports City Arena",
+        "type": "location"
+      },
+      {
+        "text": "Shanghai",
+        "type": "location"
+      },
+      {
+        "text": "China",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Qizhong Forest Sports City Arena",
+        "type": "building"
+      },
+      {
+        "text": "Shanghai",
+        "type": "location"
+      },
+      {
+        "text": "China",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.248915910720825,
+    "output_tokens": 72,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_054",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Hubert Urbański\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Magdalena Mielcarz\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Mateusz Szymkowiak\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"V-Reporter\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Hubert Urbański",
+        "type": "person"
+      },
+      {
+        "text": "Magdalena Mielcarz",
+        "type": "person"
+      },
+      {
+        "text": "Mateusz Szymkowiak",
+        "type": "person"
+      },
+      {
+        "text": "V-Reporter",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Hubert Urbański",
+        "type": "person"
+      },
+      {
+        "text": "Magdalena Mielcarz",
+        "type": "person"
+      },
+      {
+        "text": "Mateusz Szymkowiak",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8571428571428571,
+    "latency_s": 3.012984037399292,
+    "output_tokens": 100,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_055",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"World War II\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Canham\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Medal of Honor\",\n            \"type\": \"art\"\n        },\n        {\n            \"text\": \"United States\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "World War II",
+        "type": "event"
+      },
+      {
+        "text": "Canham",
+        "type": "person"
+      },
+      {
+        "text": "Medal of Honor",
+        "type": "art"
+      },
+      {
+        "text": "United States",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "World War II",
+        "type": "event"
+      },
+      {
+        "text": "Canham",
+        "type": "person"
+      },
+      {
+        "text": "Medal of Honor",
+        "type": "other"
+      },
+      {
+        "text": "the United States",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 2.8427929878234863,
+    "output_tokens": 89,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_056",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Ambrose Burnside\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Marye 's Heights\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Battle of Fredericksburg\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Ambrose Burnside",
+        "type": "person"
+      },
+      {
+        "text": "Marye 's Heights",
+        "type": "location"
+      },
+      {
+        "text": "Battle of Fredericksburg",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Ambrose Burnside",
+        "type": "person"
+      },
+      {
+        "text": "Marye",
+        "type": "location"
+      },
+      {
+        "text": "the Battle of Fredericksburg",
+        "type": "event"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.3333333333333333,
+    "latency_s": 2.467226028442383,
+    "output_tokens": 75,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_057",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Westminster College\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Boston College Law School\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Westminster College",
+        "type": "organization"
+      },
+      {
+        "text": "Boston College Law School",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Westminster College",
+        "type": "organization"
+      },
+      {
+        "text": "Bachelor of Arts degree",
+        "type": "other"
+      },
+      {
+        "text": "Boston College Law School",
+        "type": "organization"
+      },
+      {
+        "text": "Juris Doctor",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 1.833333969116211,
+    "output_tokens": 51,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_058",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Sharpay 's Fabulous Adventure\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"2011\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"American\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Direct-to-DVD\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Musical\",\n            \"type\": \"art\"\n        },\n        {\n            \"text\": \"Romantic comedy\",\n            \"type\": \"art\"\n        },\n        {\n            \"text\": \"Film\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"High School Musical\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Ashley Tisdale\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Sharpay 's Fabulous Adventure",
+        "type": "product"
+      },
+      {
+        "text": "2011",
+        "type": "other"
+      },
+      {
+        "text": "American",
+        "type": "location"
+      },
+      {
+        "text": "Direct-to-DVD",
+        "type": "product"
+      },
+      {
+        "text": "Musical",
+        "type": "art"
+      },
+      {
+        "text": "Romantic comedy",
+        "type": "art"
+      },
+      {
+        "text": "Film",
+        "type": "product"
+      },
+      {
+        "text": "High School Musical",
+        "type": "product"
+      },
+      {
+        "text": "Ashley Tisdale",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Sharpay 's Fabulous Adventure",
+        "type": "art"
+      },
+      {
+        "text": "American",
+        "type": "location"
+      },
+      {
+        "text": "High School Musical",
+        "type": "art"
+      },
+      {
+        "text": "Ashley Tisdale",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.30769230769230765,
+    "latency_s": 5.20892858505249,
+    "output_tokens": 193,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_059",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Dawn\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"NASA\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"1 Ceres\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"4 Vesta\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Dawn",
+        "type": "product"
+      },
+      {
+        "text": "NASA",
+        "type": "organization"
+      },
+      {
+        "text": "1 Ceres",
+        "type": "location"
+      },
+      {
+        "text": "4 Vesta",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Dawn",
+        "type": "product"
+      },
+      {
+        "text": "NASA",
+        "type": "organization"
+      },
+      {
+        "text": "1 Ceres",
+        "type": "other"
+      },
+      {
+        "text": "4 Vesta",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 2.701441764831543,
+    "output_tokens": 87,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_060",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Meet Uncle\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Pashupatinath\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Pashupati\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Meet Uncle",
+        "type": "person"
+      },
+      {
+        "text": "Pashupatinath",
+        "type": "location"
+      },
+      {
+        "text": "Pashupati",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Uncle",
+        "type": "person"
+      },
+      {
+        "text": "Pashupatinath",
+        "type": "building"
+      },
+      {
+        "text": "Pashupati",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.3333333333333333,
+    "latency_s": 2.3157958984375,
+    "output_tokens": 72,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_061",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"New York\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Alki\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "New York",
+        "type": "location"
+      },
+      {
+        "text": "Alki",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "New York",
+        "type": "location"
+      },
+      {
+        "text": "Alki",
+        "type": "location"
+      },
+      {
+        "text": "Alki",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 1.7885890007019043,
+    "output_tokens": 48,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_062",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Parc des Princes\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"CASG Paris\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Olympique de Paris\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Parc des Princes",
+        "type": "location"
+      },
+      {
+        "text": "CASG Paris",
+        "type": "organization"
+      },
+      {
+        "text": "Olympique de Paris",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Parc des Princes",
+        "type": "building"
+      },
+      {
+        "text": "CASG Paris",
+        "type": "organization"
+      },
+      {
+        "text": "Olympique de Paris",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.499847888946533,
+    "output_tokens": 74,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_063",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"The Golden Mickeys\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Chinese\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"米奇金獎音樂劇\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Disney\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "The Golden Mickeys",
+        "type": "product"
+      },
+      {
+        "text": "Chinese",
+        "type": "other"
+      },
+      {
+        "text": "米奇金獎音樂劇",
+        "type": "other"
+      },
+      {
+        "text": "Disney",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "The Golden Mickeys",
+        "type": "art"
+      },
+      {
+        "text": "Chinese",
+        "type": "other"
+      },
+      {
+        "text": "米奇金獎音樂劇",
+        "type": "art"
+      },
+      {
+        "text": "Disney",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 2.8910629749298096,
+    "output_tokens": 90,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_064",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"SAS Commuter\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Norwegian\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Stavanger\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Bergen\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "SAS Commuter",
+        "type": "organization"
+      },
+      {
+        "text": "Norwegian",
+        "type": "organization"
+      },
+      {
+        "text": "Stavanger",
+        "type": "location"
+      },
+      {
+        "text": "Bergen",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "SAS Commuter",
+        "type": "organization"
+      },
+      {
+        "text": "Norwegian",
+        "type": "organization"
+      },
+      {
+        "text": "Stavanger",
+        "type": "location"
+      },
+      {
+        "text": "Bergen",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.8928399085998535,
+    "output_tokens": 90,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_065",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"BARUG\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Commission on Elections\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"COMELEC\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "BARUG",
+        "type": "organization"
+      },
+      {
+        "text": "Commission on Elections",
+        "type": "organization"
+      },
+      {
+        "text": "COMELEC",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "BARUG",
+        "type": "organization"
+      },
+      {
+        "text": "Commission on Elections",
+        "type": "organization"
+      },
+      {
+        "text": "COMELEC",
+        "type": "organization"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 2.3645591735839844,
+    "output_tokens": 68,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_066",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\"entities\": [{\"text\": \"NewLabour Party\", \"type\": \"organization\"}, {\"text\": \"Jim Anderton\", \"type\": \"person\"}]}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "NewLabour Party",
+        "type": "organization"
+      },
+      {
+        "text": "Jim Anderton",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "NewLabour Party",
+        "type": "organization"
+      },
+      {
+        "text": "UK New Labour movement",
+        "type": "event"
+      },
+      {
+        "text": "Labour Party",
+        "type": "organization"
+      },
+      {
+        "text": "Jim Anderton",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 1.3891339302062988,
+    "output_tokens": 33,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_067",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Mangini\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Jets\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Mazzone\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Jets\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"2008 season\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Mangini",
+        "type": "person"
+      },
+      {
+        "text": "Jets",
+        "type": "organization"
+      },
+      {
+        "text": "Mazzone",
+        "type": "person"
+      },
+      {
+        "text": "Jets",
+        "type": "organization"
+      },
+      {
+        "text": "2008 season",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Mangini",
+        "type": "person"
+      },
+      {
+        "text": "Jets",
+        "type": "organization"
+      },
+      {
+        "text": "Mazzone 's",
+        "type": "person"
+      },
+      {
+        "text": "Jets",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5714285714285715,
+    "latency_s": 3.1887502670288086,
+    "output_tokens": 108,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_068",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Super Bowl XXXI\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Packers\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"New England Patriots\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Super Bowl XXXI",
+        "type": "event"
+      },
+      {
+        "text": "Packers",
+        "type": "organization"
+      },
+      {
+        "text": "New England Patriots",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Super Bowl XXXI",
+        "type": "event"
+      },
+      {
+        "text": "Packers",
+        "type": "organization"
+      },
+      {
+        "text": "England",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6666666666666666,
+    "latency_s": 2.2777042388916016,
+    "output_tokens": 70,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_069",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "medium",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Ryann Donnelly\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Misfits\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Last Caress\",\n            \"type\": \"art\"\n        },\n        {\n            \"text\": \"Christian Battle of the Bands\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Ryann Donnelly",
+        "type": "person"
+      },
+      {
+        "text": "Misfits",
+        "type": "organization"
+      },
+      {
+        "text": "Last Caress",
+        "type": "art"
+      },
+      {
+        "text": "Christian Battle of the Bands",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Ryann Donnelly",
+        "type": "person"
+      },
+      {
+        "text": "Misfits",
+        "type": "art"
+      },
+      {
+        "text": "Last Caress",
+        "type": "art"
+      },
+      {
+        "text": "Battle of the Bands",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 2.93186092376709,
+    "output_tokens": 93,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_070",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Lamancha goat\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"R. W. Soens\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"C. W. Channel\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Arcadia\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Florida\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Lamancha goat",
+        "type": "product"
+      },
+      {
+        "text": "R. W. Soens",
+        "type": "person"
+      },
+      {
+        "text": "C. W. Channel",
+        "type": "person"
+      },
+      {
+        "text": "Arcadia",
+        "type": "location"
+      },
+      {
+        "text": "Florida",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Spotlight ( national ) Sale",
+        "type": "event"
+      },
+      {
+        "text": "Lamancha goat",
+        "type": "other"
+      },
+      {
+        "text": "R. W. Soens",
+        "type": "person"
+      },
+      {
+        "text": "C. W. Channel",
+        "type": "person"
+      },
+      {
+        "text": "Arcadia",
+        "type": "location"
+      },
+      {
+        "text": "Florida",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.7272727272727272,
+    "latency_s": 3.3423218727111816,
+    "output_tokens": 114,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_071",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Kaveri river\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Karnataka\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Tamil Nadu\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Kingdom of Mysore\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Madras Presidency\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Kaveri river",
+        "type": "location"
+      },
+      {
+        "text": "Karnataka",
+        "type": "location"
+      },
+      {
+        "text": "Tamil Nadu",
+        "type": "location"
+      },
+      {
+        "text": "Kingdom of Mysore",
+        "type": "location"
+      },
+      {
+        "text": "Madras Presidency",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Kaveri",
+        "type": "location"
+      },
+      {
+        "text": "Karnataka",
+        "type": "location"
+      },
+      {
+        "text": "Tamil Nadu",
+        "type": "location"
+      },
+      {
+        "text": "Kingdom of Mysore",
+        "type": "organization"
+      },
+      {
+        "text": "Madras Presidency",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.4000000000000001,
+    "latency_s": 3.35078501701355,
+    "output_tokens": 114,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_072",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Yasunori Matsumoto\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ares\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Kikuko Inoue\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Dela\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Junko Iwao\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Yūko Mizutani\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Kyōko Hikami\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Yūko Miyamura\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Minoru Inaba\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ryōtarō Okiayu\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Yuri Amano\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Kaori\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"Jūrōta Kosugi\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Masako Katsuki\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"CD Drama Brandish Gaiden\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"PC Engine CD-ROM²\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Yasunori Matsumoto",
+        "type": "person"
+      },
+      {
+        "text": "Ares",
+        "type": "other"
+      },
+      {
+        "text": "Kikuko Inoue",
+        "type": "person"
+      },
+      {
+        "text": "Dela",
+        "type": "other"
+      },
+      {
+        "text": "Junko Iwao",
+        "type": "person"
+      },
+      {
+        "text": "Yūko Mizutani",
+        "type": "person"
+      },
+      {
+        "text": "Kyōko Hikami",
+        "type": "person"
+      },
+      {
+        "text": "Yūko Miyamura",
+        "type": "person"
+      },
+      {
+        "text": "Minoru Inaba",
+        "type": "person"
+      },
+      {
+        "text": "Ryōtarō Okiayu",
+        "type": "person"
+      },
+      {
+        "text": "Yuri Amano",
+        "type": "person"
+      },
+      {
+        "text": "Kaori",
+        "type": "other"
+      },
+      {
+        "text": "Jūrōta Kosugi",
+        "type": "person"
+      },
+      {
+        "text": "Masako Katsuki",
+        "type": "person"
+      },
+      {
+        "text": "CD Drama Brandish Gaiden",
+        "type": "product"
+      },
+      {
+        "text": "PC Engine CD-ROM²",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "CD Drama Brandish Gaiden",
+        "type": "art"
+      },
+      {
+        "text": "CDドラマ ブランディッシュ外伝",
+        "type": "art"
+      },
+      {
+        "text": "Yasunori Matsumoto ( Ares )",
+        "type": "person"
+      },
+      {
+        "text": "Kikuko Inoue ( Dela )",
+        "type": "person"
+      },
+      {
+        "text": "Junko Iwao",
+        "type": "person"
+      },
+      {
+        "text": "Yūko Mizutani",
+        "type": "person"
+      },
+      {
+        "text": "Kyōko Hikami",
+        "type": "person"
+      },
+      {
+        "text": "Yūko Miyamura",
+        "type": "person"
+      },
+      {
+        "text": "Minoru Inaba",
+        "type": "person"
+      },
+      {
+        "text": "Ryōtarō Okiayu",
+        "type": "person"
+      },
+      {
+        "text": "Yuri Amano",
+        "type": "person"
+      },
+      {
+        "text": "Kaori",
+        "type": "person"
+      },
+      {
+        "text": "Jūrōta Kosugi",
+        "type": "person"
+      },
+      {
+        "text": "Masako Katsuki",
+        "type": "person"
+      },
+      {
+        "text": "PC Engine CD-ROM²",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6451612903225806,
+    "latency_s": 9.358665943145752,
+    "output_tokens": 366,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_073",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n\"entities\": [\n  {\"text\": \"Petit-de-Grat Island\", \"type\": \"location\"},\n  {\"text\": \"Cape Breton Island\", \"type\": \"location\"},\n  {\"text\": \"Richmond County\", \"type\": \"location\"},\n  {\"text\": \"Nova Scotia\", \"type\": \"location\"},\n  {\"text\": \"Canada\", \"type\": \"location\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Petit-de-Grat Island",
+        "type": "location"
+      },
+      {
+        "text": "Cape Breton Island",
+        "type": "location"
+      },
+      {
+        "text": "Richmond County",
+        "type": "location"
+      },
+      {
+        "text": "Nova Scotia",
+        "type": "location"
+      },
+      {
+        "text": "Canada",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Petit-de-Grat Island",
+        "type": "location"
+      },
+      {
+        "text": "Canadian",
+        "type": "location"
+      },
+      {
+        "text": "Cape Breton Island",
+        "type": "location"
+      },
+      {
+        "text": "Richmond County",
+        "type": "location"
+      },
+      {
+        "text": "Nova Scotia",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8000000000000002,
+    "latency_s": 2.6575140953063965,
+    "output_tokens": 86,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_074",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Oslo Spektrum\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Oslo\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Norway\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Norwegian Broadcasting Corporation\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"NRK\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Margrethe Røed\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Tooji\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Oslo Spektrum",
+        "type": "location"
+      },
+      {
+        "text": "Oslo",
+        "type": "location"
+      },
+      {
+        "text": "Norway",
+        "type": "location"
+      },
+      {
+        "text": "Norwegian Broadcasting Corporation",
+        "type": "organization"
+      },
+      {
+        "text": "NRK",
+        "type": "organization"
+      },
+      {
+        "text": "Margrethe Røed",
+        "type": "person"
+      },
+      {
+        "text": "Tooji",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "the Oslo Spektrum",
+        "type": "building"
+      },
+      {
+        "text": "Oslo",
+        "type": "location"
+      },
+      {
+        "text": "Norway",
+        "type": "location"
+      },
+      {
+        "text": "Norwegian Broadcasting Corporation",
+        "type": "organization"
+      },
+      {
+        "text": "NRK",
+        "type": "organization"
+      },
+      {
+        "text": "Margrethe Røed",
+        "type": "person"
+      },
+      {
+        "text": "Tooji",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8571428571428571,
+    "latency_s": 4.264256000518799,
+    "output_tokens": 153,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_075",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Wilkes-Barre / Scranton Penguins\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"American Hockey League\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Mohegan Sun Arena at Casey Plaza\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Wachovia Arena\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Wilkes-Barre Township\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Wilkes-Barre / Scranton Penguins",
+        "type": "organization"
+      },
+      {
+        "text": "American Hockey League",
+        "type": "organization"
+      },
+      {
+        "text": "Mohegan Sun Arena at Casey Plaza",
+        "type": "location"
+      },
+      {
+        "text": "Wachovia Arena",
+        "type": "location"
+      },
+      {
+        "text": "Wilkes-Barre Township",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Wilkes-Barre",
+        "type": "organization"
+      },
+      {
+        "text": "Scranton Penguins",
+        "type": "organization"
+      },
+      {
+        "text": "American Hockey League",
+        "type": "organization"
+      },
+      {
+        "text": "Mohegan Sun Arena at Casey Plaza",
+        "type": "building"
+      },
+      {
+        "text": "formerly Wachovia Arena",
+        "type": "building"
+      },
+      {
+        "text": "Wilkes-Barre Township",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.3636363636363636,
+    "latency_s": 3.570266008377075,
+    "output_tokens": 124,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_076",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Central Alliance\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Midland League\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Northern Premier League\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Northern Counties East League\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Sutton Town\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Ashfield United\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Central Alliance",
+        "type": "organization"
+      },
+      {
+        "text": "Midland League",
+        "type": "organization"
+      },
+      {
+        "text": "Northern Premier League",
+        "type": "organization"
+      },
+      {
+        "text": "Northern Counties East League",
+        "type": "organization"
+      },
+      {
+        "text": "Sutton Town",
+        "type": "organization"
+      },
+      {
+        "text": "Ashfield United",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Central Alliance",
+        "type": "organization"
+      },
+      {
+        "text": "Midland League",
+        "type": "organization"
+      },
+      {
+        "text": "Northern Premier League",
+        "type": "organization"
+      },
+      {
+        "text": "Northern Counties East League",
+        "type": "organization"
+      },
+      {
+        "text": "Sutton Town",
+        "type": "location"
+      },
+      {
+        "text": "Ashfield United",
+        "type": "organization"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8333333333333334,
+    "latency_s": 3.68571400642395,
+    "output_tokens": 130,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_077",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Deluxe Reading\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Johnny Lightning\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Mattel\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Hot Wheels\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Crime Buster Gun\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"O.M.A\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Operation X 500 Space Base\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Deluxe Reading",
+        "type": "organization"
+      },
+      {
+        "text": "Johnny Lightning",
+        "type": "product"
+      },
+      {
+        "text": "Mattel",
+        "type": "organization"
+      },
+      {
+        "text": "Hot Wheels",
+        "type": "product"
+      },
+      {
+        "text": "Crime Buster Gun",
+        "type": "product"
+      },
+      {
+        "text": "O.M.A",
+        "type": "product"
+      },
+      {
+        "text": "Operation X 500 Space Base",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Deluxe Reading",
+        "type": "organization"
+      },
+      {
+        "text": "Johnny Lightning",
+        "type": "product"
+      },
+      {
+        "text": "Mattel",
+        "type": "organization"
+      },
+      {
+        "text": "Hot Wheels",
+        "type": "product"
+      },
+      {
+        "text": "Crime Buster Gun",
+        "type": "product"
+      },
+      {
+        "text": "O.M.A",
+        "type": "organization"
+      },
+      {
+        "text": "Operation X 500 Space Base",
+        "type": "product"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8571428571428571,
+    "latency_s": 4.198390007019043,
+    "output_tokens": 152,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_078",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Mildred\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"James Clendenin\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Louisville\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"St. Louis\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Mildred",
+        "type": "person"
+      },
+      {
+        "text": "James Clendenin",
+        "type": "person"
+      },
+      {
+        "text": "Louisville",
+        "type": "location"
+      },
+      {
+        "text": "St. Louis",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Mildred",
+        "type": "person"
+      },
+      {
+        "text": "James Clendenin",
+        "type": "person"
+      },
+      {
+        "text": "Louisville",
+        "type": "location"
+      },
+      {
+        "text": "Courtenay",
+        "type": "person"
+      },
+      {
+        "text": "St. Louis",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.888888888888889,
+    "latency_s": 2.7541160583496094,
+    "output_tokens": 90,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_079",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"A Tale of Five Cities\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"A Tale of Five Women\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"US\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"1951\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"British\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Italian\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Romolo Marcellini\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "A Tale of Five Cities",
+        "type": "product"
+      },
+      {
+        "text": "A Tale of Five Women",
+        "type": "product"
+      },
+      {
+        "text": "US",
+        "type": "location"
+      },
+      {
+        "text": "1951",
+        "type": "other"
+      },
+      {
+        "text": "British",
+        "type": "location"
+      },
+      {
+        "text": "Italian",
+        "type": "location"
+      },
+      {
+        "text": "Romolo Marcellini",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "A Tale of Five Cities",
+        "type": "art"
+      },
+      {
+        "text": "A Tale of Five Women",
+        "type": "art"
+      },
+      {
+        "text": "US",
+        "type": "location"
+      },
+      {
+        "text": "British",
+        "type": "location"
+      },
+      {
+        "text": "Italian",
+        "type": "location"
+      },
+      {
+        "text": "Romolo Marcellini",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6153846153846153,
+    "latency_s": 4.208794832229614,
+    "output_tokens": 151,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_080",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Chano Pozo\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Dizzy Gillespie\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Machito\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"New York City\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Chano Pozo",
+        "type": "person"
+      },
+      {
+        "text": "Dizzy Gillespie",
+        "type": "person"
+      },
+      {
+        "text": "Machito",
+        "type": "person"
+      },
+      {
+        "text": "New York City",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Chano Pozo",
+        "type": "person"
+      },
+      {
+        "text": "bebop revolution",
+        "type": "event"
+      },
+      {
+        "text": "Dizzy Gillespie",
+        "type": "person"
+      },
+      {
+        "text": "Machito",
+        "type": "person"
+      },
+      {
+        "text": "New York City",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.888888888888889,
+    "latency_s": 2.7776780128479004,
+    "output_tokens": 92,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_081",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Unlosing Ranger VS Darkdeath Evilman\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"The Witch and the Hundred Knight\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Battle Princess of Arcadias\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"The Guided Fate Paradox\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Disgaea\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Unlosing Ranger VS Darkdeath Evilman",
+        "type": "product"
+      },
+      {
+        "text": "The Witch and the Hundred Knight",
+        "type": "product"
+      },
+      {
+        "text": "Battle Princess of Arcadias",
+        "type": "product"
+      },
+      {
+        "text": "The Guided Fate Paradox",
+        "type": "product"
+      },
+      {
+        "text": "Disgaea",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Darkdeath Evilman",
+        "type": "person"
+      },
+      {
+        "text": "The Witch",
+        "type": "person"
+      },
+      {
+        "text": "Hundred Knight",
+        "type": "person"
+      },
+      {
+        "text": "Battle Princess of Arcadias",
+        "type": "person"
+      },
+      {
+        "text": "Guided Fate Paradox",
+        "type": "person"
+      },
+      {
+        "text": "Disgaea",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.1818181818181818,
+    "latency_s": 3.569260835647583,
+    "output_tokens": 124,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_082",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"HD 209458 b\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Osiris\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"HD 209458\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Pegasus\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Solar System\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "HD 209458 b",
+        "type": "product"
+      },
+      {
+        "text": "Osiris",
+        "type": "other"
+      },
+      {
+        "text": "HD 209458",
+        "type": "organization"
+      },
+      {
+        "text": "Pegasus",
+        "type": "location"
+      },
+      {
+        "text": "Solar System",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "HD 209458 b",
+        "type": "other"
+      },
+      {
+        "text": "Osiris",
+        "type": "other"
+      },
+      {
+        "text": "HD 209458",
+        "type": "other"
+      },
+      {
+        "text": "Pegasus",
+        "type": "other"
+      },
+      {
+        "text": "Solar System",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.20000000000000004,
+    "latency_s": 3.4592630863189697,
+    "output_tokens": 118,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_083",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Kellogg 's\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Incredibles\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Pop-Tarts\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"fruit snacks\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Incrediberry Blast\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Kellogg 's",
+        "type": "organization"
+      },
+      {
+        "text": "Incredibles",
+        "type": "product"
+      },
+      {
+        "text": "Pop-Tarts",
+        "type": "product"
+      },
+      {
+        "text": "fruit snacks",
+        "type": "product"
+      },
+      {
+        "text": "Incrediberry Blast",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Kellogg",
+        "type": "organization"
+      },
+      {
+        "text": "Incredibles-themed cereal",
+        "type": "product"
+      },
+      {
+        "text": "Pop-Tarts",
+        "type": "product"
+      },
+      {
+        "text": "fruit snacks",
+        "type": "product"
+      },
+      {
+        "text": "Incrediberry Blast",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6,
+    "latency_s": 3.294739007949829,
+    "output_tokens": 112,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_084",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Rob Kozluk\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Sheffield United\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Dennis Souza\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"RAEC Mons\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Lewin Nyatanga\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Derby\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Stephen Foster\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Burnley\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Marciano Bruma\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Sparta Rotterdam\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Rob Kozluk",
+        "type": "person"
+      },
+      {
+        "text": "Sheffield United",
+        "type": "organization"
+      },
+      {
+        "text": "Dennis Souza",
+        "type": "person"
+      },
+      {
+        "text": "RAEC Mons",
+        "type": "organization"
+      },
+      {
+        "text": "Lewin Nyatanga",
+        "type": "person"
+      },
+      {
+        "text": "Derby",
+        "type": "organization"
+      },
+      {
+        "text": "Stephen Foster",
+        "type": "person"
+      },
+      {
+        "text": "Burnley",
+        "type": "organization"
+      },
+      {
+        "text": "Marciano Bruma",
+        "type": "person"
+      },
+      {
+        "text": "Sparta Rotterdam",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Rob Kozluk",
+        "type": "person"
+      },
+      {
+        "text": "Sheffield United",
+        "type": "organization"
+      },
+      {
+        "text": "Dennis Souza",
+        "type": "person"
+      },
+      {
+        "text": "RAEC Mons",
+        "type": "organization"
+      },
+      {
+        "text": "Lewin Nyatanga",
+        "type": "person"
+      },
+      {
+        "text": "Stephen Foster",
+        "type": "person"
+      },
+      {
+        "text": "Burnley",
+        "type": "organization"
+      },
+      {
+        "text": "Marciano Bruma",
+        "type": "person"
+      },
+      {
+        "text": "Sparta Rotterdam",
+        "type": "organization"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.9473684210526316,
+    "latency_s": 5.84192681312561,
+    "output_tokens": 215,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_085",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Dick Enberg\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Exhibition Stadium\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Toronto\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"1985 American League Championship Series\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"NBC\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Dick Enberg",
+        "type": "person"
+      },
+      {
+        "text": "Exhibition Stadium",
+        "type": "location"
+      },
+      {
+        "text": "Toronto",
+        "type": "location"
+      },
+      {
+        "text": "1985 American League Championship Series",
+        "type": "event"
+      },
+      {
+        "text": "NBC",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Dick Enberg",
+        "type": "person"
+      },
+      {
+        "text": "Exhibition Stadium",
+        "type": "building"
+      },
+      {
+        "text": "Toronto",
+        "type": "location"
+      },
+      {
+        "text": "Games",
+        "type": "event"
+      },
+      {
+        "text": "American League Championship Series",
+        "type": "event"
+      },
+      {
+        "text": "NBC",
+        "type": "organization"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5454545454545454,
+    "latency_s": 3.2558329105377197,
+    "output_tokens": 111,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_086",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Ptolemy II Philadelphus\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Pliny the Elder\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Dionysius\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Mauryan court\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Pataliputra\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"India\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Emperor Ashoka\",\n            \"type\": \"person\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Ptolemy II Philadelphus",
+        "type": "person"
+      },
+      {
+        "text": "Pliny the Elder",
+        "type": "person"
+      },
+      {
+        "text": "Dionysius",
+        "type": "person"
+      },
+      {
+        "text": "Mauryan court",
+        "type": "organization"
+      },
+      {
+        "text": "Pataliputra",
+        "type": "location"
+      },
+      {
+        "text": "India",
+        "type": "location"
+      },
+      {
+        "text": "Emperor Ashoka",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Ptolemy II Philadelphus",
+        "type": "person"
+      },
+      {
+        "text": "Pliny",
+        "type": "person"
+      },
+      {
+        "text": "Dionysius",
+        "type": "person"
+      },
+      {
+        "text": "Mauryan court",
+        "type": "organization"
+      },
+      {
+        "text": "Pataliputra",
+        "type": "location"
+      },
+      {
+        "text": "India",
+        "type": "location"
+      },
+      {
+        "text": "Emperor Ashoka",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8571428571428571,
+    "latency_s": 4.480209827423096,
+    "output_tokens": 159,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_087",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Paula D'Alessandris\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Mind The Gap ( MTG ) Theatre Company\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"New York\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"United Kingdom\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Paula D'Alessandris",
+        "type": "person"
+      },
+      {
+        "text": "Mind The Gap ( MTG ) Theatre Company",
+        "type": "organization"
+      },
+      {
+        "text": "New York",
+        "type": "location"
+      },
+      {
+        "text": "United Kingdom",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Paula D'Alessandris",
+        "type": "person"
+      },
+      {
+        "text": "Mind The Gap ( MTG ) Theatre Company",
+        "type": "organization"
+      },
+      {
+        "text": "British",
+        "type": "location"
+      },
+      {
+        "text": "New York",
+        "type": "location"
+      },
+      {
+        "text": "America",
+        "type": "location"
+      },
+      {
+        "text": "the United Kingdom",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6,
+    "latency_s": 2.971980094909668,
+    "output_tokens": 98,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_088",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"NYCPM\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"DPM\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"MPH\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Icahn School of Medicine at Mount Sinai\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "NYCPM",
+        "type": "organization"
+      },
+      {
+        "text": "DPM",
+        "type": "product"
+      },
+      {
+        "text": "MPH",
+        "type": "product"
+      },
+      {
+        "text": "Icahn School of Medicine at Mount Sinai",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "NYCPM",
+        "type": "organization"
+      },
+      {
+        "text": "DPM/MPH",
+        "type": "other"
+      },
+      {
+        "text": "Master of Public Health",
+        "type": "other"
+      },
+      {
+        "text": "Icahn School of Medicine",
+        "type": "organization"
+      },
+      {
+        "text": "Mount Sinai",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.22222222222222224,
+    "latency_s": 2.884424924850464,
+    "output_tokens": 94,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_089",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n\"entities\": [\n{\"text\": \"GSK3β\", \"type\": \"organization\"},\n{\"text\": \"MARK\", \"type\": \"organization\"},\n{\"text\": \"tau\", \"type\": \"product\"}\n]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "GSK3β",
+        "type": "organization"
+      },
+      {
+        "text": "MARK",
+        "type": "organization"
+      },
+      {
+        "text": "tau",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "threonine",
+        "type": "other"
+      },
+      {
+        "text": "Thr175",
+        "type": "other"
+      },
+      {
+        "text": "kinases",
+        "type": "other"
+      },
+      {
+        "text": "GSK3β",
+        "type": "other"
+      },
+      {
+        "text": "MARK",
+        "type": "other"
+      },
+      {
+        "text": "tau protein",
+        "type": "other"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 1.8665719032287598,
+    "output_tokens": 47,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_090",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Preki\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Mo Johnston\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Digital Takawira\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Ron Newman\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"The Wiz\",\n            \"type\": \"organization\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Preki",
+        "type": "person"
+      },
+      {
+        "text": "Mo Johnston",
+        "type": "person"
+      },
+      {
+        "text": "Digital Takawira",
+        "type": "person"
+      },
+      {
+        "text": "Ron Newman",
+        "type": "person"
+      },
+      {
+        "text": "The Wiz",
+        "type": "organization"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Wiz",
+        "type": "organization"
+      },
+      {
+        "text": "Preki",
+        "type": "person"
+      },
+      {
+        "text": "Mo Johnston",
+        "type": "person"
+      },
+      {
+        "text": "Digital Takawira",
+        "type": "person"
+      },
+      {
+        "text": "Ron Newman",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8000000000000002,
+    "latency_s": 3.1550028324127197,
+    "output_tokens": 108,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_091",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"SV1\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"J90\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"Y-MP\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"UNIX\",\n            \"type\": \"product\"\n        },\n        {\n            \"text\": \"UNICOS\",\n            \"type\": \"product\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "SV1",
+        "type": "product"
+      },
+      {
+        "text": "J90",
+        "type": "product"
+      },
+      {
+        "text": "Y-MP",
+        "type": "product"
+      },
+      {
+        "text": "UNIX",
+        "type": "product"
+      },
+      {
+        "text": "UNICOS",
+        "type": "product"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "SV1",
+        "type": "product"
+      },
+      {
+        "text": "J90",
+        "type": "product"
+      },
+      {
+        "text": "Y-MP",
+        "type": "product"
+      },
+      {
+        "text": "UNIX",
+        "type": "product"
+      },
+      {
+        "text": "UNICOS",
+        "type": "product"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 3.1831839084625244,
+    "output_tokens": 107,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_092",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Comedy Circus – Kaante Ki Takkar\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus – Teen Ka Tadka\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus Ke Superstar\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus Ka Jadoo\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Jubilee Comedy Circus\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus Ke Taansen\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Ka Naya Daur\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Kahaani Comedy Circus Ki\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus Ke Ajoobe\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Comedy Circus Ke Mahabali\",\n            \"type\": \"event\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Comedy Circus – Kaante Ki Takkar",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus – Teen Ka Tadka",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus Ke Superstar",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus Ka Jadoo",
+        "type": "event"
+      },
+      {
+        "text": "Jubilee Comedy Circus",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus Ke Taansen",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Ka Naya Daur",
+        "type": "event"
+      },
+      {
+        "text": "Kahaani Comedy Circus Ki",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus Ke Ajoobe",
+        "type": "event"
+      },
+      {
+        "text": "Comedy Circus Ke Mahabali",
+        "type": "event"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Comedy Circus – Kaante Ki Takkar",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus – Teen Ka Tadka",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus Ke Superstar",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus Ka Jadoo",
+        "type": "art"
+      },
+      {
+        "text": "Jubilee Comedy Circus",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus Ke Taansen",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Ka Naya Daur",
+        "type": "art"
+      },
+      {
+        "text": "Kahaani Comedy Circus Ki",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus Ke Ajoobe",
+        "type": "art"
+      },
+      {
+        "text": "Comedy Circus Ke Mahabali",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.0,
+    "latency_s": 6.783843040466309,
+    "output_tokens": 248,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_093",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Number 2 Dry Dock\",\n            \"type\": \"building\"\n        },\n        {\n            \"text\": \"Royal Naval Museum\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Portsmouth Naval Base\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Portsmouth\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"HMS Nelson\",\n            \"type\": \"building\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Number 2 Dry Dock",
+        "type": "building"
+      },
+      {
+        "text": "Royal Naval Museum",
+        "type": "organization"
+      },
+      {
+        "text": "Portsmouth Naval Base",
+        "type": "location"
+      },
+      {
+        "text": "Portsmouth",
+        "type": "location"
+      },
+      {
+        "text": "HMS Nelson",
+        "type": "building"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Number 2 Dry Dock",
+        "type": "building"
+      },
+      {
+        "text": "Royal Naval Museum",
+        "type": "building"
+      },
+      {
+        "text": "Portsmouth Naval Base",
+        "type": "location"
+      },
+      {
+        "text": "Portsmouth",
+        "type": "location"
+      },
+      {
+        "text": "Nelson",
+        "type": "product"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6,
+    "latency_s": 3.335474967956543,
+    "output_tokens": 112,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_094",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\"entities\": [{\"text\": \"United States\", \"type\": \"location\"}, {\"text\": \"Lyndon B Johnson\", \"type\": \"person\"}, {\"text\": \"Richard M Nixon\", \"type\": \"person\"}, {\"text\": \"Ronald Reagan\", \"type\": \"person\"}, {\"text\": \"George Bush\", \"type\": \"person\"}, {\"text\": \"George W Bush\", \"type\": \"person\"}, {\"text\": \"Donald Trump\", \"type\": \"person\"}]}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "United States",
+        "type": "location"
+      },
+      {
+        "text": "Lyndon B Johnson",
+        "type": "person"
+      },
+      {
+        "text": "Richard M Nixon",
+        "type": "person"
+      },
+      {
+        "text": "Ronald Reagan",
+        "type": "person"
+      },
+      {
+        "text": "George Bush",
+        "type": "person"
+      },
+      {
+        "text": "George W Bush",
+        "type": "person"
+      },
+      {
+        "text": "Donald Trump",
+        "type": "person"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "United States",
+        "type": "location"
+      },
+      {
+        "text": "Lyndon B Johnson",
+        "type": "person"
+      },
+      {
+        "text": "Richard M Nixon",
+        "type": "person"
+      },
+      {
+        "text": "Ronald Reagan",
+        "type": "person"
+      },
+      {
+        "text": "George Bush",
+        "type": "person"
+      },
+      {
+        "text": "George W Bush",
+        "type": "person"
+      },
+      {
+        "text": "Donald Trump",
+        "type": "person"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 1.0,
+    "latency_s": 3.055560350418091,
+    "output_tokens": 101,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_095",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Glungezer\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Lizum Lizum im Wattental\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Hochfügen-Hochzillertal\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Penken\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Kellerjoch\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Patscherkofel\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Glungezer",
+        "type": "location"
+      },
+      {
+        "text": "Lizum Lizum im Wattental",
+        "type": "location"
+      },
+      {
+        "text": "Hochfügen-Hochzillertal",
+        "type": "location"
+      },
+      {
+        "text": "Penken",
+        "type": "location"
+      },
+      {
+        "text": "Kellerjoch",
+        "type": "location"
+      },
+      {
+        "text": "Patscherkofel",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Glungezer",
+        "type": "location"
+      },
+      {
+        "text": "Lizum Lizum im Wattental",
+        "type": "location"
+      },
+      {
+        "text": "Hochfügen-Hochzillertal",
+        "type": "location"
+      },
+      {
+        "text": "Penken and Kellerjoch",
+        "type": "location"
+      },
+      {
+        "text": "Patscherkofel",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.7272727272727272,
+    "latency_s": 4.122588157653809,
+    "output_tokens": 145,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_096",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Ben\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Bruce Davison\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Academy Award Nominated\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Tell Me Your Name\",\n            \"type\": \"art\"\n        },\n        {\n            \"text\": \"Disney\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Stephen J. Anderson\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Sugar\",\n            \"type\": \"art\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Ben",
+        "type": "person"
+      },
+      {
+        "text": "Bruce Davison",
+        "type": "person"
+      },
+      {
+        "text": "Academy Award Nominated",
+        "type": "event"
+      },
+      {
+        "text": "Tell Me Your Name",
+        "type": "art"
+      },
+      {
+        "text": "Disney",
+        "type": "organization"
+      },
+      {
+        "text": "Stephen J. Anderson",
+        "type": "person"
+      },
+      {
+        "text": "Sugar",
+        "type": "art"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Bruce Davison in",
+        "type": "person"
+      },
+      {
+        "text": "Tell Me Your Name",
+        "type": "art"
+      },
+      {
+        "text": "Disney",
+        "type": "location"
+      },
+      {
+        "text": "Stephen J. Anderson",
+        "type": "person"
+      },
+      {
+        "text": "Sugar",
+        "type": "art"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.5,
+    "latency_s": 4.225107908248901,
+    "output_tokens": 149,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_097",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"British Eighth Army\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Italy\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Italian Campaign\",\n            \"type\": \"event\"\n        },\n        {\n            \"text\": \"Po Valley\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Distinguished Unit Citation\",\n            \"type\": \"art\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "British Eighth Army",
+        "type": "organization"
+      },
+      {
+        "text": "Italy",
+        "type": "location"
+      },
+      {
+        "text": "Italian Campaign",
+        "type": "event"
+      },
+      {
+        "text": "Po Valley",
+        "type": "location"
+      },
+      {
+        "text": "Distinguished Unit Citation",
+        "type": "art"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "British Eighth Army",
+        "type": "organization"
+      },
+      {
+        "text": "Italy",
+        "type": "location"
+      },
+      {
+        "text": "Italian Campaign",
+        "type": "event"
+      },
+      {
+        "text": "Distinguished Unit Citation for actions",
+        "type": "other"
+      },
+      {
+        "text": "Po Valley",
+        "type": "location"
+      }
+    ],
+    "correct": true,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": true,
+    "entity_f1": 0.8000000000000002,
+    "latency_s": 3.366255044937134,
+    "output_tokens": 107,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_098",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Dr. Forest Dewey Dodrill\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"Wayne State University\",\n            \"type\": \"organization\"\n        },\n        {\n            \"text\": \"Harper Hospital\",\n            \"type\": \"building\"\n        },\n        {\n            \"text\": \"Detroit\",\n            \"type\": \"location\"\n        },\n        {\n            \"text\": \"Opitek\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"left ventricle\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"left atrium\",\n            \"type\": \"other\"\n        },\n        {\n            \"text\": \"mitral valve\",\n            \"type\": \"other\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Dr. Forest Dewey Dodrill",
+        "type": "person"
+      },
+      {
+        "text": "Wayne State University",
+        "type": "organization"
+      },
+      {
+        "text": "Harper Hospital",
+        "type": "building"
+      },
+      {
+        "text": "Detroit",
+        "type": "location"
+      },
+      {
+        "text": "Opitek",
+        "type": "person"
+      },
+      {
+        "text": "left ventricle",
+        "type": "other"
+      },
+      {
+        "text": "left atrium",
+        "type": "other"
+      },
+      {
+        "text": "mitral valve",
+        "type": "other"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Forest Dewey Dodrill",
+        "type": "person"
+      },
+      {
+        "text": "Wayne State University",
+        "type": "organization"
+      },
+      {
+        "text": "Harper Hospital",
+        "type": "building"
+      },
+      {
+        "text": "Detroit",
+        "type": "location"
+      },
+      {
+        "text": "Opitek",
+        "type": "person"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.6153846153846154,
+    "latency_s": 4.883553743362427,
+    "output_tokens": 175,
+    "error": null
+  },
+  {
+    "task_id": "fewnerd_099",
+    "dataset": "fewnerd",
+    "condition": "guided_nothink",
+    "model": "Qwen3-8B",
+    "difficulty": "hard",
+    "raw_response": "{\n\n\n    \"entities\": [\n        {\n            \"text\": \"Payne\",\n            \"type\": \"person\"\n        },\n        {\n            \"text\": \"HMS Brune\",\n            \"type\": \"building\"\n        },\n        {\n            \"text\": \"HMS Phoenix\",\n            \"type\": \"building\"\n        },\n        {\n            \"text\": \"Eastern Seaboard\",\n            \"type\": \"location\"\n        }\n    ]\n}",
+    "has_think": false,
+    "parsed_answer": [
+      {
+        "text": "Payne",
+        "type": "person"
+      },
+      {
+        "text": "HMS Brune",
+        "type": "building"
+      },
+      {
+        "text": "HMS Phoenix",
+        "type": "building"
+      },
+      {
+        "text": "Eastern Seaboard",
+        "type": "location"
+      }
+    ],
+    "expected_answer": [
+      {
+        "text": "Payne",
+        "type": "person"
+      },
+      {
+        "text": "HMS",
+        "type": "organization"
+      },
+      {
+        "text": "Brune",
+        "type": "organization"
+      },
+      {
+        "text": "HMS",
+        "type": "organization"
+      },
+      {
+        "text": "Phoenix",
+        "type": "organization"
+      },
+      {
+        "text": "Eastern Seaboard",
+        "type": "location"
+      }
+    ],
+    "correct": false,
+    "parse_success": true,
+    "structure_valid": true,
+    "content_correct_fallback": false,
+    "entity_f1": 0.4444444444444445,
+    "latency_s": 2.8026418685913086,
+    "output_tokens": 91,
+    "error": null
+  }
+]

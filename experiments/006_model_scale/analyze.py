@@ -17,10 +17,10 @@ from typing import Any
 RESULTS_DIR = Path(__file__).parent / "results"
 REPORT_PATH = RESULTS_DIR / "report.md"
 
-MODEL_ORDER = ["qwen3-0.6b", "qwen3-1.7b", "qwen3-4b", "qwen3-8b", "qwen3-14b"]
+MODEL_ORDER = ["qwen3-0.6b", "qwen3-1.7b", "qwen3-4b", "qwen3-8b", "qwen3-14b", "qwen3-32b"]
 MODEL_PARAMS = {
     "qwen3-0.6b": "0.6B", "qwen3-1.7b": "1.7B", "qwen3-4b": "4B",
-    "qwen3-8b": "8B", "qwen3-14b": "14B",
+    "qwen3-8b": "8B", "qwen3-14b": "14B", "qwen3-32b": "32B",
 }
 STRATEGIES = ["free", "prompt", "guided"]
 SUBGROUPS = {

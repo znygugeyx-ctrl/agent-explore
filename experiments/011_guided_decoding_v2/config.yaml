@@ -1,0 +1,71 @@
+# Experiment 011: Guided Decoding — Task Complexity × Enum Scale
+
+models:
+  - id: Qwen/Qwen3-8B
+    name: qwen3-8b
+  - id: Qwen/Qwen3-14B
+    name: qwen3-14b
+
+vllm:
+  base_url: http://localhost:8001/v1
+  temperature: 0.0
+  max_tokens: 2048   # prompt_think needs room for <think> block
+  concurrency: 4
+
+observer:
+  url: http://localhost:7777
+
+track1:
+  dataset: gsm8k
+  source: openai/gsm8k
+  split: test
+  total_tasks: 100
+  difficulty:
+    easy: {steps: [1, 2], count: 35}
+    medium: {steps: [3, 4], count: 35}
+    hard: {steps: [5, 99], count: 30}
+  conditions: [prompt_nothink, prompt_think, guided_nothink]
+  schema:
+    type: object
+    required: [answer]
+    properties:
+      answer: {type: integer}
+
+track2:
+  conditions: [prompt_nothink, guided_nothink]
+  datasets:
+    sst5:
+      source: SetFit/sst5
+      split: test
+      total_tasks: 80
+      difficulty: {easy: 30, medium: 30, hard: 20}
+      labels: [very_negative, negative, neutral, positive, very_positive]
+    goemo:
+      source: google-research-datasets/go_emotions
+      split: test
+      filter: single_label_only
+      total_tasks: 80
+      difficulty: {easy: 30, medium: 30, hard: 20}
+      # 28 labels defined in schemas.py
+    banking77:
+      source: PolyAI/banking77
+      split: test
+      total_tasks: 140
+      difficulty: {easy: 50, medium: 50, hard: 40}
+      # 77 labels defined in schemas.py
+
+difficulty_grading:
+  gsm8k: step_count          # mechanical, no LLM needed
+  classification: claude_confidence  # uses Bedrock Haiku
+  confidence_thresholds:
+    easy: 0.8     # confidence > 0.8
+    medium: 0.5   # 0.5 < confidence <= 0.8
+    hard: 0.0     # confidence <= 0.5
+  grading_model: us.anthropic.claude-haiku-4-5-20251001
+  grading_pool_size: 300  # candidates to grade per dataset
+
+seed: 42
+
+pilot:
+  tasks_per_dataset: 10
+  model: Qwen/Qwen3-8B

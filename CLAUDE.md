@@ -122,26 +122,22 @@ All `run.py` must support断点恢复 (resume from interruption):
 
 ## vLLM Inference Endpoint
 
-GPU inference runs on an EC2 g6e.2xlarge (L40S 48GB) with vLLM + Qwen3-8B. Stopped nightly to save cost. See `infra/README.md` for full details.
+GPU inference runs on EC2 via the `infra-ops` skill. **Instances are terminated after each experiment** (not stopped) — each run starts fresh. See `infra/README.md` for full details.
 
-**Daily lifecycle:** start instance → start vLLM → SSH tunnel → experiment → stop instance
+**Instance types:**
+- `g6e.2xlarge` (1× L40S 48GB) — models ≤14B
+- `g6e.12xlarge` (4× L40S 192GB) — models >14B, tensor-parallel=4
 
+**Lifecycle:** `/infra-ops` skill handles launch → vLLM setup → SSH tunnel → terminate. Instances are discovered via EC2 tags (`Experiment=<name>`), not stored IDs.
+
+**Static config in `~/.aws-resources`** (never commit — contains AMI IDs and SG IDs per region):
 ```bash
-# Instance ID stored in ~/.aws-resources as $VLLM_INSTANCE_ID (never commit)
-
-# Start instance + get new IP
-aws ec2 start-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
-aws ec2 describe-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1 \
-  --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
-
-# SSH tunnel (makes localhost:8000 → remote vLLM)
-ssh -f -N -L 8000:localhost:8000 -i ~/.ssh/vllm-experiment-key.pem ubuntu@<IP>
-
-# Stop instance
-aws ec2 stop-instances --instance-ids $VLLM_INSTANCE_ID --region us-east-1
+source ~/.aws-resources  # loads VLLM_AMI_US_EAST_1, VLLM_SG_US_EAST_1, VLLM_KEY_PATH, etc.
 ```
 
-**Using in code:** `Model(id="Qwen/Qwen3-8B", provider="openai_compat", base_url="http://localhost:8000/v1")`
+**SSH tunnel:** `localhost:8001` → remote `8000` (port 8001 because 8000 is occupied locally)
+
+**Using in code:** `Model(id="Qwen/Qwen3-8B", provider="openai_compat", base_url="http://localhost:8001/v1")`
 
 **Key capabilities** (documented in `infra/README.md`):
 - Tool calling (Hermes parser)

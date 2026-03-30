@@ -40,3 +40,4 @@ Thumbs.db
 
 pi-mono/
 *.lock
+experiments/*/results/*-pilot/

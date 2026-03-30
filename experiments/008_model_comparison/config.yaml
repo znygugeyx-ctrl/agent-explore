@@ -1,0 +1,25 @@
+experiment: 008_model_comparison
+description: MiroThinker-1.7-mini vs Claude Haiku 4.5 on GAIA search tasks
+
+model:
+  id: miromind-ai/MiroThinker-1.7-mini
+  provider: openai_compat
+  base_url: http://localhost:8001/v1
+  temperature: 1.0
+  top_p: 0.95
+  repetition_penalty: 1.05
+  max_tokens: 16384
+
+tasks:
+  source: experiments/007_content_format/tasks.jsonl
+  count: 9  # 3xL1, 3xL2, 3xL3
+
+runs: 2
+max_turns: 30
+concurrency: 1  # sequential to avoid OOM on GPU
+content_format: text_only
+
+baseline:
+  experiment: "007"
+  strategy: text_only
+  model: Claude Haiku 4.5

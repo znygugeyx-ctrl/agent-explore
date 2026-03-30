@@ -1,0 +1,60 @@
+experiment: 012_mask_vs_remove_v2
+
+# ---------- 任务配置 ----------
+num_tasks: 10          # pilot: 10; full: 50
+min_tools_per_task: 20
+target_total_tools: 50  # 原始 BFCL 工具 + filler 补齐到此数
+
+# ---------- 策略 ----------
+strategies:
+  vllm: [all, remove_dynamic, mask_hint, mask_logit]
+  bedrock: [all, remove_dynamic, mask_hint]
+
+# ---------- 模型 ----------
+models:
+  qwen3_8b:
+    id: Qwen/Qwen3-8B
+    name: Qwen3-8B
+    provider: openai_compat
+    base_url: http://localhost:8001/v1
+    cost:
+      input: 0.0
+      output: 0.0
+      cache_read: 0.0
+      cache_write: 0.0
+
+  qwen3_14b:
+    id: Qwen/Qwen3-14B
+    name: Qwen3-14B
+    provider: openai_compat
+    base_url: http://localhost:8001/v1
+    cost:
+      input: 0.0
+      output: 0.0
+      cache_read: 0.0
+      cache_write: 0.0
+
+  claude_haiku:
+    id: us.anthropic.claude-haiku-4-5-20251001-v1:0
+    name: Claude-Haiku-4.5
+    provider: bedrock
+    cost:
+      input: 0.8         # $/M tokens
+      output: 4.0
+      cache_read: 0.08
+      cache_write: 1.0
+
+# ---------- 运行参数 ----------
+vllm_base_url: http://localhost:8001/v1
+runs_per_strategy: 1   # pilot: 1; full: 3
+max_parallel: 3
+temperature: 0.0
+max_tokens: 2048
+
+# ---------- 系统提示 ----------
+system_prompt: |
+  You are a helpful assistant with access to a set of tools.
+  For EVERY user request, you MUST call exactly one tool to answer.
+  Do NOT compute the answer mentally or from memory — always invoke a tool.
+  Do NOT write a plain text response instead of a tool call.
+  Even if you know the answer, you must still call the appropriate tool.
