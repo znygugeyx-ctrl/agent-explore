@@ -1,0 +1,1035 @@
+{
+  "summary": {
+    "overall_score": 1.88,
+    "easy_score": 2.28,
+    "hard_score": 1.48,
+    "score_distribution": {
+      "0": 9,
+      "1": 21,
+      "2": 6,
+      "3": 3,
+      "4": 3,
+      "5": 8
+    },
+    "by_category": {
+      "character": 1.8181818181818181,
+      "relationship": 1.0,
+      "item": 2.8333333333333335,
+      "location": 3.4,
+      "event": 1.2857142857142858,
+      "reasoning": 0.8888888888888888
+    },
+    "avg_latency_ms": 9447.84,
+    "judge_model": "us.anthropic.claude-sonnet-4-6"
+  },
+  "records": [
+    {
+      "id": 1,
+      "question": "方源在开窍大典上测试的资质等级是什么？",
+      "answer": "丙等资质",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第五节：人祖三蛊，希望开窍",
+      "msa_answer": "五转",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6932,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 2,
+      "question": "方正的资质等级是什么？",
+      "answer": "甲等资质",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第五节：人祖三蛊，希望开窍",
+      "msa_answer": "甲等",
+      "cited_docs": [
+        {
+          "id": 335,
+          "title": "第一百三十六节：白狐蛊仙传承"
+        }
+      ],
+      "latency_ms": 6698,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 3,
+      "question": "方源和方正是什么关系？",
+      "answer": "孪生兄弟，方源是哥哥，方正是弟弟",
+      "difficulty": "easy",
+      "category": "relationship",
+      "source_section": "第二节：逆光阴五百年觉悟",
+      "msa_answer": "无",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6783,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 4,
+      "question": "春秋蝉有什么能力？",
+      "answer": "能够逆转光阴，让使用者以生命和修为为代价重生回到过去",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第一节：纵身亡魔心仍不悔",
+      "msa_answer": "逆转时光",
+      "cited_docs": [
+        {
+          "id": 1,
+          "title": "第一节：纵身亡魔心仍不悔"
+        },
+        {
+          "id": 19,
+          "title": "第十九节：六转本命春秋蝉！"
+        },
+        {
+          "id": 20,
+          "title": "第二十节：学堂家老无语了"
+        },
+        {
+          "id": 187,
+          "title": "第一百八十七节：时间长河唯一条，春秋蝉做舟来渡"
+        },
+        {
+          "id": 1479,
+          "title": "第四百五十八节：铜龙鱼"
+        }
+      ],
+      "latency_ms": 16669,
+      "rounds": 2,
+      "score": 3
+    },
+    {
+      "id": 5,
+      "question": "方源所在的家族叫什么名字？",
+      "answer": "古月族（古月山寨）",
+      "difficulty": "easy",
+      "category": "location",
+      "source_section": "第三节：请一边玩蛋去",
+      "msa_answer": "古月家族",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6840,
+      "rounds": 2,
+      "score": 4
+    },
+    {
+      "id": 6,
+      "question": "蛊师的修为境界一共分为几转？",
+      "answer": "九转",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第七节：蛊师有九转，花酒留遗藏",
+      "msa_answer": "九转",
+      "cited_docs": [
+        {
+          "id": 7,
+          "title": "第七节：蛊师有九转，花酒留遗藏"
+        }
+      ],
+      "latency_ms": 6149,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 7,
+      "question": "开窍大典上，每个少年都会得到什么蛊虫？",
+      "answer": "希望蛊",
+      "difficulty": "easy",
+      "category": "event",
+      "source_section": "第五节：人祖三蛊，希望开窍",
+      "msa_answer": "智慧蛊",
+      "cited_docs": [
+        {
+          "id": 2167,
+          "title": "第三十五节有载——"
+        }
+      ],
+      "latency_ms": 5171,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 8,
+      "question": "方源的第一只本命蛊是什么？",
+      "answer": "春秋蝉",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第十九节：六转本命春秋蝉！",
+      "msa_answer": "血脉蛊",
+      "cited_docs": [
+        {
+          "id": 2262,
+          "title": "第二百八十六节：九转升炼蛊！"
+        }
+      ],
+      "latency_ms": 6863,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 9,
+      "question": "古月山寨位于什么山上？",
+      "answer": "青茅山",
+      "difficulty": "easy",
+      "category": "location",
+      "source_section": "第二节：逆光阴五百年觉悟",
+      "msa_answer": "古月山寨位于**元泉山**。",
+      "cited_docs": [
+        {
+          "id": 156,
+          "title": "第一百五十六节：照影秘方，花酒迷离"
+        }
+      ],
+      "latency_ms": 6865,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 10,
+      "question": "白凝冰拥有什么特殊体质？",
+      "answer": "北冥冰魄体",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第十五节：历史由胜利者书写",
+      "msa_answer": "北冥冰魄体",
+      "cited_docs": [
+        {
+          "id": 137,
+          "title": "第一百三十七节：影之殇"
+        }
+      ],
+      "latency_ms": 6761,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 11,
+      "question": "方源在三叉山获得了哪个王者传承？",
+      "answer": "狗王传承",
+      "difficulty": "easy",
+      "category": "event",
+      "source_section": "第一百二十节",
+      "msa_answer": "三叉山的王者传承是“三叉山的王者传承”。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 7245,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 12,
+      "question": "琅琊福地的地灵是什么形态？",
+      "answer": "狐狸形态的地灵",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第四百节",
+      "msa_answer": "鸭子",
+      "cited_docs": [
+        {
+          "id": 1152,
+          "title": "第一百三十一节：获取五光山"
+        }
+      ],
+      "latency_ms": 6554,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 13,
+      "question": "方源在第三卷将身体变成了什么形态？",
+      "answer": "六臂天尸",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第五百节",
+      "msa_answer": "魔尊形态",
+      "cited_docs": [
+        {
+          "id": 1514,
+          "title": "第四百九十三节：落英馆"
+        }
+      ],
+      "latency_ms": 6527,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 14,
+      "question": "酒虫这种蛊虫的主要作用是什么？",
+      "answer": "能够产生酒液，用于修炼或交易",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第十七节：初炼酒虫",
+      "msa_answer": "酒虫的主要作用是作为本命蛊，其价值比一些二转蛊虫还要珍贵，且能带人前往花酒行者的尸骸之处。",
+      "cited_docs": [
+        {
+          "id": 14,
+          "title": "第十四节：山缝之中藏玄机"
+        }
+      ],
+      "latency_ms": 8068,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 15,
+      "question": "龙宫这座仙蛊屋属于谁？",
+      "answer": "吴帅",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第一千节",
+      "msa_answer": "龙宫这座仙蛊屋属于**吴帅**。\n\n根据文档内容，吴帅是“龙宫”仙蛊屋的主人。他借助方源之力重生后，以“龙宫”作为自己的仙蛊屋，用于攻略梦境、探索真意，并在与冰晶仙王的战斗中展现出其掌控“龙宫”的能力。此外，文档中多次提到“龙宫”为吴帅所用，如“吴帅昂首阔步，出关而来”“吴帅怀抱双臂，对冰晶仙王道”，表明其为龙宫的主人。",
+      "cited_docs": [
+        {
+          "id": 1982,
+          "title": "第十四节：甘拜下风"
+        }
+      ],
+      "latency_ms": 12266,
+      "rounds": 2,
+      "score": 4
+    },
+    {
+      "id": 16,
+      "question": "天庭的统治者是谁？",
+      "answer": "星宿仙尊",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第二千节",
+      "msa_answer": "龙公",
+      "cited_docs": [
+        {
+          "id": 1380,
+          "title": "第三百五十九节：星宿手段"
+        }
+      ],
+      "latency_ms": 6263,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 17,
+      "question": "方源在后期被称为什么魔尊？",
+      "answer": "炼天魔尊",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第二千一百节",
+      "msa_answer": "吞江蟾魔尊",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6919,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 18,
+      "question": "五域分别是哪五个区域？",
+      "answer": "南疆、中洲、北原、东海、西漠",
+      "difficulty": "easy",
+      "category": "location",
+      "source_section": "第二百节",
+      "msa_answer": "南疆、中洲、北原、东海、西漠",
+      "cited_docs": [
+        {
+          "id": 1045,
+          "title": "第二十四节：是机缘还是麻烦？"
+        }
+      ],
+      "latency_ms": 7451,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 19,
+      "question": "月光蛊是方源早期使用的什么类型的蛊虫？",
+      "answer": "攻击类蛊虫，能发出月刃进行攻击",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第二十二节：月刃飞舞",
+      "msa_answer": "月光蛊是方源早期使用的**月光蛊**，属于一种能操控月光、用于破石的特殊蛊虫。",
+      "cited_docs": [
+        {
+          "id": 60,
+          "title": "第六十节：壁破现甬道，传承岂易与？"
+        }
+      ],
+      "latency_ms": 7329,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 20,
+      "question": "近水楼台是几转的仙蛊屋？",
+      "answer": "七转仙蛊屋",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第五百五十节",
+      "msa_answer": "七转",
+      "cited_docs": [
+        {
+          "id": 566,
+          "title": "第一百六十一节：近水楼台解玄秘"
+        }
+      ],
+      "latency_ms": 6642,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 21,
+      "question": "南疆有哪条著名的大河？",
+      "answer": "黄龙江",
+      "difficulty": "easy",
+      "category": "location",
+      "source_section": "第二百二十节",
+      "msa_answer": "黄龙江",
+      "cited_docs": [
+        {
+          "id": 200,
+          "title": "第一节：黄龙江上竹筏倾"
+        }
+      ],
+      "latency_ms": 6888,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 22,
+      "question": "武庸领导的势力叫什么？",
+      "answer": "南联（南方联盟）",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第一千五百节",
+      "msa_answer": "武庸领导的势力叫古月山寨。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 7244,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 23,
+      "question": "方源前世在地球上是什么身份？",
+      "answer": "华夏学子（来自地球的穿越者）",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第一节：纵身亡魔心仍不悔",
+      "msa_answer": "家奴",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6906,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 24,
+      "question": "天元宝莲对方源有什么作用？",
+      "answer": "帮助方源恢复真元，弥补丙等资质的不足",
+      "difficulty": "easy",
+      "category": "item",
+      "source_section": "第五十节",
+      "msa_answer": "天元宝莲是三转花蛊，能为蛊师产元石，相当于移动元泉，可减少元石携带，支撑修行消耗，对方源有极大帮助。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        },
+        {
+          "id": 162,
+          "title": "第一百六十二节：天元宝莲"
+        },
+        {
+          "id": 163,
+          "title": "第一百六十三节：雷冠头狼"
+        },
+        {
+          "id": 309,
+          "title": "第一百一十节：心慈之志"
+        },
+        {
+          "id": 2242,
+          "title": "第二百六十六节：火炉气运"
+        }
+      ],
+      "latency_ms": 22046,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 25,
+      "question": "魔尊幽魂是什么道的蛊仙？",
+      "answer": "魂道蛊仙",
+      "difficulty": "easy",
+      "category": "character",
+      "source_section": "第一千二百节",
+      "msa_answer": "魔尊幽魂是魂道的蛊仙。",
+      "cited_docs": [
+        {
+          "id": 1971,
+          "title": "第三节：黑天蛊仙"
+        }
+      ],
+      "latency_ms": 7239,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 26,
+      "question": "方源为什么在第一次使用春秋蝉时愿意付出生命的代价？",
+      "answer": "因为他已经被正道群雄围攻，走投无路，必死无疑，所以用春秋蝉赌一次重生的机会",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第一节：纵身亡魔心仍不悔",
+      "msa_answer": "因为他相信自己重生了，且拥有五百年的记忆和经验，可以承受这种代价。",
+      "cited_docs": [
+        {
+          "id": 2,
+          "title": "第二节：逆光阴五百年觉悟"
+        }
+      ],
+      "latency_ms": 6896,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 27,
+      "question": "影无邪偷走春秋蝉后对方源造成了什么后果？",
+      "answer": "影无邪触发了春秋蝉导致方源被迫第二次重生，进入至尊仙胎这个新的身体",
+      "difficulty": "hard",
+      "category": "event",
+      "source_section": "第一千零二十节",
+      "msa_answer": "影无邪偷走春秋蝉后，方源因失去关键助力而陷入绝境，导致十大古派围剿、天庭追杀，影无邪的危局也直接威胁到方源的安危，使方源与影无邪的命运紧密相连，一荣俱荣一损俱损。",
+      "cited_docs": [
+        {
+          "id": 1076,
+          "title": "第五十五节：和影宗交易（上）"
+        }
+      ],
+      "latency_ms": 9340,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 28,
+      "question": "方源的丙等资质和天元宝莲之间是什么关系？",
+      "answer": "方源资质仅为丙等，修炼速度远不如甲乙等，但天元宝莲能持续恢复真元，弥补了资质差距，让他能超越资质限制进行修炼和战斗",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "多节",
+      "msa_answer": "方源的丙等资质和天元宝莲之间没有直接关系。根据文档内容，方源的丙等资质是他在修炼过程中所具备的资质等级，而天元宝莲是方源所获得的一只五转蛊虫，两者属于不同层面的设定。资质是修炼者的内在条件，而天元宝莲是外在的修炼对象，二者并无直接关联。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 10564,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 29,
+      "question": "天意为什么要阻止方源？",
+      "answer": "天意是宇宙本身的意志力量，它维护命运和秩序，而方源追求永生、反抗命运，打破了天道规则，因此天意将方源视为必须消灭的威胁",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "多节",
+      "msa_answer": "因为方源前世影响了天意的计划。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 7064,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 30,
+      "question": "方源对凤金煌做了什么，这体现了他什么性格？",
+      "answer": "方源在狐仙福地踩踏凤金煌的脸，公然羞辱她。这体现了他冷酷无情、不在意他人尊严、为达目的不择手段的魔道性格",
+      "difficulty": "hard",
+      "category": "relationship",
+      "source_section": "第四百二十节",
+      "msa_answer": "方源接受了凤金煌的提议，交换赌注，并将信道蛊虫交给凤金煌，这体现了他重情义、有担当的性格。",
+      "cited_docs": [
+        {
+          "id": 857,
+          "title": "第二百零八节：方正之死"
+        }
+      ],
+      "latency_ms": 8220,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 31,
+      "question": "方源从三叉山的三王传承中选择了哪个传承，为什么？",
+      "answer": "方源选择了狗王传承（而非地王或兽王），因为他前世的记忆让他知道狗王传承最适合他当时的情况和未来的规划",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第一百二十节",
+      "msa_answer": "方源从三叉山的三王传承中选择了三王传承，因为三王传承是当年六转蛊仙的福地，世人大哗，无数人蜂拥而至，他借此机会炼蛊，提升自身实力，为后续发展打下基础。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        },
+        {
+          "id": 326,
+          "title": "第一百二十七节：九眼酒虫"
+        },
+        {
+          "id": 340,
+          "title": "第一百四十一节：打成肉渣"
+        },
+        {
+          "id": 1114,
+          "title": "第九十三节：两道真传取其一"
+        }
+      ],
+      "latency_ms": 19107,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 32,
+      "question": "琅琊地灵和方源之间是什么样的合作关系？",
+      "answer": "琅琊地灵是琅琊福地的管理者，方源是福地的主人。地灵负责日常管理和经营，方源提供战略方向和资源。地灵精于算计和蛊方收集，两者互利共生",
+      "difficulty": "hard",
+      "category": "relationship",
+      "source_section": "多节",
+      "msa_answer": "琅琊地灵和方源之间是合作关系。方源与琅琊地灵有交情，琅琊地灵曾帮助方源，例如在方源被追杀时，琅琊地灵曾救过他。这表明他们之间存在相互支持和合作的关系。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 9431,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 33,
+      "question": "方源为什么要将身体改造成六臂天尸？",
+      "answer": "六臂天尸是僵尸体质，不受很多常规攻击影响，且战力强大。方源选择这种形态是为了提升战斗力，弥补他蛊仙初期的实力不足",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第五百节",
+      "msa_answer": "为了提高青提仙元，他不得不开始向宝黄天中贩卖荒兽。",
+      "cited_docs": [
+        {
+          "id": 1179,
+          "title": "第一百五十八节：黑凡洞天之争（下）"
+        }
+      ],
+      "latency_ms": 7371,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 34,
+      "question": "方源和吴帅在故事中是什么关系？",
+      "answer": "敌对关系。吴帅拥有八转仙蛊屋龙宫，是五域中的顶级战力之一，与方源在多次大战中对立",
+      "difficulty": "hard",
+      "category": "relationship",
+      "source_section": "多节",
+      "msa_answer": "朋友",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 6615,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 35,
+      "question": "方源在最终大战中为什么要和巨阳仙尊联手？",
+      "answer": "因为天庭（星宿仙尊）是两者的共同敌人，方源需要巨阳仙尊的战力来攻打天庭，而巨阳仙尊也需要方源的谋略和手段",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第二千三百节",
+      "msa_answer": "因为方源想要天道梦境，这是不可以的！",
+      "cited_docs": [
+        {
+          "id": 2320,
+          "title": "第三百四十四节：双尊战方源"
+        }
+      ],
+      "latency_ms": 7125,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 36,
+      "question": "方正从方源的弟弟最终变成了什么角色？",
+      "answer": "方正从一个性格温和的弟弟逐渐成长为正道领袖之一，最终掌控了八转仙蛊屋诛魔榜，站在方源的对立面",
+      "difficulty": "hard",
+      "category": "relationship",
+      "source_section": "多节",
+      "msa_answer": "方正从方源的弟弟最终变成了一个被方源利用、最终被方源控制并最终被方源杀死的工具人。他原本是方源的弟弟，因方源的阴谋而陷入困境，最终成为方源复仇计划中的牺牲品。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 9367,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 37,
+      "question": "赵怜云为什么需要从方源手中取回爱情蛊？",
+      "answer": "因为她的爱人马鸿运被方源所杀，灵魂被方源掌控。她需要爱情蛊（九转仙蛊）的威能来从方源的仙窍中盗取马鸿运的魂魄以复活他",
+      "difficulty": "hard",
+      "category": "event",
+      "source_section": "第三百六十八节",
+      "msa_answer": "赵怜云需要从方源手中取回爱情蛊，是因为她被方源用计陷害，导致她与方源的恋情破裂，而方源则利用她对爱情的执念，将她推入困境。赵怜云虽为凡人，却因继承了盗天真传，具备与凤金煌竞争仙子之位的资格，而方源作为凤金煌的亲生父亲，自然不愿让赵怜云得势。因此，赵怜云必须从方源手中取回爱情蛊，以证明自己的清白与实力，争取成为灵缘斋的当代仙子。",
+      "cited_docs": [
+        {
+          "id": 1222,
+          "title": "第二百零一节：当代仙子赵怜云？"
+        }
+      ],
+      "latency_ms": 12531,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 38,
+      "question": "方源的至尊仙窍和普通蛊仙的仙窍有什么不同？",
+      "answer": "至尊仙窍是方源第二次重生后获得的至尊仙胎中的仙窍，规模和潜力远超普通蛊仙的仙窍，能够容纳更多资源和蛊虫",
+      "difficulty": "hard",
+      "category": "item",
+      "source_section": "第一千零五十节",
+      "msa_answer": "方源的至尊仙窍分为十层，每层面积超过五千万亩，总面积达五亿亩，且内部结构复杂，第一层划分为五个部分，第二层到第十层为空无一物但带有九种颜色，而普通蛊仙的仙窍通常只有一个统一的空间，没有这种分层和特殊结构。",
+      "cited_docs": [
+        {
+          "id": 1028,
+          "title": "第七节：九五至尊仙窍（下）"
+        },
+        {
+          "id": 2032,
+          "title": "第六十三节：什么情况？"
+        },
+        {
+          "id": 2091,
+          "title": "第一百二十节：尊者无敌之秘"
+        },
+        {
+          "id": 2302,
+          "title": "第三百二十六节：再得智慧蛊"
+        },
+        {
+          "id": 2310,
+          "title": "第三百三十四节：生下来就有五转蛊"
+        }
+      ],
+      "latency_ms": 22985,
+      "rounds": 2,
+      "score": 3
+    },
+    {
+      "id": 39,
+      "question": "光阴飞刃这个杀招是方源如何学会的？",
+      "answer": "方源通过梦境修炼（进入梦境中的历史记忆）学会了光阴飞刃杀招",
+      "difficulty": "hard",
+      "category": "event",
+      "source_section": "第一千三百节",
+      "msa_answer": "方源在幽魂真传中没有记载，是通过梦境中老者的传授学会的。",
+      "cited_docs": [
+        {
+          "id": 1600,
+          "title": "第五百八十节：遗忘"
+        }
+      ],
+      "latency_ms": 6627,
+      "rounds": 2,
+      "score": 4
+    },
+    {
+      "id": 40,
+      "question": "为什么方源不能公开展示自己的八转实力？",
+      "answer": "因为一旦暴露八转实力，会引来天庭、各大势力的联合围剿。他需要隐藏实力来布局四域围攻中洲的大计",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第一千九百节",
+      "msa_answer": "因为方源是古月一族的隐秘传承者，若公开展示八转实力，将暴露一族的隐秘，引发外界觊觎和追杀，危及族人安全。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 8673,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 41,
+      "question": "白凝冰在故事早期和方源是什么关系？",
+      "answer": "白凝冰是白家寨的天才少女，与方源既是对手又有复杂的交集。她最初是方源的竞争者，后来在多次冲突和合作中关系变得复杂",
+      "difficulty": "hard",
+      "category": "relationship",
+      "source_section": "多节",
+      "msa_answer": "敌人",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        },
+        {
+          "id": 137,
+          "title": "第一百三十七节：影之殇"
+        },
+        {
+          "id": 138,
+          "title": "第一百三十八节：居然有人追着白凝冰杀？"
+        },
+        {
+          "id": 142,
+          "title": "第一百四十二节：古月青书VS白凝冰（下）"
+        },
+        {
+          "id": 169,
+          "title": "第一百六十九节：寻路"
+        }
+      ],
+      "latency_ms": 20013,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 42,
+      "question": "狐仙福地对方源意味着什么？",
+      "answer": "狐仙福地是方源获得蛊仙传承的关键地点，他在这里得到了成仙的机缘，也是琅琊福地的前身和起点",
+      "difficulty": "hard",
+      "category": "location",
+      "source_section": "第四百五十节",
+      "msa_answer": "狐仙福地是方源重生后的重要福地，他在此地获得了星门蛊、星萤蛊等资源，并通过通天蛊连接宝黄天，展开交易与炼蛊活动，为他后续的修行和势力扩张提供了关键支持。",
+      "cited_docs": [
+        {
+          "id": 7,
+          "title": "第七节：蛊师有九转，花酒留遗藏"
+        },
+        {
+          "id": 466,
+          "title": "第六十一节：没有什么不能出卖的"
+        },
+        {
+          "id": 656,
+          "title": "第七节：我要大义灭亲"
+        },
+        {
+          "id": 1152,
+          "title": "第一百三十一节：获取五光山"
+        },
+        {
+          "id": 1440,
+          "title": "第四百二十节：赵怜云升仙"
+        }
+      ],
+      "latency_ms": 21774,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 43,
+      "question": "定仙游这只蛊虫在战斗中的战略价值是什么？",
+      "answer": "定仙游是传送类仙蛊，能让使用者瞬间移动，在战斗中提供极大的机动性优势，可用于突袭、撤退或战场穿插",
+      "difficulty": "hard",
+      "category": "item",
+      "source_section": "多节",
+      "msa_answer": "定仙游是七转级数的仙道杀招，能送人往返于天底下任何地点，前半部分艰难，后半部分简易，具有极高的战略价值。",
+      "cited_docs": [
+        {
+          "id": 1550,
+          "title": "第五百三十节：乐土传人"
+        }
+      ],
+      "latency_ms": 7958,
+      "rounds": 2,
+      "score": 3
+    },
+    {
+      "id": 44,
+      "question": "秦鼎菱为什么蠢蠢欲动想对巨阳仙尊动手？",
+      "answer": "因为秦鼎菱掌握着赌运杀招，这个杀招专门克制巨阳仙尊。她在等待方源和巨阳仙尊战斗时巨阳仙尊最虚弱的时机动手",
+      "difficulty": "hard",
+      "category": "event",
+      "source_section": "第三百六十八节",
+      "msa_answer": "巨阳仙尊死后，秦鼎菱转修运道，但因已有八转修为，风险很大，便舍弃金道，化为金棺，闭死关，悟运道。",
+      "cited_docs": [
+        {
+          "id": 1823,
+          "title": "第八百零五节：再掌天相"
+        }
+      ],
+      "latency_ms": 8314,
+      "rounds": 2,
+      "score": 0
+    },
+    {
+      "id": 45,
+      "question": "小说中彭达这个角色的特殊之处是什么？",
+      "answer": "彭达是第六卷引入的新角色，和方源一样是从现代中国穿越到蛊世界的人（程序员身份），形成了对方源穿越经历的镜像对照",
+      "difficulty": "hard",
+      "category": "character",
+      "source_section": "第二千节",
+      "msa_answer": "他是二转蛊师",
+      "cited_docs": [
+        {
+          "id": 1969,
+          "title": "第一节：新天外之魔"
+        }
+      ],
+      "latency_ms": 6678,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 46,
+      "question": "变异仙蛊有哪些用途？",
+      "answer": "变异仙蛊有三种用途：一是攻击敌人使其身体部分反叛自身；二是增变自身（在变化形态上叠加变化如长翅膀等）；三是经营仙窍使生命产生异变繁衍新物种",
+      "difficulty": "hard",
+      "category": "item",
+      "source_section": "第八百六十二节",
+      "msa_answer": "攻伐、增变、经营仙窍",
+      "cited_docs": [
+        {
+          "id": 1879,
+          "title": "第八百六十二节：李小白要上位"
+        }
+      ],
+      "latency_ms": 6912,
+      "rounds": 2,
+      "score": 5
+    },
+    {
+      "id": 47,
+      "question": "方源为什么不愿意出售春秋蝉、净魂、连运这些仙蛊？",
+      "answer": "春秋蝉是他的本命蛊和最大底牌；净魂仙蛊是仙道杀招万我的核心；连运仙蛊能弥补春秋蝉的弊端。三只蛊各有不可替代的作用，所以他绝不出手",
+      "difficulty": "hard",
+      "category": "item",
+      "source_section": "第九十九节",
+      "msa_answer": "因为这些仙蛊对南疆正道家族有巨大价值，缺乏它们就难以施展家族的招牌杀招。",
+      "cited_docs": [
+        {
+          "id": 1615,
+          "title": "第五百九十五节：威胁整个南疆正道"
+        }
+      ],
+      "latency_ms": 7873,
+      "rounds": 2,
+      "score": 1
+    },
+    {
+      "id": 48,
+      "question": "气功果爆炸对天庭造成了什么影响？",
+      "answer": "气功果引爆后对天庭造成了毁灭性打击，大片区域化为废墟，众多仙蛊屋被迫后撤",
+      "difficulty": "hard",
+      "category": "event",
+      "source_section": "第二千三百节",
+      "msa_answer": "天庭破碎，大量洞天碎片飞溅，仙窍门户残破，仙元消耗严重，大量蛊仙阵亡。",
+      "cited_docs": [
+        {
+          "id": 2242,
+          "title": "第二百六十六节：火炉气运"
+        },
+        {
+          "id": 2287,
+          "title": "第三百一十一节：幽魂灭日"
+        },
+        {
+          "id": 2339,
+          "title": "第三百六十三节：方源炸天庭的阴谋"
+        },
+        {
+          "id": 2343,
+          "title": "第三百六十七节：三尊齐攻天庭！"
+        },
+        {
+          "id": 2344,
+          "title": "第三百六十八节：方源、巨阳战星宿"
+        }
+      ],
+      "latency_ms": 21918,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 49,
+      "question": "方源布局四域围攻中洲的战略是怎样的？",
+      "answer": "方源在各域安排代理人：北原有长生天领袖，南疆有武庸，东海有他假扮的气海老祖提携，西漠利用房家和唐家。四域同时对中洲施压形成包围",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "第一千九百节",
+      "msa_answer": "方源布局四域围攻中洲的战略是：以四域为支点，联合四域势力，形成包围中洲的军事态势，旨在削弱中洲的势力，进而实现对中洲的控制。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 8887,
+      "rounds": 2,
+      "score": 2
+    },
+    {
+      "id": 50,
+      "question": "方源追求的终极目标是什么，为什么所有势力都要阻止他？",
+      "answer": "方源追求永生（真正的不灭不朽），这违反了天道规则。天意要消灭他，天庭视他为威胁，正道各派因他的魔道行径与他为敌，形成了一人与整个世界对抗的格局",
+      "difficulty": "hard",
+      "category": "reasoning",
+      "source_section": "多节",
+      "msa_answer": "方源追求的终极目标是建立一个没有压迫、人人平等的山寨，他以凡人之躯挑战社会体制，因此引起了蛊师们的愤怒。所有势力都因他威胁到自身利益和权威而阻止他。",
+      "cited_docs": [
+        {
+          "id": 118,
+          "title": "第一百一十八节：吞江蟾的传说"
+        }
+      ],
+      "latency_ms": 8831,
+      "rounds": 2,
+      "score": 1
+    }
+  ]
+}

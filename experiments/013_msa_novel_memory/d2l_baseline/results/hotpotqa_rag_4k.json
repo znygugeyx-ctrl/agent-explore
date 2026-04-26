@@ -1,0 +1,5202 @@
+[
+  {
+    "question": "What Electoral Division in Victoria contained a suburb of Melbourne with a population of 25,147 at the 2016 Census?",
+    "answer": "The Division of Fawkner",
+    "rag_answer": "The Electoral Division in Victoria that contained a suburb of Melbourne with a population of 25,147 at the 2016 Census is the Division of Fawkner. This is because South Yarra, the suburb with the given population, was part of the Division of Fawkner, as stated in Doc 1.",
+    "retrieved_titles": [
+      "Division of Fawkner",
+      "South Yarra, Victoria",
+      "South Kolan",
+      "The Blood of Yingzhou District",
+      "Dirk Frimout"
+    ],
+    "retrieval_scores": [
+      0.8646827936172485,
+      0.8453662395477295,
+      0.7206153869628906,
+      0.7172853350639343,
+      0.7119559049606323
+    ],
+    "latency_ms": 3465,
+    "gold_doc_ids": [
+      8367,
+      8368
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3943
+  },
+  {
+    "question": "Are University of Virginia and Massachusetts Institute of Technology in the same country?",
+    "answer": "yes",
+    "rag_answer": "Yes, both the University of Virginia and the Massachusetts Institute of Technology are in the United States.",
+    "retrieved_titles": [
+      "Massachusetts Institute of Technology",
+      "University of Virginia",
+      "VFAW-3",
+      "June Jones",
+      "Stevanato Group"
+    ],
+    "retrieval_scores": [
+      0.8853588104248047,
+      0.8690748810768127,
+      0.7228964567184448,
+      0.7096126079559326,
+      0.7088862657546997
+    ],
+    "latency_ms": 1088,
+    "gold_doc_ids": [
+      2183,
+      2181
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "What distinction about his birth makes the contemporary of Bill Pollack unique as a winner of the Formula One World Drivers' Championship?",
+    "answer": "American-born",
+    "rag_answer": "Phil Hill is unique because he is the only American-born driver to win the Formula One World Drivers' Championship.",
+    "retrieved_titles": [
+      "Bill Pollack",
+      "Phil Hill",
+      "Nobel Prize in Physiology or Medicine",
+      "Ludwig Boltzmann Institut für Menschenrechte",
+      "Swiss made"
+    ],
+    "retrieval_scores": [
+      0.8906898498535156,
+      0.8597850203514099,
+      0.7780436873435974,
+      0.7656095027923584,
+      0.7589588165283203
+    ],
+    "latency_ms": 1231,
+    "gold_doc_ids": [
+      7942,
+      7939
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3946
+  },
+  {
+    "question": "What song was on an American radio network that is owned by Disney Channels Worldwide, Inc. is a song by Senegalese-American R&B and rapper Akon? ",
+    "answer": "\"Lonely\"",
+    "rag_answer": "The song \"Lonely\" by Akon was on Radio Disney, an American radio network owned by Disney Channels Worldwide, Inc.",
+    "retrieved_titles": [
+      "Lonely (Akon song)",
+      "Radio Disney",
+      "Honky Tonk Angels",
+      "Supersuckers",
+      "Bob Boilen"
+    ],
+    "retrieval_scores": [
+      0.8648985624313354,
+      0.8336846828460693,
+      0.7291011810302734,
+      0.7181805372238159,
+      0.7171673774719238
+    ],
+    "latency_ms": 1383,
+    "gold_doc_ids": [
+      7981,
+      7979
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3949
+  },
+  {
+    "question": "Do both Changle District and Longkou face water?",
+    "answer": "yes",
+    "rag_answer": "Yes, both Changle District and Longkou face water. Changle District faces the East China Sea, and Longkou faces the Bohai Sea to the north and Laizhou Bay to the west.",
+    "retrieved_titles": [
+      "Changle District",
+      "Longkou",
+      "Zhang Kangzhi",
+      "St. Louis, Peoria and Northern Railroad Depot",
+      "Trams in Brandenburg an der Havel"
+    ],
+    "retrieval_scores": [
+      0.8719202280044556,
+      0.8608119487762451,
+      0.7450329065322876,
+      0.716242790222168,
+      0.7148616313934326
+    ],
+    "latency_ms": 2077,
+    "gold_doc_ids": [
+      5359,
+      5362
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "In what town is Suffolk county hamlet that was served by the Suffolk Traction Company?",
+    "answer": "Town of Islip",
+    "rag_answer": "The Suffolk County hamlet served by the Suffolk Traction Company is Bayport.",
+    "retrieved_titles": [
+      "Suffolk Traction Company",
+      "Bayport, New York",
+      "E postcode area",
+      "Tandy Corporation",
+      "General Mills"
+    ],
+    "retrieval_scores": [
+      0.9069969654083252,
+      0.7909350395202637,
+      0.7500463724136353,
+      0.742802619934082,
+      0.7311168313026428
+    ],
+    "latency_ms": 899,
+    "gold_doc_ids": [
+      7711,
+      7710
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3924
+  },
+  {
+    "question": "Which writer is older, Joseph Epstein or Milan Kundera?",
+    "answer": "Milan Kundera",
+    "rag_answer": "Joseph Epstein was born on January 9, 1937, and Milan Kundera was born on April 1, 1929. Therefore, Milan Kundera is older than Joseph Epstein.",
+    "retrieved_titles": [
+      "Joseph Epstein (writer)",
+      "Milan Kundera",
+      "Alan H. Epstein",
+      "Eleanor Coppola",
+      "Verdi, the King of Melody"
+    ],
+    "retrieval_scores": [
+      0.8620970249176025,
+      0.8365265130996704,
+      0.7846819162368774,
+      0.7319691777229309,
+      0.7092301845550537
+    ],
+    "latency_ms": 2170,
+    "gold_doc_ids": [
+      7190,
+      7197
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Works by Hanna Leena Kristiina Varis are part of a collection in a museum that houses approximately 65,000 what?",
+    "answer": "drawings",
+    "rag_answer": "drawings",
+    "retrieved_titles": [
+      "Hanna Varis",
+      "Albertina",
+      "Spider-Man in film",
+      "Twicecoaster: Lane 2",
+      "A World Apart (film)"
+    ],
+    "retrieval_scores": [
+      0.9012113809585571,
+      0.7814664840698242,
+      0.7071223258972168,
+      0.7059811949729919,
+      0.7012799978256226
+    ],
+    "latency_ms": 404,
+    "gold_doc_ids": [
+      621,
+      622
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "Which How to Steal a Million actor attended the Royal Academy of Dramatic Art?",
+    "answer": "Peter O'Toole",
+    "rag_answer": "Peter O'Toole attended the Royal Academy of Dramatic Art.",
+    "retrieved_titles": [
+      "How to Steal a Million",
+      "Peter O'Toole",
+      "Leonardo DiCaprio",
+      "Smeep Kang",
+      "Nothing Gold Can Stay (TV series)"
+    ],
+    "retrieval_scores": [
+      0.8357511758804321,
+      0.7887141108512878,
+      0.7374972105026245,
+      0.7350673675537109,
+      0.7328922748565674
+    ],
+    "latency_ms": 901,
+    "gold_doc_ids": [
+      3293,
+      3290
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "What role did Slim Dunlap take when he joined the Minnesota band the Replacements in 1987?",
+    "answer": "guitarist",
+    "rag_answer": "Slim Dunlap joined The Replacements in 1987 as the lead guitarist.",
+    "retrieved_titles": [
+      "Slim Dunlap",
+      "The Replacements (band)",
+      "Supersuckers",
+      "Last 2 Walk",
+      "100 Million BC"
+    ],
+    "retrieval_scores": [
+      0.9432060718536377,
+      0.8814908862113953,
+      0.7679159641265869,
+      0.75171959400177,
+      0.7353110909461975
+    ],
+    "latency_ms": 1086,
+    "gold_doc_ids": [
+      8565,
+      8558
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3947
+  },
+  {
+    "question": "Which breed, Chinese Chongqing Dog or Kanni, is used for hunting?",
+    "answer": "Kanni",
+    "rag_answer": "The Chinese Chongqing Dog is used for hunting.",
+    "retrieved_titles": [
+      "Chinese Chongqing Dog",
+      "Kanni",
+      "Thái Bình river system",
+      "My Kingdom (film)",
+      "Beer stein"
+    ],
+    "retrieval_scores": [
+      0.8788025379180908,
+      0.8723710775375366,
+      0.7036248445510864,
+      0.6998870372772217,
+      0.6925440430641174
+    ],
+    "latency_ms": 773,
+    "gold_doc_ids": [
+      1574,
+      1573
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "What is this subfamily within the cat family Felidae named by Reginald Innes Pocock that is descendant of Pseudaelurus?",
+    "answer": "Pantherinae",
+    "rag_answer": "The subfamily within the cat family Felidae named by Reginald Innes Pocock that is descendant of Pseudaelurus is Pantherinae.",
+    "retrieved_titles": [
+      "Pantherinae",
+      "Pseudaelurus",
+      "Wheelock Whitney",
+      "The Lion Guard",
+      "Anthriscus"
+    ],
+    "retrieval_scores": [
+      0.898307204246521,
+      0.8709962368011475,
+      0.7393311858177185,
+      0.7361011505126953,
+      0.7322869300842285
+    ],
+    "latency_ms": 1671,
+    "gold_doc_ids": [
+      8079,
+      8076
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "What park replaced American's first waterpark designed by the creator of seaworld?",
+    "answer": "Krakatau",
+    "rag_answer": "Universal's Volcano Bay replaced America's first water park, Wet 'n Wild Orlando, which was designed by George Millay, the creator of SeaWorld.",
+    "retrieved_titles": [
+      "Wet 'n Wild Orlando",
+      "Volcano Bay",
+      "Theme Park Inc",
+      "William Howard (engineer)",
+      "The Social Network"
+    ],
+    "retrieval_scores": [
+      0.8568145036697388,
+      0.8172485828399658,
+      0.7830439209938049,
+      0.7395119071006775,
+      0.7384648323059082
+    ],
+    "latency_ms": 1682,
+    "gold_doc_ids": [
+      834,
+      842
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Armageddon in Retrospect was written by the author who was best known for what 1969 satire novel?",
+    "answer": "Slaughterhouse-Five",
+    "rag_answer": "Slaughterhouse-Five",
+    "retrieved_titles": [
+      "Armageddon in Retrospect",
+      "Kurt Vonnegut",
+      "Cindy Bernard",
+      "Chicago (2002 film)",
+      "Second VA-65 (U.S. Navy)"
+    ],
+    "retrieval_scores": [
+      0.8608434796333313,
+      0.8130626082420349,
+      0.7311786413192749,
+      0.7182056903839111,
+      0.7155979871749878
+    ],
+    "latency_ms": 519,
+    "gold_doc_ids": [
+      5920,
+      5911
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Which of the following buildings was designed by SHoP Architects: 247 Cherry or General Motors Building?",
+    "answer": "247 Cherry",
+    "rag_answer": "247 Cherry was designed by SHoP Architects.",
+    "retrieved_titles": [
+      "247 Cherry",
+      "General Motors Building (Manhattan)",
+      "Auburn (Natchez, Mississippi)",
+      "Rising Sun Historic District",
+      "William Street, Limerick"
+    ],
+    "retrieval_scores": [
+      0.870577335357666,
+      0.8266628980636597,
+      0.7483990788459778,
+      0.7184690237045288,
+      0.714142918586731
+    ],
+    "latency_ms": 925,
+    "gold_doc_ids": [
+      4510,
+      4506
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3943
+  },
+  {
+    "question": "What sibling of John D. Rockefeller III was the chairman of Chase Manhattan Corporation?",
+    "answer": "David Rockefeller",
+    "rag_answer": "David Rockefeller was the sibling of John D. Rockefeller III who was the chairman of Chase Manhattan Corporation.",
+    "retrieved_titles": [
+      "David Rockefeller",
+      "John D. Rockefeller III",
+      "75 Rockefeller Plaza",
+      "Pendaflex",
+      "Jim Rogers (Oklahoma politician)"
+    ],
+    "retrieval_scores": [
+      0.9315530061721802,
+      0.9104256629943848,
+      0.809868574142456,
+      0.7554850578308105,
+      0.7551831603050232
+    ],
+    "latency_ms": 1241,
+    "gold_doc_ids": [
+      5540,
+      5545
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "In the seventh-largest country in Africa, what is the oil prodcution of the city at the mouth of the Congo River?",
+    "answer": "1200000 oilbbl/d",
+    "rag_answer": "The oil production of Soyo, the city at the mouth of the Congo River in Angola, is estimated at 1,200,000 oil barrels per day (1200000 oilbbl/d).",
+    "retrieved_titles": [
+      "Soyo",
+      "Angola",
+      "Four Mile Tree",
+      "The Shame of a City",
+      "Veterinary specialties"
+    ],
+    "retrieval_scores": [
+      0.8775599002838135,
+      0.8582512140274048,
+      0.7570939064025879,
+      0.7530624866485596,
+      0.7493377923965454
+    ],
+    "latency_ms": 2354,
+    "gold_doc_ids": [
+      4406,
+      4414
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "Which former mill town is near Rivington Hall Barn?",
+    "answer": "Bolton",
+    "rag_answer": "Bolton is the former mill town near Rivington Hall Barn.",
+    "retrieved_titles": [
+      "Rivington Hall Barn",
+      "Bolton",
+      "Lincoln County, Arkansas",
+      "List of foxhound packs of the United Kingdom",
+      "Harrier (dog)"
+    ],
+    "retrieval_scores": [
+      0.8995338678359985,
+      0.7953156232833862,
+      0.7327831983566284,
+      0.7288261651992798,
+      0.7102059125900269
+    ],
+    "latency_ms": 967,
+    "gold_doc_ids": [
+      3307,
+      3304
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "Which historical drama filmed in the Winter Palace of the Russian State Hermitage Museum stars Sergey Dreyden?",
+    "answer": "Russian Ark",
+    "rag_answer": "Russian Ark",
+    "retrieved_titles": [
+      "Russian Ark",
+      "Sergey Dreyden",
+      "The Social Network",
+      "Giuseppe Verdi (film)",
+      "Killings (short story)"
+    ],
+    "retrieval_scores": [
+      0.8406055569648743,
+      0.8391066789627075,
+      0.7616245746612549,
+      0.7490756511688232,
+      0.7441468238830566
+    ],
+    "latency_ms": 381,
+    "gold_doc_ids": [
+      269,
+      268
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3949
+  },
+  {
+    "question": "What novella was \"Eyes Wide Shut,\" starring Vinessa Elizabeth Shaw, based on?",
+    "answer": "\"Traumnovelle\" (\"Dream Story\")",
+    "rag_answer": "\"Eyes Wide Shut\" was based on Arthur Schnitzler's 1926 novella \"Traumnovelle\" (\"Dream Story\").",
+    "retrieved_titles": [
+      "Eyes Wide Shut",
+      "Vinessa Shaw",
+      "Star Over Bethlehem",
+      "Chiltern Shakespeare Company",
+      "Lung Leg"
+    ],
+    "retrieval_scores": [
+      0.852760910987854,
+      0.8470175862312317,
+      0.7239170074462891,
+      0.7151501178741455,
+      0.7118126153945923
+    ],
+    "latency_ms": 1650,
+    "gold_doc_ids": [
+      4988,
+      4982
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Shannon Purser played the role of June Acosta in a 2017 horror film directed by who?",
+    "answer": "John R. Leonetti",
+    "rag_answer": "The documents do not specify the director of the 2017 horror film in which Shannon Purser played June Acosta. While Doc 2 mentions \"Wish Upon\" and lists the director as John R. Leonetti, it does not confirm that Shannon Purser played June Acosta in that film. Doc 1 states she played June Acosta in \"Wish Upon,\" but there is no explicit confirmation of the director in that context. Therefore, based on the provided information, the answer cannot be definitively determined.\n\nAnswer: Insufficient information.",
+    "retrieved_titles": [
+      "Shannon Purser",
+      "Wish Upon",
+      "Agatha Christie: Evil Under the Sun",
+      "Jimmy Tatro",
+      "Shannon Bell"
+    ],
+    "retrieval_scores": [
+      0.8771737813949585,
+      0.8168341517448425,
+      0.7440997958183289,
+      0.7406941056251526,
+      0.7236098051071167
+    ],
+    "latency_ms": 4965,
+    "gold_doc_ids": [
+      2731,
+      2730
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "How many Studio albums did the group that released the debut album The Cactus Al/Bum release in their initial career?",
+    "answer": "two studio albums",
+    "rag_answer": "The group that released the debut album *The Cactus Al/Bum* is 3rd Bass. According to Document 2, they released two studio albums in their initial career. \n\nAnswer: 2.",
+    "retrieved_titles": [
+      "The Cactus Album",
+      "3rd Bass",
+      "Twice discography",
+      "The Beatles (TV series)",
+      "Veteranz' Day"
+    ],
+    "retrieval_scores": [
+      0.8757364153862,
+      0.7949116230010986,
+      0.7867426872253418,
+      0.7571085691452026,
+      0.7523585557937622
+    ],
+    "latency_ms": 2111,
+    "gold_doc_ids": [
+      2740,
+      2744
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3941
+  },
+  {
+    "question": "The Twelfth United States Army Group commander was the first chairman of what?",
+    "answer": "Joint Chiefs of Staff",
+    "rag_answer": "The Twelfth United States Army Group commander, General Omar Bradley, was the first Chairman of the Joint Chiefs of Staff.",
+    "retrieved_titles": [
+      "Twelfth United States Army Group",
+      "Omar Bradley",
+      "Young Democrats of North Carolina",
+      "Tyler Media Group",
+      "Sulla"
+    ],
+    "retrieval_scores": [
+      0.8763390779495239,
+      0.8307813405990601,
+      0.7312917709350586,
+      0.7236135005950928,
+      0.721122145652771
+    ],
+    "latency_ms": 1350,
+    "gold_doc_ids": [
+      1260,
+      1265
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "Is Edison Sault Power Canal somehow linked with or used with the Cayuga–Seneca Canal?",
+    "answer": "no",
+    "rag_answer": "No, the Edison Sault Power Canal is not linked with or used with the Cayuga–Seneca Canal. They are separate canals located in different regions (Michigan and New York, respectively) and serve different purposes.",
+    "retrieved_titles": [
+      "Edison Sault Power Canal",
+      "Cayuga–Seneca Canal",
+      "Rule of reason",
+      "Toon Disney",
+      "St. Louis, Peoria and Northern Railroad Depot"
+    ],
+    "retrieval_scores": [
+      0.9105103015899658,
+      0.8999346494674683,
+      0.7566781044006348,
+      0.7446622252464294,
+      0.7406178116798401
+    ],
+    "latency_ms": 2143,
+    "gold_doc_ids": [
+      5063,
+      5068
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3954
+  },
+  {
+    "question": "Which of Damon Stoudamire's cousins once played college basketball for the University of Kentucky?",
+    "answer": "Terrence Jones",
+    "rag_answer": "Terrence Jones, who is a cousin of Damon Stoudamire, played college basketball for the University of Kentucky.",
+    "retrieved_titles": [
+      "Damon Stoudamire",
+      "Terrence Jones",
+      "2013 Robert Morris Colonials football team",
+      "Bluefield State College",
+      "2013 Texas Tech Red Raiders football team"
+    ],
+    "retrieval_scores": [
+      0.8826562166213989,
+      0.8063492178916931,
+      0.7401541471481323,
+      0.7302845120429993,
+      0.7221958637237549
+    ],
+    "latency_ms": 1327,
+    "gold_doc_ids": [
+      796,
+      794
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3922
+  },
+  {
+    "question": "Which airport is busier, Palm Springs International Airport or Trenton–Mercer Airport?",
+    "answer": "Trenton–Mercer Airport",
+    "rag_answer": "Trenton–Mercer Airport is busier than Palm Springs International Airport.  \n\nEvidence:  \n- Trenton–Mercer Airport handled approximately 794,000 passengers between June 2014 and May 2015.  \n- Palm Springs International Airport's document does not provide passenger numbers, only that it is highly seasonal with most flights during winter.  \n\nSince no passenger data is given for Palm Springs, we cannot directly compare, but based on the provided data, Trenton–Mercer Airport has a specific passenger volume, while Palm Springs lacks comparable data. Therefore, based on the available information, Trenton–Mercer Airport is known to have a measurable passenger count, suggesting it is busier.  \n\nAnswer: Trenton–Mercer Airport is busier.",
+    "retrieved_titles": [
+      "Trenton–Mercer Airport",
+      "Palm Springs International Airport",
+      "Exercise Red Flag",
+      "Tumi Inc.",
+      "Atlanta Zero Mile Post"
+    ],
+    "retrieval_scores": [
+      0.8808326721191406,
+      0.8722867965698242,
+      0.711215615272522,
+      0.6973503828048706,
+      0.696670413017273
+    ],
+    "latency_ms": 7106,
+    "gold_doc_ids": [
+      5149,
+      5157
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": "Who produced the 1998 British comedy starring the director of the feature film \"Eddie the Eagle\"?",
+    "answer": "Matthew Vaughn",
+    "rag_answer": "Matthew Vaughn produced the 1998 British comedy \"Lock, Stock and Two Smoking Barrels,\" which stars the director of the feature film \"Eddie the Eagle,\" Dexter Fletcher.",
+    "retrieved_titles": [
+      "Lock, Stock and Two Smoking Barrels",
+      "Dexter Fletcher",
+      "Profile of a Serial Killer",
+      "4 Devils",
+      "Amy (soundtrack)"
+    ],
+    "retrieval_scores": [
+      0.8108357191085815,
+      0.796907901763916,
+      0.7797223329544067,
+      0.7415328025817871,
+      0.7181833982467651
+    ],
+    "latency_ms": 1884,
+    "gold_doc_ids": [
+      2674,
+      2678
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3916
+  },
+  {
+    "question": "What is the English translation of the noodle similar to Taglierini that is not tagliatelle?",
+    "answer": "little hairs",
+    "rag_answer": "The English translation of the noodle similar to Taglierini that is not tagliatelle is Capellini.",
+    "retrieved_titles": [
+      "Taglierini",
+      "Capellini",
+      "Eve's pudding",
+      "Tikka (food)",
+      "Waywords and Meansigns Opendoor Edition"
+    ],
+    "retrieval_scores": [
+      0.8674633502960205,
+      0.8312325477600098,
+      0.7824190855026245,
+      0.7677550315856934,
+      0.7448359131813049
+    ],
+    "latency_ms": 1342,
+    "gold_doc_ids": [
+      7184,
+      7183
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "What Japanese fashion label was founded by the creator of Dover Street Market?",
+    "answer": "Comme des Garçons",
+    "rag_answer": "Comme des Garçons",
+    "retrieved_titles": [
+      "Dover Street Market",
+      "Comme des Garçons",
+      "Metcalf South Shopping Center",
+      "Volume 1 (Future Boy album)",
+      "Toys in the Attic (2009 film)"
+    ],
+    "retrieval_scores": [
+      0.8908079862594604,
+      0.8381228446960449,
+      0.7445342540740967,
+      0.7227352261543274,
+      0.7217227220535278
+    ],
+    "latency_ms": 575,
+    "gold_doc_ids": [
+      7463,
+      7460
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "What WikiLeaks using whistleblower is notable for having a hacking organization with a user base of over 1,800,000?",
+    "answer": "Jeremy Hammond",
+    "rag_answer": "The documents do not state that WikiLeaks is a hacking organization with a user base of over 1,800,000. Instead, HackThisSite.org is described as having a user base of over 1,800,000. Jeremy Hammond founded HackThisSite, and he was involved with WikiLeaks as a whistleblower. Therefore, the correct answer is:\n\nHackThisSite.org is notable for having a hacking organization with a user base of over 1,800,000.",
+    "retrieved_titles": [
+      "HackThisSite",
+      "Jeremy Hammond",
+      "They",
+      "Watts Brothers Tool Works",
+      "List of Buffalo Bills players"
+    ],
+    "retrieval_scores": [
+      0.8201578259468079,
+      0.8164013624191284,
+      0.7551014423370361,
+      0.7342323660850525,
+      0.7274463772773743
+    ],
+    "latency_ms": 4570,
+    "gold_doc_ids": [
+      291,
+      292
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3934
+  },
+  {
+    "question": "What Danish eurodance group had a single called \"Barbie Girl\" which resulted in a lawsuit in 2002?",
+    "answer": "Aqua",
+    "rag_answer": "Aqua",
+    "retrieved_titles": [
+      "Aqua (band)",
+      "Mattel, Inc. v. MCA Records, Inc.",
+      "Empire Award for Best Soundtrack",
+      "List of The Simpsons comics",
+      "2014–15 UEFA Champions League knockout phase"
+    ],
+    "retrieval_scores": [
+      0.8689125776290894,
+      0.8652293682098389,
+      0.7198174595832825,
+      0.7085540890693665,
+      0.7080760598182678
+    ],
+    "latency_ms": 419,
+    "gold_doc_ids": [
+      7222,
+      7227
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "Bride of the Regiment was later remade into a 1948 film starring the actress and pin-up girl who was the highest-salaried American woman in which two years?",
+    "answer": "1946 and 1947",
+    "rag_answer": "The actress is Betty Grable, who was the highest-salaried American woman in 1946 and 1947.",
+    "retrieved_titles": [
+      "Bride of the Regiment",
+      "Betty Grable",
+      "Carolyn Jones",
+      "Field of Dreams",
+      "Let's Misbehave"
+    ],
+    "retrieval_scores": [
+      0.8471685647964478,
+      0.8392748832702637,
+      0.7501164674758911,
+      0.7280668616294861,
+      0.7143720388412476
+    ],
+    "latency_ms": 1463,
+    "gold_doc_ids": [
+      1507,
+      1499
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Who is the father of the Prince in which William Joseph Weaver is most famous for painting a full length portrait of?",
+    "answer": "George III",
+    "rag_answer": "The father of Prince Edward, Duke of Kent and Strathearn, whom William Joseph Weaver is most famous for painting a full-length portrait of, is King George III of the United Kingdom.",
+    "retrieved_titles": [
+      "William J. Weaver",
+      "Prince Edward, Duke of Kent and Strathearn",
+      "La Fille de marbre",
+      "Chief of the General Staff (Ukraine)",
+      "My Brother, Borat"
+    ],
+    "retrieval_scores": [
+      0.8904759883880615,
+      0.8173248171806335,
+      0.7260483503341675,
+      0.725453794002533,
+      0.7198612689971924
+    ],
+    "latency_ms": 1860,
+    "gold_doc_ids": [
+      8731,
+      8730
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3932
+  },
+  {
+    "question": "The producer of \"Live By NIght\" began his film career playing what role in \"Critters 3\"?",
+    "answer": "Josh",
+    "rag_answer": "The documents do not provide information about the producer of \"Live By Night\" or their film career, including any role in \"Critters 3.\" Therefore, based on the given documents, the question cannot be answered.",
+    "retrieved_titles": [
+      "Leonardo DiCaprio",
+      "Benny Ciaramello",
+      "EuroTrip",
+      "Mike Cahill (director)",
+      "Fawad Siddiqui"
+    ],
+    "retrieval_scores": [
+      0.7789773941040039,
+      0.7732105851173401,
+      0.7389470338821411,
+      0.7279963493347168,
+      0.7268767356872559
+    ],
+    "latency_ms": 2091,
+    "gold_doc_ids": [
+      711,
+      705
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3950
+  },
+  {
+    "question": "Grammy winner for song of the year, also put out a 1971 album by the Carpenters, but what song did he win an Academy Award for Best Original Songs?",
+    "answer": "A Star Is Born",
+    "rag_answer": "Paul Williams won a Grammy for Song of the Year for \"Evergreen\" and an Academy Award for Best Original Song for \"Evergreen.\"",
+    "retrieved_titles": [
+      "Let Me Be the One (The Carpenters song)",
+      "Paul Williams (songwriter)",
+      "A Perfect Day (song)",
+      "Leonardo DiCaprio filmography",
+      "Slim Dunlap"
+    ],
+    "retrieval_scores": [
+      0.85882967710495,
+      0.8229827880859375,
+      0.7738946080207825,
+      0.7585375308990479,
+      0.7568920850753784
+    ],
+    "latency_ms": 1446,
+    "gold_doc_ids": [
+      1742,
+      1745
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "What flow of goods and services were managed and distributed by General Blood?",
+    "answer": "blood, platelets, and plasma",
+    "rag_answer": "General Blood managed and distributed human blood, platelets, and plasma.",
+    "retrieved_titles": [
+      "General Blood",
+      "Supply chain management",
+      "Michael J. Lotz",
+      "NASA facilities",
+      "Division of Barrier"
+    ],
+    "retrieval_scores": [
+      0.8969277143478394,
+      0.8490281105041504,
+      0.7734036445617676,
+      0.7597026824951172,
+      0.7540905475616455
+    ],
+    "latency_ms": 886,
+    "gold_doc_ids": [
+      9087,
+      9096
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3960
+  },
+  {
+    "question": "Which English musician is known for both the songs \"See Yourself\" and \"Withing You Without You\"?",
+    "answer": "George Harrison",
+    "rag_answer": "George Harrison",
+    "retrieved_titles": [
+      "See Yourself",
+      "Within You Without You",
+      "Remix",
+      "List of accolades received by American Beauty",
+      "Michael Hass"
+    ],
+    "retrieval_scores": [
+      0.8438925743103027,
+      0.807986855506897,
+      0.7270761728286743,
+      0.726415753364563,
+      0.7251269817352295
+    ],
+    "latency_ms": 377,
+    "gold_doc_ids": [
+      376,
+      383
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "The 53rd National Hockey League All-Star Game took place at the indoor arena that was completed in what year?",
+    "answer": "1998",
+    "rag_answer": "The 53rd National Hockey League All-Star Game took place at the indoor arena that was completed in 1998.",
+    "retrieved_titles": [
+      "53rd National Hockey League All-Star Game",
+      "BB&amp;T Center (Sunrise, Florida)",
+      "Agreement on the Conservation of Polar Bears",
+      "The Epic of American Civilization",
+      "14th Empire Awards"
+    ],
+    "retrieval_scores": [
+      0.8932586908340454,
+      0.8168915510177612,
+      0.7234261631965637,
+      0.7147418856620789,
+      0.7140296101570129
+    ],
+    "latency_ms": 1440,
+    "gold_doc_ids": [
+      785,
+      789
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3953
+  },
+  {
+    "question": "What profession do Raj Kapoor and Mike Cahill share?",
+    "answer": "director",
+    "rag_answer": "Both Raj Kapoor and Mike Cahill are film directors.",
+    "retrieved_titles": [
+      "Mike Cahill (director)",
+      "Raj Kapoor",
+      "List of Malayalam films of 2005",
+      "Mansi Aggarwal",
+      "Look Around (Anthony Rapp album)"
+    ],
+    "retrieval_scores": [
+      0.8646351099014282,
+      0.8453195095062256,
+      0.7641892433166504,
+      0.7556329965591431,
+      0.7416032552719116
+    ],
+    "latency_ms": 831,
+    "gold_doc_ids": [
+      587,
+      589
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3946
+  },
+  {
+    "question": "What tribe was the Megaoryzomys curioi previously in that Nesoryzomys are also in?",
+    "answer": "Oryzomyini",
+    "rag_answer": "Oryzomyini",
+    "retrieved_titles": [
+      "Nesoryzomys",
+      "Megaoryzomys",
+      "FLJ20097 / CCDC132",
+      "Cryptoraptor",
+      "Emu"
+    ],
+    "retrieval_scores": [
+      0.8790772557258606,
+      0.8776088953018188,
+      0.7726802825927734,
+      0.7713789939880371,
+      0.7504685521125793
+    ],
+    "latency_ms": 535,
+    "gold_doc_ids": [
+      8030,
+      8032
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "What is in both the Lithocarpus and Duranta species?",
+    "answer": "trees",
+    "rag_answer": "There is no information in the provided documents that indicates anything is in both the Lithocarpus and Duranta species. The two genera belong to different plant families (Fagaceae and Verbenaceae), have different geographic distributions, and are not described as sharing any common characteristics. Therefore, based on the documents, there is no shared element between Lithocarpus and Duranta species.\n\nAnswer: Nothing is shared between Lithocarpus and Duranta species.",
+    "retrieved_titles": [
+      "Lithocarpus",
+      "Duranta",
+      "Roland R-8",
+      "Elisabeth of Bavaria, Queen of Germany",
+      "FC Bayern Munich II"
+    ],
+    "retrieval_scores": [
+      0.8837642669677734,
+      0.8623648881912231,
+      0.7508803606033325,
+      0.7481173276901245,
+      0.7473019361495972
+    ],
+    "latency_ms": 4168,
+    "gold_doc_ids": [
+      4064,
+      4058
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "What country do both Adnan Akmal and Kamran Akmal represent in cricket?",
+    "answer": "Pakistani",
+    "rag_answer": "Pakistan",
+    "retrieved_titles": [
+      "Adnan Akmal",
+      "Kamran Akmal",
+      "Shkëlzen Gashi",
+      "Dolores Claman",
+      "Indian Home Rule movement"
+    ],
+    "retrieval_scores": [
+      0.9100161790847778,
+      0.9006984829902649,
+      0.7311016917228699,
+      0.7290485501289368,
+      0.7102247476577759
+    ],
+    "latency_ms": 333,
+    "gold_doc_ids": [
+      5280,
+      5282
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3962
+  },
+  {
+    "question": "Who was the director of 2004 American teen comedy adventure film in which Michelle Christine Trachtenberg appeared?",
+    "answer": "Schaffer",
+    "rag_answer": "The director of the 2004 American teen comedy adventure film *EuroTrip*, in which Michelle Christine Trachtenberg appeared, was Jeff Schaffer.",
+    "retrieved_titles": [
+      "EuroTrip",
+      "Michelle Trachtenberg",
+      "Torchy Runs for Mayor",
+      "Jim: The James Foley Story",
+      "Bryan Johnson (comic book writer)"
+    ],
+    "retrieval_scores": [
+      0.8369828462600708,
+      0.831076979637146,
+      0.7178558111190796,
+      0.7131507396697998,
+      0.7084323763847351
+    ],
+    "latency_ms": 1575,
+    "gold_doc_ids": [
+      3710,
+      3706
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3962
+  },
+  {
+    "question": "Did Zaza Pachulia win an NBA Championship with the Atlanta Hawks?",
+    "answer": "Zaza Pachulia",
+    "rag_answer": "No, Zaza Pachulia did not win an NBA Championship with the Atlanta Hawks. He won his first NBA Championship in 2017 as a member of the Golden State Warriors.",
+    "retrieved_titles": [
+      "Zaza Pachulia",
+      "2005–06 Atlanta Hawks season",
+      "1996 Infiniti Open – Singles",
+      "1973–74 Virginia Squires season",
+      "1990 IAAF Grand Prix Final"
+    ],
+    "retrieval_scores": [
+      0.9138199090957642,
+      0.880121111869812,
+      0.8134921193122864,
+      0.8099941611289978,
+      0.7828919887542725
+    ],
+    "latency_ms": 1932,
+    "gold_doc_ids": [
+      1884,
+      1877
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "What position does Kyle York hold at the internet performance management company Dyn?",
+    "answer": "Chief Strategy Officer",
+    "rag_answer": "Kyle York holds the position of Chief Strategy Officer at Dyn.",
+    "retrieved_titles": [
+      "Kyle York (entrepreneur)",
+      "Dyn (company)",
+      "Lee on the Beats",
+      "Let Freedom Ring, Inc.",
+      "168th Air Refueling Squadron"
+    ],
+    "retrieval_scores": [
+      0.9106444120407104,
+      0.8732139468193054,
+      0.7415638566017151,
+      0.7334875464439392,
+      0.7270574569702148
+    ],
+    "latency_ms": 828,
+    "gold_doc_ids": [
+      5051,
+      5057
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3945
+  },
+  {
+    "question": "What building in the capital of city of Brandenburg has a roof that is 1 m bigger than the roof of the Der Oderturm? ",
+    "answer": "Stern-Plaza",
+    "rag_answer": "The Stern-Plaza in Potsdam has a roof that is 1 m bigger than the roof of the Der Oderturm.",
+    "retrieved_titles": [
+      "Oderturm",
+      "Potsdam",
+      "15 Temmuz Kızılay Milli İrade Meydanı",
+      "Closeburn Castle",
+      "Carroll County, New Hampshire"
+    ],
+    "retrieval_scores": [
+      0.906408429145813,
+      0.8339560627937317,
+      0.7570544481277466,
+      0.750521183013916,
+      0.7397662997245789
+    ],
+    "latency_ms": 1439,
+    "gold_doc_ids": [
+      2050,
+      2053
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3937
+  },
+  {
+    "question": "Where does Śivarāma Swami conduct courses on Vaishnava Theology?",
+    "answer": "in the village of Aldenham",
+    "rag_answer": "Śivarāma Swami conducts courses on Vaishnava Theology at Bhaktivedanta Manor.",
+    "retrieved_titles": [
+      "Sivarama Swami",
+      "Bhaktivedanta Manor",
+      "Ramanlal Vora",
+      "NestEgg",
+      "Schenectady County Historical Society"
+    ],
+    "retrieval_scores": [
+      0.8948290348052979,
+      0.7953256368637085,
+      0.7684880495071411,
+      0.7345556020736694,
+      0.7328857779502869
+    ],
+    "latency_ms": 1216,
+    "gold_doc_ids": [
+      6558,
+      6556
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3947
+  },
+  {
+    "question": "What family are the genus' Sinofranchetia and Stauntonia from?",
+    "answer": "a genus of flowering plant in the Lardizabalaceae family",
+    "rag_answer": "Both Sinofranchetia and Stauntonia are from the Lardizabalaceae family.",
+    "retrieved_titles": [
+      "Sinofranchetia",
+      "Stauntonia",
+      "Akbesia",
+      "Ohio County, Kentucky",
+      "University of Illinois round barns"
+    ],
+    "retrieval_scores": [
+      0.9022032022476196,
+      0.8704854249954224,
+      0.7834634780883789,
+      0.7421790361404419,
+      0.7407848238945007
+    ],
+    "latency_ms": 1248,
+    "gold_doc_ids": [
+      2035,
+      2034
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3926
+  },
+  {
+    "question": "Q: Which actor played a role in the comedy series \"30 Rock\" as well as the drama series \"Mad Men\"? A: Jon Hamm",
+    "answer": "Jon Hamm",
+    "rag_answer": "Jon Hamm played a role in the comedy series \"30 Rock\" as well as the drama series \"Mad Men\".",
+    "retrieved_titles": [
+      "Jon Hamm",
+      "Live Show",
+      "Bach: The Great Passion",
+      "American Housewife",
+      "Julianna Margulies"
+    ],
+    "retrieval_scores": [
+      0.8836489915847778,
+      0.8448716402053833,
+      0.7574329972267151,
+      0.7536681294441223,
+      0.7451874017715454
+    ],
+    "latency_ms": 1319,
+    "gold_doc_ids": [
+      7797,
+      7796
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "Are Dogo Cubano and the Dutch Shepherd both breeds of dog?",
+    "answer": "yes",
+    "rag_answer": "Yes, both the Dogo Cubano and the Dutch Shepherd are breeds of dog.",
+    "retrieved_titles": [
+      "Dogo Cubano",
+      "Dutch Shepherd",
+      "Cigar store Indian",
+      "Italian ship Anteo (A5309)",
+      "Oxford (company)"
+    ],
+    "retrieval_scores": [
+      0.8938176035881042,
+      0.8802350759506226,
+      0.7174469828605652,
+      0.7001675367355347,
+      0.6990755200386047
+    ],
+    "latency_ms": 1137,
+    "gold_doc_ids": [
+      5031,
+      5033
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3936
+  },
+  {
+    "question": "What city, located in Lincoln County, Montana, United States, is Vegepet based in?",
+    "answer": "Troy, Montana",
+    "rag_answer": "Troy",
+    "retrieved_titles": [
+      "Vegepet",
+      "Troy, Montana",
+      "West Tyson County Park",
+      "Bath, Maine",
+      "Jackson Park Historic District (Dubuque, Iowa)"
+    ],
+    "retrieval_scores": [
+      0.8498914241790771,
+      0.8412157297134399,
+      0.7671264410018921,
+      0.7418926954269409,
+      0.7178863286972046
+    ],
+    "latency_ms": 431,
+    "gold_doc_ids": [
+      8290,
+      8291
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3937
+  },
+  {
+    "question": "One Raffles Place is one of the tallest skyscrapers in the city of Singapore and tallest in the wolrd outside North America until it was succeeded by a Building in city?",
+    "answer": "Hong Kong",
+    "rag_answer": "One Raffles Place was the tallest building in the world outside North America until it was succeeded by the Bank of China Tower.",
+    "retrieved_titles": [
+      "One Raffles Place",
+      "Skyscraper (roller coaster)",
+      "Bank of China Tower (Hong Kong)",
+      "STOLport",
+      "Sutter General Hospital"
+    ],
+    "retrieval_scores": [
+      0.9193971157073975,
+      0.8332841992378235,
+      0.8312046527862549,
+      0.7644699811935425,
+      0.7602220773696899
+    ],
+    "latency_ms": 1355,
+    "gold_doc_ids": [
+      176,
+      177
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "Peter Curtis and Scott Draper are both what?",
+    "answer": "former tennis player",
+    "rag_answer": "Peter Curtis and Scott Draper are both former professional tennis players.",
+    "retrieved_titles": [
+      "Peter Curtis (tennis)",
+      "Scott Draper",
+      "Howard Drossin",
+      "List of Major League Baseball on Fox broadcasters",
+      "Paul Avery"
+    ],
+    "retrieval_scores": [
+      0.8195215463638306,
+      0.8083955645561218,
+      0.6853619813919067,
+      0.6785896420478821,
+      0.677449107170105
+    ],
+    "latency_ms": 898,
+    "gold_doc_ids": [
+      4311,
+      4314
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "Which movie was released first, Return to Oz or Midnight Madness?",
+    "answer": "Midnight Madness",
+    "rag_answer": "Midnight Madness was released first. It came out in 1980, while Return to Oz was released in 1985.",
+    "retrieved_titles": [
+      "Midnight Madness (film)",
+      "Return to Oz",
+      "Singapore Sling (1993 film)",
+      "Feast of the Annunciation",
+      "Making Today a Perfect Day"
+    ],
+    "retrieval_scores": [
+      0.8481370806694031,
+      0.8404889106750488,
+      0.7496477365493774,
+      0.7272955179214478,
+      0.7261828184127808
+    ],
+    "latency_ms": 1724,
+    "gold_doc_ids": [
+      3375,
+      3376
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3956
+  },
+  {
+    "question": "Which dog is used for herding, the Bosnian Coarse-haired Hound or Dutch Shepherd?",
+    "answer": "Dutch Shepherd",
+    "rag_answer": "The Dutch Shepherd is used for herding.",
+    "retrieved_titles": [
+      "Dutch Shepherd",
+      "Bosnian Coarse-haired Hound",
+      "Wave Breaker: The Rescue Coaster",
+      "WWF (file format)",
+      "Mortgage industry of the United States"
+    ],
+    "retrieval_scores": [
+      0.9265878200531006,
+      0.870643675327301,
+      0.7343131303787231,
+      0.7161692380905151,
+      0.7149128913879395
+    ],
+    "latency_ms": 644,
+    "gold_doc_ids": [
+      9359,
+      5031
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3925
+  },
+  {
+    "question": "Did both  Slaughter-House Cases and United States v. Darby Lumber Co. involve civil rights law?",
+    "answer": "no",
+    "rag_answer": "No, neither Slaughter-House Cases nor United States v. Darby Lumber Co. primarily involved civil rights law. Slaughter-House Cases dealt with the interpretation of the Fourteenth Amendment and limited protections for citizenship, which is related to civil rights, but its impact was narrow. United States v. Darby Lumber Co. involved labor standards and the Commerce Clause, focusing on workers' rights under the Fair Labor Standards Act, not civil rights in the traditional sense. Thus, while both touch on rights, only Slaughter-House Cases is directly within civil rights law. The correct answer is: No.",
+    "retrieved_titles": [
+      "United States v. Darby Lumber Co.",
+      "Slaughter-House Cases",
+      "General Survey Act",
+      "James McDonald (lawyer)",
+      "Drum (South African magazine)"
+    ],
+    "retrieval_scores": [
+      0.8859587907791138,
+      0.8850354552268982,
+      0.7850552797317505,
+      0.7687337398529053,
+      0.7576477527618408
+    ],
+    "latency_ms": 5307,
+    "gold_doc_ids": [
+      3954,
+      3950
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "Which St. Louis Rams season was the final full season played by the 2008 winner of the Heisman Trophy?",
+    "answer": "75th",
+    "rag_answer": "The 2008 Heisman Trophy winner was Sam Bradford, who played for the St. Louis Rams during the 2012 season. Therefore, the final full season played by the 2008 Heisman Trophy winner with the St. Louis Rams was the 2012 season.",
+    "retrieved_titles": [
+      "2012 St. Louis Rams season",
+      "Sam Bradford",
+      "Club HSM: Make It Happen",
+      "James Younghusband",
+      "Valencia Street Circuit"
+    ],
+    "retrieval_scores": [
+      0.8470419049263,
+      0.8273543119430542,
+      0.7397553324699402,
+      0.7137884497642517,
+      0.7067583203315735
+    ],
+    "latency_ms": 2913,
+    "gold_doc_ids": [
+      9098,
+      9100
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3951
+  },
+  {
+    "question": "Which channel produced the ninth volume of the tv series that premiered as the same date as RuPaul's first album?",
+    "answer": "VH1",
+    "rag_answer": "The ninth volume of the TV series that premiered on the same date as RuPaul's first album (March 2, 2015) is the ninth season of *RuPaul's Drag Race*. According to Doc 1, *RuPaul's Drag Race* is produced by World of Wonder for Logo TV and, beginning with the ninth season, VH1. Therefore, the channel that produced the ninth volume is **VH1**.",
+    "retrieved_titles": [
+      "RuPaul's Drag Race",
+      "Realness (RuPaul album)",
+      "How Your Mother Met Me",
+      "Alpha TV",
+      "Fightin' Words (album)"
+    ],
+    "retrieval_scores": [
+      0.8651093244552612,
+      0.8352756500244141,
+      0.7740312814712524,
+      0.7528884410858154,
+      0.752805233001709
+    ],
+    "latency_ms": 4010,
+    "gold_doc_ids": [
+      7207,
+      7204
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "Milo Parker starred in which 2014 movie alongside Gillian Anderson?",
+    "answer": "Robot Overlords",
+    "rag_answer": "Milo Parker starred in \"Robot Overlords\" alongside Gillian Anderson.",
+    "retrieved_titles": [
+      "Milo Parker",
+      "Robot Overlords",
+      "The Social Network",
+      "Zero for Conduct",
+      "Matthew Goode"
+    ],
+    "retrieval_scores": [
+      0.7973129153251648,
+      0.7691226601600647,
+      0.7383209466934204,
+      0.70599365234375,
+      0.6968801021575928
+    ],
+    "latency_ms": 1011,
+    "gold_doc_ids": [
+      7674,
+      7680
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "When was the track from which a sample was featured in \"Take Me to the Clouds Above\" released? ",
+    "answer": "16 March 1987",
+    "rag_answer": "The track from which a sample was featured in \"Take Me to the Clouds Above\" is \"How Will I Know\" by Whitney Houston, which was released in 1992.",
+    "retrieved_titles": [
+      "LMC (British band)",
+      "With or Without You",
+      "Tim Conlon (artist)",
+      "Richard Strauss",
+      "Alfred Hitchcock filmography"
+    ],
+    "retrieval_scores": [
+      0.8033206462860107,
+      0.7177610397338867,
+      0.6839673519134521,
+      0.6668365597724915,
+      0.6643441915512085
+    ],
+    "latency_ms": 2131,
+    "gold_doc_ids": [
+      676,
+      677
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3918
+  },
+  {
+    "question": "Who was the brother of the wife of the Democratic Party nomination for Vice President in 1972?",
+    "answer": "President John F. Kennedy",
+    "rag_answer": "Eunice Kennedy Shriver was the wife of Sargent Shriver, who was the Democratic Party's nominee for Vice President in 1972. She was the sister of President John F. Kennedy and senators Robert F. Kennedy and Ted Kennedy. Therefore, the brother of the wife of the Democratic Party nominee for Vice President in 1972 was John F. Kennedy. \n\nAnswer: John F. Kennedy.",
+    "retrieved_titles": [
+      "Eunice Kennedy Shriver",
+      "Sargent Shriver",
+      "Trish King",
+      "Gerald Grosvenor, 4th Duke of Westminster",
+      "Bush v. Palm Beach County Canvassing Board"
+    ],
+    "retrieval_scores": [
+      0.8460018634796143,
+      0.8176963329315186,
+      0.7423332929611206,
+      0.7251336574554443,
+      0.7205171585083008
+    ],
+    "latency_ms": 3871,
+    "gold_doc_ids": [
+      5958,
+      5960
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Which 2009 animated film is from Japan, Summer Wars or The Secret of Kells?",
+    "answer": "Summer Wars",
+    "rag_answer": "Summer Wars is the 2009 animated film from Japan.",
+    "retrieved_titles": [
+      "The Secret of Kells",
+      "Summer Wars",
+      "Robinsonekspedisjonen 2009",
+      "Return to Oz",
+      "Trigger Street Productions"
+    ],
+    "retrieval_scores": [
+      0.8661375641822815,
+      0.8569534420967102,
+      0.7206137776374817,
+      0.7171030044555664,
+      0.7041354179382324
+    ],
+    "latency_ms": 980,
+    "gold_doc_ids": [
+      139,
+      142
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "What city is the army division that conducted Operation Blue Hearts in the Korean War based out of?",
+    "answer": "Fort Hood, Texas",
+    "rag_answer": "Fort Hood, Texas",
+    "retrieved_titles": [
+      "Operation Blue Hearts",
+      "1st Cavalry Division (United States)",
+      "Geography of the Democratic Republic of the Congo",
+      "Virginia State University",
+      "The Conjuring (film series)"
+    ],
+    "retrieval_scores": [
+      0.8791947960853577,
+      0.8080388307571411,
+      0.7297005653381348,
+      0.7271770238876343,
+      0.7206162214279175
+    ],
+    "latency_ms": 458,
+    "gold_doc_ids": [
+      5759,
+      5757
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3940
+  },
+  {
+    "question": "Which came to market first, \"Hey Pa! There's a Goat on the Roof\" or \"Poleconomy\"",
+    "answer": "Hey Pa! There's a Goat on the Roof",
+    "rag_answer": "\"Hey Pa! There's a Goat on the Roof\" came to market first. It was issued in 1966, while \"Poleconomy\" was first published in 1980.",
+    "retrieved_titles": [
+      "Hey Pa! There's a Goat on the Roof",
+      "Poleconomy",
+      "Eins, Zwei, Polizei",
+      "Hall &amp; Oates",
+      "Cargo control room"
+    ],
+    "retrieval_scores": [
+      0.9148944616317749,
+      0.8377054333686829,
+      0.7850855588912964,
+      0.7587071657180786,
+      0.7570482492446899
+    ],
+    "latency_ms": 2233,
+    "gold_doc_ids": [
+      2650,
+      2651
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3935
+  },
+  {
+    "question": "What conference does the team that drafted Derrick Hamilton in 2004 belong to?",
+    "answer": "National Football Conference (NFC) West",
+    "rag_answer": "The San Francisco 49ers, the team that drafted Derrick Hamilton in 2004, belong to the National Football Conference (NFC).",
+    "retrieved_titles": [
+      "Derrick Hamilton",
+      "San Francisco 49ers",
+      "Concussion (2015 film)",
+      "Lou Brock",
+      "1996 Nottingham Open – Singles"
+    ],
+    "retrieval_scores": [
+      0.8855106830596924,
+      0.7831681966781616,
+      0.7442983388900757,
+      0.7235854864120483,
+      0.7211666107177734
+    ],
+    "latency_ms": 1646,
+    "gold_doc_ids": [
+      6974,
+      6979
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3949
+  },
+  {
+    "question": "What american singer,had Warren Fu as one of their video directors, and also had to face allegation of illegal marriage with R. Kelly?",
+    "answer": "Aaliyah",
+    "rag_answer": "Aaliyah",
+    "retrieved_titles": [
+      "Warren Fu",
+      "Aaliyah",
+      "David Beckham's Soccer USA",
+      "Park Myeong-su",
+      "201 (South Park)"
+    ],
+    "retrieval_scores": [
+      0.872240424156189,
+      0.8320304155349731,
+      0.7823102474212646,
+      0.7769900560379028,
+      0.7722275257110596
+    ],
+    "latency_ms": 508,
+    "gold_doc_ids": [
+      2542,
+      2540
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+    "answer": "The Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers.",
+    "rag_answer": "Charley and the Angel was released first. It was released in 1973, while The Boatniks was released in 1970. Therefore, The Boatniks was released first.",
+    "retrieved_titles": [
+      "Charley and the Angel",
+      "The Boatniks",
+      "Sandra Dee",
+      "Sail On: The 30th Anniversary Collection",
+      "Feast of the Annunciation"
+    ],
+    "retrieval_scores": [
+      0.8492491841316223,
+      0.8424834609031677,
+      0.737263023853302,
+      0.7351148128509521,
+      0.7246413230895996
+    ],
+    "latency_ms": 2120,
+    "gold_doc_ids": [
+      4424,
+      4418
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "What county is Keene High School located in?",
+    "answer": "Cheshire County",
+    "rag_answer": "The documents do not specify the county in which Keene High School is located. Therefore, based on the provided information, the county cannot be determined.",
+    "retrieved_titles": [
+      "Keene High School",
+      "Marlborough, New Hampshire",
+      "Kirtley, Kentucky",
+      "RM postcode area",
+      "Bell Labs"
+    ],
+    "retrieval_scores": [
+      0.8940767049789429,
+      0.7420140504837036,
+      0.717190146446228,
+      0.7024155855178833,
+      0.6998478174209595
+    ],
+    "latency_ms": 1601,
+    "gold_doc_ids": [
+      1796,
+      1793
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3951
+  },
+  {
+    "question": "Which film was released first, Home on the Range or Pete's Dragon?",
+    "answer": "Home on the Range",
+    "rag_answer": "Home on the Range was released first. It was released in 2004, while Pete's Dragon was released in 2016.",
+    "retrieved_titles": [
+      "Pete's Dragon (2016 film)",
+      "Home on the Range (2004 film)",
+      "Climbing!",
+      "Maytag (disambiguation)",
+      "Lego Spider-Man"
+    ],
+    "retrieval_scores": [
+      0.8292617797851562,
+      0.8195508122444153,
+      0.741910457611084,
+      0.7337114214897156,
+      0.7333069443702698
+    ],
+    "latency_ms": 1526,
+    "gold_doc_ids": [
+      3880,
+      3875
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "The host of PokerFace is from where?",
+    "answer": "Newcastle upon Tyne, England",
+    "rag_answer": "The host of PokerFace, Ant & Dec, is from Newcastle upon Tyne, England.",
+    "retrieved_titles": [
+      "PokerFace",
+      "Ant &amp; Dec",
+      "Wilsberg",
+      "Donald Trahan",
+      "Brooklyn Film Festival"
+    ],
+    "retrieval_scores": [
+      0.887526273727417,
+      0.7661706209182739,
+      0.7530892491340637,
+      0.7469102740287781,
+      0.743576169013977
+    ],
+    "latency_ms": 1027,
+    "gold_doc_ids": [
+      3894,
+      3896
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "Who was born first, Ronnie Radke or Dave Brockie?",
+    "answer": "Dave Brockie",
+    "rag_answer": "Dave Brockie was born first. He was born on August 30, 1963, while Ronnie Radke was born on December 15, 1983.",
+    "retrieved_titles": [
+      "Ronnie Radke",
+      "Dave Brockie",
+      "Ricky Martin (1999 album)",
+      "Hayden (musician)",
+      "Jimmy Tatro"
+    ],
+    "retrieval_scores": [
+      0.8467355370521545,
+      0.805528461933136,
+      0.7163742780685425,
+      0.7080428600311279,
+      0.707089364528656
+    ],
+    "latency_ms": 1998,
+    "gold_doc_ids": [
+      7643,
+      7646
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "The ghetto that George Kadish documented held how many people at its peak?",
+    "answer": "29,000",
+    "rag_answer": "The ghetto that George Kadish documented held 29,000 people at its peak.",
+    "retrieved_titles": [
+      "George Kadish",
+      "Kovno Ghetto",
+      "Jim Hanna (loyalist)",
+      "55 Water Street",
+      "Children of Crisis"
+    ],
+    "retrieval_scores": [
+      0.872562050819397,
+      0.8303038477897644,
+      0.7256653904914856,
+      0.7163421511650085,
+      0.7144252061843872
+    ],
+    "latency_ms": 1208,
+    "gold_doc_ids": [
+      856,
+      859
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "What retailer did Albert Heijn start up that eventually merged with the Delhaize Group?",
+    "answer": "Koninklijke Ahold N.V.",
+    "rag_answer": "Albert Heijn founded Ahold, which eventually merged with the Delhaize Group to form Ahold Delhaize.",
+    "retrieved_titles": [
+      "Albert Heijn (born 1927)",
+      "Ahold",
+      "Dahlia imperialis",
+      "383 Madison Avenue",
+      "Wisma Atria"
+    ],
+    "retrieval_scores": [
+      0.8916639089584351,
+      0.8725014925003052,
+      0.7463858127593994,
+      0.7380870580673218,
+      0.7345215082168579
+    ],
+    "latency_ms": 1461,
+    "gold_doc_ids": [
+      7359,
+      7357
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "Where was the original line of the railroad William Howard worked for?",
+    "answer": "the port of Baltimore west to Sandy Hook",
+    "rag_answer": "The original line of the railroad William Howard worked for, the Baltimore and Ohio Railroad, was from the port of Baltimore west to Sandy Hook.",
+    "retrieved_titles": [
+      "William Howard (engineer)",
+      "Baltimore and Ohio Railroad",
+      "Prince William County Sheriff's Office",
+      "Nassau Boulevard (LIRR station)",
+      "Apocalypse (Six Flags America)"
+    ],
+    "retrieval_scores": [
+      0.886005163192749,
+      0.839702308177948,
+      0.8001006841659546,
+      0.7870742082595825,
+      0.7820821404457092
+    ],
+    "latency_ms": 1529,
+    "gold_doc_ids": [
+      3483,
+      3480
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Who is affiliated with more countries as a director, Robert Florey and R. G. Springsteen?",
+    "answer": "Robert Florey",
+    "rag_answer": "Robert Florey is affiliated with more countries as a director (French-American) compared to R. G. Springsteen (American only). Therefore, Robert Florey is affiliated with more countries.",
+    "retrieved_titles": [
+      "R. G. Springsteen",
+      "Robert Florey",
+      "James Dooley (composer)",
+      "Jan Borgman",
+      "Alexander Acosta"
+    ],
+    "retrieval_scores": [
+      0.8861715793609619,
+      0.876068115234375,
+      0.755893886089325,
+      0.7552023530006409,
+      0.7539414167404175
+    ],
+    "latency_ms": 1834,
+    "gold_doc_ids": [
+      1728,
+      1729
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3905
+  },
+  {
+    "question": "Who else beside the  American university administrator and politician from the state of Oklahoma was part of the  Boren-McCurdy proposals?",
+    "answer": "David McCurdy",
+    "rag_answer": "Representative David McCurdy was the other person part of the Boren-McCurdy proposals.",
+    "retrieved_titles": [
+      "Boren-McCurdy proposals",
+      "David L. Boren",
+      "Christine L. Borgman",
+      "Compliance (film)",
+      "Saeculum obscurum"
+    ],
+    "retrieval_scores": [
+      0.8576276302337646,
+      0.8477611541748047,
+      0.754173219203949,
+      0.7375738620758057,
+      0.7204809188842773
+    ],
+    "latency_ms": 1158,
+    "gold_doc_ids": [
+      7952,
+      7951
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "What game where a play must act as a night security guard was a new intellectual property released in 2014?",
+    "answer": "Five Nights at Freddy's",
+    "rag_answer": "Five Nights at Freddy's was a new intellectual property released in 2014, where the player must act as a night security guard.",
+    "retrieved_titles": [
+      "2014 in video gaming",
+      "Five Nights at Freddy's (video game)",
+      "Just Keep Runnin'",
+      "Matt Vasgersian",
+      "2006 Asian Games"
+    ],
+    "retrieval_scores": [
+      0.8560444116592407,
+      0.8431170582771301,
+      0.7443950772285461,
+      0.7416939735412598,
+      0.735995888710022
+    ],
+    "latency_ms": 1483,
+    "gold_doc_ids": [
+      8547,
+      8545
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "At what intersection was the former home of the wooden roller coaster now located at Six Flags Great America in Gurnee, Illinois located?",
+    "answer": "North Avenue and First Avenue",
+    "rag_answer": "The documents do not provide information about the intersection where the former home of the Little Dipper roller coaster (at Kiddieland Amusement Park) was located. While Doc 2 mentions Kiddieland Amusement Park was at the corner of North Avenue and First Avenue in Melrose Park, Illinois, this is not the same location as Six Flags Great America in Gurnee, Illinois. Therefore, based on the given documents, the intersection of the former home of the roller coaster cannot be determined for the current location at Six Flags Great America.\n\nAnswer: The documents do not contain enough information to determine the intersection where the former home of the roller coaster at Six Flags Great America was located.",
+    "retrieved_titles": [
+      "Little Dipper (Six Flags Great America)",
+      "Kiddieland Amusement Park",
+      "Twin City Railroad",
+      "Walter V. Shipley",
+      "Trik Turner"
+    ],
+    "retrieval_scores": [
+      0.8662084937095642,
+      0.818487286567688,
+      0.7515202760696411,
+      0.7095614671707153,
+      0.7071573138237
+    ],
+    "latency_ms": 5950,
+    "gold_doc_ids": [
+      213,
+      207
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "What team did Robbie Keane play for after Inter Milan?",
+    "answer": "Republic of Ireland national team",
+    "rag_answer": "The documents do not provide information about which team Robbie Keane played for after Inter Milan. Therefore, based on the given information, the question cannot be answered.",
+    "retrieved_titles": [
+      "Robbie Keane",
+      "2000–01 Inter Milan season",
+      "Miroslav Přerost",
+      "1984–85 FC Bayern Munich season",
+      "Gangster Squad (film)"
+    ],
+    "retrieval_scores": [
+      0.8893921971321106,
+      0.8856461048126221,
+      0.7650585174560547,
+      0.7611716985702515,
+      0.7472739219665527
+    ],
+    "latency_ms": 1637,
+    "gold_doc_ids": [
+      6782,
+      6785
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "Which American film director and actor famous for his role as Donny \"The Bear Jew\" Donowitz wrote the 2012 film \"The Man with the Iron Fists\"?",
+    "answer": "Eli Roth",
+    "rag_answer": "Eli Roth wrote the 2012 film \"The Man with the Iron Fists.\" However, this is incorrect based on the documents. While Eli Roth is noted as a writer of \"The Man with the Iron Fists,\" the document states that the film was written by RZA and Eli Roth. But the question specifically asks for the director and actor famous for Donny \"The Bear Jew\" Donowitz. Eli Roth is that actor and director. Therefore, the correct answer is:\n\nEli Roth.",
+    "retrieved_titles": [
+      "The Man with the Iron Fists",
+      "Eli Roth",
+      "A Soldier's Daughter Never Cries (film)",
+      "Stephen Susco",
+      "Alex Pettyfer"
+    ],
+    "retrieval_scores": [
+      0.8639229536056519,
+      0.8108927607536316,
+      0.7379403114318848,
+      0.7343863248825073,
+      0.7079458236694336
+    ],
+    "latency_ms": 4689,
+    "gold_doc_ids": [
+      7764,
+      7767
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "The album \"The Best of LeAnn Rimes\" contained a song used as the theme song for a film. What is the name of the film?",
+    "answer": "Coyote Ugly",
+    "rag_answer": "The film is \"Coyote Ugly\".",
+    "retrieved_titles": [
+      "Can't Fight the Moonlight",
+      "The Best of LeAnn Rimes",
+      "The Whole Truth (2016 film)",
+      "The Joker (The Dark Knight)",
+      "Four-Star Spectacular"
+    ],
+    "retrieval_scores": [
+      0.8564761877059937,
+      0.8440173864364624,
+      0.7387940287590027,
+      0.7299084663391113,
+      0.7192072868347168
+    ],
+    "latency_ms": 882,
+    "gold_doc_ids": [
+      3016,
+      3015
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3937
+  },
+  {
+    "question": "Siegfriedstellung in the First World War was a defensive position of what country's army?",
+    "answer": "German",
+    "rag_answer": "The Siegfriedstellung in the First World War was a defensive position of Germany's army.",
+    "retrieved_titles": [
+      "Siegfried Line",
+      "Hindenburg Line",
+      "Rocked: Sum 41 in Congo",
+      "Alice's Adventures in Wonderland",
+      "Alex Mendelssohn"
+    ],
+    "retrieval_scores": [
+      0.8748160004615784,
+      0.8675030469894409,
+      0.7301697134971619,
+      0.7259988188743591,
+      0.7222457528114319
+    ],
+    "latency_ms": 1118,
+    "gold_doc_ids": [
+      2328,
+      2327
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "What philosophy related to creationism is Paul Nelson noted for?",
+    "answer": "intelligent design",
+    "rag_answer": "Paul Nelson is noted for advocating young earth creationism and intelligent design.",
+    "retrieved_titles": [
+      "Paul Nelson (creationist)",
+      "Ontogenetic depth",
+      "Bret Easton Ellis",
+      "David Cheriton",
+      "Operation Iraqi Children"
+    ],
+    "retrieval_scores": [
+      0.9301084280014038,
+      0.8511271476745605,
+      0.730387806892395,
+      0.7299407720565796,
+      0.7201077938079834
+    ],
+    "latency_ms": 851,
+    "gold_doc_ids": [
+      7531,
+      7529
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3948
+  },
+  {
+    "question": "Which amusement park at Coney Island, Brooklyn, New York City,  without being the grandest, was the island's longest lasting?",
+    "answer": "Steeplechase Park",
+    "rag_answer": "Steeplechase Park was the island's longest-lasting amusement park at Coney Island, Brooklyn, New York City, without being the grandest.",
+    "retrieved_titles": [
+      "Dreamland (amusement park)",
+      "Steeplechase Park",
+      "New Jersey State Fair",
+      "Provincetown-Boston Airlines",
+      "1876 in Germany"
+    ],
+    "retrieval_scores": [
+      0.8814780712127686,
+      0.8630671501159668,
+      0.7646929621696472,
+      0.7394781112670898,
+      0.739335298538208
+    ],
+    "latency_ms": 1675,
+    "gold_doc_ids": [
+      5706,
+      5708
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3947
+  },
+  {
+    "question": "In which genus number of species are more, Lavatera or Oplismenus?",
+    "answer": "Oplismenus",
+    "rag_answer": "Lavatera has about 25 species, while Oplismenus has over 100 described species (though only 7 are officially recognized). Therefore, Oplismenus has more species. Answer: Oplismenus.",
+    "retrieved_titles": [
+      "Lavatera",
+      "Oplismenus",
+      "14 Penn Plaza LLC v. Pyett",
+      "Lady Churchill's Rosebud Wristlet",
+      "Shearwater (band)"
+    ],
+    "retrieval_scores": [
+      0.882987380027771,
+      0.8539470434188843,
+      0.7134733200073242,
+      0.7033630609512329,
+      0.7028564810752869
+    ],
+    "latency_ms": 2404,
+    "gold_doc_ids": [
+      2515,
+      2509
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": "What is the name of the former MGM Grand Garden Special Events Center where the Mayweather-Ortiz fight took place?",
+    "answer": "MGM Grand Garden Arena",
+    "rag_answer": "The name of the former MGM Grand Garden Special Events Center where the Mayweather-Ortiz fight took place is the MGM Grand Garden Arena.",
+    "retrieved_titles": [
+      "MGM Grand Garden Arena",
+      "Canelo Álvarez vs. Alfonso Gómez",
+      "Missouri Theatre (Columbia, Missouri)",
+      "Beckingham Palace",
+      "Buffalo Bulls men's basketball"
+    ],
+    "retrieval_scores": [
+      0.8804125785827637,
+      0.8704385757446289,
+      0.7503871917724609,
+      0.7369197607040405,
+      0.7159924507141113
+    ],
+    "latency_ms": 1441,
+    "gold_doc_ids": [
+      329,
+      327
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "One of Central Dublin's most historic working-class neighbourhoods is the home to a football club who were the first ever winners of what cup?",
+    "answer": "FAI Junior Cup",
+    "rag_answer": "The Liberties, a historic working-class neighbourhood in Central Dublin, is home to Brideville F.C., which were the first ever winners of the FAI Junior Cup.",
+    "retrieved_titles": [
+      "Brideville F.C.",
+      "The Liberties, Dublin",
+      "Forbury Gardens",
+      "BB postcode area",
+      "1955 Philadelphia Phillies season"
+    ],
+    "retrieval_scores": [
+      0.870204508304596,
+      0.836746096611023,
+      0.7492732405662537,
+      0.7481309175491333,
+      0.7433742880821228
+    ],
+    "latency_ms": 1672,
+    "gold_doc_ids": [
+      1281,
+      1288
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "What was the address of the penitentiary where Jimmy Elliot was sentenced?",
+    "answer": "2027 Fairmount Avenue",
+    "rag_answer": "The address of the Eastern State Penitentiary where Jimmy Elliot was sentenced is 2027 Fairmount Avenue between Corinthian Avenue and North 22nd Street in the Fairmount section of Philadelphia, Pennsylvania.",
+    "retrieved_titles": [
+      "Jimmy Elliott",
+      "Eastern State Penitentiary",
+      "The State Hermitage Youth Education Center",
+      "The Frost Place",
+      "My Beautiful Dark Twisted Fantasy"
+    ],
+    "retrieval_scores": [
+      0.8512104749679565,
+      0.8102430105209351,
+      0.7420356273651123,
+      0.7405301332473755,
+      0.7386265993118286
+    ],
+    "latency_ms": 2154,
+    "gold_doc_ids": [
+      4377,
+      4382
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "Sebastian Gutierrez is known for writing the screenplay for the 2003 film directed by whom?",
+    "answer": "Mathieu Kassovitz",
+    "rag_answer": "Sebastian Gutierrez is known for writing the screenplay for the 2003 film \"Gothika\", which was directed by Mathieu Kassovitz.",
+    "retrieved_titles": [
+      "Sebastian Gutierrez",
+      "Gothika",
+      "Robert Garcia (American boxer)",
+      "Annabelle Williams",
+      "2002–03 Australian region cyclone season"
+    ],
+    "retrieval_scores": [
+      0.8660603761672974,
+      0.8320803642272949,
+      0.7346477508544922,
+      0.7066158652305603,
+      0.7033426761627197
+    ],
+    "latency_ms": 1721,
+    "gold_doc_ids": [
+      6475,
+      6476
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "What Harry Potter actor strred in My Boy Jack?",
+    "answer": "Daniel Radcliffe",
+    "rag_answer": "Daniel Radcliffe starred in \"My Boy Jack\".",
+    "retrieved_titles": [
+      "Daniel Radcliffe",
+      "Brian Kirk",
+      "A Star Is Born Again",
+      "Christine (1983 film)",
+      "East Is East (1999 film)"
+    ],
+    "retrieval_scores": [
+      0.8518443703651428,
+      0.8243142366409302,
+      0.7873426079750061,
+      0.7758538722991943,
+      0.7749321460723877
+    ],
+    "latency_ms": 677,
+    "gold_doc_ids": [
+      1203,
+      1204
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3933
+  },
+  {
+    "question": "The 1996 film \"The Christmas Tree\" stars Andrew McCarthy and an actress that has won how any Emmy Awards?",
+    "answer": "three",
+    "rag_answer": "The actress in \"The Christmas Tree\" is Julie Harris, who won three Emmy Awards.",
+    "retrieved_titles": [
+      "The Christmas Tree (1996 film)",
+      "Julie Harris (actress)",
+      "Neighbors 2: Sorority Rising",
+      "Seducing Mr. Perfect",
+      "Otis B. Thayer"
+    ],
+    "retrieval_scores": [
+      0.9096983075141907,
+      0.777647852897644,
+      0.743171215057373,
+      0.732636570930481,
+      0.7173987627029419
+    ],
+    "latency_ms": 1047,
+    "gold_doc_ids": [
+      5004,
+      5007
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3953
+  },
+  {
+    "question": "Who else besides \"The Golden Jet\" was born in Point Anne, Ontario?",
+    "answer": "Dennis Hull, as well as painter Manley MacDonald.",
+    "rag_answer": "Manley MacDonald.",
+    "retrieved_titles": [
+      "Point Anne, Ontario",
+      "Bobby Hull",
+      "1999 Stella Artois Championships – Singles",
+      "The Apple Dumpling Gang Rides Again",
+      "Carol Sloane"
+    ],
+    "retrieval_scores": [
+      0.8478004932403564,
+      0.832583487033844,
+      0.7394881248474121,
+      0.7266340255737305,
+      0.7252728343009949
+    ],
+    "latency_ms": 551,
+    "gold_doc_ids": [
+      7242,
+      7247
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "Who wrote The Devils, and was an eninent English theater, opera and film director?",
+    "answer": "Peter Hall",
+    "rag_answer": "The Devils was written by John Whiting. However, John Whiting is not described as an eminent English theatre, opera, and film director in the documents. Sir Peter Hall, who commissioned The Devils, was an eminent English theatre, opera, and film director. Therefore, the correct answer is: Sir Peter Hall.",
+    "retrieved_titles": [
+      "The Devils (play)",
+      "Peter Hall (director)",
+      "The Mother of Tears",
+      "Les Enfants Terribles (disambiguation)",
+      "The Beniker Gang"
+    ],
+    "retrieval_scores": [
+      0.8778913617134094,
+      0.8174198865890503,
+      0.7838320732116699,
+      0.7698349952697754,
+      0.7648448348045349
+    ],
+    "latency_ms": 2904,
+    "gold_doc_ids": [
+      6766,
+      6769
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3956
+  },
+  {
+    "question": "What movie did Chris Duesterdiek work on that was directed by Seth Rogen and Evan Goldberg?",
+    "answer": "The Interview",
+    "rag_answer": "Chris Duesterdiek worked on \"The Interview,\" which was directed by Seth Rogen and Evan Goldberg.",
+    "retrieved_titles": [
+      "Chris Duesterdiek",
+      "The Interview",
+      "Bittersweet (Apocalyptica song)",
+      "Remain in Light",
+      "Adam Kinzinger"
+    ],
+    "retrieval_scores": [
+      0.8638789653778076,
+      0.8274233341217041,
+      0.7200487852096558,
+      0.7183306217193604,
+      0.7160688042640686
+    ],
+    "latency_ms": 1366,
+    "gold_doc_ids": [
+      701,
+      696
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Which came out first, Dinosaur or McFarland, USA",
+    "answer": "Dinosaur",
+    "rag_answer": "Dinosaur came out first. It was released in 2000, while McFarland, USA was released in 2015.",
+    "retrieved_titles": [
+      "Dinosaur (film)",
+      "McFarland, USA",
+      "New York Korean Film Festival 2010",
+      "Frankie Darro",
+      "The Barry Building"
+    ],
+    "retrieval_scores": [
+      0.8836541175842285,
+      0.8087178468704224,
+      0.771885097026825,
+      0.756869912147522,
+      0.755196213722229
+    ],
+    "latency_ms": 1553,
+    "gold_doc_ids": [
+      5466,
+      5464
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3943
+  },
+  {
+    "question": "The Zapruder film shows President John F. Kennedy's motorcade as it passed through a plaza that was named aNational Historic Landmark in what year? ",
+    "answer": "1993",
+    "rag_answer": "1993",
+    "retrieved_titles": [
+      "Zapruder film",
+      "Dealey Plaza",
+      "Don Haskins",
+      "Richard Hauptmann",
+      "Corey I. Sanders"
+    ],
+    "retrieval_scores": [
+      0.8937715291976929,
+      0.8600114583969116,
+      0.7411247491836548,
+      0.738703727722168,
+      0.7341753840446472
+    ],
+    "latency_ms": 725,
+    "gold_doc_ids": [
+      3755,
+      3748
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Little Brown Stein is a rivalry trophy that imitates a mug made out of what item?",
+    "answer": "stoneware",
+    "rag_answer": "Little Brown Stein is a rivalry trophy that imitates a mug made out of stoneware.",
+    "retrieved_titles": [
+      "Little Brown Stein",
+      "Beer stein",
+      "Russia–United Kingdom relations",
+      "Vegepet",
+      "Pacific Tigers men's basketball"
+    ],
+    "retrieval_scores": [
+      0.9147703647613525,
+      0.8490760326385498,
+      0.7322162389755249,
+      0.7200028896331787,
+      0.7197566032409668
+    ],
+    "latency_ms": 1100,
+    "gold_doc_ids": [
+      2355,
+      2352
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3956
+  },
+  {
+    "question": "When was one of the teacher of Nikolai Lugansky died who was a Russian Soviet pianist, composer?",
+    "answer": "1924November 22, 1993",
+    "rag_answer": "Tatiana Nikolayeva, one of Nikolai Lugansky's teachers, died on November 22, 1993.",
+    "retrieved_titles": [
+      "Nikolai Lugansky",
+      "Tatiana Nikolayeva",
+      "Russian Soviet Government Bureau",
+      "Heinrich Bellermann",
+      "The Fashion Focus"
+    ],
+    "retrieval_scores": [
+      0.9106416702270508,
+      0.8554173707962036,
+      0.749679446220398,
+      0.7140675783157349,
+      0.6938262581825256
+    ],
+    "latency_ms": 1625,
+    "gold_doc_ids": [
+      7450,
+      7447
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3960
+  },
+  {
+    "question": "In which suburb of Melbourne, Australia did Harold Edward Holt go missing?",
+    "answer": "Portsea, Victoria",
+    "rag_answer": "Harold Edward Holt went missing at Cheviot Beach near Portsea, Victoria. Therefore, the suburb of Melbourne, Australia where he went missing is Portsea.",
+    "retrieved_titles": [
+      "Harold Holt",
+      "Portsea, Victoria",
+      "Bob Maddox",
+      "Sunil Grover",
+      "Marlborough, New Hampshire"
+    ],
+    "retrieval_scores": [
+      0.8657879829406738,
+      0.8069682717323303,
+      0.7336860299110413,
+      0.7282129526138306,
+      0.7266528606414795
+    ],
+    "latency_ms": 1709,
+    "gold_doc_ids": [
+      9058,
+      9063
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3904
+  },
+  {
+    "question": "What chef is the owner of a Japanese restaurant in the Tribeca neighborhood and also owns two Bar Masas in New York and Nevada?",
+    "answer": "Masayoshi \"Masa\" Takayama",
+    "rag_answer": "Masa Takayama is the chef who owns a Japanese restaurant in the Tribeca neighborhood (Tetsu) and also owns two Bar Masas in New York and Nevada.",
+    "retrieved_titles": [
+      "Masa Takayama",
+      "Tetsu (restaurant)",
+      "Corey Stewart (politician)",
+      "Sarah Kate Ellis",
+      "Yeah Yeah Yeahs"
+    ],
+    "retrieval_scores": [
+      0.904086709022522,
+      0.870352029800415,
+      0.7228275537490845,
+      0.7222711443901062,
+      0.7207485437393188
+    ],
+    "latency_ms": 1779,
+    "gold_doc_ids": [
+      9026,
+      9024
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3946
+  },
+  {
+    "question": "What player was the first overall pick in the 2004 NFL draft and had the Manning Field named after him?",
+    "answer": "Eli Manning",
+    "rag_answer": "The player who was the first overall pick in the 2004 NFL Draft and had Manning Field named after him is Eli Manning. However, based on the documents, Manning Field is named after the Manning family (Peyton, Eli, and Archie Manning), not specifically because Eli was the first overall pick. While Eli Manning was the first overall pick in the 2004 NFL Draft, the field is named in honor of the entire Manning family, not just him. Therefore, the answer is:\n\nEli Manning.",
+    "retrieved_titles": [
+      "Eli Manning",
+      "Manning Field at John L. Guidry Stadium",
+      "Jim Tracy (baseball)",
+      "Marcus Rashford",
+      "American Dog Breeders Association"
+    ],
+    "retrieval_scores": [
+      0.8899815082550049,
+      0.8390582203865051,
+      0.7479098439216614,
+      0.7409166097640991,
+      0.7334061861038208
+    ],
+    "latency_ms": 4719,
+    "gold_doc_ids": [
+      1025,
+      1032
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3951
+  },
+  {
+    "question": "Taylor Momsen and Craig Mabbitt from Escape the Fate have what in common?",
+    "answer": "lead singer",
+    "rag_answer": "Taylor Momsen and Craig Mabbitt are both musicians and singers. Taylor Momsen is the lead singer of The Pretty Reckless, and Craig Mabbitt is the lead vocalist of Escape the Fate.",
+    "retrieved_titles": [
+      "Escape the Fate",
+      "Taylor Momsen",
+      "Olivia Munn",
+      "Michael P. Nelson",
+      "The Apprentice (U.S. season 8)"
+    ],
+    "retrieval_scores": [
+      0.8230506181716919,
+      0.8193883895874023,
+      0.7394413948059082,
+      0.7336263656616211,
+      0.7232314348220825
+    ],
+    "latency_ms": 2018,
+    "gold_doc_ids": [
+      3444,
+      3440
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": "ElvenQuest is a comic fantasy broadcast that stars what English actress who is the wife of Lord Frederick Windsor, and who is formally referred to as what?",
+    "answer": "Lady Frederick Windsor",
+    "rag_answer": "ElvenQuest stars Sophie Winkleman, who is formally referred to as Lady Frederick Windsor.",
+    "retrieved_titles": [
+      "Sophie Winkleman",
+      "ElvenQuest",
+      "Mr. Reliable",
+      "International Foxhound Association",
+      "Secuestro Express"
+    ],
+    "retrieval_scores": [
+      0.8550947904586792,
+      0.8460177183151245,
+      0.7459238767623901,
+      0.7330447435379028,
+      0.7276831865310669
+    ],
+    "latency_ms": 1261,
+    "gold_doc_ids": [
+      9557,
+      9561
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3940
+  },
+  {
+    "question": "Which American anthology horror series created and produced by Ryan Murphy and Brad Falchuk did  Denis O'Hare filmography performance in the first season of ",
+    "answer": "American Horror Story",
+    "rag_answer": "American Horror Story",
+    "retrieved_titles": [
+      "Denis O'Hare filmography",
+      "American Horror Story",
+      "List of fictional actors",
+      "Red (2008 film)",
+      "Enfants Terribles (artists)"
+    ],
+    "retrieval_scores": [
+      0.8963900804519653,
+      0.8941353559494019,
+      0.7726680636405945,
+      0.7621364593505859,
+      0.7474432587623596
+    ],
+    "latency_ms": 377,
+    "gold_doc_ids": [
+      1418,
+      1409
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "Thunderbirds was a film featuring the exploits of what part of the Oklahoma Army National Guard?",
+    "answer": "45th Infantry Division",
+    "rag_answer": "The documents do not specify that Thunderbirds featured the exploits of a particular part of the Oklahoma Army National Guard. While the 45th Infantry Division was part of the Oklahoma Army National Guard and fought in World War II, the film \"Thunderbirds\" is described as featuring the exploits of the 45th Infantry Division in the Italian campaign of World War II, and it was filmed at Fort Sill, Oklahoma. However, there is no direct evidence in the documents linking the film to a specific part of the Oklahoma Army National Guard. Therefore, based on the information provided, the answer cannot be definitively determined.\n\nAnswer: Insufficient information.",
+    "retrieved_titles": [
+      "Thunderbirds (1952 film)",
+      "45th Infantry Division (United States)",
+      "Tenko (TV series)",
+      "Groomed",
+      "Jim Acosta"
+    ],
+    "retrieval_scores": [
+      0.8649769425392151,
+      0.8145383596420288,
+      0.7417919635772705,
+      0.7216185927391052,
+      0.7190340757369995
+    ],
+    "latency_ms": 5679,
+    "gold_doc_ids": [
+      7103,
+      7105
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "Murray Seafield St George Head most recognised for which song from the concept album and subsequent musical \"Chess\" by Tim Rice, Benny Andersson and Björn Ulvaeus?",
+    "answer": "One Night in Bangkok",
+    "rag_answer": "Murray Seafield St George Head is most recognised for the song \"One Night in Bangkok\" from the concept album and subsequent musical \"Chess\" by Tim Rice, Benny Andersson, and Björn Ulvaeus.",
+    "retrieved_titles": [
+      "Murray Head",
+      "One Night in Bangkok",
+      "My Funny Friend and Me",
+      "Let's Go Scare Al",
+      "Poco: The Songs of Richie Furay"
+    ],
+    "retrieval_scores": [
+      0.8713744878768921,
+      0.8690836429595947,
+      0.7539650797843933,
+      0.7353533506393433,
+      0.7332074046134949
+    ],
+    "latency_ms": 2271,
+    "gold_doc_ids": [
+      1692,
+      1689
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "What coastal town in Australia did army personnel Robin Reid and Paul Luckman kidnap and bring teenage boys to beat, torture, and sexually assault them?",
+    "answer": "Kingscliff, New South Wales",
+    "rag_answer": "Kingscliff",
+    "retrieved_titles": [
+      "Murder of Peter Aston",
+      "Kingscliff, New South Wales",
+      "Christopher Robin",
+      "Twelfth United States Army Group",
+      "Buttonville, Ontario"
+    ],
+    "retrieval_scores": [
+      0.911430835723877,
+      0.7753801345825195,
+      0.7522597312927246,
+      0.7511636018753052,
+      0.7493940591812134
+    ],
+    "latency_ms": 480,
+    "gold_doc_ids": [
+      6553,
+      6548
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3930
+  },
+  {
+    "question": "How do the Peter Laufer books Forbidden Creatures and No Animals Were Harmed differ in their focus on animals?",
+    "answer": "his own opinions changed",
+    "rag_answer": "\"Forbidden Creatures\" focuses on illegal animal smuggling and exotic pet ownership, particularly highlighting a case involving a chimpanzee, while \"No Animals Were Harmed\" explores the ethical boundary between using animals for entertainment and abusing them, based on conversations with professionals who work with animals.",
+    "retrieved_titles": [
+      "No Animals Were Harmed (book)",
+      "Forbidden Creatures",
+      "List of foxhound packs of the United Kingdom",
+      "The Devils (play)",
+      "Entlebucher Mountain Dog"
+    ],
+    "retrieval_scores": [
+      0.9151495695114136,
+      0.8985065817832947,
+      0.8001590967178345,
+      0.7792224884033203,
+      0.7505056858062744
+    ],
+    "latency_ms": 2581,
+    "gold_doc_ids": [
+      119,
+      120
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "When they were formed, did The Fatima Mansions or Nude have more members?",
+    "answer": "The Fatima Mansions",
+    "rag_answer": "The Fatima Mansions had more members when they were formed. The original line-up consisted of 5 members (Cathal Coughlan, Nick Allum, Jonathan Fell, Zac Woolhouse, and Aindrias O'Gruama), while Nude had 4 members (Tony Karlsson, Bobby Amaro, and Kevin Brown, with no mention of a fifth member). Therefore, The Fatima Mansions had more members.",
+    "retrieved_titles": [
+      "The Fatima Mansions",
+      "Nude (band)",
+      "Best of Puddle of Mudd",
+      "Tribo de Jah",
+      "Metropolitan Life Insurance Company Tower"
+    ],
+    "retrieval_scores": [
+      0.8468554615974426,
+      0.8275448083877563,
+      0.7502914667129517,
+      0.7474599480628967,
+      0.7226357460021973
+    ],
+    "latency_ms": 3955,
+    "gold_doc_ids": [
+      7239,
+      7233
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3945
+  },
+  {
+    "question": "What facility is shared by RAAF Base Williamtown and Newcastle Airport in New South Wales?",
+    "answer": "runway",
+    "rag_answer": "Runway facilities.",
+    "retrieved_titles": [
+      "RAAF Base Williamtown",
+      "Newcastle Airport (New South Wales)",
+      "Politics of Alaska",
+      "The General (locomotive)",
+      "CNN International"
+    ],
+    "retrieval_scores": [
+      0.9284055233001709,
+      0.8818130493164062,
+      0.7288593649864197,
+      0.7131896018981934,
+      0.7110871076583862
+    ],
+    "latency_ms": 533,
+    "gold_doc_ids": [
+      9330,
+      9329
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "William Pery served as Captain of the Yeomen of the Guard under the lord who served in what position from 1865 to 1868?",
+    "answer": "Viscount Cranborne",
+    "rag_answer": "The lord who served as Viscount Cranborne from 1865 to 1868 was Robert Gascoyne-Cecil, 3rd Marquess of Salisbury. Therefore, William Pery served as Captain of the Yeomen of the Guard under Lord Salisbury, who held the title of Viscount Cranborne during that period. \n\nAnswer: Viscount Cranborne.",
+    "retrieved_titles": [
+      "William Pery, 3rd Earl of Limerick",
+      "Robert Gascoyne-Cecil, 3rd Marquess of Salisbury",
+      "Barrie Dobson",
+      "Bernard Lloyd",
+      "2016–17 Manchester City F.C. season"
+    ],
+    "retrieval_scores": [
+      0.880398690700531,
+      0.7826472520828247,
+      0.7249481678009033,
+      0.7021206617355347,
+      0.6978861689567566
+    ],
+    "latency_ms": 3442,
+    "gold_doc_ids": [
+      1702,
+      1707
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "Do Cathy Berberian and Dickran Tevrizian share the same profession ?",
+    "answer": "no",
+    "rag_answer": "No, Cathy Berberian and Dickran Tevrizian do not share the same profession. Cathy Berberian was a mezzo-soprano and composer, while Dickran Tevrizian was a United States federal judge.",
+    "retrieved_titles": [
+      "Dickran Tevrizian",
+      "Cathy Berberian",
+      "The Lonely Lady",
+      "List of compositions by Sergei Rachmaninoff",
+      "Sham Wedding/Hoax Funeral"
+    ],
+    "retrieval_scores": [
+      0.8347203731536865,
+      0.831243097782135,
+      0.7557318210601807,
+      0.7449396848678589,
+      0.7429794073104858
+    ],
+    "latency_ms": 2258,
+    "gold_doc_ids": [
+      6222,
+      6218
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Toyota Innova is part of the IMV program along with which light commercial vehicle?",
+    "answer": "Hilux",
+    "rag_answer": "Toyota Hilux",
+    "retrieved_titles": [
+      "Toyota Innova",
+      "Toyota Hilux",
+      "Evangelists of the Worldwide Church of God",
+      "2019 FIA Formula One World Championship",
+      "Terebinth"
+    ],
+    "retrieval_scores": [
+      0.8920753002166748,
+      0.8347195386886597,
+      0.7484824657440186,
+      0.73194420337677,
+      0.7293039560317993
+    ],
+    "latency_ms": 404,
+    "gold_doc_ids": [
+      3233,
+      3235
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "Which team did Joe Buck's father broadcast for?",
+    "answer": "St. Louis Cardinals",
+    "rag_answer": "The documents do not specify which team Joe Buck's father, Jack Buck, broadcast for. While it mentions that Jack Buck is Joe Buck's father and that Joe is the son of sportscaster Jack Buck, the specific teams Jack Buck covered are not provided in the given documents. Therefore, based on the information available, the answer cannot be determined.",
+    "retrieved_titles": [
+      "Joe Buck",
+      "Bob Buck",
+      "Sports teams in Florida",
+      "Jim Tracy (baseball)",
+      "2015 NBA Summer League"
+    ],
+    "retrieval_scores": [
+      0.9062598943710327,
+      0.8841959238052368,
+      0.7878541350364685,
+      0.7775865197181702,
+      0.7489626407623291
+    ],
+    "latency_ms": 3376,
+    "gold_doc_ids": [
+      974,
+      979
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "What type of believer does Mir Jafar Baghirov and Joseph Stalin have in common?",
+    "answer": "communist",
+    "rag_answer": "Mir Jafar Baghirov and Joseph Stalin both believed in communism.",
+    "retrieved_titles": [
+      "Mir Jafar Baghirov",
+      "Joseph Stalin",
+      "Prince Michael of Yugoslavia (born 1958)",
+      "Ulysses S. Grant",
+      "Khmer Rouge"
+    ],
+    "retrieval_scores": [
+      0.8985614776611328,
+      0.8618189096450806,
+      0.7568468451499939,
+      0.7463878393173218,
+      0.733147382736206
+    ],
+    "latency_ms": 1051,
+    "gold_doc_ids": [
+      3398,
+      3389
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3946
+  },
+  {
+    "question": "Which production company was involved with both of the movies A Kid in King Arthur's Court and The Great Locomotive Chase?",
+    "answer": "Walt Disney Productions",
+    "rag_answer": "Walt Disney Productions was involved with \"The Great Locomotive Chase\" (1956). However, \"A Kid in King Arthur's Court\" (1995) was directed by Michael Gottlieb and produced by Disney. Therefore, the production company involved with both movies is **Walt Disney Productions**.\n\nAnswer: Walt Disney Productions.",
+    "retrieved_titles": [
+      "A Kid in King Arthur's Court",
+      "The Great Locomotive Chase",
+      "Fireman Sam: The Great Fire of Pontypandy",
+      "Storm Over the Nile",
+      "Todo un hombre (1943 film)"
+    ],
+    "retrieval_scores": [
+      0.8557705879211426,
+      0.8364554643630981,
+      0.7697471380233765,
+      0.7317402362823486,
+      0.7244361042976379
+    ],
+    "latency_ms": 3333,
+    "gold_doc_ids": [
+      882,
+      881
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "Castle Hill is a plantation near what primary residence of Thomas Jefferson?",
+    "answer": "Monticello",
+    "rag_answer": "Castle Hill is a plantation near Monticello, which was the primary residence of Thomas Jefferson.",
+    "retrieved_titles": [
+      "Castle Hill (Virginia)",
+      "Monticello",
+      "Closeburn Castle",
+      "The General (locomotive)",
+      "Mansfield Park (1983 TV serial)"
+    ],
+    "retrieval_scores": [
+      0.9054448008537292,
+      0.8637975454330444,
+      0.7614113092422485,
+      0.7392749786376953,
+      0.7263057231903076
+    ],
+    "latency_ms": 1117,
+    "gold_doc_ids": [
+      3227,
+      3220
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": " \"One Less Set of Footsteps\" is a song written and performed by a singer born in which year ?",
+    "answer": "1943",
+    "rag_answer": "The documents do not provide the birth year of the singer who wrote and performed \"One Less Set of Footsteps,\" which is Jim Croce. While Doc 2 states that Jim Croce was born on January 10, 1943, the question asks for the birth year of the singer, and the documents do not explicitly confirm that Jim Croce is the singer of \"One Less Set of Footsteps\" in the context of the question. However, based on the information provided in Doc 1, it is implied that Jim Croce wrote and performed the song.\n\nTherefore, the answer is: 1943.",
+    "retrieved_titles": [
+      "One Less Set of Footsteps",
+      "Jim Croce",
+      "I Remember (AlunaGeorge album)",
+      "Thomas Edward Burns",
+      "Steven Adler"
+    ],
+    "retrieval_scores": [
+      0.889108419418335,
+      0.7351481318473816,
+      0.7215468287467957,
+      0.7100611925125122,
+      0.7060508728027344
+    ],
+    "latency_ms": 5843,
+    "gold_doc_ids": [
+      1756,
+      1757
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Where is the 1999 British comedy-drama film starring Jimi Mistry set?",
+    "answer": "Salford, Lancashire",
+    "rag_answer": "The documents do not state that Jimi Mistry starred in the 1999 British comedy-drama film \"East Is East.\" While the film is mentioned in Doc 2, there is no information confirming Jimi Mistry's involvement in it. Therefore, based on the provided documents, we cannot determine if Jimi Mistry was in the film or where it is set.\n\nHowever, the film \"East Is East\" is set in Salford, Lancashire, in 1971, as stated in Doc 2.\n\nAnswer: Salford, Lancashire. \n\nNote: This answer assumes the question is asking about the setting of the film, not Jimi Mistry's involvement, which is not confirmed.",
+    "retrieved_titles": [
+      "Jimi Mistry",
+      "East Is East (1999 film)",
+      "Kumar (Singaporean entertainer)",
+      "Yianni Agisilaou",
+      "Golden Kela Awards"
+    ],
+    "retrieval_scores": [
+      0.8611490726470947,
+      0.8485863208770752,
+      0.7528520226478577,
+      0.7497053742408752,
+      0.7447911500930786
+    ],
+    "latency_ms": 6611,
+    "gold_doc_ids": [
+      7160,
+      7163
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3960
+  },
+  {
+    "question": "What where Mark Chamberlain and Alex Oxlade-Chamberlain being?",
+    "answer": "an English professional footballer",
+    "rag_answer": "Mark Chamberlain and Alex Oxlade-Chamberlain were footballers. Mark was an English former international footballer, and Alex is a professional footballer who plays as a midfielder for Liverpool and the England national team.",
+    "retrieved_titles": [
+      "Alex Oxlade-Chamberlain",
+      "Mark Chamberlain",
+      "Strange Synergy",
+      "2015 AFC Asian Cup Group C",
+      "Shu Hai Practices Javelin"
+    ],
+    "retrieval_scores": [
+      0.8982954025268555,
+      0.8844224214553833,
+      0.7919838428497314,
+      0.7876012325286865,
+      0.7843567728996277
+    ],
+    "latency_ms": 2168,
+    "gold_doc_ids": [
+      1297,
+      1294
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "What street was the adult entertainment district of the Liberty Tree District centered on?",
+    "answer": "Washington Street",
+    "rag_answer": "The adult entertainment district of the Liberty Tree District was centered on Washington Street.",
+    "retrieved_titles": [
+      "Liberty Tree District",
+      "Combat Zone, Boston",
+      "St Peters, South Australia",
+      "Kentucky Vehicle Enforcement",
+      "Saskia Garel"
+    ],
+    "retrieval_scores": [
+      0.870585560798645,
+      0.842402458190918,
+      0.7122780680656433,
+      0.7100740671157837,
+      0.7058432698249817
+    ],
+    "latency_ms": 965,
+    "gold_doc_ids": [
+      2402,
+      2399
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "Who directed a 2006 film where Ron Perkins character plays the manager of a hotel?",
+    "answer": "Christopher Nolan",
+    "rag_answer": "The 2006 film where Ron Perkins played the manager of a hotel is *The Prestige*, directed by Christopher Nolan. \n\nAnswer: Christopher Nolan.",
+    "retrieved_titles": [
+      "Ron Perkins",
+      "The Prestige (film)",
+      "The Truth About Love (film)",
+      "Pumping Iron II: The Women",
+      "The Beniker Gang"
+    ],
+    "retrieval_scores": [
+      0.8706824779510498,
+      0.7630499005317688,
+      0.7628666162490845,
+      0.740531861782074,
+      0.7400519847869873
+    ],
+    "latency_ms": 1667,
+    "gold_doc_ids": [
+      686,
+      684
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "Which Walt Disney film was produced first, The Apple Dumpling Gang or Something Wicked This Way Comes?",
+    "answer": "The Apple Dumpling Gang",
+    "rag_answer": "The Apple Dumpling Gang was produced first. It was released in 1975, while Something Wicked This Way Comes was released in 1983.",
+    "retrieved_titles": [
+      "The Apple Dumpling Gang (film)",
+      "Something Wicked This Way Comes (film)",
+      "Fifty Shades of Oy Vey: A Parody",
+      "Dedicated deck card game",
+      "Grey: Fifty Shades of Grey as Told by Christian"
+    ],
+    "retrieval_scores": [
+      0.8750811815261841,
+      0.8464102149009705,
+      0.7316470146179199,
+      0.7206989526748657,
+      0.7183938026428223
+    ],
+    "latency_ms": 1803,
+    "gold_doc_ids": [
+      63,
+      64
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3942
+  },
+  {
+    "question": "When was the king that started coin production in Copenhagen born?",
+    "answer": "2 February 1455",
+    "rag_answer": "The documents do not provide the birth date of the king who started coin production in Copenhagen. While Doc 1 mentions that King Hans started coin production in Copenhagen, and Doc 2 provides information about John, King of Denmark (also known as Hans), it does not specify when King Hans was born. Therefore, based on the given documents, the birth date of the king who started coin production in Copenhagen cannot be determined.",
+    "retrieved_titles": [
+      "Royal Mint (Denmark)",
+      "John, King of Denmark",
+      "SV St. Georg",
+      "André Rieu",
+      "Music City Queen"
+    ],
+    "retrieval_scores": [
+      0.9224756956100464,
+      0.808376669883728,
+      0.7229108810424805,
+      0.7209283113479614,
+      0.7196015119552612
+    ],
+    "latency_ms": 3901,
+    "gold_doc_ids": [
+      1215,
+      1209
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3962
+  },
+  {
+    "question": "Which internationl football team has had a player endorse the \"Nike Hypervenom\" football boot?",
+    "answer": "England",
+    "rag_answer": "England national team.",
+    "retrieved_titles": [
+      "Nike Hypervenom",
+      "Marcus Rashford",
+      "1997–98 SC Bastia season",
+      "2017–18 World Rugby Sevens Series",
+      "Morghem's .500 Nitro Express"
+    ],
+    "retrieval_scores": [
+      0.9234139919281006,
+      0.7752765417098999,
+      0.7641124725341797,
+      0.7612094879150391,
+      0.752521276473999
+    ],
+    "latency_ms": 520,
+    "gold_doc_ids": [
+      8897,
+      8890
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3934
+  },
+  {
+    "question": "Which documentary was made first, The Shame of a City or Unchained Memories?",
+    "answer": "Unchained Memories",
+    "rag_answer": "Unchained Memories was made first. It was released in 2003, while The Shame of a City premiered in 2006.",
+    "retrieved_titles": [
+      "The Shame of a City",
+      "Unchained Memories",
+      "Gasland",
+      "TV Land: Myths and Legends",
+      "Hilda Neihardt"
+    ],
+    "retrieval_scores": [
+      0.8666872978210449,
+      0.8332690596580505,
+      0.7394907474517822,
+      0.7227973341941833,
+      0.7098672986030579
+    ],
+    "latency_ms": 1636,
+    "gold_doc_ids": [
+      7617,
+      7614
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "What is the seventh book of the Hebrew and Christina bible and also has Quran references to the river drinking experience?",
+    "answer": "Book of Judges",
+    "rag_answer": "The seventh book of the Hebrew and Christian Bible is the Book of Judges, and it contains the story referenced in the Quran regarding the drinking from the river, associated with the figure of Gideon (Talut).",
+    "retrieved_titles": [
+      "Book of Judges",
+      "Talut",
+      "Yarmouth Runic Stone",
+      "Eastern freshwater cod",
+      "Goodliffe's Abracadabra"
+    ],
+    "retrieval_scores": [
+      0.848244309425354,
+      0.8342431783676147,
+      0.7604743242263794,
+      0.7534626722335815,
+      0.753343939781189
+    ],
+    "latency_ms": 2104,
+    "gold_doc_ids": [
+      3046,
+      3045
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "Cordyline ruba grows from Bundaberg, Queensland to which northeastern city in New South Whales, Australia?",
+    "answer": "Lismore",
+    "rag_answer": "The documents do not provide information about Cordyline rubra growing from Bundaberg, Queensland to a northeastern city in New South Wales. While Doc 1 mentions the plant's natural distribution from Lismore to near Bundaberg, Queensland, and Doc 2 identifies Lismore as a city in New South Wales, there is no explicit statement confirming that Cordyline rubra grows from Bundaberg to Lismore or that Lismore is the northeastern city in question. Therefore, based on the given information, the answer cannot be definitively established.\n\nAnswer: Insufficient information.",
+    "retrieved_titles": [
+      "Cordyline rubra",
+      "Lismore, New South Wales",
+      "Rothmannia",
+      "Now Summer 2007 (Australian series)",
+      "2013 Robert Morris Colonials football team"
+    ],
+    "retrieval_scores": [
+      0.8797398805618286,
+      0.788429856300354,
+      0.757034420967102,
+      0.7477630376815796,
+      0.7303452491760254
+    ],
+    "latency_ms": 5368,
+    "gold_doc_ids": [
+      5721,
+      5727
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "What year did the shopping centre on the street numbered B411 open in the space of in the retail space of the former William Whiteley Limited department store?",
+    "answer": "1989",
+    "rag_answer": "The shopping centre on the street numbered B411, Whiteleys, opened in 1989.",
+    "retrieved_titles": [
+      "Whiteleys",
+      "Queensway, London",
+      "Soho (Tampa)",
+      "The Florida Interurban Railway and Tunnel Company",
+      "Football in England"
+    ],
+    "retrieval_scores": [
+      0.8804314136505127,
+      0.8184346556663513,
+      0.7485539317131042,
+      0.7229354977607727,
+      0.7199288010597229
+    ],
+    "latency_ms": 1252,
+    "gold_doc_ids": [
+      2806,
+      2802
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "Who was the fourth son of the lord of the Seventeen Provinces of the Netherlands in 1555?",
+    "answer": "Diego Félix of Austria",
+    "rag_answer": "Diego Félix of Austria, Prince of Asturias and Portugal, was the fourth son of Philip II of Spain, who became lord of the Seventeen Provinces of the Netherlands in 1555. Therefore, the answer is Diego Félix of Austria.",
+    "retrieved_titles": [
+      "Diego, Prince of Asturias",
+      "Philip II of Spain",
+      "James II of England",
+      "John G. Neihardt State Historic Site",
+      "Anthony Shriver"
+    ],
+    "retrieval_scores": [
+      0.8247542977333069,
+      0.8168656826019287,
+      0.7798237800598145,
+      0.7365283370018005,
+      0.725545346736908
+    ],
+    "latency_ms": 2645,
+    "gold_doc_ids": [
+      9211,
+      9213
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3966
+  },
+  {
+    "question": "Japanese destroyer Oite participated in what conflict that ended with the surrender of the American forces to the Empire of Japan?",
+    "answer": "Battle of Wake Island",
+    "rag_answer": "The Japanese destroyer Oite participated in the Battle of Wake Island, which ended with the surrender of the American forces to the Empire of Japan.",
+    "retrieved_titles": [
+      "Japanese destroyer Oite (1924)",
+      "Battle of Wake Island",
+      "American Freedom Mortgage",
+      "Power and the Passion (song)",
+      "Oscar Hammerstein II"
+    ],
+    "retrieval_scores": [
+      0.866766631603241,
+      0.8015880584716797,
+      0.7012428045272827,
+      0.6933299899101257,
+      0.6825634241104126
+    ],
+    "latency_ms": 1562,
+    "gold_doc_ids": [
+      3725,
+      3719
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3947
+  },
+  {
+    "question": "Besides the founder of Led Zeppelin, and Bert Jansch, what other to British musician was heavily influenced by Davey Graham?",
+    "answer": "Eric Clapton",
+    "rag_answer": "Eric Clapton",
+    "retrieved_titles": [
+      "Folk, Blues and Beyond",
+      "Jimmy Page",
+      "Lavet type stepping motor",
+      "The World According to Garp",
+      "Leah Ray"
+    ],
+    "retrieval_scores": [
+      0.8591045141220093,
+      0.8445471525192261,
+      0.7101147174835205,
+      0.7089694738388062,
+      0.7064353227615356
+    ],
+    "latency_ms": 584,
+    "gold_doc_ids": [
+      7305,
+      7298
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3960
+  },
+  {
+    "question": "How many miles does the train, which passes through the Amtrak Jacksonville station and shares the track with the Silver Meteor, run?",
+    "answer": "1522",
+    "rag_answer": "The train that passes through the Amtrak Jacksonville station and shares the track with the Silver Meteor is the Silver Star. According to Doc 1, the Silver Star route is 1522 miles long. \n\nAnswer: 1522 miles.",
+    "retrieved_titles": [
+      "Silver Star (Amtrak train)",
+      "Jacksonville station",
+      "2015 Auto Club 400",
+      "Maytag (disambiguation)",
+      "Wildcat Brook"
+    ],
+    "retrieval_scores": [
+      0.8927910327911377,
+      0.8886842727661133,
+      0.7508885860443115,
+      0.7383675575256348,
+      0.7348896265029907
+    ],
+    "latency_ms": 2458,
+    "gold_doc_ids": [
+      7994,
+      7995
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3950
+  },
+  {
+    "question": "What is the first two words of the fifth studio album of Joseph Edgar Foreman?",
+    "answer": "The Hungry",
+    "rag_answer": "The first two words of the fifth studio album of Joseph Edgar Foreman are \"The Hungry Hustlerz.\"",
+    "retrieved_titles": [
+      "The Hungry Hustlerz: Starvation Is Motivation",
+      "Afroman",
+      "Red Letter Days (album)",
+      "The Leslie West Band",
+      "Bernard Samuel"
+    ],
+    "retrieval_scores": [
+      0.8190996646881104,
+      0.8135764002799988,
+      0.7533373832702637,
+      0.7464702725410461,
+      0.7259172797203064
+    ],
+    "latency_ms": 1231,
+    "gold_doc_ids": [
+      4576,
+      4582
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Who coached the Indians and was the first Native American to win a gold metal his home country?",
+    "answer": "Jim Thorpe",
+    "rag_answer": "Jim Thorpe coached the Indians and was the first Native American to win a gold medal for his home country.",
+    "retrieved_titles": [
+      "Jim Thorpe",
+      "Eagle Feather",
+      "Garry Holloway",
+      "Paul Michaux",
+      "2000 Baltimore Ravens season"
+    ],
+    "retrieval_scores": [
+      0.8625713586807251,
+      0.8132671117782593,
+      0.7779568433761597,
+      0.7732143402099609,
+      0.7685409188270569
+    ],
+    "latency_ms": 1247,
+    "gold_doc_ids": [
+      7561,
+      7555
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "Who was the architect of a Dutch museum dedicated to the arts and history in Amsterdam, located at the Museum Square?",
+    "answer": "Petrus Josephus Hubertus (Pierre) Cuypers",
+    "rag_answer": "Pierre Cuypers was the architect of the Rijksmuseum, a Dutch museum dedicated to arts and history in Amsterdam, located at the Museum Square.",
+    "retrieved_titles": [
+      "Rijksmuseum",
+      "Pierre Cuypers",
+      "Pavillon du Butard",
+      "Gershgorin circle theorem",
+      "James Fraser Mustard"
+    ],
+    "retrieval_scores": [
+      0.8807656168937683,
+      0.8483361005783081,
+      0.730696439743042,
+      0.7303166389465332,
+      0.723807692527771
+    ],
+    "latency_ms": 1676,
+    "gold_doc_ids": [
+      1658,
+      1663
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "Mexican Indignados Movement is a response to a war also known as?",
+    "answer": "Mexican War on Drugs",
+    "rag_answer": "Mexican Indignados Movement is a response to the Mexican Drug War.",
+    "retrieved_titles": [
+      "Mexican Indignados Movement",
+      "Mexican Drug War",
+      "Tenskwatawa",
+      "Maelstrom (ride)",
+      "Monroe v. Pape"
+    ],
+    "retrieval_scores": [
+      0.8535007834434509,
+      0.8129143714904785,
+      0.7071774005889893,
+      0.6927607655525208,
+      0.682430624961853
+    ],
+    "latency_ms": 955,
+    "gold_doc_ids": [
+      2779,
+      2780
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3930
+  },
+  {
+    "question": "Which genus has more species, Azorina or Azadirachta?",
+    "answer": "Azadirachta",
+    "rag_answer": "Azadirachta has more species than Azorina. Azorina has one species (Azorina vidalii), while Azadirachta has two species (Azadirachta excelsa and Azadirachta indica).",
+    "retrieved_titles": [
+      "Azorina",
+      "Azadirachta",
+      "Mos Def &amp; Talib Kweli Are Black Star",
+      "Ohio National Guard",
+      "Romanian Raven Shepherd Dog"
+    ],
+    "retrieval_scores": [
+      0.8947052955627441,
+      0.85221266746521,
+      0.7290166616439819,
+      0.7203997373580933,
+      0.7192800045013428
+    ],
+    "latency_ms": 2341,
+    "gold_doc_ids": [
+      5598,
+      5596
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Command and Control was a book that discusses the 1980 incident in what state?",
+    "answer": "Arkansas",
+    "rag_answer": "Arkansas",
+    "retrieved_titles": [
+      "Command and Control (book)",
+      "1980 Damascus Titan missile explosion",
+      "Criminal Law (Sexual Offences) Act 2006",
+      "Luke Air Force Base",
+      "Teletrol"
+    ],
+    "retrieval_scores": [
+      0.8676068782806396,
+      0.8129903078079224,
+      0.7601495981216431,
+      0.7428109645843506,
+      0.7338001728057861
+    ],
+    "latency_ms": 447,
+    "gold_doc_ids": [
+      3889,
+      3891
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3951
+  },
+  {
+    "question": "In what year was the Commander of the second human spaceflight mission in the United States Apollo space program born?",
+    "answer": "1928",
+    "rag_answer": "Frank Borman, the Commander of Apollo 8, was born in 1928. Apollo 8 was the second human spaceflight mission in the United States Apollo space program.\n\nAnswer: 1928.",
+    "retrieved_titles": [
+      "Frank Borman",
+      "Apollo 8",
+      "Soyuz TMA-19",
+      "The Soul of a Butterfly",
+      "Terry Halvorsen"
+    ],
+    "retrieval_scores": [
+      0.8730632662773132,
+      0.870690643787384,
+      0.7887201905250549,
+      0.7490038275718689,
+      0.7483227252960205
+    ],
+    "latency_ms": 2229,
+    "gold_doc_ids": [
+      1487,
+      1488
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3916
+  },
+  {
+    "question": "Multiple award-winning actor Gary Sinise appeared in The Stand in 1994 - a miniseries based on a novel and screenplay by which noted author?",
+    "answer": "Stephen King",
+    "rag_answer": "Stephen King",
+    "retrieved_titles": [
+      "The Stand (miniseries)",
+      "Gary Sinise",
+      "Close to the Enemy",
+      "No Animals Were Harmed (book)",
+      "Once Upon a Time in China V"
+    ],
+    "retrieval_scores": [
+      0.9245521426200867,
+      0.8426709771156311,
+      0.7476975321769714,
+      0.7358938455581665,
+      0.7336560487747192
+    ],
+    "latency_ms": 350,
+    "gold_doc_ids": [
+      7071,
+      7076
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "At which university did the notable psychoanalyst associated with the University of Chicago serve most of his career as a professor of psychiatry?",
+    "answer": "University of New York Upstate",
+    "rag_answer": "Thomas Szasz, a notable psychoanalyst associated with the University of Chicago, served most of his career as a professor of psychiatry at the State University of New York Upstate Medical University in Syracuse, New York.",
+    "retrieved_titles": [
+      "Chicago Institute for Psychoanalysis",
+      "Thomas Szasz",
+      "Jaroslav Hašek",
+      "List of the Smashing Pumpkins band members",
+      "Anna Lewandowska"
+    ],
+    "retrieval_scores": [
+      0.8750185370445251,
+      0.8381750583648682,
+      0.7179824113845825,
+      0.714608371257782,
+      0.7139662504196167
+    ],
+    "latency_ms": 2124,
+    "gold_doc_ids": [
+      2104,
+      2097
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3963
+  },
+  {
+    "question": "When was the Indian film actor, producer and playback singer born who debut with the 2000 War film, \"Refugee\" and had lead role in Main Prem Ki Diwani Hoon?",
+    "answer": "5 February 1976",
+    "rag_answer": "The Indian film actor, producer, and playback singer born on 5 February 1976, who made his screen debut with the 2000 War film \"Refugee\" and had a lead role in \"Main Prem Ki Diwani Hoon,\" is Abhishek Bachchan. Therefore, he was born on **5 February 1976**.",
+    "retrieved_titles": [
+      "Abhishek Bachchan",
+      "Main Prem Ki Diwani Hoon",
+      "Peter Finch",
+      "Austin School of Film",
+      "Richard Hauptmann"
+    ],
+    "retrieval_scores": [
+      0.8823391199111938,
+      0.8282041549682617,
+      0.7199223041534424,
+      0.689533531665802,
+      0.6873481869697571
+    ],
+    "latency_ms": 3495,
+    "gold_doc_ids": [
+      8345,
+      8348
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3929
+  },
+  {
+    "question": "Which opera has more acts, La jolie fille de Perth or Mitridate, re di Ponto?",
+    "answer": "La jolie fille de Perth \"(The Fair Maid of Perth)\" is an opera in four acts",
+    "rag_answer": "La jolie fille de Perth has more acts than Mitridate, re di Ponto. La jolie fille de Perth is an opera in four acts, while Mitridate, re di Ponto is in three acts.",
+    "retrieved_titles": [
+      "Mitridate, re di Ponto",
+      "La jolie fille de Perth",
+      "Chuffilly-Roche",
+      "Ascend (Nine Lashes album)",
+      "Advance Thresher/Emerson-Newton Implement Company"
+    ],
+    "retrieval_scores": [
+      0.8841782808303833,
+      0.8608142137527466,
+      0.7762067317962646,
+      0.7385302186012268,
+      0.7271915674209595
+    ],
+    "latency_ms": 2232,
+    "gold_doc_ids": [
+      304,
+      308
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3953
+  },
+  {
+    "question": "In what year was the Moldavian, later Romanian writer, known for his work \"The Goat and Her Three Kids\" born?",
+    "answer": "1837",
+    "rag_answer": "The Moldavian, later Romanian writer known for his work \"The Goat and Her Three Kids\" was born in 1837.",
+    "retrieved_titles": [
+      "The Goat and Her Three Kids",
+      "Ion Creangă",
+      "The Stranger (novel)",
+      "The Fine Arts Center",
+      "Nash-Fortenberry UFO sighting"
+    ],
+    "retrieval_scores": [
+      0.8870322704315186,
+      0.8337303996086121,
+      0.7080385088920593,
+      0.6952182054519653,
+      0.6928123235702515
+    ],
+    "latency_ms": 1447,
+    "gold_doc_ids": [
+      6637,
+      6641
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3942
+  },
+  {
+    "question": "Which other film did one of the supporting cast in \"Sleepless in Seattle\" appear?",
+    "answer": "\"Now and Then\" (1995)",
+    "rag_answer": "One of the supporting cast members in \"Sleepless in Seattle,\" Rita Wilson, appeared in \"My Big Fat Greek Wedding\" (2002).",
+    "retrieved_titles": [
+      "Sleepless in Seattle",
+      "Rita Wilson",
+      "In Her Shoes (film)",
+      "Hello Carter",
+      "L'Alibi (1937 film)"
+    ],
+    "retrieval_scores": [
+      0.8903974294662476,
+      0.8196572661399841,
+      0.7624788284301758,
+      0.7480624318122864,
+      0.7424871921539307
+    ],
+    "latency_ms": 1579,
+    "gold_doc_ids": [
+      1816,
+      1817
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3951
+  },
+  {
+    "question": "Who graduated from The SC Bastia Reserves and Academy  and was born 9 September 1987?",
+    "answer": "Alexandre Dimitri Song Billong",
+    "rag_answer": "Alex Song graduated from The SC Bastia Reserves and Academy and was born on 9 September 1987.",
+    "retrieved_titles": [
+      "SC Bastia Reserves and Academy",
+      "Alex Song",
+      "Mountbatten Institute",
+      "2007–08 Wigan Athletic F.C. season",
+      "No. 401 Squadron RCAF"
+    ],
+    "retrieval_scores": [
+      0.9052554965019226,
+      0.7643521428108215,
+      0.7507815957069397,
+      0.7445465326309204,
+      0.7412815093994141
+    ],
+    "latency_ms": 1343,
+    "gold_doc_ids": [
+      3267,
+      3261
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3954
+  },
+  {
+    "question": "Who was born in Ireland and has coached the captain of MLS club Colorado Rapids?",
+    "answer": "Des McAleenan",
+    "rag_answer": "Des McAleenan was born in Ireland and has coached Tim Howard, who is the captain of the MLS club Colorado Rapids.",
+    "retrieved_titles": [
+      "Tim Howard",
+      "Des McAleenan",
+      "2007 Copa América",
+      "Kevin Beard",
+      "Thaleia Zariphopoulou"
+    ],
+    "retrieval_scores": [
+      0.860544741153717,
+      0.8369648456573486,
+      0.754174530506134,
+      0.7478923201560974,
+      0.7352938055992126
+    ],
+    "latency_ms": 1328,
+    "gold_doc_ids": [
+      5766,
+      5768
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3953
+  },
+  {
+    "question": "Who is the chairman of the company that operates Suncoast Hotel and Casino?",
+    "answer": "Bill Boyd",
+    "rag_answer": "The chairman of the company that operates Suncoast Hotel and Casino is Bill Boyd.",
+    "retrieved_titles": [
+      "Suncoast Hotel and Casino",
+      "Boyd Gaming",
+      "Rockefeller family",
+      "Peter Daou",
+      "Betty Brosmer"
+    ],
+    "retrieval_scores": [
+      0.8727207183837891,
+      0.8257774710655212,
+      0.7733906507492065,
+      0.7635672688484192,
+      0.7345519065856934
+    ],
+    "latency_ms": 1013,
+    "gold_doc_ids": [
+      9648,
+      9651
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "What park is just south of the location where the New York Jets played prior to moving to Shea Stadium? ",
+    "answer": "Central Park",
+    "rag_answer": "Central Park",
+    "retrieved_titles": [
+      "1964 New York Jets season",
+      "Polo Grounds",
+      "O'Hare International Airport",
+      "Florida's Turnpike",
+      "Newport Life Magazine"
+    ],
+    "retrieval_scores": [
+      0.8540402054786682,
+      0.8128184676170349,
+      0.7545955181121826,
+      0.7452751994132996,
+      0.7247312068939209
+    ],
+    "latency_ms": 377,
+    "gold_doc_ids": [
+      3934,
+      3931
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3950
+  },
+  {
+    "question": "My Secret Hotel is a television series starring a South Korean DJ who rose to fame as the lead actress in what?",
+    "answer": "Queen In-hyun's Man",
+    "rag_answer": "The documents do not state that Yoo In-na, who stars in *My Secret Hotel*, is a South Korean DJ. While Doc 2 mentions she is a DJ, it does not link her DJ role to her rise to fame as a lead actress in a specific drama. Therefore, based on the information provided, the question cannot be accurately answered.",
+    "retrieved_titles": [
+      "My Secret Hotel",
+      "Yoo In-na",
+      "Kristen Wiig",
+      "Norman Reedus",
+      "2016 MTV Movie Awards"
+    ],
+    "retrieval_scores": [
+      0.8843324184417725,
+      0.8268535733222961,
+      0.7018744349479675,
+      0.6875854134559631,
+      0.6868941783905029
+    ],
+    "latency_ms": 3397,
+    "gold_doc_ids": [
+      5512,
+      5508
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "How many small-box format stores are there for one of Newell Brands' brand that sells scented candles, candleholders, accessories, and dinnerware?",
+    "answer": "560",
+    "rag_answer": "The documents do not provide information on the number of small-box format stores for any of Newell Brands' brands, including Yankee Candle. While Yankee Candle is mentioned as having about 560 small-box format stores, there is no indication that these stores are operated by Newell Brands. Therefore, based on the given information, the number of small-box format stores for a Newell Brands brand selling scented candles, candleholders, accessories, and dinnerware cannot be determined.\n\nAnswer: Insufficient information.",
+    "retrieved_titles": [
+      "Yankee Candle",
+      "Newell Brands",
+      "Chase Bank",
+      "General Dynamics F-16 Fighting Falcon",
+      "Sports associations (East Germany)"
+    ],
+    "retrieval_scores": [
+      0.8568972945213318,
+      0.853614330291748,
+      0.7276735305786133,
+      0.7223439812660217,
+      0.7157357931137085
+    ],
+    "latency_ms": 4398,
+    "gold_doc_ids": [
+      5410,
+      5417
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3950
+  },
+  {
+    "question": "Davey Brozowski is a percussionist for a band that formed in what city in Washington?",
+    "answer": "Issaquah",
+    "rag_answer": "Davey Brozowski is a percussionist for Modest Mouse, which formed in Issaquah, Washington.",
+    "retrieved_titles": [
+      "Davey Brozowski",
+      "!!!",
+      "Modest Mouse",
+      "Youngstown Puddlers",
+      "Comcomly"
+    ],
+    "retrieval_scores": [
+      0.8848777413368225,
+      0.795383095741272,
+      0.7755510807037354,
+      0.7408522367477417,
+      0.7404426336288452
+    ],
+    "latency_ms": 1345,
+    "gold_doc_ids": [
+      2359,
+      2363
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "Substorm was described in qualitative terms by a scientist nominated for what seven times?",
+    "answer": "Nobel Prize",
+    "rag_answer": "The scientist who described substorms in qualitative terms is Kristian Birkeland, who was nominated for the Nobel Prize seven times.",
+    "retrieved_titles": [
+      "Substorm",
+      "Kristian Birkeland",
+      "Edward Iwi",
+      "The Eye of Tandyla",
+      "Henrik Palmgren"
+    ],
+    "retrieval_scores": [
+      0.8506447672843933,
+      0.7897765040397644,
+      0.730186939239502,
+      0.7212363481521606,
+      0.716034471988678
+    ],
+    "latency_ms": 1426,
+    "gold_doc_ids": [
+      7438,
+      7445
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "Did Billy Corgan's band The Smashing Pumpkins or Greek Fire originate in a more southern location?",
+    "answer": "Greek Fire",
+    "rag_answer": "The Smashing Pumpkins originated in Chicago, Illinois, which is in the Midwest, while Greek Fire originated in St. Louis, Missouri, which is in the South. Therefore, Greek Fire originated in a more southern location.",
+    "retrieved_titles": [
+      "Greek Fire (band)",
+      "Billy Corgan",
+      "Independence Day (1983 film)",
+      "1980 Damascus Titan missile explosion",
+      "Glee (season 4)"
+    ],
+    "retrieval_scores": [
+      0.84572833776474,
+      0.84185791015625,
+      0.7269136309623718,
+      0.7268695831298828,
+      0.726003885269165
+    ],
+    "latency_ms": 2264,
+    "gold_doc_ids": [
+      8301,
+      8303
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3930
+  },
+  {
+    "question": "The NG postcode area is situated approximately how many miles from Gamston, Rushcliffe?",
+    "answer": "approximately 3 mi",
+    "rag_answer": "The documents do not provide the distance between the NG postcode area and Gamston, Rushcliffe. Therefore, the question cannot be answered based on the given information.",
+    "retrieved_titles": [
+      "Gamston, Rushcliffe",
+      "NG postcode area",
+      "Rideau Valley Conservation Authority",
+      "Old Sparky",
+      "Hashtag United F.C."
+    ],
+    "retrieval_scores": [
+      0.919988751411438,
+      0.8833348751068115,
+      0.7403285503387451,
+      0.7337203025817871,
+      0.7204357385635376
+    ],
+    "latency_ms": 1585,
+    "gold_doc_ids": [
+      5313,
+      5311
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3956
+  },
+  {
+    "question": "A writer for The Kenyon Review won a Pulitzer Prize in what year?",
+    "answer": "1947",
+    "rag_answer": "The documents do not specify which writer from The Kenyon Review won a Pulitzer Prize or in what year. Therefore, based on the provided information, the question cannot be answered.",
+    "retrieved_titles": [
+      "The Kenyon Review",
+      "Robert Penn Warren",
+      "Armageddon in Retrospect",
+      "Good in Bed",
+      "Mark S. Golub"
+    ],
+    "retrieval_scores": [
+      0.8819723129272461,
+      0.7936586737632751,
+      0.7228664755821228,
+      0.7200512886047363,
+      0.7099380493164062
+    ],
+    "latency_ms": 1758,
+    "gold_doc_ids": [
+      7692,
+      7691
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3915
+  },
+  {
+    "question": "The project that Jeder Rappen zählt is inspired by began in what year?",
+    "answer": "2004",
+    "rag_answer": "The project that Jeder Rappen zählt is inspired by Serious Request, which began in 2004. \n\nAnswer concisely: 2004",
+    "retrieved_titles": [
+      "Jeder Rappen zählt",
+      "Serious Request",
+      "Kenneth Hess",
+      "Pierre Cuypers",
+      "Nordic Reich Party"
+    ],
+    "retrieval_scores": [
+      0.8830768465995789,
+      0.8040229082107544,
+      0.75053471326828,
+      0.7419828176498413,
+      0.7395849823951721
+    ],
+    "latency_ms": 1705,
+    "gold_doc_ids": [
+      9191,
+      9188
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3961
+  },
+  {
+    "question": "In what year was the soft drink that the Coca-Cola Company designed Red Flash to compete against created?",
+    "answer": "1937",
+    "rag_answer": "The soft drink that The Coca-Cola Company designed Red Flash to compete against is Big Red. According to Document 2, Big Red was created in 1937. \n\nAnswer: 1937.",
+    "retrieved_titles": [
+      "Red Flash",
+      "Big Red (drink)",
+      "Stroud and District Combination Bill Adams Cup",
+      "Gilbert V. Rohleder",
+      "Ivi, Inc."
+    ],
+    "retrieval_scores": [
+      0.9383014440536499,
+      0.8362263441085815,
+      0.7386239767074585,
+      0.7322355508804321,
+      0.7321388125419617
+    ],
+    "latency_ms": 2114,
+    "gold_doc_ids": [
+      4594,
+      4585
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "In what capacity did the author of the book,  An Inconvenient Truth,  serve in the United States government ? ",
+    "answer": "Vice President",
+    "rag_answer": "The author of the book *An Inconvenient Truth*, Al Gore, served as the 45th Vice President of the United States from 1993 to 2001.",
+    "retrieved_titles": [
+      "An Inconvenient Truth (book)",
+      "Al Gore",
+      "Gerald Grosvenor, 6th Duke of Westminster",
+      "Weekend at Bernie's",
+      "Joan Dunlop"
+    ],
+    "retrieval_scores": [
+      0.8695244789123535,
+      0.823712944984436,
+      0.7579752802848816,
+      0.7409355640411377,
+      0.7409334182739258
+    ],
+    "latency_ms": 1989,
+    "gold_doc_ids": [
+      6650,
+      6645
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "How does this series represent a function, which is also used in the Homotopy analysis method?",
+    "answer": "infinite sum of terms",
+    "rag_answer": "The homotopy analysis method uses a homotopy-Maclaurin series to represent a function, which is a type of power series derived from the Taylor series. This series approximates the function by summing terms based on derivatives of the function at a single point, allowing for the handling of nonlinearities in differential equations. Thus, the series represents the function through an infinite sum of terms calculated from its derivatives, similar to the Taylor series.",
+    "retrieved_titles": [
+      "Homotopy analysis method",
+      "Taylor series",
+      "They",
+      "Sphaerotholus",
+      "Speaker of the Chhattisgarh Legislative Assembly"
+    ],
+    "retrieval_scores": [
+      0.8840785026550293,
+      0.881104588508606,
+      0.749943733215332,
+      0.7423520684242249,
+      0.7410839200019836
+    ],
+    "latency_ms": 4015,
+    "gold_doc_ids": [
+      2253,
+      2255
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3948
+  },
+  {
+    "question": "Who is the mother of Mary, Crown Princess of Denmark's husband?",
+    "answer": "Queen Margrethe II",
+    "rag_answer": "The mother of Mary, Crown Princess of Denmark's husband (Frederik, Crown Prince of Denmark) is Queen Margrethe II of Denmark.",
+    "retrieved_titles": [
+      "Mary, Crown Princess of Denmark",
+      "Frederik, Crown Prince of Denmark",
+      "Jeanne Marie Ford",
+      "Ai Weiwei: The Fake Case",
+      "Baron Cottesloe"
+    ],
+    "retrieval_scores": [
+      0.9157370328903198,
+      0.8887766599655151,
+      0.765444815158844,
+      0.7595030069351196,
+      0.7575288414955139
+    ],
+    "latency_ms": 1587,
+    "gold_doc_ids": [
+      827,
+      826
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3936
+  },
+  {
+    "question": "Haier has North American rights to which appliance company headquartered in Louisville, Kentucky?",
+    "answer": "GE Appliances",
+    "rag_answer": "Haier has North American rights to GE Appliances, which is headquartered in Louisville, Kentucky.",
+    "retrieved_titles": [
+      "GE Appliances",
+      "Hotpoint",
+      "Gino's Pizza and Spaghetti",
+      "Skyplex",
+      "The Apprentice (U.S. season 13)"
+    ],
+    "retrieval_scores": [
+      0.9003243446350098,
+      0.8668639063835144,
+      0.7459371089935303,
+      0.7389739155769348,
+      0.7240046858787537
+    ],
+    "latency_ms": 1072,
+    "gold_doc_ids": [
+      673,
+      671
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "What film, based on the book “Boston Strong”, featured the actress Alex McKenna?",
+    "answer": "Patriots Day",
+    "rag_answer": "The documents do not state that Alex McKenna appeared in a film based on the book \"Boston Strong.\" While \"Patriots Day\" is described as being based on \"Boston Strong,\" the film stars Mark Wahlberg, J. K. Simmons, John Goodman, Kevin Bacon, and Michelle Monaghan, and there is no mention of Alex McKenna in the cast. Therefore, based on the information provided, no film based on \"Boston Strong\" is confirmed to feature Alex McKenna.\n\nAnswer: There is no film based on \"Boston Strong\" that features Alex McKenna according to the provided documents.",
+    "retrieved_titles": [
+      "Alex McKenna",
+      "Patriots Day (film)",
+      "Hotel Mumbai",
+      "The Nun (2018 film)",
+      "Exercise Red Flag"
+    ],
+    "retrieval_scores": [
+      0.8474279046058655,
+      0.8261576890945435,
+      0.7691531181335449,
+      0.7508642673492432,
+      0.7153575420379639
+    ],
+    "latency_ms": 5358,
+    "gold_doc_ids": [
+      5110,
+      5112
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": "Which South Korean film about an affair between an attractive thirty-two-year-old woman and a youth just short of legal majority premiered at the 2005 Sundance Film Festival?",
+    "answer": "Green Chair",
+    "rag_answer": "Green Chair",
+    "retrieved_titles": [
+      "Green Chair",
+      "Shim Ji-ho",
+      "Sex and the City (season 6)",
+      "Midaq Alley (film)",
+      "Always Brando"
+    ],
+    "retrieval_scores": [
+      0.8521182537078857,
+      0.8043307065963745,
+      0.7506940960884094,
+      0.7428802251815796,
+      0.7250112891197205
+    ],
+    "latency_ms": 753,
+    "gold_doc_ids": [
+      9254,
+      9256
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "The View from the Bottom is the fifth studio album by an American rock band best known for what hit song?",
+    "answer": "My Own Worst Enemy",
+    "rag_answer": "The View from the Bottom is the fifth studio album by the American rock band Lit, which is best known for their hit song \"My Own Worst Enemy.\"",
+    "retrieved_titles": [
+      "The View from the Bottom",
+      "Lit (band)",
+      "Ballbreaker",
+      "We the Best",
+      "Floyd (30 Rock)"
+    ],
+    "retrieval_scores": [
+      0.9025668501853943,
+      0.801365852355957,
+      0.7579004764556885,
+      0.7484626770019531,
+      0.7344626188278198
+    ],
+    "latency_ms": 1609,
+    "gold_doc_ids": [
+      225,
+      224
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "Atlanta Zero Mile Post is located within a historic area opened in what year ?",
+    "answer": "1969",
+    "rag_answer": "The Atlanta Zero Mile Post is located within the Underground Atlanta Historic District, which was first opened in 1969. Answer: 1969.",
+    "retrieved_titles": [
+      "Atlanta Zero Mile Post",
+      "Underground Atlanta",
+      "WPPR",
+      "University of Science and Arts of Oklahoma",
+      "Hood Museum of Art"
+    ],
+    "retrieval_scores": [
+      0.8719000220298767,
+      0.8139048218727112,
+      0.7349189519882202,
+      0.7281768321990967,
+      0.722580075263977
+    ],
+    "latency_ms": 1688,
+    "gold_doc_ids": [
+      5867,
+      5865
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "In what city does a Christian minister who won the singles title with Jan Kodes in the 1970 French Open currently reside?",
+    "answer": "Perth, Western Australia",
+    "rag_answer": "Perth, Western Australia.",
+    "retrieved_titles": [
+      "1970 French Open",
+      "Margaret Court",
+      "1993 ATP Buenos Aires – Doubles",
+      "Communicourt",
+      "Star Over Bethlehem"
+    ],
+    "retrieval_scores": [
+      0.8402571678161621,
+      0.812816321849823,
+      0.7676945328712463,
+      0.7184416055679321,
+      0.7111227512359619
+    ],
+    "latency_ms": 589,
+    "gold_doc_ids": [
+      5558,
+      5559
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "Which them park is host to both the Back to the Future Rid and The Simpsons Ride?",
+    "answer": "Universal Studios Florida",
+    "rag_answer": "Neither park hosts both \"Back to the Future: The Ride\" and \"The Simpsons Ride.\" \n\n- \"Back to the Future: The Ride\" was located at Universal Studios Florida and Universal Studios Hollywood, but has since been replaced by \"The Simpsons Ride\" at those locations.\n- \"The Simpsons Ride\" replaced \"Back to the Future: The Ride\" at both Universal Studios Florida and Universal Studios Hollywood.\n\nTherefore, both rides were previously hosted at Universal Studios Florida and Universal Studios Hollywood, but they are no longer both operating there. The question implies a current coexistence, which does not exist.\n\nAnswer: Neither park currently hosts both rides. The rides were both previously located at Universal Studios Florida and Universal Studios Hollywood, but have since been replaced.",
+    "retrieved_titles": [
+      "Back to the Future: The Ride",
+      "The Simpsons Ride",
+      "The Emperor's New School",
+      "Swing with Scooter",
+      "Prodigal Daughter (Star Trek: Deep Space Nine)"
+    ],
+    "retrieval_scores": [
+      0.9040877819061279,
+      0.8757247924804688,
+      0.7627726793289185,
+      0.751404345035553,
+      0.7440429925918579
+    ],
+    "latency_ms": 6445,
+    "gold_doc_ids": [
+      2851,
+      2855
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "Who wrote Bring Me Sunshine and where did they write it?",
+    "answer": "Bring Me Sunshine (1994) was originally a three-part retrospective in tribute to Eric Morecambe",
+    "rag_answer": "The documents do not specify who wrote \"Bring Me Sunshine\" or where it was written. Therefore, based on the provided information, the question cannot be answered.",
+    "retrieved_titles": [
+      "Bring Me Sunshine (1994)",
+      "Flashing Lights (Kanye West song)",
+      "Bing Crosby",
+      "Angel and the Ape",
+      "Cherokee Heritage Center"
+    ],
+    "retrieval_scores": [
+      0.8373297452926636,
+      0.7895581722259521,
+      0.7894459962844849,
+      0.7661371231079102,
+      0.7545835375785828
+    ],
+    "latency_ms": 1636,
+    "gold_doc_ids": [
+      413,
+      406
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3917
+  },
+  {
+    "question": "What actor appeared in \"Evening in Byzantium\" and was nominated for the Academy Award for Best Supporting Actor in 1973 for \"The Heartbreak Kid\"?",
+    "answer": "Edward Albert Heimberger",
+    "rag_answer": "Eddie Albert appeared in \"Evening in Byzantium\" and was nominated for the Academy Award for Best Supporting Actor in 1973 for \"The Heartbreak Kid\".",
+    "retrieved_titles": [
+      "Evening in Byzantium",
+      "Eddie Albert",
+      "68th Venice International Film Festival",
+      "Hagop Sandaldjian",
+      "Oh, What a Lovely Tea Party"
+    ],
+    "retrieval_scores": [
+      0.8377399444580078,
+      0.8083539009094238,
+      0.7404581308364868,
+      0.7120136022567749,
+      0.7037783265113831
+    ],
+    "latency_ms": 2025,
+    "gold_doc_ids": [
+      1605,
+      1604
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "What city did the Freebooters F.C. soccer team lose in that is now known as Croke Park?",
+    "answer": "Dublin",
+    "rag_answer": "Dublin",
+    "retrieved_titles": [
+      "Freebooters F.C.",
+      "Croke Park",
+      "Searching for the Hows and Whys",
+      "The Frost Place",
+      "NHL All-Star Skills Competition"
+    ],
+    "retrieval_scores": [
+      0.9096699357032776,
+      0.8716787695884705,
+      0.7466568946838379,
+      0.7431927919387817,
+      0.7381405830383301
+    ],
+    "latency_ms": 368,
+    "gold_doc_ids": [
+      4910,
+      4918
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3953
+  },
+  {
+    "question": "Who is Bruce Spizer an expert on, known as the most influential act of the rock era?",
+    "answer": "The Beatles",
+    "rag_answer": "Bruce Spizer is an expert on The Beatles, who are known as the most influential act of the rock era.",
+    "retrieved_titles": [
+      "Bruce Spizer",
+      "The Beatles",
+      "Shake Your Money Maker (album)",
+      "Putting the Damage On",
+      "Massachusetts Institute of Technology"
+    ],
+    "retrieval_scores": [
+      0.9041731357574463,
+      0.8225377798080444,
+      0.7678900361061096,
+      0.7676000595092773,
+      0.7660456895828247
+    ],
+    "latency_ms": 1242,
+    "gold_doc_ids": [
+      3566,
+      3558
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "What other jobs did the man that co-produced Gyara Hazar Ladkian have?",
+    "answer": "film lyricist",
+    "rag_answer": "The man who co-produced *Gyara Hazar Ladkian*, Ali Sardar Jafri, was also a poet, critic, and film lyricist.",
+    "retrieved_titles": [
+      "Gyara Hazar Ladkian",
+      "Ali Sardar Jafri",
+      "Sharon Gannon",
+      "Hey Brother",
+      "Victor Beaumont"
+    ],
+    "retrieval_scores": [
+      0.8748897314071655,
+      0.775522768497467,
+      0.7529280185699463,
+      0.7421939373016357,
+      0.7418581247329712
+    ],
+    "latency_ms": 1819,
+    "gold_doc_ids": [
+      4024,
+      4020
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "Bill Nelson flew as a Payload Specialist on a Space Shuttle launched for the first time in what year?",
+    "answer": "1981",
+    "rag_answer": "Bill Nelson flew as a Payload Specialist on the Space Shuttle \"Columbia,\" which launched for the first time in 1981.",
+    "retrieved_titles": [
+      "Bill Nelson",
+      "Space Shuttle Columbia",
+      "Academy Awards pre-show",
+      "Butch Laswell",
+      "Millington, Tennessee"
+    ],
+    "retrieval_scores": [
+      0.8880802392959595,
+      0.8725458383560181,
+      0.751280665397644,
+      0.7410323619842529,
+      0.7381566762924194
+    ],
+    "latency_ms": 1536,
+    "gold_doc_ids": [
+      431,
+      428
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3947
+  },
+  {
+    "question": "Dunstan is an electoral district that includes which suburb of Adelaide in the City of Norwood Payneham St Peters?",
+    "answer": "College Park",
+    "rag_answer": "College Park",
+    "retrieved_titles": [
+      "Electoral district of Dunstan",
+      "College Park, South Australia",
+      "1995 Nottingham Open – Singles",
+      "Piola (Milan Metro)",
+      "Woolwich, Maine"
+    ],
+    "retrieval_scores": [
+      0.9263541102409363,
+      0.8589318990707397,
+      0.736251950263977,
+      0.7350519895553589,
+      0.7136058807373047
+    ],
+    "latency_ms": 391,
+    "gold_doc_ids": [
+      7870,
+      7877
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3932
+  },
+  {
+    "question": "What is the official currency in the country that hosts the Asahi-Ryokuken Yomiuri Memorial tournament?",
+    "answer": "yen",
+    "rag_answer": "The official currency in Japan, the country that hosts the Asahi-Ryokuken Yomiuri Memorial tournament, is the Japanese yen (JPY).",
+    "retrieved_titles": [
+      "Asahi-Ryokuken Yomiuri Memorial",
+      "Japanese yen",
+      "Solomon Islands Broadcasting Corporation",
+      "Warrior of Love Rainbowman",
+      "Roissy–Picardie Link"
+    ],
+    "retrieval_scores": [
+      0.8972397446632385,
+      0.8749786615371704,
+      0.7430354952812195,
+      0.7323930263519287,
+      0.7226682901382446
+    ],
+    "latency_ms": 1632,
+    "gold_doc_ids": [
+      2505,
+      2502
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "Whose native growing land is more south, Beech or Daviesia?",
+    "answer": "Daviesia",
+    "rag_answer": "The documents do not provide enough information to determine whose native growing land is more south between Beech and Daviesia. While Daviesia is native to Australia and Beech is native to temperate Europe, Asia, and North America, the specific latitudinal positions or relative southern extents of their native ranges are not given. Therefore, a comparison of their southern native growing lands cannot be made based on the provided information.",
+    "retrieved_titles": [
+      "Daviesia",
+      "Beech",
+      "Portstewart Eagles",
+      "Pajottenland",
+      "Riverlake"
+    ],
+    "retrieval_scores": [
+      0.8521788120269775,
+      0.8406535983085632,
+      0.7550704479217529,
+      0.7398101091384888,
+      0.7389603853225708
+    ],
+    "latency_ms": 3980,
+    "gold_doc_ids": [
+      5794,
+      3329
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3962
+  },
+  {
+    "question": "What division of Mexican football is the team that Jesús Daniel García Esparza currently plays for?",
+    "answer": "Liga MX",
+    "rag_answer": "The team that Jesús Daniel García Esparza currently plays for, Cruz Azul, plays in the top division of Mexican football, Liga MX.",
+    "retrieved_titles": [
+      "Jesús Daniel García",
+      "Cruz Azul",
+      "1998 Minnesota Vikings season",
+      "Silke Nowitzki",
+      "Pepsi Max 400"
+    ],
+    "retrieval_scores": [
+      0.9060412645339966,
+      0.8423283100128174,
+      0.7459923028945923,
+      0.7448341846466064,
+      0.7419535517692566
+    ],
+    "latency_ms": 1572,
+    "gold_doc_ids": [
+      3028,
+      3024
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3958
+  },
+  {
+    "question": "What is the birthdate of this Norwegian professional footballer who plays as an attacking midfielder and who broke the record for the youngest player that has ever played in the Norwegian top league?",
+    "answer": "17 December 1998",
+    "rag_answer": "The birthdate of the Norwegian professional footballer who plays as an attacking midfielder and broke the record for the youngest player in the Norwegian top league is 17 December 1998.",
+    "retrieved_titles": [
+      "Zymer Bytyqi",
+      "Martin Ødegaard",
+      "Nørrebrohallen",
+      "Esteban García",
+      "B. J. Garbe"
+    ],
+    "retrieval_scores": [
+      0.8718990087509155,
+      0.8460482358932495,
+      0.753600001335144,
+      0.74936842918396,
+      0.7324373722076416
+    ],
+    "latency_ms": 1918,
+    "gold_doc_ids": [
+      607,
+      612
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "Edithvale railway station is located on a line that is situated in what city?",
+    "answer": "Melbourne, Australia",
+    "rag_answer": "Edithvale railway station is located on the Frankston line, which is situated in Melbourne, Australia.",
+    "retrieved_titles": [
+      "Edithvale railway station",
+      "Frankston railway line",
+      "Imphal International Airport",
+      "Grand Ole Opry",
+      "Irish pub"
+    ],
+    "retrieval_scores": [
+      0.8979328870773315,
+      0.809905469417572,
+      0.7324815988540649,
+      0.722425103187561,
+      0.7196774482727051
+    ],
+    "latency_ms": 1178,
+    "gold_doc_ids": [
+      6954,
+      6955
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3946
+  },
+  {
+    "question": " Robert Smith founded the multinational company headquartered in what city?",
+    "answer": "Golden Valley, Minnesota,",
+    "rag_answer": "Robert Smith founded General Mills, which is headquartered in Golden Valley, Minnesota.",
+    "retrieved_titles": [
+      "Robert Smith (Illinois politician)",
+      "General Mills",
+      "Alexander I. Poltorak",
+      "Metropolitan Life North Building",
+      "Somerset MRT Station"
+    ],
+    "retrieval_scores": [
+      0.8507267236709595,
+      0.7879531979560852,
+      0.7483363747596741,
+      0.7400988340377808,
+      0.722129762172699
+    ],
+    "latency_ms": 880,
+    "gold_doc_ids": [
+      8042,
+      8043
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3964
+  },
+  {
+    "question": "What album starring Ed Sheeran was released on 3 March 2017?",
+    "answer": "÷ (pronounced \"divide\") is the third studio album by English singer-songwriter Ed Sheeran.",
+    "rag_answer": "The album starring Ed Sheeran that was released on 3 March 2017 is ÷.",
+    "retrieved_titles": [
+      "÷ (album)",
+      "Castle on the Hill (song)",
+      "5.15",
+      "Seven (Poco album)",
+      "Dan Tyler"
+    ],
+    "retrieval_scores": [
+      0.891196608543396,
+      0.8523514270782471,
+      0.7461305856704712,
+      0.7425702214241028,
+      0.7411677837371826
+    ],
+    "latency_ms": 1288,
+    "gold_doc_ids": [
+      6080,
+      6086
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3936
+  },
+  {
+    "question": "What party campaigned for the Irish Home Rule Movement?",
+    "answer": "The Home Rule League",
+    "rag_answer": "The Home Rule League campaigned for the Irish Home Rule Movement.",
+    "retrieved_titles": [
+      "Home Rule League",
+      "Irish Home Rule movement",
+      "Papa Stour",
+      "Standard Oil of Iowa",
+      "2011 BNP Paribas Primrose Bordeaux – Doubles"
+    ],
+    "retrieval_scores": [
+      0.8956941366195679,
+      0.8847867250442505,
+      0.6928501725196838,
+      0.6925162672996521,
+      0.6873632669448853
+    ],
+    "latency_ms": 887,
+    "gold_doc_ids": [
+      8870,
+      8878
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3955
+  },
+  {
+    "question": "Where does the state legislature in which John Coffin Talbot served convene?",
+    "answer": "the State House in Augusta",
+    "rag_answer": "The state legislature in which John Coffin Talbot served convenes in Augusta.",
+    "retrieved_titles": [
+      "John C. Talbot",
+      "Maine Legislature",
+      "Young Democrats of North Carolina",
+      "Albert Sacco",
+      "Rocked: Sum 41 in Congo"
+    ],
+    "retrieval_scores": [
+      0.8754278421401978,
+      0.8485065698623657,
+      0.7761398553848267,
+      0.7438783645629883,
+      0.7334394454956055
+    ],
+    "latency_ms": 955,
+    "gold_doc_ids": [
+      8445,
+      8446
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3912
+  },
+  {
+    "question": "Are Waco Regional Airport and Idaho Falls Regional Airport both city owned airports?  ",
+    "answer": "yes",
+    "rag_answer": "Yes, both Waco Regional Airport and Idaho Falls Regional Airport are city-owned airports.",
+    "retrieved_titles": [
+      "Idaho Falls Regional Airport",
+      "Waco Regional Airport",
+      "Bath, Maine",
+      "Cañada del Oro",
+      "Muddy Creek Forks Historic District"
+    ],
+    "retrieval_scores": [
+      0.8959766626358032,
+      0.8881492018699646,
+      0.7326641082763672,
+      0.7238172292709351,
+      0.717383086681366
+    ],
+    "latency_ms": 1057,
+    "gold_doc_ids": [
+      3631,
+      3633
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3931
+  },
+  {
+    "question": "The Order of th elithuanian Grand Duke Gediminas features one of the earliest symbols of Lithuania, that was used by the Lithuanian Republic as a minor state symbol during what period?",
+    "answer": "between World War I and World War II",
+    "rag_answer": "The Columns of Gediminas, featured in the Order of the Lithuanian Grand Duke Gediminas, were used by the Lithuanian Republic as a minor state symbol during the period between World War I and World War II.",
+    "retrieved_titles": [
+      "Order of the Lithuanian Grand Duke Gediminas",
+      "Columns of Gediminas",
+      "Lemania",
+      "Dignāga",
+      "Lille Chamber of Accounts"
+    ],
+    "retrieval_scores": [
+      0.8850959539413452,
+      0.8776955008506775,
+      0.7413179278373718,
+      0.7235355377197266,
+      0.7194839715957642
+    ],
+    "latency_ms": 2312,
+    "gold_doc_ids": [
+      7400,
+      7397
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3968
+  },
+  {
+    "question": "What was the position in the United States Army of the Lieutenant general that Confederate General Robert E. Lee surrendered to?",
+    "answer": "Commanding General",
+    "rag_answer": "The position in the United States Army of the lieutenant general that Confederate General Robert E. Lee surrendered to was Commanding General.",
+    "retrieved_titles": [
+      "Lee's Farewell Address",
+      "Isaac R. Trimble",
+      "Ulysses S. Grant",
+      "Beck v. Ohio",
+      "Wire obstacle"
+    ],
+    "retrieval_scores": [
+      0.880308985710144,
+      0.8302911520004272,
+      0.8255094885826111,
+      0.7273924350738525,
+      0.7223137617111206
+    ],
+    "latency_ms": 1373,
+    "gold_doc_ids": [
+      4265,
+      4266
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3936
+  },
+  {
+    "question": "The 2017–18 Wigan Athletic F.C. season will be a year in which the team competes in the league cup known as what for sponsorship reasons?",
+    "answer": "Carabao Cup",
+    "rag_answer": "The 2017–18 Wigan Athletic F.C. season will be a year in which the team competes in the league cup known as the Carabao Cup for sponsorship reasons.",
+    "retrieved_titles": [
+      "2017–18 Wigan Athletic F.C. season",
+      "EFL Cup",
+      "2017 Oakland Raiders season",
+      "Imran Ali (cricketer, born 1985)",
+      "Serious Request"
+    ],
+    "retrieval_scores": [
+      0.8904407024383545,
+      0.8361478447914124,
+      0.7669951319694519,
+      0.727846622467041,
+      0.7260408401489258
+    ],
+    "latency_ms": 1907,
+    "gold_doc_ids": [
+      3109,
+      3111
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3959
+  },
+  {
+    "question": "How many records had the team sold before performing \"aint thinkin' 'bout you\"?",
+    "answer": "three million copies worldwide",
+    "rag_answer": "The documents do not contain enough information to answer the question about how many records the team had sold before performing \"Ain't Thinkin' 'Bout You.\"",
+    "retrieved_titles": [
+      "Ain't Thinkin' 'Bout You",
+      "Gillan's Inn",
+      "Chris Brown",
+      "Ist das Ihr Fahrrad, Mr. O'Brien?",
+      "Longplayer"
+    ],
+    "retrieval_scores": [
+      0.8343847990036011,
+      0.790778398513794,
+      0.7882344722747803,
+      0.7715326547622681,
+      0.7676147222518921
+    ],
+    "latency_ms": 1662,
+    "gold_doc_ids": [
+      3569,
+      3571
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3952
+  },
+  {
+    "question": "How old was Virginia Bruce when she starred in Let Freedom Ring?",
+    "answer": "29",
+    "rag_answer": "Virginia Bruce was born on September 29, 1910, and Let Freedom Ring was released in 1939. \n\nTo calculate her age in 1939:  \n1939 - 1910 = 29 years old.\n\nAnswer: 29 years old.",
+    "retrieved_titles": [
+      "Virginia Bruce",
+      "Let Freedom Ring (film)",
+      "Love Child (1982 film)",
+      "Karen Narasaki",
+      "Nora Lewin"
+    ],
+    "retrieval_scores": [
+      0.895546019077301,
+      0.8855998516082764,
+      0.7657501697540283,
+      0.7521528005599976,
+      0.7479543685913086
+    ],
+    "latency_ms": 3070,
+    "gold_doc_ids": [
+      8857,
+      8854
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3931
+  },
+  {
+    "question": "Sam Mendes and Ruby Yang share what profession?",
+    "answer": "filmmaker.",
+    "rag_answer": "Sam Mendes and Ruby Yang both share the profession of filmmaker.",
+    "retrieved_titles": [
+      "Ruby Yang",
+      "Sam Mendes",
+      "Meghan Strange",
+      "Yuen Woo-ping",
+      "Guns &amp; Talks"
+    ],
+    "retrieval_scores": [
+      0.8781114816665649,
+      0.8348925113677979,
+      0.7614333629608154,
+      0.7514830231666565,
+      0.7444767355918884
+    ],
+    "latency_ms": 885,
+    "gold_doc_ids": [
+      543,
+      539
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3934
+  },
+  {
+    "question": "The creek of which Paradise Creek is a tributary is a tributary of what river?",
+    "answer": "Delaware River",
+    "rag_answer": "Paradise Creek is a tributary of Brodhead Creek, which is a tributary of the Delaware River. \n\nAnswer: Delaware River.",
+    "retrieved_titles": [
+      "Paradise Creek (Pennsylvania)",
+      "Brodhead Creek",
+      "Gerlach, Nevada",
+      "Virginia State University",
+      "Follow-the-sun"
+    ],
+    "retrieval_scores": [
+      0.8751831650733948,
+      0.806209146976471,
+      0.7304351925849915,
+      0.72678542137146,
+      0.6992068290710449
+    ],
+    "latency_ms": 1602,
+    "gold_doc_ids": [
+      1131,
+      1136
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3957
+  },
+  {
+    "question": "When was the magazine Sam Duckworth got his name Get Cape. Wear Cape. Fly from launched?",
+    "answer": "January 2004",
+    "rag_answer": "The magazine Sam Duckworth got his name \"Get Cape. Wear Cape. Fly\" from, Retro Gamer, was launched in January 2004.",
+    "retrieved_titles": [
+      "Get Cape. Wear Cape. Fly",
+      "Retro Gamer",
+      "Craig Johnston",
+      "List of Austrian mountain climbers",
+      "Bobby Hull"
+    ],
+    "retrieval_scores": [
+      0.9216203689575195,
+      0.7923023700714111,
+      0.7830562591552734,
+      0.7648656368255615,
+      0.7603375911712646
+    ],
+    "latency_ms": 1738,
+    "gold_doc_ids": [
+      3108,
+      3106
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3967
+  },
+  {
+    "question": "Which plant genus is part of a family with a longer name, Morning glory or Rothmannia?",
+    "answer": "Morning glory",
+    "rag_answer": "Morning glory is part of a family with a longer name. The family name \"Convolvulaceae\" is longer than \"Rubiaceae.\" Therefore, the plant genus part of the family with a longer name is Morning glory.",
+    "retrieved_titles": [
+      "Morning glory",
+      "Rothmannia",
+      "Ipomoea wrightii",
+      "Pumping Iron II: The Women",
+      "Synod of Worcester"
+    ],
+    "retrieval_scores": [
+      0.892605721950531,
+      0.8745708465576172,
+      0.8479580283164978,
+      0.7204826474189758,
+      0.7201104760169983
+    ],
+    "latency_ms": 2216,
+    "gold_doc_ids": [
+      2531,
+      2536
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3965
+  },
+  {
+    "question": "The team that would become the Little Giants was located in the county seat of which Ohio county?",
+    "answer": "Mahoning County",
+    "rag_answer": "The team that would become the Little Giants was located in Mahoning County, which has Youngstown as its county seat.",
+    "retrieved_titles": [
+      "Youngstown Puddlers",
+      "Youngstown, Ohio",
+      "List of British regional nicknames",
+      "Ike Mahoney",
+      "Kiddieland Amusement Park"
+    ],
+    "retrieval_scores": [
+      0.8723543882369995,
+      0.8189892768859863,
+      0.7363491058349609,
+      0.734117865562439,
+      0.7283324003219604
+    ],
+    "latency_ms": 1266,
+    "gold_doc_ids": [
+      8186,
+      8183
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3944
+  },
+  {
+    "question": "In the 2012-13 FC Sion they brought in Gennaro Gattuso and a player who now plays for what Scottish team?",
+    "answer": "Scottish Premiership club Hearts",
+    "rag_answer": "Kyle Lafferty, who FC Sion brought in during the 2012–13 season, now plays for Hearts, a Scottish Premiership club.",
+    "retrieved_titles": [
+      "2012–13 FC Sion season",
+      "Kyle Lafferty",
+      "1998–99 Valencia CF season",
+      "San Marco Marine Brigade",
+      "Gongche Shangshu movement"
+    ],
+    "retrieval_scores": [
+      0.9201027750968933,
+      0.7874318361282349,
+      0.783369779586792,
+      0.7429457902908325,
+      0.7311869263648987
+    ],
+    "latency_ms": 1660,
+    "gold_doc_ids": [
+      9218,
+      9220
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3912
+  },
+  {
+    "question": "Are Anja Salomonowitz and Rod Lurie both directors?",
+    "answer": "yes",
+    "rag_answer": "Yes, both Anja Salomonowitz and Rod Lurie are directors.",
+    "retrieved_titles": [
+      "Anja Salomonowitz",
+      "Rod Lurie",
+      "Little Children (film)",
+      "Parent show",
+      "Mortdecai (film)"
+    ],
+    "retrieval_scores": [
+      0.9032026529312134,
+      0.869730532169342,
+      0.7411116361618042,
+      0.7364160418510437,
+      0.7356252670288086
+    ],
+    "latency_ms": 1124,
+    "gold_doc_ids": [
+      3415,
+      3413
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3926
+  },
+  {
+    "question": "Stephen susco wrote a movie produced by which american film actor?",
+    "answer": "Sam Raimi",
+    "rag_answer": "The documents do not provide information about Stephen Susco writing a movie produced by an American film actor. Therefore, based on the given information, the question cannot be answered.",
+    "retrieved_titles": [
+      "Sam Raimi",
+      "The Grudge 2",
+      "James Foley (director)",
+      "Duane Davis",
+      "Mamma Mia!"
+    ],
+    "retrieval_scores": [
+      0.7657650709152222,
+      0.7631800174713135,
+      0.7549375295639038,
+      0.7166680693626404,
+      0.7143145799636841
+    ],
+    "latency_ms": 1739,
+    "gold_doc_ids": [
+      8958,
+      8961
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3935
+  },
+  {
+    "question": "Which auto club has sanctioned races run in California as well as Indianapolis?",
+    "answer": "United States Auto Club",
+    "rag_answer": "The United States Auto Club (USAC) has sanctioned races run in California (as seen in the 1991 USAC FF2000 Championship) and the Indianapolis 500 (from 1956 to 1997). \n\nAnswer: United States Auto Club (USAC).",
+    "retrieved_titles": [
+      "United States Auto Club",
+      "1991 USAC FF2000 Championship",
+      "California State Route 86",
+      "Jim Lentz",
+      "Florence Blue Jays"
+    ],
+    "retrieval_scores": [
+      0.885701060295105,
+      0.8196259140968323,
+      0.7711465358734131,
+      0.76949143409729,
+      0.7434049844741821
+    ],
+    "latency_ms": 3065,
+    "gold_doc_ids": [
+      6680,
+      6678
+    ],
+    "pool_size": "4k",
+    "pool_tokens": 3936
+  }
+]

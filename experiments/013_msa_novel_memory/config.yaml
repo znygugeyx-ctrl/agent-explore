@@ -1,0 +1,42 @@
+experiment: 013_msa_novel_memory
+
+model:
+  name: MSA-4B
+  backbone: Qwen3-4B-Instruct
+  provider: local
+  parameters:
+    num_hidden_layers: 36
+    num_attention_heads: 32
+    num_key_value_heads: 8
+    head_dim: 128
+    router_layers: "18-35"
+    pooling_kernel_size: 64
+    top_k_docs: 16
+
+infrastructure:
+  instance_type: g6e.12xlarge
+  gpus: "4x L40S 48GB"
+  ram_gb: 384
+  cuda_version: "12.8"
+
+novel:
+  title: 蛊真人
+  total_chars: 7_954_736
+  chinese_chars: 6_346_678
+  tokens: 5_887_459
+  sections: 2345
+  avg_chars_per_section: 3387
+  estimated_chunks: 91991
+
+msa_service:
+  template: QWEN3_INSTRUCT_TEMPLATE
+  max_generate_tokens: 512
+  block_size: 2048
+  slice_chunk_size: 16384
+  temperature: 0.0
+  qa_mode: false
+  server_port: 8080
+
+encoding:
+  time_seconds: ~150
+  cache_path: /home/ubuntu/MSA/memory_cache
