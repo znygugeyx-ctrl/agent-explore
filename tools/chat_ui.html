@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qwen3.5-27B Chat</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1a1a2e; color: #e0e0e0; height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  header {
+    padding: 12px 20px; background: #16213e; border-bottom: 1px solid #0f3460;
+    display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;
+  }
+  header h1 { font-size: 16px; font-weight: 600; color: #e94560; }
+  .settings { display: flex; gap: 12px; align-items: center; font-size: 13px; }
+  .settings label { color: #888; }
+  .settings input, .settings select {
+    background: #0f3460; border: 1px solid #1a4080; color: #e0e0e0;
+    padding: 4px 8px; border-radius: 4px; font-size: 13px; width: 70px;
+  }
+  #chat {
+    flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px;
+  }
+  .msg { max-width: 80%; padding: 12px 16px; border-radius: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+  .msg.user { align-self: flex-end; background: #0f3460; border-bottom-right-radius: 4px; }
+  .msg.assistant { align-self: flex-start; background: #16213e; border-bottom-left-radius: 4px; border: 1px solid #1a4080; }
+  .msg.assistant .thinking { color: #888; font-style: italic; font-size: 0.9em; border-left: 2px solid #444; padding-left: 8px; margin-bottom: 8px; }
+  .msg.error { align-self: center; background: #4a1028; color: #ff6b8a; font-size: 13px; }
+  #input-area {
+    padding: 16px 20px; background: #16213e; border-top: 1px solid #0f3460;
+    display: flex; gap: 10px; flex-shrink: 0;
+  }
+  #input {
+    flex: 1; background: #0f3460; border: 1px solid #1a4080; color: #e0e0e0;
+    padding: 10px 14px; border-radius: 8px; font-size: 15px; resize: none;
+    font-family: inherit; outline: none; min-height: 44px; max-height: 150px;
+  }
+  #input:focus { border-color: #e94560; }
+  #input::placeholder { color: #555; }
+  button {
+    background: #e94560; color: white; border: none; padding: 10px 20px;
+    border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600;
+    transition: background 0.2s;
+  }
+  button:hover { background: #c73652; }
+  button:disabled { background: #555; cursor: not-allowed; }
+  #clear-btn { background: #333; font-size: 13px; padding: 6px 12px; }
+  #clear-btn:hover { background: #444; }
+  .endpoint-bar {
+    padding: 6px 20px; background: #111; font-size: 12px; color: #666;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .endpoint-bar input {
+    background: #1a1a2e; border: 1px solid #333; color: #aaa; padding: 3px 8px;
+    border-radius: 3px; font-size: 12px; font-family: monospace; width: 300px;
+  }
+  .status { width: 8px; height: 8px; border-radius: 50%; background: #555; }
+  .status.ok { background: #4ade80; }
+  .status.err { background: #ef4444; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Qwen3.5-27B Uncensored</h1>
+  <div class="settings">
+    <label>Temp</label><input type="number" id="temp" value="0.7" min="0" max="2" step="0.1">
+    <label>Max tokens</label><input type="number" id="max-tokens" value="4096" min="64" max="32768" step="64">
+    <label>Think</label>
+    <select id="think-mode">
+      <option value="off">Off</option>
+      <option value="brief">Brief</option>
+      <option value="full">Full</option>
+    </select>
+    <button id="clear-btn" onclick="clearChat()">Clear</button>
+  </div>
+</header>
+
+<div class="endpoint-bar">
+  <div class="status" id="status-dot"></div>
+  <label>Endpoint:</label>
+  <input type="text" id="endpoint" value="http://localhost:8001/v1">
+  <span id="model-name" style="color:#888"></span>
+</div>
+
+<div id="chat"></div>
+
+<div id="input-area">
+  <textarea id="input" placeholder="输入消息..." rows="1"></textarea>
+  <button id="send-btn" onclick="send()">发送</button>
+</div>
+
+<script>
+const chatEl = document.getElementById('chat');
+const inputEl = document.getElementById('input');
+const sendBtn = document.getElementById('send-btn');
+const statusDot = document.getElementById('status-dot');
+const modelNameEl = document.getElementById('model-name');
+
+let messages = [];
+let streaming = false;
+let modelId = '';
+
+// Auto-resize textarea
+inputEl.addEventListener('input', () => {
+  inputEl.style.height = 'auto';
+  inputEl.style.height = Math.min(inputEl.scrollHeight, 150) + 'px';
+});
+
+// Enter to send, Shift+Enter for newline
+inputEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+});
+
+// Check endpoint on load
+checkEndpoint();
+
+async function checkEndpoint() {
+  const base = document.getElementById('endpoint').value;
+  try {
+    const res = await fetch(base + '/models');
+    const data = await res.json();
+    modelId = data.data?.[0]?.id || '';
+    modelNameEl.textContent = modelId;
+    statusDot.className = 'status ok';
+  } catch {
+    statusDot.className = 'status err';
+    modelNameEl.textContent = '(unreachable)';
+  }
+}
+
+document.getElementById('endpoint').addEventListener('change', checkEndpoint);
+
+function addMsg(role, content) {
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  div.textContent = content;
+  chatEl.appendChild(div);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return div;
+}
+
+function clearChat() {
+  messages = [];
+  chatEl.innerHTML = '';
+}
+
+async function send() {
+  if (streaming) return;
+  const text = inputEl.value.trim();
+  if (!text) return;
+
+  inputEl.value = '';
+  inputEl.style.height = 'auto';
+  addMsg('user', text);
+  messages.push({ role: 'user', content: text });
+
+  const base = document.getElementById('endpoint').value;
+  const temp = parseFloat(document.getElementById('temp').value) || 0.6;
+  const maxTokens = parseInt(document.getElementById('max-tokens').value) || 4096;
+
+  const assistantDiv = addMsg('assistant', '');
+  streaming = true;
+  sendBtn.disabled = true;
+
+  try {
+    const thinkMode = document.getElementById('think-mode').value;
+    const apiMessages = [];
+
+    // System prompt based on think mode
+    if (thinkMode === 'off') {
+      apiMessages.push({ role: 'system', content: '/no_think' });
+    } else if (thinkMode === 'brief') {
+      apiMessages.push({ role: 'system', content: 'Think step by step but keep your internal reasoning extremely concise — under 50 words. Focus on the final answer.' });
+    }
+
+    apiMessages.push(...messages);
+
+    const res = await fetch(base + '/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: modelId || 'default',
+        messages: apiMessages,
+        temperature: temp,
+        max_tokens: maxTokens,
+        stream: true,
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`HTTP ${res.status}: ${err}`);
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let content = '';
+    let reasoning = '';
+    let buffer = '';
+
+    function render() {
+      let html = '';
+      if (reasoning.trim()) {
+        html += `<div class="thinking">${escapeHtml(reasoning.trim())}</div>`;
+      }
+      html += escapeHtml(content);
+      assistantDiv.innerHTML = html;
+      chatEl.scrollTop = chatEl.scrollHeight;
+    }
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ') || line === 'data: [DONE]') continue;
+        try {
+          const data = JSON.parse(line.slice(6));
+          const delta = data.choices?.[0]?.delta;
+          if (!delta) continue;
+
+          // llama.cpp: reasoning in separate field
+          if (delta.reasoning_content) {
+            reasoning += delta.reasoning_content;
+            render();
+          }
+          if (delta.content) {
+            const c = delta.content;
+            // Also handle inline <think> tags as fallback
+            content += c;
+            // Re-parse: if content starts with <think>, split it
+            const thinkMatch = content.match(/^<think>([\s\S]*?)(<\/think>)([\s\S]*)$/);
+            if (thinkMatch) {
+              reasoning += thinkMatch[1];
+              content = thinkMatch[3];
+            }
+            render();
+          }
+        } catch {}
+      }
+    }
+
+    messages.push({ role: 'assistant', content: content || reasoning });
+
+  } catch (err) {
+    addMsg('error', `Error: ${err.message}`);
+  } finally {
+    streaming = false;
+    sendBtn.disabled = false;
+    inputEl.focus();
+  }
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+</script>
+</body>
+</html>
