@@ -104,7 +104,7 @@ Single耗时最少
 
 ## 平均 token 消耗
 
-每题平均，含主 agent + subagent 全部 token：
+每题平均，含主 agent + subagent 全部 token，**口径 = `input + output + cache_creation + cache_read` 的累计**（与 Anthropic API `usage` 字段一致）：
 
 | Agent 框架 | WorkBench | FinanceBench | PlanCraft | 总平均 |
 | ---------- | --------: | -----------: | --------: | -----: |
@@ -112,15 +112,27 @@ Single耗时最少
 | **Swarm**  |     318 k |        297 k | **335 k** |  317 k |
 | **Verify** |     511 k |        313 k |     749 k |  524 k |
 
+> **关于"300k token/题"的口径说明**：这里的 token 数不是"题目独立内容"的大小，而是**多轮 LLM 调用累计的 IO 量**。一个典型 PlanCraft single 题（13 turns，44s 完成）的实际分布是：
+>
+> | 项 | 数值 | 含义 |
+> |---|---:|---|
+> | input_tokens（每轮新增） | 28 | 用户基本不再说话，每轮新输入极少 |
+> | output_tokens | 1.8 k | 模型 13 轮总共生成的 token |
+> | cache_creation | 35 k | 首次写入 cache 的 system prompt + 工具定义 + 任务描述 |
+> | **cache_read（13 轮累计重读）** | **489 k** | 每轮模型都要"读一遍"已 cache 的全部历史 ≈ 35 k × 13 turns |
+> | 累计 total | **525 k** | ← 表格里看到的"avg_tok" |
+>
+> 也就是说，**"独立内容"只有 35k input + 1.8k output ≈ 37k**，剩下 488k 是 cache 读取的累加。Anthropic 把 cache_read 计费为 input 的 10%，所以这道题成本仅 $0.51。**总平均 311k tokens/题 看起来很多，实际真正"花钱的独立内容"只有约 30k 量级**，剩下都是多轮交互下的 cache 重读。
+
 Single 没有 subagent，所有 token 都在主 agent；Swarm 把 planner / executor 两个 teammate 的 token 也累加；Verify 把 verifier subagent 算进来。
 
 Swarm 与 Single 总平均接近（317k vs 311k），但**两者的 token 分布不同**：
 
 - WorkBench / FinanceBench 上，Swarm 的 token 比 Single **多 40%~87%**：一份用户任务被传给 planner、再传给 executor，每次跨 agent 通信都带来上下文重渲染，多 agent 协作本身就有 token overhead。
 
-- PlanCraft 上反而 Swarm 的 token 比 Single **少 39%**（335k vs 551k）：这是任务被提前放弃的副作用，执行被提前切断。
+- PlanCraft 上反而 Swarm 的 token 比 Single **少 39%**（335k vs 551k）：这是任务被提前放弃的副作用，执行被提前切断，多轮 cache 累加的次数也变少。
 
-Verify 的 token 最多，因为它在主 agent 完整解完题后， spawn verifier 还需要重新读一次完整状态，上下文被重新注入了一次。
+Verify 的 token 最多，因为它在主 agent 完整解完题后， spawn verifier 还需要重新读一次完整状态，verifier 自己的对话上下文也是从头开始注入。
 
 # 总结
 
