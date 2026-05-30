@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Run Detail</title>
+<style>
+:root {
+  --bg: #0e1116; --fg: #e6e6e6; --muted: #8a93a6;
+  --card: #161b22; --border: #2a3140;
+  --green: #3fb950; --red: #f85149; --amber: #d29922; --blue: #58a6ff;
+  --purple: #d2a8ff; --orange: #ffa657; --pink: #ff7b72;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.4 -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+h1 { font-size: 16px; margin: 0; font-weight: 600; }
+.back { font-size: 12px; color: var(--blue); text-decoration: none; }
+main { padding: 20px; display: grid; grid-template-columns: 320px 1fr; gap: 20px; }
+.col { display: flex; flex-direction: column; gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px; }
+.card h2 { margin: 0 0 10px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.kv { display: grid; grid-template-columns: 110px 1fr; row-gap: 4px; column-gap: 8px; font-size: 13px; }
+.kv .k { color: var(--muted); }
+.kv .v { word-break: break-all; }
+.badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+.badge.pass { background: rgba(63, 185, 80, 0.15); color: var(--green); }
+.badge.fail { background: rgba(248, 81, 73, 0.15); color: var(--red); }
+.badge.partial { background: rgba(210, 153, 34, 0.15); color: var(--amber); }
+.mode { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; background: #233040; color: var(--blue); font-weight: 600; }
+pre { background: #0a0d12; border: 1px solid var(--border); border-radius: 4px; padding: 10px; font-size: 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; max-height: 400px; }
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+.tab { padding: 8px 14px; cursor: pointer; font-size: 13px; color: var(--muted); border-bottom: 2px solid transparent; }
+.tab.active { color: var(--fg); border-bottom-color: var(--blue); }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* Grid timeline */
+.lanes-wrap { position: relative; overflow-x: auto; padding: 0; }
+.timeline-grid { display: grid; position: relative; }
+/* grid-template-columns set inline with lane-name col + N event cols */
+.lane-name-cell { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; position: sticky; left: 0; background: var(--card); z-index: 2; }
+.lane-name-cell .nm { font-weight: 600; font-size: 13px; }
+.lane-name-cell .role { font-size: 10px; color: var(--muted); margin-top: 2px; }
+.lane-name-cell.lead { background: rgba(88,166,255,0.07); }
+.lane-name-cell.solver, .lane-name-cell.adder, .lane-name-cell.checker, .lane-name-cell.coder, .lane-name-cell.tester, .lane-name-cell.researcher, .lane-name-cell.decomposer, .lane-name-cell.lookup, .lane-name-cell.multiplier { background: rgba(210,168,255,0.05); }
+
+.col-header-cell { padding: 4px 4px 6px; border-bottom: 1px solid var(--border); font-size: 9px; color: var(--muted); text-align: center; min-width: 0; overflow: hidden; }
+.col-header-cell.lane-name-cell { padding: 6px 12px; }
+.col-header-cell .ts { color: var(--muted); }
+
+.cell { border-bottom: 1px solid var(--border); border-right: 1px solid rgba(255,255,255,0.02); position: relative; min-height: 50px; min-width: 0; padding: 4px 2px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2px; }
+.cell.idle { background: repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0 6px, transparent 6px 12px); }
+
+.evtbar { display: inline-block; padding: 2px 6px; font-size: 10px; line-height: 1.2; border-radius: 3px; white-space: nowrap; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.evtbar.text     { background: rgba(88,166,255,0.18); color: var(--blue); border: 1px solid var(--blue); }
+.evtbar.tool_use { background: rgba(210,153,34,0.20); color: var(--amber); border: 1px solid var(--amber); }
+.evtbar.spawn    { background: rgba(63,185,80,0.20); color: var(--green); border: 1px solid var(--green); }
+.evtbar.shutdown { background: rgba(248,81,73,0.18); color: var(--red); border: 1px solid var(--red); }
+.evtbar.tool_res { background: rgba(63,185,80,0.10); color: var(--green); border: 1px dashed var(--green); }
+.evtbar.fs_in    { background: rgba(88,166,255,0.16); color: var(--blue); border: 1px solid var(--blue); }
+.evtbar.fs_out   { background: rgba(255,166,87,0.16); color: var(--orange); border: 1px solid var(--orange); }
+.evtbar.fs_other { background: rgba(210,168,255,0.10); color: var(--purple); border: 1px dashed var(--purple); }
+.src-anchor { width: 10px; height: 10px; border-radius: 50%; border: 2px solid; background: transparent; box-sizing: border-box; }
+.src-anchor.out { border-color: var(--orange); }
+.src-anchor.in  { border-color: var(--blue); }
+.src-anchor.shutdown { border-color: var(--red); }
+
+/* Arrows overlay */
+.arrows-svg { position: absolute; pointer-events: none; top: 0; left: 0; }
+.arrows-svg path { stroke-width: 1.8; fill: none; }
+.arrows-svg path.dm-out   { stroke: var(--orange); }
+.arrows-svg path.dm-in    { stroke: var(--blue); stroke-width: 2; }
+.arrows-svg path.shutdown { stroke: var(--red); stroke-dasharray: 4,3; }
+
+#tt { position: fixed; z-index: 100; background: #0a0d12; border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; font-size: 11px; max-width: 460px; pointer-events: none; opacity: 0; transition: opacity 0.1s; box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
+#tt pre { background: transparent; border: none; padding: 0; max-height: 360px; }
+#tt .ttkey { color: var(--muted); }
+#tt .ttv { color: var(--fg); }
+
+.legend { display: flex; gap: 14px; font-size: 11px; color: var(--muted); margin-bottom: 10px; flex-wrap: wrap; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+.legend .text  { background: rgba(88,166,255,0.5); }
+.legend .tool  { background: rgba(210,153,34,0.5); }
+.legend .spawn { background: rgba(63,185,80,0.5); }
+.legend .shut  { background: rgba(248,81,73,0.5); }
+.legend .fsin  { background: rgba(88,166,255,0.5); }
+.legend .fsout { background: rgba(255,166,87,0.5); }
+.legend .arrout { width: 18px; height: 2px; background: var(--orange); border-radius: 0; }
+.legend .arrin  { width: 18px; height: 2px; background: var(--blue); border-radius: 0; opacity: 0.7; border-top: 1px dashed var(--blue); border-bottom: 0; height: 0; }
+
+.msglist { display: flex; flex-direction: column; gap: 8px; }
+.msg { padding: 8px 12px; background: #131820; border: 1px solid var(--border); border-radius: 4px; }
+.msg.out { border-left: 3px solid var(--orange); }
+.msg.in  { border-left: 3px solid var(--blue); }
+.msg .head { display: flex; gap: 8px; align-items: center; font-size: 12px; margin-bottom: 4px; }
+.msg .from { color: var(--blue); font-weight: 600; }
+.msg .arrow { color: var(--muted); }
+.msg .to { color: var(--orange); font-weight: 600; }
+.msg .ts { color: var(--muted); font-size: 11px; margin-left: auto; }
+.msg .body { font-size: 12px; white-space: pre-wrap; word-break: break-word; max-height: 240px; overflow-y: auto; }
+
+.raw-event { border: 1px solid var(--border); border-radius: 4px; margin-bottom: 8px; padding: 10px 12px; background: #131820; }
+.raw-event .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.raw-event.assistant { border-left: 3px solid var(--blue); }
+.raw-event.user      { border-left: 3px solid var(--purple); }
+.raw-event.result    { border-left: 3px solid var(--green); background: #0e1d12; }
+.raw-event.system    { border-left: 3px solid var(--muted); opacity: 0.7; }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Run Detail</h1>
+  <a class="back" href="/">← back</a>
+</header>
+<main>
+  <div class="col">
+    <div class="card"><h2>Summary</h2><div class="kv" id="summary"></div></div>
+    <div class="card"><h2>Verification</h2><div id="verify"></div></div>
+    <div class="card"><h2>Tool Activity</h2><div id="tools"></div></div>
+    <div class="card"><h2>Task Prompt</h2><pre id="prompt"></pre></div>
+    <div class="card"><h2>Final Answer</h2><pre id="final"></pre></div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="tabs">
+        <div class="tab active" data-tab="timeline">Timeline</div>
+        <div class="tab" data-tab="messages">Messages</div>
+        <div class="tab" data-tab="fs">Filesystem</div>
+        <div class="tab" data-tab="raw">Raw Events</div>
+      </div>
+      <div class="legend" id="legend">
+        <span><span class="sw text"></span>text</span>
+        <span><span class="sw tool"></span>tool</span>
+        <span><span class="sw spawn"></span>spawn</span>
+        <span><span class="sw shut"></span>shutdown</span>
+        <span><span class="sw fsin"></span>worker → lead (reply)</span>
+        <span><span class="sw fsout"></span>worker → worker</span>
+        <span><span class="arrout"></span>lead → worker</span>
+        <span><span class="arrin"></span>worker → lead</span>
+      </div>
+      <div class="tab-pane active" id="pane-timeline"><div class="lanes-wrap" id="lanes"></div></div>
+      <div class="tab-pane" id="pane-messages"><div class="msglist" id="messages"></div></div>
+      <div class="tab-pane" id="pane-fs"><div id="fs"></div></div>
+      <div class="tab-pane" id="pane-raw"><div id="raw"></div></div>
+    </div>
+  </div>
+</main>
+<div id="tt"></div>
+
+<script>
+const runId = location.pathname.split("/").pop();
+const $ = id => document.getElementById(id);
+const tt = $("tt");
+const escapeHtml = s => (s == null ? "" : String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const jp = o => { try { return JSON.stringify(o, null, 2); } catch { return String(o); } };
+function showTt(html, e) {
+  tt.innerHTML = html; tt.style.opacity = "1";
+  const w = tt.offsetWidth, h = tt.offsetHeight;
+  let x = e.clientX + 12, y = e.clientY + 12;
+  if (x + w > innerWidth) x = e.clientX - w - 12;
+  if (y + h > innerHeight) y = e.clientY - h - 12;
+  tt.style.left = x + "px"; tt.style.top = y + "px";
+}
+function hideTt() { tt.style.opacity = "0"; }
+
+document.querySelectorAll(".tab").forEach(t => {
+  t.onclick = () => {
+    document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+    document.querySelectorAll(".tab-pane").forEach(x => x.classList.remove("active"));
+    t.classList.add("active"); $("pane-" + t.dataset.tab).classList.add("active");
+  };
+});
+
+// Lane normalization: "team-lead" (CC's actual leader name) maps to "lead"
+function normLane(name) {
+  if (!name) return "lead";
+  const n = String(name).toLowerCase();
+  if (n === "team-lead" || n === "teamlead" || n === "lead") return "lead";
+  return name;
+}
+
+function verdictBadge(r) {
+  const v = r.verify || {};
+  if (r.timeout) return `<span class="badge fail">TIMEOUT</span>`;
+  if (v.ok) return `<span class="badge pass">PASS</span>`;
+  if ((v.score || 0) > 0) return `<span class="badge partial">${((v.score || 0) * 100 | 0)}%</span>`;
+  return `<span class="badge fail">FAIL</span>`;
+}
+
+const MODE_DISPLAY = { single: "Single", sw: "Swarm", owv: "Verify", ow: "OW" };
+function modeLabel(m) { return MODE_DISPLAY[m] || m; }
+
+function renderLeftPanels(r) {
+  const modeLbl = modeLabel(r.mode);
+  document.title = `${r.benchmark}/${r.task_id} [${modeLbl}]`;
+  $("title").textContent = `${r.benchmark} · ${r.task_id} · ${modeLbl}`;
+  $("summary").innerHTML = `
+    <div class="k">benchmark</div><div class="v">${r.benchmark}</div>
+    <div class="k">task</div><div class="v">${r.task_id}</div>
+    <div class="k">mode</div><div class="v"><span class="mode ${r.mode}">${modeLbl}</span></div>
+    <div class="k">team_name</div><div class="v">${r.team_name || '<span class="muted">—</span>'}</div>
+    <div class="k">verdict</div><div class="v">${verdictBadge(r)}</div>
+    <div class="k">score</div><div class="v">${(r.verify || {}).score?.toFixed(2) ?? '—'}</div>
+    <div class="k">elapsed</div><div class="v">${r.elapsed_s?.toFixed(1)}s${r.timeout ? ' ⏱' : ''}</div>
+    <div class="k">events</div><div class="v">${r.n_events}</div>
+    <div class="k">tool uses</div><div class="v">${(r.tool_uses || []).length}</div>
+    <div class="k">spawns</div><div class="v">${(r.agent_spawns || []).length}</div>
+    <div class="k">DMs</div><div class="v">${(r.send_messages || []).length}</div>
+    <div class="k">fs events</div><div class="v">${(r.fs_trace || []).length}</div>
+  `;
+  // Verify panel: friendly display for fanoutqa LLM judge
+  let verifyHtml = "";
+  const v = r.verify || {};
+  if (v.judge) {
+    const j = v.judge;
+    const lbl = j.label || "?";
+    const okClass = j.correct ? "pass" : "fail";
+    verifyHtml += `<div style="margin-bottom:8px"><span class="badge ${okClass}">${j.correct ? 'CORRECT' : 'WRONG'}</span> <b>${lbl}</b> <span class="muted">${j.label_desc||''}</span></div>`;
+    if (v.token_f1 != null) verifyHtml += `<div class="muted" style="font-size:11px;margin-bottom:6px">token_f1=${v.token_f1} · strict=${v.strict_match_rate ?? '—'} · n_leaves=${v.n_leaves ?? '—'}</div>`;
+    if (j.raw) verifyHtml += `<details><summary class="muted" style="font-size:11px">judge reasoning</summary><pre>${escapeHtml(j.raw)}</pre></details>`;
+  } else {
+    verifyHtml = `<pre>${escapeHtml(jp(v))}</pre>`;
+  }
+  $("verify").innerHTML = verifyHtml;
+  let toolHtml = "";
+  if ((r.team_create_calls || []).length) toolHtml += `<div class="muted">TeamCreate</div><pre>${escapeHtml(jp(r.team_create_calls))}</pre>`;
+  if ((r.agent_spawns || []).length) {
+    toolHtml += `<div class="muted">Spawns</div>`;
+    for (const a of r.agent_spawns) toolHtml += `<div style="margin:4px 0;font-size:12px">→ <b>${a.name || '?'}</b> <span class="muted">(${a.subagent_type})</span></div>`;
+  }
+  if ((r.send_messages || []).length) {
+    toolHtml += `<div class="muted" style="margin-top:8px">SendMessage</div>`;
+    for (const m of r.send_messages) toolHtml += `<div style="margin:4px 0;font-size:12px">→ <b>${m.to}</b>: ${escapeHtml((m.message_preview || '').slice(0, 80))}</div>`;
+  }
+  $("tools").innerHTML = toolHtml || `<div class="muted">No tool activity.</div>`;
+  $("prompt").textContent = r.prompt || "";
+  $("final").textContent = r.final_text || "(no answer)";
+}
+
+// ---- Build event list ----
+// Each event: { lane, t, kind, label, payload, fromLane?, toLane? }
+function buildEvents(r) {
+  const t0 = r.started_at || (r.finished_at ? r.finished_at - r.elapsed_s : 0);
+  const t1 = r.finished_at || (t0 + (r.elapsed_s || 1));
+  const dur = Math.max(t1 - t0, 0.1);
+  const out = [];
+  const lanes = new Set(["lead"]);
+
+  // 1. Stream events: assistant messages and tool_uses (lane = lead). Synthesize timestamps.
+  const rs = r.raw_stream || [];
+  let idx = -1;
+  for (const ev of rs) {
+    idx++;
+    const synth_t = t0 + (idx / Math.max(rs.length - 1, 1)) * dur * 0.95; // leave room for fs after
+    if (ev.type === "assistant") {
+      const blocks = ev.message?.content || [];
+      for (const b of blocks) {
+        if (b.type === "text" && b.text?.trim()) {
+          const txt = b.text.trim();
+          out.push({
+            lane: "lead", t: synth_t, kind: "text",
+            label: txt.slice(0, 16) + (txt.length > 16 ? "…" : ""),
+            payload: txt, source: "stream",
+          });
+        } else if (b.type === "tool_use") {
+          const inp = b.input || {};
+          let kind = "tool_use", label = b.name, fromLane = null, toLane = null;
+          if (b.name === "TeamCreate") { label = "TeamCreate"; }
+          else if (b.name === "Agent") {
+            kind = "spawn";
+            const nm = normLane(inp.name || inp.subagent_type || "?");
+            label = `spawn ${nm}`;
+            lanes.add(nm);
+            fromLane = "lead"; toLane = nm;
+          } else if (b.name === "SendMessage") {
+            const to = normLane(inp.to);
+            const msg = inp.message;
+            const msgStr = typeof msg === "string" ? msg : JSON.stringify(msg || "");
+            const isShutdown = /shutdown_request/i.test(msgStr);
+            kind = isShutdown ? "shutdown" : "tool_use";
+            const summary = inp.summary || (typeof msg === "string" ? msg : (msg?.text || msgStr));
+            const sn = String(summary).replace(/\s+/g, " ").slice(0, 28);
+            label = isShutdown ? `shutdown` : sn || `DM`;
+            fromLane = "lead"; toLane = to;
+            if (to !== "lead") lanes.add(to);
+          } else if (b.name === "TaskStop") {
+            kind = "shutdown";
+            const target = normLane(inp.agent_id || inp.name || "?");
+            label = "TaskStop";
+            fromLane = "lead"; toLane = target;
+            if (target !== "lead") lanes.add(target);
+          } else {
+            label = b.name + (inp.query ? ` "${String(inp.query).slice(0,16)}…"` : "");
+          }
+          // bar lives on sender lane (lead in the stream POV)
+          out.push({
+            lane: fromLane || "lead", t: synth_t, kind, label,
+            payload: { tool: b.name, input: inp },
+            fromLane, toLane, source: "stream",
+          });
+        }
+      }
+    } else if (ev.type === "user") {
+      const blocks = ev.message?.content || [];
+      if (Array.isArray(blocks)) {
+        for (const b of blocks) {
+          if (b.type === "tool_result") {
+            const tc = Array.isArray(b.content) ? b.content.map(c => c.text || jp(c)).join("\n") : (b.content || "");
+            // skip noisy tool_result echos in timeline; keep accessible via Raw tab
+            // Only show meaningful ones
+            const s = String(tc).slice(0, 80);
+            out.push({
+              lane: "lead", t: synth_t, kind: "tool_res",
+              label: s.length > 12 ? s.slice(0, 12) + "…" : (s || "result"),
+              payload: tc, source: "stream",
+            });
+          }
+        }
+      }
+    }
+  }
+
+  // 2. fs trace: file_change on inboxes/<name>.json. Real timestamps — these are
+  // the *only* record of teammate→lead and teammate→teammate replies (which never
+  // appear in lead's stream-json). We render every meaningful inbox write so no
+  // message is lost in visualization.
+  const fs = r.fs_trace || [];
+  const seenInboxKey = new Set(); // dedupe identical (owner,from,text-prefix)
+  for (const ev of fs) {
+    if (ev.kind !== "file_change") continue;
+    const path = ev.path || "";
+    const m = path.match(/inboxes\/([^/.]+)\.json/);
+    if (!m) continue; // skip config.json / tasks for timeline; available in fs tab
+    const owner = normLane(m[1]);
+    lanes.add(owner);
+    let parsed = null, lastMsg = null;
+    try {
+      parsed = JSON.parse(ev.content || "[]");
+      if (Array.isArray(parsed) && parsed.length) lastMsg = parsed[parsed.length - 1];
+    } catch {}
+    if (!lastMsg) continue;
+    const fromN = normLane(lastMsg.from || "?");
+    if (fromN === owner) continue; // self-write
+    lanes.add(fromN);
+    const txt = lastMsg.text || "";
+    const isIdle = /idle_notification/i.test(txt);
+    const isShutdownAck = /shutdown_approved/i.test(txt);
+    const isShutdownReq = /shutdown_request/i.test(txt);
+    const isFromLead = (fromN === "lead");
+
+    // For lead→worker: stream already has the SendMessage tool_use. We only add
+    // an fs event if it carries info the stream lacks — currently nothing
+    // (so we still skip to avoid duplicate arrows). For worker→* we always add.
+    if (isFromLead) continue;
+
+    // Dedupe near-identical entries (the teammate's inbox file is rewritten
+    // with the full message list each time, so the same "last message" can
+    // appear multiple times).
+    const key = `${owner}|${fromN}|${txt.slice(0, 80)}`;
+    if (seenInboxKey.has(key)) continue;
+    seenInboxKey.add(key);
+
+    // Render-on-sender-lane: bar lives on the SENDER's lane (consistent with
+    // the stream tool_use convention: lead's SendMessage bars sit on the lead
+    // lane). Arrow then points across to the receiver. This gives one bar per
+    // message on the originator row, regardless of direction.
+    let label;
+    let kind = (owner === "lead") ? "fs_in" : "fs_out";
+    if (isIdle)             label = `idle ▶ ${owner}`;
+    else if (isShutdownAck) label = `shut-ack ▶ ${owner}`;
+    else if (isShutdownReq) label = `shut-req ▶ ${owner}`;
+    else {
+      let semantic = null;
+      try {
+        const inner = JSON.parse(txt);
+        if (typeof inner === "object") semantic = inner.text || inner.content;
+      } catch {}
+      semantic = semantic || lastMsg.summary || txt;
+      label = String(semantic).replace(/\s+/g, " ").slice(0, 24) + ` ▶ ${owner}`;
+    }
+    out.push({
+      lane: fromN, t: ev.t || t0, kind, label,
+      payload: { path, content: ev.content, lastMsg, parsed }, source: "fs",
+      fromLane: fromN, toLane: owner,
+    });
+  }
+
+  // 3. Sort by t
+  out.sort((a, b) => a.t - b.t);
+  return { events: out, lanes: Array.from(lanes), t0, t1, dur };
+}
+
+function renderTimeline(r) {
+  const { events, lanes, t0 } = buildEvents(r);
+  const wrap = $("lanes");
+  wrap.innerHTML = "";
+  if (!events.length) { wrap.innerHTML = `<div class="muted">No events.</div>`; return; }
+
+  // Order lanes: lead first, then teammates by first-appearance order
+  const laneOrder = ["lead"];
+  for (const ln of lanes) if (ln !== "lead" && !laneOrder.includes(ln)) laneOrder.push(ln);
+
+  // Each event gets its own column, in time order
+  const N = events.length;
+  const colW = 86; // px per column
+  const laneCol = 130;
+
+  const grid = document.createElement("div");
+  grid.className = "timeline-grid";
+  grid.style.gridTemplateColumns = `${laneCol}px repeat(${N}, ${colW}px)`;
+
+  // Header row: "time" + tick labels (only every K-th)
+  const corner = document.createElement("div");
+  corner.className = "lane-name-cell col-header-cell";
+  corner.textContent = `time → (${N} events)`;
+  grid.appendChild(corner);
+  const labelEvery = Math.max(1, Math.floor(N / 20));
+  events.forEach((ev, i) => {
+    const cell = document.createElement("div");
+    cell.className = "col-header-cell";
+    if (i % labelEvery === 0 || i === N - 1) {
+      cell.textContent = `+${(ev.t - t0).toFixed(1)}s`;
+    }
+    grid.appendChild(cell);
+  });
+
+  // For each lane, build row with N + 1 cells (name + N event slots)
+  const cellByLaneCol = {}; // "lane|col" -> cell DOM
+  for (const ln of laneOrder) {
+    const nameCell = document.createElement("div");
+    nameCell.className = `lane-name-cell ${ln}`;
+    const role = ln === "lead" ? "orchestrator" :
+                 (r.agent_spawns?.find(s => normLane(s.name) === ln)?.subagent_type || "agent");
+    nameCell.innerHTML = `<div class="nm">${ln}</div><div class="role">${role}</div>`;
+    grid.appendChild(nameCell);
+
+    events.forEach((ev, i) => {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      cell.dataset.lane = ln;
+      cell.dataset.col = String(i);
+      grid.appendChild(cell);
+      cellByLaneCol[`${ln}|${i}`] = cell;
+    });
+  }
+
+  // Place each event into its (lane, col) cell
+  events.forEach((ev, i) => {
+    const cell = cellByLaneCol[`${ev.lane}|${i}`];
+    if (!cell) return;
+
+    const bar = document.createElement("div");
+    bar.className = `evtbar ${ev.kind}`;
+    bar.textContent = ev.label;
+    bar.dataset.col = String(i);
+    bar.dataset.lane = ev.lane;
+    bar.onmousemove = (e) => {
+      const rows = [];
+      rows.push(`<div><span class="ttkey">when:</span> <span class="ttv">+${(ev.t - t0).toFixed(2)}s · col ${i}</span></div>`);
+      rows.push(`<div><span class="ttkey">lane:</span> <span class="ttv">${ev.lane}</span></div>`);
+      rows.push(`<div><span class="ttkey">kind:</span> <span class="ttv">${ev.kind}</span></div>`);
+      rows.push(`<div><span class="ttkey">source:</span> <span class="ttv">${ev.source}</span></div>`);
+      if (ev.fromLane) rows.push(`<div><span class="ttkey">from→to:</span> <span class="ttv">${ev.fromLane} → ${ev.toLane}</span></div>`);
+      if (ev.payload) {
+        if (ev.payload.input) rows.push(`<div class="ttkey">input:</div><pre>${escapeHtml(jp(ev.payload.input))}</pre>`);
+        if (ev.payload.lastMsg) rows.push(`<div class="ttkey">last message:</div><pre>${escapeHtml(jp(ev.payload.lastMsg))}</pre>`);
+        else if (typeof ev.payload === "string") rows.push(`<pre>${escapeHtml(ev.payload.slice(0, 600))}</pre>`);
+        else if (ev.payload.content) rows.push(`<pre>${escapeHtml(String(ev.payload.content).slice(0, 600))}</pre>`);
+      }
+      showTt(rows.join(""), e);
+    };
+    bar.onmouseleave = hideTt;
+    cell.appendChild(bar);
+  });
+
+  wrap.appendChild(grid);
+
+  // Draw arrows after layout
+  setTimeout(() => drawArrows(grid, events, laneOrder, cellByLaneCol), 0);
+}
+
+function drawArrows(grid, events, laneOrder, cellByLaneCol) {
+  const old = grid.querySelector(".arrows-svg");
+  if (old) old.remove();
+  const gridRect = grid.getBoundingClientRect();
+  const svgNs = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNs, "svg");
+  svg.setAttribute("class", "arrows-svg");
+  svg.setAttribute("width", grid.scrollWidth);
+  svg.setAttribute("height", grid.scrollHeight);
+  svg.style.width = grid.scrollWidth + "px";
+  svg.style.height = grid.scrollHeight + "px";
+
+  const defs = document.createElementNS(svgNs, "defs");
+  defs.innerHTML = `
+    <marker id="arrOut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ffa657"/></marker>
+    <marker id="arrIn"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff"/></marker>
+    <marker id="arrShut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f85149"/></marker>
+  `;
+  svg.appendChild(defs);
+
+  events.forEach((ev, i) => {
+    if (!ev.fromLane || !ev.toLane || ev.fromLane === ev.toLane) return;
+    const senderCell = cellByLaneCol[`${ev.fromLane}|${i}`];
+    const receiverCell = cellByLaneCol[`${ev.toLane}|${i}`];
+    if (!senderCell || !receiverCell) return;
+    // Pick anchors: prefer the cell that has the event bar; the other end
+    // anchors to the empty cell's center. This handles both directions:
+    //   stream lead→worker: bar lives on lead lane (sender)
+    //   fs   worker→lead:   bar lives on lead lane (receiver)
+    const senderBar = senderCell.querySelector(".evtbar");
+    const receiverBar = receiverCell.querySelector(".evtbar");
+    let a, useSenderBar;
+    if (senderBar) { a = senderBar.getBoundingClientRect(); useSenderBar = true; }
+    else { a = senderCell.getBoundingClientRect(); useSenderBar = false; }
+    let b, useReceiverBar;
+    if (receiverBar) { b = receiverBar.getBoundingClientRect(); useReceiverBar = true; }
+    else { b = receiverCell.getBoundingClientRect(); useReceiverBar = false; }
+
+    const aCenter = a.top + a.height / 2;
+    const bCenter = b.top + b.height / 2;
+    const goingDown = bCenter > aCenter;
+
+    const x1 = a.left - gridRect.left + a.width / 2;
+    // start at edge of sender bar (if any), else center of sender cell
+    const y1 = (useSenderBar ? (goingDown ? a.bottom : a.top) : aCenter) - gridRect.top;
+    const x2 = b.left - gridRect.left + b.width / 2;
+    // end at edge of receiver bar (if any) — that's where the arrowhead lands
+    const y2 = (useReceiverBar ? (goingDown ? b.top : b.bottom) : bCenter) - gridRect.top;
+    const path = document.createElementNS(svgNs, "path");
+    path.setAttribute("d", `M${x1},${y1} L${x2},${y2}`);
+    let cls, marker;
+    if (ev.kind === "shutdown") { cls = "shutdown"; marker = "arrShut"; }
+    else if (ev.fromLane === "lead") { cls = "dm-out"; marker = "arrOut"; }
+    else { cls = "dm-in"; marker = "arrIn"; }
+    path.setAttribute("class", cls);
+    path.setAttribute("marker-end", `url(#${marker})`);
+    svg.appendChild(path);
+  });
+  grid.appendChild(svg);
+}
+
+// ---- Messages tab: bidirectional, derived from both stream and fs ----
+function renderMessages(r) {
+  const items = [];
+  // Outbound from lead (from stream)
+  for (const m of (r.send_messages || [])) {
+    items.push({ kind: "out", from: "lead", to: normLane(m.to), body: m.message_preview || "", t: 0 });
+  }
+  // Bidirectional from fs (each inbox file change → last message in array)
+  for (const ev of (r.fs_trace || [])) {
+    if (ev.kind !== "file_change") continue;
+    const m = (ev.path || "").match(/inboxes\/([^/.]+)\.json/);
+    if (!m) continue;
+    const owner = normLane(m[1]);
+    try {
+      const arr = JSON.parse(ev.content || "[]");
+      if (Array.isArray(arr) && arr.length) {
+        const last = arr[arr.length - 1];
+        const fromN = normLane(last.from || "?");
+        if (fromN === "lead" && owner !== "lead") continue; // already covered by send_messages
+        items.push({
+          kind: owner === "lead" ? "in" : "out",
+          from: fromN, to: owner, body: last.text || "", t: ev.t,
+        });
+      }
+    } catch {}
+  }
+  items.sort((a, b) => (a.t || 0) - (b.t || 0));
+  const html = items.map(i => `
+    <div class="msg ${i.kind}">
+      <div class="head"><span class="from">${i.from}</span><span class="arrow">→</span><span class="to">${i.to}</span><span class="ts">${i.kind === 'in' ? 'received' : 'sent'}</span></div>
+      <div class="body">${escapeHtml(i.body.slice(0, 1500))}</div>
+    </div>`).join("");
+  $("messages").innerHTML = html || `<div class="muted">No messages.</div>`;
+}
+
+function renderFs(r) {
+  const fs = r.fs_trace || [];
+  if (!fs.length) { $("fs").innerHTML = `<div class="muted">No filesystem trace.</div>`; return; }
+  const t0 = fs[0]?.t || 0;
+  let html = `<div class="muted" style="margin-bottom:10px">Captured ${fs.length} fs events for team <b>${r.team_name || '?'}</b></div>`;
+  for (const ev of fs) {
+    const dt = ev.t ? `+${(ev.t - t0).toFixed(2)}s` : "";
+    html += `<details style="margin:6px 0;border:1px solid var(--border);border-radius:4px;padding:6px 10px">
+      <summary><span class="muted">${dt}</span> <b>${ev.kind}</b> <code>${escapeHtml(ev.path || '')}</code></summary>
+      <pre>${escapeHtml(jp(ev.content || ev))}</pre>
+    </details>`;
+  }
+  $("fs").innerHTML = html;
+}
+
+function renderRaw(r) {
+  const stream = r.raw_stream || [];
+  $("raw").innerHTML = stream.map(ev => `
+    <div class="raw-event ${ev.type || ''}">
+      <div class="head"><span>${ev.type || '?'}</span><span class="muted">${ev.session_id ? ev.session_id.slice(0, 8) : ''}</span></div>
+      <pre>${escapeHtml(jp(ev).slice(0, 4000))}</pre>
+    </div>
+  `).join("") || `<div class="muted">No events.</div>`;
+}
+
+async function load() {
+  const res = await fetch(`/api/runs/${runId}`);
+  if (!res.ok) { $("title").textContent = "not found"; return; }
+  const r = await res.json();
+  renderLeftPanels(r);
+  renderTimeline(r);
+  renderMessages(r);
+  renderFs(r);
+  renderRaw(r);
+}
+load();
+</script>
+</body>
+</html>

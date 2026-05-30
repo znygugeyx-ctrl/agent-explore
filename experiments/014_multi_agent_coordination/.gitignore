@@ -1,0 +1,37 @@
+# External repos vendored locally for benchmark setup; users should clone separately.
+_vendor/
+
+# Per-task state files generated at sample time (regenerable, contain absolute paths).
+pilot/tasks/_plancraft_states/
+pilot/tasks/*.jsonl
+
+# Runner-level smoke-test logs
+runner/_logs/
+
+# Probe-time scratch
+probe_pty/_dashboard.log
+probe_pty/_dashboard.pid
+
+# Run-time artifacts
+pilot/_runlogs/
+pilot/_logs/
+pilot/_judge_cache/
+pilot/_dashboard.log
+pilot/_dashboard.pid
+pilot/_*.pid
+pilot/_*.log
+pilot/__pycache__/
+runner/__pycache__/
+mcp_servers/__pycache__/
+**/__pycache__/
+
+# Dashboard runtime data — large jsonl with raw_stream.
+# A trimmed summary version is committed separately under results/.
+pilot/dashboard/data/runs.jsonl
+pilot/dashboard/data/
+
+# Probe / debug artifacts
+probe_pty/probe2_l2_stdout.txt
+probe_pty/probe3_stdout.txt
+probe_pty/probe3_stderr.txt
+probe_pty/probe_log.txt

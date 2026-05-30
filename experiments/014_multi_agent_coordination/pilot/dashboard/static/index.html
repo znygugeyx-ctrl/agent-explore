@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>014 Multi-Agent Pilot Dashboard</title>
+<style>
+:root {
+  --bg: #0e1116; --fg: #e6e6e6; --muted: #8a93a6;
+  --card: #161b22; --border: #2a3140;
+  --green: #3fb950; --red: #f85149; --amber: #d29922; --blue: #58a6ff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+h1 { font-size: 16px; margin: 0; font-weight: 600; }
+.live { font-size: 12px; color: var(--muted); }
+.live .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; vertical-align: middle; }
+main { padding: 20px; }
+.summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px; }
+.card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.card .value { font-size: 22px; font-weight: 600; margin-top: 6px; }
+.card .sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.matrix { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; margin-bottom: 20px; }
+.matrix h2 { margin: 0 0 12px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.matrix table { border-collapse: collapse; width: 100%; }
+.matrix th, .matrix td { padding: 8px 10px; text-align: center; border: 1px solid var(--border); font-size: 13px; }
+.matrix th { background: #1c222d; color: var(--muted); font-weight: 600; }
+.matrix td.bench { text-align: left; font-weight: 600; }
+.matrix .pass { color: var(--green); }
+.matrix .fail { color: var(--red); }
+.matrix .partial { color: var(--amber); }
+.matrix .tok { display: block; font-size: 10px; color: var(--muted); margin-top: 2px; }
+.matrix .lat { display: block; font-size: 10px; color: var(--muted); }
+.runs { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; }
+.runs h2 { margin: 0 0 12px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.runs .filters { display: flex; gap: 12px; margin-bottom: 12px; font-size: 12px; flex-wrap: wrap; }
+.runs .filters select, .runs .filters input { background: #0a0d12; border: 1px solid var(--border); color: var(--fg); padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+table.runlist { width: 100%; border-collapse: collapse; }
+table.runlist th, table.runlist td { padding: 7px 10px; font-size: 13px; text-align: left; border-bottom: 1px solid var(--border); }
+table.runlist th { color: var(--muted); font-weight: 500; font-size: 11px; text-transform: uppercase; }
+table.runlist td.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.runlist tr:hover td { background: #1a212c; cursor: pointer; }
+.badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+.badge.pass { background: rgba(63, 185, 80, 0.15); color: var(--green); }
+.badge.fail { background: rgba(248, 81, 73, 0.15); color: var(--red); }
+.badge.partial { background: rgba(210, 153, 34, 0.15); color: var(--amber); }
+.mode { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; background: #233040; color: var(--blue); font-weight: 600; }
+.mode.ow  { background: #2d2238; color: #d2a8ff; }
+.mode.owv { background: #1a3a2a; color: #5fd190; }
+.mode.sw  { background: #38221f; color: #ffa657; }
+.mode.single { background: #233040; color: var(--blue); }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>014 Multi-Agent Pilot</h1>
+  <div class="live"><span class="dot"></span><span id="status">connecting…</span></div>
+</header>
+<main>
+
+<div class="summary">
+  <div class="card"><div class="label">Total Runs</div><div class="value" id="total">0</div></div>
+  <div class="card"><div class="label">Pass Rate</div><div class="value" id="passrate">—</div></div>
+  <div class="card"><div class="label">Avg Latency</div><div class="value" id="latency">—</div></div>
+  <div class="card"><div class="label">Total Tokens</div><div class="value" id="tokens">0</div><div class="sub" id="tokens_sub">—</div></div>
+  <div class="card"><div class="label">Total Cost</div><div class="value" id="cost">$0</div><div class="sub" id="cost_sub">—</div></div>
+</div>
+
+<div class="matrix">
+  <h2>Score Matrix — benchmark × mode (pass / total · avg tokens · avg latency)</h2>
+  <table id="matrix">
+    <thead><tr><th>benchmark</th><th>Single</th><th>Swarm</th><th>Verify</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="runs">
+  <h2>All Runs (newest first)</h2>
+  <div class="filters">
+    <label>benchmark
+      <select id="f_bench"><option value="">(all)</option></select>
+    </label>
+    <label>mode
+      <select id="f_mode"><option value="">(all)</option></select>
+    </label>
+    <label>verdict
+      <select id="f_verdict">
+        <option value="">(all)</option>
+        <option value="pass">pass</option>
+        <option value="fail">fail</option>
+      </select>
+    </label>
+  </div>
+  <table class="runlist">
+    <thead><tr>
+      <th>time</th><th>benchmark</th><th>task</th><th>mode</th>
+      <th>verdict</th><th>score</th><th class="num">elapsed</th>
+      <th class="num">tools</th><th class="num">spawns</th><th class="num">msgs</th>
+      <th class="num">verify</th><th class="num">tokens</th><th class="num">cost</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let runs = [];
+
+// Display name mapping: underlying mode id → user-facing label.
+// Codebase still uses single/sw/owv internally; dashboard renders them as
+// Single / Swarm / Verify.
+const MODE_DISPLAY = { single: "Single", sw: "Swarm", owv: "Verify", ow: "OW" };
+function modeLabel(m) { return MODE_DISPLAY[m] || m; }
+
+function fmtTime(ts) {
+  if (!ts) return "—";
+  const d = new Date(ts * 1000);
+  return d.toTimeString().slice(0, 8);
+}
+function fmtElapsed(s) { return s == null ? "—" : `${s.toFixed(1)}s`; }
+function fmtTok(n) {
+  if (n == null || !n) return "—";
+  if (n >= 1e6) return (n/1e6).toFixed(2) + "M";
+  if (n >= 1e3) return (n/1e3).toFixed(1) + "k";
+  return String(n);
+}
+function fmtCost(c) {
+  if (c == null) return "—";
+  if (c < 0.01) return "$" + c.toFixed(4);
+  return "$" + c.toFixed(2);
+}
+function verdictBadge(r) {
+  if (r.timeout) return `<span class="badge fail">timeout</span>`;
+  if (r.ok) return `<span class="badge pass">PASS</span>`;
+  if ((r.score || 0) > 0) return `<span class="badge partial">${(r.score*100|0)}%</span>`;
+  return `<span class="badge fail">FAIL</span>`;
+}
+
+function renderSummary() {
+  $("total").textContent = runs.length;
+  const passed = runs.filter(r => r.ok).length;
+  const total = runs.length;
+  $("passrate").textContent = total ? `${passed}/${total} (${(passed/total*100|0)}%)` : "—";
+  const lat = runs.length ? (runs.reduce((s, r) => s + (r.elapsed_s || 0), 0) / runs.length) : null;
+  $("latency").textContent = lat == null ? "—" : `${lat.toFixed(1)}s`;
+  const tot_tok = runs.reduce((s, r) => s + (r.total_tokens || 0), 0);
+  const out_tok = runs.reduce((s, r) => s + (r.output_tokens || 0), 0);
+  $("tokens").textContent = fmtTok(tot_tok);
+  $("tokens_sub").textContent = `output: ${fmtTok(out_tok)}`;
+  const cost = runs.reduce((s, r) => s + (r.cost_usd || 0), 0);
+  const avg_cost = total ? cost / total : 0;
+  $("cost").textContent = fmtCost(cost);
+  $("cost_sub").textContent = `avg/run: ${fmtCost(avg_cost)}`;
+}
+
+function renderMatrix() {
+  const benches = ["workbench", "financebench", "plancraft"];
+  const modes = ["single", "sw", "owv"];
+  const cell = {};
+  for (const r of runs) {
+    const k = `${r.benchmark}|${r.mode}`;
+    if (!cell[k]) cell[k] = { ok: 0, total: 0, score: 0, tokens: 0, elapsed: 0, cost: 0 };
+    cell[k].total += 1;
+    if (r.ok) cell[k].ok += 1;
+    cell[k].score += r.score || 0;
+    cell[k].tokens += r.total_tokens || 0;
+    cell[k].elapsed += r.elapsed_s || 0;
+    cell[k].cost += r.cost_usd || 0;
+  }
+  const tbody = document.querySelector("#matrix tbody");
+  tbody.innerHTML = "";
+  for (const b of benches) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td class="bench">${b}</td>` + modes.map(m => {
+      const c = cell[`${b}|${m}`];
+      if (!c || c.total === 0) return `<td class="muted">—</td>`;
+      const cls = c.ok === c.total ? "pass" : c.ok === 0 ? "fail" : "partial";
+      const avg_score_pct = (c.score / c.total) * 100;
+      const avg_tok = c.tokens / c.total;
+      const avg_lat = c.elapsed / c.total;
+      const avg_cost = c.cost / c.total;
+      return `<td class="${cls}">
+        ${c.ok}/${c.total} <span class="muted">(${avg_score_pct.toFixed(0)}%)</span>
+        <span class="tok">${fmtTok(avg_tok)} tok · ${fmtCost(avg_cost)}</span>
+        <span class="lat">${avg_lat.toFixed(0)}s avg</span>
+      </td>`;
+    }).join("");
+    tbody.appendChild(tr);
+  }
+}
+
+function refreshFilters() {
+  // populate dropdowns from runs
+  const bench = new Set(runs.map(r => r.benchmark).filter(Boolean));
+  const mode = new Set(runs.map(r => r.mode).filter(Boolean));
+  function fill(sel, vals, labelFn) {
+    const cur = sel.value;
+    const lbl = labelFn || (v => v);
+    sel.innerHTML = '<option value="">(all)</option>' + [...vals].sort().map(v => `<option value="${v}">${lbl(v)}</option>`).join("");
+    sel.value = cur;
+  }
+  fill($("f_bench"), bench);
+  fill($("f_mode"), mode, modeLabel);
+}
+
+function renderRows() {
+  const fb = $("f_bench").value;
+  const fm = $("f_mode").value;
+  const fv = $("f_verdict").value;
+  const filtered = runs.filter(r => {
+    if (fb && r.benchmark !== fb) return false;
+    if (fm && r.mode !== fm) return false;
+    if (fv === "pass" && !r.ok) return false;
+    if (fv === "fail" && r.ok) return false;
+    return true;
+  });
+  const tbody = $("rows");
+  tbody.innerHTML = "";
+  for (const r of filtered) {
+    const tr = document.createElement("tr");
+    tr.onclick = () => { window.location.href = `/run/${r.run_id}`; };
+    tr.innerHTML = `
+      <td>${fmtTime(r.finished_at)}</td>
+      <td>${r.benchmark}</td>
+      <td title="${r.task_id}">${(r.task_id||'').slice(0,30)}</td>
+      <td><span class="mode ${r.mode}">${modeLabel(r.mode)}</span></td>
+      <td>${verdictBadge(r)}</td>
+      <td>${(r.score||0).toFixed(2)}</td>
+      <td class="num">${fmtElapsed(r.elapsed_s)}</td>
+      <td class="num">${r.n_tool_uses||0}</td>
+      <td class="num">${r.n_agent_spawns||0}</td>
+      <td class="num">${r.n_send_messages||0}</td>
+      <td class="num">${r.n_verifier_rounds||0}</td>
+      <td class="num">${fmtTok(r.total_tokens)}</td>
+      <td class="num">${fmtCost(r.cost_usd)}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+async function refresh() {
+  const r = await fetch("/api/runs");
+  runs = await r.json();
+  refreshFilters();
+  renderSummary(); renderMatrix(); renderRows();
+}
+
+["f_bench", "f_mode", "f_verdict"].forEach(id => $(id).onchange = renderRows);
+
+const es = new EventSource("/api/stream");
+es.onopen = () => { $("status").textContent = "live"; };
+es.onerror = () => { $("status").textContent = "disconnected"; };
+es.onmessage = (e) => {
+  try {
+    const ev = JSON.parse(e.data);
+    if (ev.event === "run") refresh();
+  } catch {}
+};
+
+refresh();
+setInterval(refresh, 5000);
+</script>
+</body>
+</html>
