@@ -1,0 +1,154 @@
+{
+  "question": "调研 Claude Code 最新的 dynamic workflow（动态工作流）功能：它是什么、能做什么、如何使用、以及底层实现原理。重点关注 Anthropic 官方文档、博客、release notes，以及该功能如何让 Claude 编排多个 subagent / 确定性控制流（loops、conditionals、fan-out）。中英文资料均可。",
+  "model": "claude-opus-4-8",
+  "run_id": "wf_c176b43e-bd5",
+  "summary": "Claude Code's \"dynamic workflows\" (research preview, requires v2.1.154+, available on all paid plans plus Anthropic API, Bedrock, Vertex AI, and Foundry) are a new orchestration primitive in which Claude writes a JavaScript script that orchestrates subagents at scale, and a runtime executes that script in an isolated background environment while the interactive session stays responsive. The key architectural idea is that deterministic control flow — loops, branching/conditionals, fan-out, and intermediate results — lives in the script itself (in script variables), so Claude's context window holds only the final answer; this contrasts with subagents and skills, where Claude orchestrates turn-by-turn, and with agent teams, where Claude plans and supervises peer workers. Users either run a bundled workflow (e.g. /deep-research) or ask Claude to author one, then monitor progress with /workflows (which shows running/completed runs, the current phase, per-phase agent counts, token totals, and elapsed time); the runtime enforces hard limits of up to 16 concurrent agents (fewer on low-CPU machines) and 1,000 agents total per run to bound resource use and prevent runaway loops. Conceptually the feature builds on Anthropic's documented orchestrator-worker pattern (a lead/central LLM dynamically decomposes work, delegates to parallel workers, and synthesizes results, iterating at runtime) — the same architecture behind Anthropic's multi-agent Research system, which spins up 3-5 subagents in parallel and can cross-check/adversarially review findings for more trustworthy results than a single pass. Note: the official documentation describes orchestration and resource limits but does not publish low-level implementation details of the control-flow primitives (loops/conditionals/fan-out internals).",
+  "findings": [
+    {
+      "claim": "A dynamic workflow is a JavaScript script that orchestrates subagents at scale; Claude writes the script for the task you describe, and a runtime executes it in an isolated background environment while the session stays responsive.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/workflows",
+        "https://code.claude.com/docs/en/workflows.md",
+        "https://code.claude.com/docs/en/agents",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      ],
+      "vote": "3-0 (merged from claims 0, 21, 15)"
+    },
+    {
+      "claim": "Deterministic control flow (the loop, branching/conditionals, and intermediate results) lives in the workflow script itself in script variables, so Claude's context holds only the final answer — unlike subagents/skills where Claude orchestrates turn-by-turn and intermediate results land in Claude's context.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/workflows",
+        "https://code.claude.com/docs/en/workflows.md"
+      ],
+      "vote": "3-0 (merged from claims 1, 22)"
+    },
+    {
+      "claim": "Dynamic workflows are in research preview, require Claude Code v2.1.154 or later, and are available on all paid plans, with Anthropic API access, and on Amazon Bedrock, Google Cloud Vertex AI, and Microsoft Foundry (on Pro they are toggled on from the Dynamic workflows row in /config).",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/workflows",
+        "https://code.claude.com/docs/en/agents"
+      ],
+      "vote": "3-0 (claim 2)"
+    },
+    {
+      "claim": "The runtime enforces concrete fan-out and loop limits: up to 16 concurrent agents (fewer on limited-CPU machines, to bound local resource use) and 1,000 agents total per run (to prevent runaway loops).",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/workflows"
+      ],
+      "vote": "3-0 (claim 3)"
+    },
+    {
+      "claim": "Workflows are used by either running a bundled workflow (e.g. /deep-research) or having Claude write/save one for your task; running workflows are monitored with /workflows, which lists running and completed runs, the phase each is in, per-phase agent counts, token totals, and elapsed time. Workflows can have independent agents adversarially review/cross-check each other's findings before reporting.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/agents",
+        "https://code.claude.com/docs/en/workflows",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      ],
+      "vote": "3-0 (merged from claims 4, 6, 15)"
+    },
+    {
+      "claim": "Dynamic workflows are one of three coordination approaches in Claude Code, distinguished by who holds the plan: a script holds the plan (dynamic workflows); Claude delegates and collects results inside one conversation (subagents); Claude plans, assigns, and supervises a group of workers (agent teams).",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/agents",
+        "https://code.claude.com/docs/en/workflows"
+      ],
+      "vote": "3-0 (claim 5)"
+    },
+    {
+      "claim": "The conceptual basis for how Claude orchestrates multiple subagents (fan-out/delegation) is the orchestrator-worker pattern: a central/lead LLM dynamically breaks down tasks, delegates them to worker LLMs running in parallel, and synthesizes their results — the same pattern behind Anthropic's multi-agent Research system.",
+      "confidence": "high",
+      "sources": [
+        "https://www.anthropic.com/engineering/building-effective-agents",
+        "https://www.anthropic.com/engineering/multi-agent-research-system",
+        "https://code.claude.com/docs/en/sub-agents"
+      ],
+      "vote": "3-0/2-1 (merged from claims 7, 16)"
+    },
+    {
+      "claim": "The orchestrator-worker workflow is dynamic and iterative: the system fans out 3-5 subagents in parallel (subagents themselves using 3+ tools in parallel), then the lead agent synthesizes results and decides at runtime whether to spawn additional subagents or refine strategy, forming an iterative loop rather than a hardcoded path.",
+      "confidence": "high",
+      "sources": [
+        "https://www.anthropic.com/engineering/multi-agent-research-system"
+      ],
+      "vote": "3-0 (merged from claims 17, 18)"
+    },
+    {
+      "claim": "Dynamic workflows are a first-class long-running background process type in Claude Code: a running workflow counts as 'active work' that keeps a background session alive (alongside subagents, monitors, and background shell commands), is tracked as in-flight work, blocks the left-arrow background shortcut (surfacing 'N background task(s) running'), and is viewable via /tasks. It is exposed as a built-in Workflow tool peer to Agent and Monitor.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/agent-view",
+        "https://code.claude.com/docs/en/tools-reference"
+      ],
+      "vote": "3-0/2-1 (merged from claims 19, 20)"
+    },
+    {
+      "claim": "Subagents are the underlying delegation mechanism: Claude auto-delegates based on each subagent's description field (or explicit invocation via natural language, @-mention, or the --agent flag); subagents run in separate context windows and cannot spawn other subagents (no nested delegation), so fan-out is achieved by the main conversation spawning multiple parallel subagents and synthesizing, and sequential workflows by chaining subagents.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/sub-agents"
+      ],
+      "vote": "3-0 (merged from claims 12, 13)"
+    },
+    {
+      "claim": "An agent running as the main thread via 'claude --agent' spawns subagents using the Agent tool (renamed from Task in v2.1.63; Task(...) still works as an alias), and the set of spawnable subagent types can be restricted with Agent(agent_type) allowlist syntax in the tools field.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/sub-agents"
+      ],
+      "vote": "3-0 (claim 14)"
+    },
+    {
+      "claim": "Agent teams (a distinct, experimental coordination approach, disabled by default via CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1, requires v2.1.32+) let one session act as a 'team lead' coordinating multiple separate Claude Code instances (teammates), each with its own context window, that message each other directly and share a task list — unlike subagents, which only report back to the main agent and never talk to each other.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/agent-teams"
+      ],
+      "vote": "3-0 (merged from claims 8, 9)"
+    },
+    {
+      "claim": "Agent teams provide deterministic control flow via a shared task list with dependencies and three task states (pending, in progress, completed): a pending task with unresolved dependencies cannot be claimed until those dependencies complete, blocked tasks unblock automatically, and claiming uses file locking to prevent race conditions. Implementation is four components (team lead, teammates, shared task list, mailbox) with state stored locally in ~/.claude/teams/{team-name}/config.json and ~/.claude/tasks/{team-name}/.",
+      "confidence": "high",
+      "sources": [
+        "https://code.claude.com/docs/en/agent-teams"
+      ],
+      "vote": "3-0 (merged from claims 10, 11)"
+    }
+  ],
+  "refuted": [
+    {
+      "claim": "Anthropic defines workflows as systems where LLMs and tools are orchestrated through predefined (deterministic) code paths, while agents are systems where LLMs dynamically direct their own processes and tool usage. This is the core distinction underlying Claude Code's dynamic-workflow framing.",
+      "vote": "0-3",
+      "source": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "claim": "The official changelog does NOT document deterministic control-flow primitives (loops, conditionals, fan-out) or low-level implementation details for dynamic workflows; orchestration is described only as automatic background coordination across many agents.",
+      "vote": "1-2",
+      "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    }
+  ],
+  "openQuestions": [
+    "What is the concrete authoring/runtime API surface of the workflow JavaScript script — i.e. what functions/primitives does Claude call to spawn agents, fan out, loop, and branch, and is this API documented anywhere beyond the high-level 'JavaScript script' description?",
+    "How does the workflow runtime handle failures, retries, partial results, and the 1,000-agent cap mid-run (e.g. graceful degradation vs hard abort), and can workflows be paused/resumed or saved and re-run deterministically?",
+    "How do dynamic workflows interact with or differ from agent teams in practice for the same large task, and when should a user choose a workflow's script-held plan over an agent team's shared-task-list self-coordination?",
+    "What are the actual token-cost and latency characteristics of dynamic workflows in production (the multi-agent Research blog cites ~15x token cost and up to 90% time reduction for that system — do similar numbers apply to dynamic workflows)?"
+  ],
+  "caveats": "All core dynamic-workflow facts come from a single vendor (Anthropic) across its own primary sources — official Claude Code docs at code.claude.com (workflows, agents, sub-agents, agent-view, tools-reference, agent-teams), the engineering blogs, and the GitHub CHANGELOG. There are no independent third-party confirmations. Dynamic workflows are explicitly in 'research preview' and tied to specific versions (v2.1.154+ for workflows, v2.1.32+ for agent teams, v2.1.63 for the Task->Agent rename), so limits, availability, and command surface may change. The orchestrator-worker conceptual basis is a faithful but partly inferential bridge. The deterministic task-list/dependency mechanism and four-component implementation are documented for agent teams, NOT for dynamic workflows, whose determinism lives in the JavaScript script's own loop/branching variables.",
+  "stats": {
+    "angles": 6,
+    "sourcesFetched": 19,
+    "claimsExtracted": 92,
+    "claimsVerified": 25,
+    "confirmed": 23,
+    "killed": 2,
+    "afterSynthesis": 13,
+    "agentCalls": 102,
+    "subagentTokens": 3011908,
+    "durationMs": 548332
+  }
+}

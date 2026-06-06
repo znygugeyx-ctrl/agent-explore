@@ -1,0 +1,3 @@
+# Raw per-agent traces are large (~14MB / 400+ jsonl) and contain bulk
+# fetched web content. Kept locally for analysis/reproduction, excluded from git.
+*/raw_traces/

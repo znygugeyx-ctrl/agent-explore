@@ -1,0 +1,22 @@
+model:        claude-opus-4-8 (Opus 4.8, 1M context)
+workflow:     deep-research
+run_id:       wf_c176b43e-bd5
+date:         2026-05-31
+
+stats:
+  angles:           6
+  sources_fetched:  19
+  claims_extracted: 92
+  claims_verified:  25  (top-confidence subset, 3-vote adversarial)
+  confirmed:        23
+  killed:           2
+  findings (final): 13  (after semantic-dedup synthesis)
+  agent_calls:      102
+  subagent_tokens:  3,011,908
+  duration:         ~548s (~9 min)
+
+artifacts:
+  deep-research.js   - workflow script (identical to opus_4.7 run)
+  report.md          - final synthesized report (authored from findings)
+  findings.json      - structured verified findings + refuted claims + open questions
+  raw_traces/        - 205 per-agent jsonl/meta files (gitignored)

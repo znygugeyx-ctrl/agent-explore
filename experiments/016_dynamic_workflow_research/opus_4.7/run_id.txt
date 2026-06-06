@@ -1,0 +1,21 @@
+model:        claude-opus-4-7 (Opus 4.7)
+workflow:     deep-research
+run_id:       wf_f887e51a-9f8
+date:         2026-05-31
+
+stats (as reported in the run's own report.md):
+  sources:          21
+  claims_extracted: 102
+  claims_verified:  25  (3-vote adversarial)
+  confirmed:        25  (0 killed)
+
+artifacts:
+  deep-research.js   - workflow script (identical to opus_4.8 run)
+  report.md          - final synthesized report
+  raw_traces/        - 209 per-agent jsonl/meta files (gitignored)
+
+note:
+  No structured findings.json was preserved for this run — the workflow's
+  /tmp task-output file (which contained the full structured findings) was
+  cleaned up before archival. Only the authored report.md survives. See the
+  experiment README for the resulting asymmetry vs the opus_4.8 run.
