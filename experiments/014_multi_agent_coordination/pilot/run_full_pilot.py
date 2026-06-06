@@ -3,7 +3,7 @@ Full pilot: 3 benchmarks × 5 tasks × 3 modes = 45 runs.
 Each task gets a fresh per-task MCP server (sandbox isolation).
 Results POSTed to dashboard at http://127.0.0.1:7799.
 """
-import json, os, subprocess, sys, time, urllib.request, uuid
+import glob, json, os, subprocess, sys, time, urllib.request, uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 EXP = os.path.dirname(HERE)
@@ -228,6 +228,110 @@ def build_prompt_owv(task: dict) -> tuple[str, dict]:
     return preamble + "TASK:\n" + task["prompt"], agents_def
 
 
+# ---------- mode: Workflow (dynamic workflow with script-enforced verify loop) ----------
+# Same verify SEMANTICS as owv (identical _verifier_prompt_for criteria, <=3 rounds),
+# but the solve->verify->retry LOOP is enforced by the workflow SCRIPT's control flow
+# rather than by the lead's prompt-following. This isolates "deterministic script loop"
+# as the single variable vs owv.
+
+def build_prompt_wf(task: dict) -> str:
+    bm = task["benchmark"]
+    answer_format = "ANSWER=done" if bm in ("plancraft", "workbench") else "ANSWER=<value>"
+    verifier_criteria = _verifier_prompt_for(bm)
+    return (
+        "Solve the following task using a DYNAMIC WORKFLOW. Use the Workflow tool: "
+        "write a JavaScript workflow script that orchestrates subagents to do the work.\n\n"
+        "IMPORTANT: the task requires MCP tools connected to this session (names start "
+        "with `mcp__`). The subagents you spawn inside the workflow MUST call those MCP "
+        "tools to actually do the work — discover them via ToolSearch if needed. Do not "
+        "answer from prior knowledge.\n\n"
+        "=== MANDATORY VERIFY LOOP (must be enforced BY THE SCRIPT) ===\n"
+        "Your workflow script MUST implement a solve->verify->retry loop in code:\n"
+        "1. SOLVE: spawn a solver agent that uses the MCP tools to complete the task.\n"
+        "2. VERIFY: spawn a SEPARATE, independent verifier agent that re-checks the work "
+        "by calling the MCP tools ITSELF (it must NOT trust the solver). The verifier "
+        "follows exactly these criteria:\n"
+        "-----\n" + verifier_criteria + "\n-----\n"
+        "3. GATE: parse the verifier's reply. If its first line is 'VERIFY_OK', exit the "
+        "loop immediately and return the answer. If 'VERIFY_FAIL', feed the verifier's "
+        "feedback back to a solver agent for ONE more attempt, then verify AGAIN.\n"
+        "4. HARD STOP after AT MOST 2 rounds: if round 2's verifier still says FAIL, the "
+        "loop MUST end anyway and the script MUST return the best/last candidate answer "
+        "(do NOT loop further, do NOT keep retrying). Cap the loop at 2 rounds in the "
+        "control flow (e.g. `for (round = 1; round <= 2; round++)`).\n"
+        "The loop and the gate decision MUST live in the script's control flow, not be "
+        "left to a single agent's discretion.\n\n"
+        "Once the Workflow tool returns its result, do NOT do any further work, do NOT "
+        "re-verify, do NOT call more tools — IMMEDIATELY emit ONE final message ending "
+        f"with a line that literally starts with `{answer_format[:7]}` ({answer_format}).\n\n"
+        "TASK:\n" + task["prompt"]
+    )
+
+
+def _wf_session_root(cwd: str) -> str:
+    # CC maps cwd -> ~/.claude/projects/<slug>, every '/' and '_' becomes '-'
+    slug = cwd.replace("/", "-").replace("_", "-")
+    return os.path.join(os.path.expanduser("~/.claude/projects"), slug)
+
+
+def collect_wf_artifacts(cwd: str, bm: str) -> dict:
+    """After a wf run, scan the session dir for the generated script + workflow
+    subagents, summing their token usage and recording script structure (for H4)."""
+    sroot = _wf_session_root(cwd)
+    js_files = glob.glob(os.path.join(sroot, "*", "workflows", "scripts", "*.js"))
+    wf_agent_jsonl = []
+    for d in glob.glob(os.path.join(sroot, "*", "subagents", "workflows", "wf_*")):
+        wf_agent_jsonl += glob.glob(os.path.join(d, "agent-*.jsonl"))
+
+    total_tokens = 0; in_tok = 0; out_tok = 0
+    mcp_calls = 0; verifier_verdicts = []
+    for jf in wf_agent_jsonl:
+        saw = None
+        with open(jf) as f:
+            for line in f:
+                if '"usage"' in line:
+                    try: ev = json.loads(line)
+                    except Exception: ev = None
+                    u = ((ev or {}).get("message", {}) or {}).get("usage") if ev else None
+                    if u:
+                        it = u.get("input_tokens", 0) + u.get("cache_read_input_tokens", 0) + u.get("cache_creation_input_tokens", 0)
+                        ot = u.get("output_tokens", 0)
+                        in_tok += it; out_tok += ot; total_tokens += it + ot
+                if '"mcp__' in line:
+                    try: ev = json.loads(line)
+                    except Exception: ev = None
+                    content = ((ev or {}).get("message", {}) or {}).get("content") if ev else None
+                    for blk in (content if isinstance(content, list) else []):
+                        if isinstance(blk, dict) and blk.get("type") == "tool_use" and (blk.get("name") or "").startswith("mcp__"):
+                            mcp_calls += 1
+                if "VERIFY_OK" in line: saw = "OK"
+                elif "VERIFY_FAIL" in line and saw != "OK": saw = "FAIL"
+        if saw: verifier_verdicts.append(saw)
+
+    structure = {}
+    if js_files:
+        with open(js_files[0]) as f:
+            txt = f.read()
+        structure = {
+            "script_name": os.path.basename(js_files[0]),
+            "lines": txt.count("\n") + 1,
+            "n_agent_calls": txt.count("agent("),
+            "has_parallel": "parallel(" in txt,
+            "has_pipeline": "pipeline(" in txt,
+            "has_loop": ("for (" in txt or "for(" in txt or "while" in txt),
+            "phases": [p for p in __import__("re").findall(r"phase\('([^']*)'\)", txt)],
+        }
+    return {
+        "usage": {"input_tokens": in_tok, "output_tokens": out_tok, "total_tokens": total_tokens},
+        "n_js_scripts": len(js_files),
+        "n_wf_subagents": len(wf_agent_jsonl),
+        "wf_mcp_calls": mcp_calls,
+        "verify_rounds": len(verifier_verdicts),
+        "verify_verdicts": verifier_verdicts,
+        "script_structure": structure,
+    }
+
+
 def _sw_teammates_for(bm: str) -> list[dict]:
     if bm == "workbench":
         return [
@@ -357,11 +461,12 @@ def summarize_stream(events: list) -> dict:
     return s
 
 
-def invoke(args: list, timeout: int, early_stop=False, answer_grace=20.0) -> tuple[str, int, bool, float]:
+def invoke(args: list, timeout: int, early_stop=False, answer_grace=20.0, cwd=None) -> tuple[str, int, bool, float]:
     started = time.time()
     if not early_stop:
         try:
-            p = subprocess.run(args, capture_output=True, text=True, timeout=timeout)
+            p = subprocess.run(args, capture_output=True, text=True, timeout=timeout,
+                               cwd=cwd, stdin=subprocess.DEVNULL)
             return p.stdout, p.returncode, False, time.time() - started
         except subprocess.TimeoutExpired as e:
             so = e.stdout
@@ -468,9 +573,22 @@ def run_one(task: dict, mode: str) -> dict:
         raise ValueError(bm)
 
     fs_trace_path = None; team_name = None; watcher = None
+    wf_cwd = None
 
     # Mode-specific prompt + args
-    if mode == "single":
+    if mode == "wf":
+        # Dynamic workflow: run in an isolated cwd so we can locate the session
+        # artifact dir (generated .js + workflow subagents) afterwards.
+        wf_cwd = f"/private/tmp/wf_{bm}_{task_id}_{uuid.uuid4().hex[:6]}"
+        os.makedirs(wf_cwd, exist_ok=True)
+        prompt = build_prompt_wf(task)
+        args = [CLAUDE, "--print", "--dangerously-skip-permissions",
+                *extra_args, "--output-format", "stream-json", "--verbose", prompt]
+        # Hard wall-clock cap: workflow scripts cannot self-time (Date.now() throws
+        # in the runtime), so the verify loop is bounded by ROUNDS (<=2) and this
+        # outer subprocess timeout backstops pathological tasks. 120s.
+        timeout = 120
+    elif mode == "single":
         prompt = build_prompt_single(task)
         args = [CLAUDE, "--print", "--dangerously-skip-permissions",
                 *extra_args, "--output-format", "stream-json", "--verbose", prompt]
@@ -503,7 +621,7 @@ def run_one(task: dict, mode: str) -> dict:
 
     started = time.time()
     try:
-        stdout, rc, timed_out, elapsed = invoke(args, timeout=timeout, early_stop=early)
+        stdout, rc, timed_out, elapsed = invoke(args, timeout=timeout, early_stop=early, cwd=wf_cwd)
     finally:
         if watcher: watcher.stop()
     finished = time.time()
@@ -538,7 +656,7 @@ def run_one(task: dict, mode: str) -> dict:
     v["lead_violated_protocol"] = lead_mcp_calls > 0
     v["lead_mcp_calls"] = lead_mcp_calls
 
-    return {
+    rec = {
         "experiment": EXPERIMENT, "benchmark": bm, "task_id": task["id"], "mode": mode,
         "prompt": task["prompt"], "expected_answer": task["expected_answer"],
         "final_text": s["final_text"], "elapsed_s": elapsed, "rc": rc, "timeout": timed_out,
@@ -550,6 +668,18 @@ def run_one(task: dict, mode: str) -> dict:
         "raw_stream": events, "fs_trace": fs_trace, "team_name": team_name,
         "started_at": started, "finished_at": finished,
     }
+
+    # wf mode: token usage + script structure live in the session artifact dir
+    if mode == "wf" and wf_cwd:
+        wf = collect_wf_artifacts(wf_cwd, bm)
+        rec["usage"] = wf["usage"]
+        rec["wf"] = {k: wf[k] for k in ("n_js_scripts", "n_wf_subagents", "wf_mcp_calls",
+                                        "verify_rounds", "verify_verdicts", "script_structure")}
+        # financebench has no state file; verify already used final_text. For
+        # workbench/plancraft the solver wrote state via MCP inside the workflow,
+        # so verify_* (run above) already reflects the real outcome.
+
+    return rec
 
 
 def post(rec: dict):

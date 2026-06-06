@@ -28,13 +28,16 @@
 
 ## 主要实验结果
 
-| Agent 框架 | WorkBench | FinanceBench | PlanCraft |     合计 |
-| ---------- | --------: | -----------: | --------: | -------: |
-| **Single** |       83% |          70% |       90% |  **81%** |
-| **Swarm**  |       70% |          67% |       53% |      63% |
-| **Verify** |       83% |          70% |       83% |      79% |
+| Agent 框架   | WorkBench | FinanceBench | PlanCraft |     合计 |
+| ------------ | --------: | -----------: | --------: | -------: |
+| **Single**   |       83% |          70% |       90% |  **81%** |
+| **Swarm**    |       70% |          67% |       53% |      63% |
+| **Verify**   |       83% |          70% |       83% |      79% |
+| **Workflow** |       70% |          53% |       93% |      72% |
 
 三个架构整体表现：**Single > Verify > Swarm**，Single Agent在所有测试集上取得了最好成绩。Verify Agent的模式在 WorkBench 和 FinanceBench 上与 Single 成绩相同，在PlanCraft下比single agent低7%。而Swarm模式则显著低于其他模式。
+
+**Workflow（动态工作流，脚本强制 verify 闭环）** 整体 72%，介于 Verify 与 Swarm 之间。它在 PlanCraft 上达到 93%（全模式最高，强顺序依赖任务由脚本闭环逐步纠错），但在 WorkBench / FinanceBench 上明显落后——这两类任务的 verifier 判据偏主观，触发反复重试，大量任务被 120s wall-clock 硬上限截断（见下）。Workflow 模式跑了 90 题、单题最多 2 轮 verify、外层 120s 超时（workflow 脚本运行时禁用 `Date.now()`，无法自计时，故以「轮数预算 + 外层超时」双重兜底）。
 
 最值得分析的是在PlanCraft这个测试集上，这里的方差最大。首先，仔细分析三种模式的失败case，发现以下问题，single失败三个case是真正遇到了hard的问题，无法解出来。而Verify模式存在 “**多Agent协作问题**” 导致的副作用，失败率更高。
 
@@ -78,39 +81,43 @@ lead 在 msg 2 让 executor "trust the plan"，lead主动放弃了 observation�
 
 ## 按难度分档通过率
 
-| Benchmark        | 难度       | Single |   Swarm |  Verify |
-| ---------------- | ---------- | -----: | ------: | ------: |
-| **WorkBench**    | Easy       |   100% |     90% |    100% |
-|                  | **Medium** |   100% |     80% |     90% |
-|                  | Hard       |    50% |     40% |     60% |
-| **FinanceBench** | Easy       |    60% |     60% |     60% |
-|                  | **Medium** |    60% |     50% |     60% |
-|                  | Hard       |    90% |     90% |     90% |
-| **PlanCraft**    | Easy       |    80% |     60% |     70% |
-|                  | **Medium** |   100% | **30%** | **90%** |
-|                  | Hard       |    90% |     70% |     90% |
+| Benchmark        | 难度       | Single |   Swarm |  Verify | Workflow |
+| ---------------- | ---------- | -----: | ------: | ------: | -------: |
+| **WorkBench**    | Easy       |   100% |     90% |    100% |      70% |
+|                  | **Medium** |   100% |     80% |     90% |      80% |
+|                  | Hard       |    50% |     40% |     60% |      60% |
+| **FinanceBench** | Easy       |    60% |     60% |     60% |      50% |
+|                  | **Medium** |    60% |     50% |     60% |      40% |
+|                  | Hard       |    90% |     90% |     90% |      70% |
+| **PlanCraft**    | Easy       |    80% |     60% |     70% |      80% |
+|                  | **Medium** |   100% | **30%** | **90%** |     100% |
+|                  | Hard       |    90% |     70% |     90% |     100% |
 
 **Easy / Hard 区间，三种架构表现接近，Medium 区间是三种架构差异最显著的地方**：PlanCraft Medium 上 Single 100% / Verify 90% / Swarm 30%。任务难度刚好落在"single agent 能稳定闭环、但 Swarm 的规划-执行分离会引入错误"的区间。Verify 因为保留了主 agent 的单一行动闭环（仅在 ANSWER 前插入一次独立校验），所以表现接近 Single。
 
 ## 平均时间消耗（秒/题）
 
-| Agent 框架 | WorkBench | FinanceBench | PlanCraft |  总平均 |
-| ---------- | --------: | -----------: | --------: | ------: |
-| **Single** |   **30s** |      **21s** |   **86s** | **46s** |
-| **Swarm**  |       73s |          66s |      106s |     82s |
-| **Verify** |       55s |          32s |       91s |     60s |
+| Agent 框架   | WorkBench | FinanceBench | PlanCraft |  总平均 |
+| ------------ | --------: | -----------: | --------: | ------: |
+| **Single**   |   **30s** |      **21s** |   **86s** | **46s** |
+| **Swarm**    |       73s |          66s |      106s |     82s |
+| **Verify**   |       55s |          32s |       91s |     60s |
+| **Workflow** |      114s |          95s |       90s |    100s |
 
-Single耗时最少
+Single耗时最少。**Workflow 总平均 100s 为各模式最高**，且这是被 120s 硬上限压住后的结果：WorkBench 30 题里 25 题、FinanceBench 11 题撞 120s 截断（PlanCraft 仅 7 题）。换言之 Workflow 在 WorkBench/FinanceBench 上的真实耗时只会更高——脚本强制的 solve→verify 闭环每轮都要独立重跑 solver + verifier，启动开销远大于 Single 的单循环。
 
 ## 平均 token 消耗
 
 每题平均，含主 agent + subagent 全部 token，**口径 = `input + output + cache_creation + cache_read` 的累计**（与 Anthropic API `usage` 字段一致）：
 
-| Agent 框架 | WorkBench | FinanceBench | PlanCraft | 总平均 |
-| ---------- | --------: | -----------: | --------: | -----: |
-| **Single** | **224 k** |    **159 k** |     551 k |  311 k |
-| **Swarm**  |     318 k |        297 k | **335 k** |  317 k |
-| **Verify** |     511 k |        313 k |     749 k |  524 k |
+| Agent 框架   | WorkBench | FinanceBench | PlanCraft | 总平均 |
+| ------------ | --------: | -----------: | --------: | -----: |
+| **Single**   | **224 k** |    **159 k** |     551 k |  311 k |
+| **Swarm**    |     318 k |        297 k | **335 k** |  317 k |
+| **Verify**   |     511 k |        313 k |     749 k |  524 k |
+| **Workflow** |     684 k |    **289 k** |     592 k |  521 k |
+
+> **Workflow 的 token 口径**：只统计 workflow 脚本 spawn 的 subagent（solver + verifier）累计 token，主 agent 仅调用 `Workflow` 工具本身、开销可忽略。Workflow 总平均 521 k，与 Verify（524 k）几乎持平——两者都是"solve + 独立 verify"的双倍工作量。WorkBench 上 Workflow 684 k 为该列最高（满轮重试 + 状态写入工具重），FinanceBench 上反而最省（289 k，多数任务 1 轮即过、检索类工作量小）。
 
 > **关于"300k token/题"的口径说明**：这里的 token 数不是"题目独立内容"的大小，而是**多轮 LLM 调用累计的 IO 量**。一个典型 PlanCraft single 题（13 turns，44s 完成）的实际分布是：
 >

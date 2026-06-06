@@ -35,3 +35,7 @@ probe_pty/probe2_l2_stdout.txt
 probe_pty/probe3_stdout.txt
 probe_pty/probe3_stderr.txt
 probe_pty/probe_log.txt
+
+# Workflow-mode feasibility probe scratch output (process artifact; the 90-run
+# dataset lives in results/data/runs_wf_slim.jsonl)
+pilot/wf_probe_out/

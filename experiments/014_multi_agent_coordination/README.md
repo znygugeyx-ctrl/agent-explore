@@ -9,6 +9,7 @@ Compare three agent coordination architectures across three agentic benchmarks.
 | **Single** (`single`) | One agent, all tools available, full observation in single context |
 | **Swarm** (`sw`) | `TeamCreate` + 2 teammates (planner + executor) communicating via mailbox |
 | **Verify** (`owv`) | Lead solves freely; **must** spawn `verifier` subagent before final ANSWER. Verifier independently re-checks via tools |
+| **Workflow** (`wf`) | Dynamic workflow: Claude writes a JS script that orchestrates a script-enforced `solve→verify→retry` loop (≤2 rounds). Same verifier criteria as `owv`, but the loop lives in the script's control flow, not the lead's prompt-following |
 
 ## Benchmarks
 
@@ -77,4 +78,13 @@ Dashboard at http://127.0.0.1:7799 — score matrix, per-run tool/message timeli
 - **Verify costs +68% tokens** vs Single — verifier independently re-runs tools, lead also continues to act after verifier returns
 - **PlanCraft Medium is the largest divergence**: strong sequential dependency breaks swarm's plan-execute split
 
-See `results/multi-agent-experiment.md` for full analysis with failure case studies.
+### Workflow mode (added later)
+
+- **Overall 72%** (vs Single 81%, Verify 79%, Swarm 63%) — between Verify and Swarm.
+- **Best on PlanCraft (93%, highest of all modes)**: the script-enforced verify→retry loop incrementally corrects strong-sequential crafting, exactly where Swarm collapses (53%).
+- **Worst on WorkBench/FinanceBench (70%/53%)**: subjective verifier criteria trigger repeated retries; 25/30 WorkBench and 11/30 FinanceBench tasks hit the 120s wall-clock cap.
+- **Cost ≈ Verify** (521k vs 524k tokens/task) but **slowest wall-clock** (100s/task avg, and that is *after* the 120s cap truncates the worst cases).
+- **Implication**: a workflow's deterministic control flow pays off when the task is a long sequential chain that benefits from script-driven retry (PlanCraft); it is net-negative when "done-ness" is fuzzy and the verifier loops without converging (WorkBench/FinanceBench). The advantage is task-shape-dependent, not universal.
+- **Runtime note**: workflow scripts cannot self-time (`Date.now()` throws in the runtime), so the loop is bounded by *round budget* (≤2) plus an *outer subprocess timeout* (120s).
+
+See `results/multi-agent-experiment.md` for the full comparison tables (now 4 modes). Workflow raw data: `results/data/runs_wf_slim.jsonl` (90 runs).
