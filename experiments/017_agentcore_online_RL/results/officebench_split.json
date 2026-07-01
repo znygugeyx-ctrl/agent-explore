@@ -1,0 +1,1361 @@
+{
+  "seed": 42,
+  "test_frac": 0.2,
+  "dropped_bug_tasks": [
+    "1-10",
+    "1-14"
+  ],
+  "train": {
+    "task_ids": [
+      "1-1",
+      "1-11",
+      "1-12",
+      "1-13",
+      "1-18",
+      "1-19",
+      "1-2",
+      "1-20",
+      "1-21",
+      "1-22",
+      "1-23",
+      "1-3",
+      "1-5",
+      "1-6",
+      "1-7",
+      "1-8",
+      "2-1",
+      "2-10",
+      "2-11",
+      "2-12",
+      "2-13",
+      "2-14",
+      "2-15",
+      "2-17",
+      "2-18",
+      "2-19",
+      "2-2",
+      "2-20",
+      "2-22",
+      "2-25",
+      "2-27",
+      "2-29",
+      "2-3",
+      "2-31",
+      "2-32",
+      "2-33",
+      "2-34",
+      "2-35",
+      "2-36",
+      "2-37",
+      "2-39",
+      "2-40",
+      "2-41",
+      "2-42",
+      "2-43",
+      "2-45",
+      "2-46",
+      "2-48",
+      "2-49",
+      "2-5",
+      "2-50",
+      "2-7",
+      "2-8",
+      "3-1",
+      "3-11",
+      "3-12",
+      "3-13",
+      "3-15",
+      "3-16",
+      "3-17",
+      "3-18",
+      "3-2",
+      "3-21",
+      "3-22",
+      "3-23",
+      "3-24",
+      "3-26",
+      "3-27",
+      "3-28",
+      "3-3",
+      "3-30",
+      "3-32",
+      "3-33",
+      "3-34",
+      "3-35",
+      "3-36",
+      "3-37",
+      "3-38",
+      "3-39",
+      "3-40",
+      "3-41",
+      "3-42",
+      "3-43",
+      "3-46",
+      "3-47",
+      "3-50",
+      "3-51",
+      "3-52",
+      "3-53",
+      "3-56",
+      "3-58",
+      "3-59",
+      "3-6",
+      "3-60",
+      "3-61",
+      "3-62",
+      "3-63",
+      "3-64",
+      "3-65",
+      "3-66",
+      "3-67",
+      "3-68",
+      "3-69",
+      "3-7",
+      "3-70",
+      "3-71",
+      "3-72",
+      "3-73",
+      "3-74",
+      "3-75",
+      "3-76",
+      "3-78",
+      "3-79",
+      "3-8",
+      "3-82",
+      "3-83",
+      "3-84",
+      "3-85",
+      "3-86",
+      "3-87",
+      "3-88",
+      "3-89",
+      "3-9",
+      "3-91",
+      "3-92",
+      "3-93",
+      "3-94",
+      "3-95",
+      "3-96",
+      "3-97",
+      "3-98",
+      "3-99"
+    ],
+    "subtasks": [
+      {
+        "task_id": "1-1",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-1",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-1",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-1",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-1",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-11",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-11",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-11",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-11",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-12",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-12",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-12",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-13",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-13",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-13",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-18",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-18",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-19",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-19",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-19",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-19",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-19",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-2",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-2",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-2",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-2",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-2",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-20",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-20",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-20",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-20",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-20",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-21",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-21",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-21",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-22",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-22",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-22",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-22",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-22",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-23",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-23",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-3",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-3",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-3",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-3",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-3",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-5",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-5",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-5",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-5",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-6",
+        "subtask_id": "5"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-7",
+        "subtask_id": "5"
+      },
+      {
+        "task_id": "1-8",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-8",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-8",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-8",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-8",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "2-1",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-1",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-1",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-1",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-10",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-10",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-11",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-11",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-12",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-13",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-13",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-14",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-15",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-17",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-18",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-18",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-18",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-19",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-2",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-2",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-20",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-20",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-20",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-22",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-22",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-25",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-27",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-29",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-3",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-31",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-31",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-31",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-31",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-31",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "2-32",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-32",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-33",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-33",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-34",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-34",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-35",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-35",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-36",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-36",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-36",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-36",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-37",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-37",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-37",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-39",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-39",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-39",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-39",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-39",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "2-40",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-40",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-40",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-40",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-41",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-41",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-41",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-42",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-43",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-43",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-45",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-45",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-45",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-46",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-48",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-49",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-5",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-50",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-7",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-8",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-8",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-1",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-11",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-12",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-12",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-12",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "3-13",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-13",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-15",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-16",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-17",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-18",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-2",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-21",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-22",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-23",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-24",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-26",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-27",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-28",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-3",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-30",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-32",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-33",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-34",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-35",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-36",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-37",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-38",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-39",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-40",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-41",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-42",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-43",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-46",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-47",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-50",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-51",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-52",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-53",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-56",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-58",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-59",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-6",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-6",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-60",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-61",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-62",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-63",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-64",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-65",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-66",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-67",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-68",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-69",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-7",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-70",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-71",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-72",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-73",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-74",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-75",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-76",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-78",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-79",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "5"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "6"
+      },
+      {
+        "task_id": "3-8",
+        "subtask_id": "7"
+      },
+      {
+        "task_id": "3-82",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-83",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-84",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-85",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-86",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-87",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-88",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-89",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-9",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-9",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-91",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-92",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-93",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-94",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-95",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-96",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-97",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-98",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-99",
+        "subtask_id": "0"
+      }
+    ]
+  },
+  "test": {
+    "task_ids": [
+      "1-15",
+      "1-16",
+      "1-4",
+      "1-9",
+      "2-16",
+      "2-21",
+      "2-23",
+      "2-24",
+      "2-26",
+      "2-30",
+      "2-38",
+      "2-44",
+      "2-6",
+      "3-10",
+      "3-100",
+      "3-14",
+      "3-19",
+      "3-20",
+      "3-25",
+      "3-29",
+      "3-4",
+      "3-44",
+      "3-45",
+      "3-48",
+      "3-49",
+      "3-5",
+      "3-54",
+      "3-55",
+      "3-57",
+      "3-77",
+      "3-80",
+      "3-81",
+      "3-90"
+    ],
+    "subtasks": [
+      {
+        "task_id": "1-15",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-15",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-15",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-16",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-16",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-4",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-4",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-4",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-4",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "1-9",
+        "subtask_id": "5"
+      },
+      {
+        "task_id": "2-16",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "4"
+      },
+      {
+        "task_id": "2-21",
+        "subtask_id": "5"
+      },
+      {
+        "task_id": "2-23",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-23",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-24",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-26",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-26",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-26",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-26",
+        "subtask_id": "3"
+      },
+      {
+        "task_id": "2-30",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-38",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-38",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "2-38",
+        "subtask_id": "2"
+      },
+      {
+        "task_id": "2-44",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "2-6",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-10",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-100",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-14",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-14",
+        "subtask_id": "1"
+      },
+      {
+        "task_id": "3-19",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-20",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-25",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-29",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-4",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-44",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-45",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-48",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-49",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-5",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-54",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-55",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-57",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-77",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-80",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-81",
+        "subtask_id": "0"
+      },
+      {
+        "task_id": "3-90",
+        "subtask_id": "0"
+      }
+    ]
+  },
+  "stats": {
+    "train_tasks": 132,
+    "test_tasks": 33,
+    "train_subtasks": 234,
+    "test_subtasks": 56,
+    "train_tasks_by_cat": {
+      "1": 16,
+      "2": 37,
+      "3": 79
+    },
+    "test_tasks_by_cat": {
+      "1": 4,
+      "2": 9,
+      "3": 20
+    }
+  }
+}

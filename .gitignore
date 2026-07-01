@@ -41,3 +41,11 @@ Thumbs.db
 pi-mono/
 *.lock
 experiments/*/results/*-pilot/
+# 017 experiment: exclude cloned third-party repos and scratch files
+experiments/017_agentcore_online_RL/rllm/
+experiments/017_agentcore_online_RL/agentcore-rl-toolkit/
+experiments/017_agentcore_online_RL/conversation.md
+experiments/017_agentcore_online_RL/TEST.md
+experiments/*/.DS_Store
+.DS_Store
+test.py
